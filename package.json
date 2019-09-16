@@ -1,0 +1,42 @@
+{
+  "name": "me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ricardo Alexis Quiroz Bazan <raquirozbazan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "develop": "next",
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production next start",
+    "lint": "eslint ."
+  },
+  "eslintConfig": {
+    "extends": "rqbazan-js/react",
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
+    },
+    "rules": {
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "dependencies": {
+    "is-mobile": "^2.1.0",
+    "next": "^9.0.5",
+    "prism-react-renderer": "^0.1.7",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-media": "^1.10.0",
+    "styled-components": "^5.0.0-beta.8",
+    "styled-components-breakpoint": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.11.0-0",
+    "eslint": "^6.4.0",
+    "eslint-config-rqbazan-js": "^0.3.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "prettier": "^1.18.2"
+  }
+}
