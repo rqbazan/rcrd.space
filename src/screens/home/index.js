@@ -2,7 +2,7 @@ import HighlightJson from 'components/highlight-json'
 import MainLayout from 'layouts/main'
 import { CoverageImg, Main } from './elements'
 
-export default function IndexPage() {
+export default function HomeScreen() {
   return (
     <MainLayout>
       <CoverageImg />
