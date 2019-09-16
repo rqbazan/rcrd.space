@@ -23,7 +23,7 @@ export default function HighlightCode() {
       {({ tokens, getLineProps, getTokenProps }) => (
         <Pre>
           {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
+            <div {...getLineProps({ line, key: `code-line-${i}` })}>
               {line.map((token, key) => (
                 <span {...getTokenProps({ token, key })} />
               ))}
