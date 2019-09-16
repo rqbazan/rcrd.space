@@ -6,7 +6,7 @@ import * as theme from 'src/theme'
 export const CoverageImg = styled.div`
   background-color: ${theme.colors.dark};
   background-image: url('${cloudinary.lg('hero')}');
-  background-position: right bottom -40%;
+  background-position: right -104px bottom -40%;
   background-repeat: no-repeat;
   background-size: contain;
   height: 100vh;

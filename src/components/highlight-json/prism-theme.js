@@ -11,7 +11,7 @@ export default {
     {
       types: ['string', 'number'],
       style: {
-        color: theme.colors.text
+        color: theme.colors.white
       }
     }
   ]
