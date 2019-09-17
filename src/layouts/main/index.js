@@ -14,7 +14,6 @@ export default function MainLayout(props) {
     <>
       {isMobile && (
         <Header>
-          <a href="https://github.com/rqbazan">@github</a>
           <Burger isColorful onClick={() => setMenuIsOpen(true)} />
           <Menu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
         </Header>

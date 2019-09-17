@@ -7,7 +7,7 @@ export const Header = styled.header`
   background-color: ${theme.colors.accent};
   display: flex;
   height: ${theme.sizes.headerHeight}px;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 ${theme.sizes.headerPadding}px;
   position: fixed;
   top: 0;
