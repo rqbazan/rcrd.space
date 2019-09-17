@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import cloudinary from 'src/cloudinary'
 import breakpoints from 'src/breakpoints'
 import * as theme from 'src/theme'
@@ -38,6 +38,15 @@ export const Main = styled.main`
   `}
 `
 
+const navNonMobileStyle = css`
+  flex-direction: row;
+
+  > a:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+`
+
 export const Navigation = styled.nav`
   margin-top: 24px;
   display: flex;
@@ -51,12 +60,11 @@ export const Navigation = styled.nav`
     margin-bottom: 32px;
   }
 
-  ${breakpoints.sm`
-    flex-direction: row;
-
-    > a:not(:last-child) {
-      margin-bottom: 0;
-      margin-right: 32px;
-    } 
+  ${breakpoints.md`
+    ${navNonMobileStyle}
   `}
+
+  @media (orientation: landscape) {
+    ${navNonMobileStyle}
+  }
 `
