@@ -23,6 +23,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Space Mono', monospace;
   }
+
+  a {
+    color: ${theme.colors.dark};
+    text-decoration: none;
+  }
 `
 
 export default GlobalStyle
