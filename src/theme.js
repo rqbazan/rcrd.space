@@ -18,6 +18,7 @@ export const sizes = {
 }
 
 export const stacks = {
+  coverageImg: -1,
   menu: 1,
-  coverageImg: -1
+  nprogress: 99
 }

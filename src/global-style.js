@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import breakpoints from 'src/breakpoints'
 import * as theme from 'src/theme'
 
 const GlobalStyle = createGlobalStyle`
@@ -36,6 +37,24 @@ const GlobalStyle = createGlobalStyle`
 
   a:hover {
     text-decoration: underline;
+  }
+
+  #nprogress {
+    pointer-events: none;
+  }
+
+  #nprogress .bar {
+    background-color: ${theme.colors.white};
+    height: 2px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: ${theme.stacks.nprogress};
+
+    ${breakpoints.md`
+      background-color: ${theme.colors.selection};
+    `}
   }
 `
 
