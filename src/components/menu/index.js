@@ -6,7 +6,7 @@ function MenuItem(props) {
   const { href, children, onClick } = props
 
   return (
-    <Link href={href}>
+    <Link href={href} prefetch>
       {/* pass href manually to avoid eslint complain */}
       <a href={href} onClick={onClick}>
         {children}
