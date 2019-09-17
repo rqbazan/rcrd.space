@@ -51,10 +51,11 @@ export const Navigation = styled.nav`
     margin-bottom: 32px;
   }
 
-  ${breakpoints.md`
+  ${breakpoints.sm`
     flex-direction: row;
 
     > a:not(:last-child) {
+      margin-bottom: 0;
       margin-right: 32px;
     } 
   `}

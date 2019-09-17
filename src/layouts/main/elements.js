@@ -16,13 +16,13 @@ export const Header = styled.header`
 
 export const Content = styled.div`
   display: flex;
+  height: calc(100vh - ${theme.sizes.headerHeight}px);
   margin-top: ${theme.sizes.headerHeight}px;
-  min-height: calc(100vh - ${theme.sizes.headerHeight}px);
   width: 100%;
 
   ${breakpoints.md`
+    height: 100vh;
     margin: auto;
-    min-height: 100vh;
     width: ${theme.breakpoints.md}px;
   `}
 `
