@@ -6,6 +6,7 @@
   "author": "Ricardo Alexis Quiroz Bazan <raquirozbazan@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "pre-dev": "rm -rf node_modules/.cache .next",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -22,6 +23,9 @@
     }
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-brands-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "is-mobile": "^2.1.0",
     "next": "^9.0.5",
     "prism-react-renderer": "^0.1.7",

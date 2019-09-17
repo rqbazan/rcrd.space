@@ -27,18 +27,35 @@ export const Main = styled.main`
   flex-direction: column;
   justify-content: flex-start;
   width: inherit;
+  padding: 24px;
 
   ${breakpoints.md`
     justify-content: center;
   `}
 
-  pre {
-    padding: 24px;
+  ${breakpoints.lg`
+    padding: 0;
+  `}
+`
+
+export const Navigation = styled.nav`
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+
+  > a {
+    align-self: flex-start;
   }
 
-  ${breakpoints.lg`
-    pre {
-      padding: 0;
-    }
+  > a:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  ${breakpoints.md`
+    flex-direction: row;
+
+    > a:not(:last-child) {
+      margin-right: 32px;
+    } 
   `}
 `

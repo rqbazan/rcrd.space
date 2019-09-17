@@ -1,6 +1,9 @@
 import NextApp from 'next/app'
 import GlobalStyle from 'src/global-style'
 import MobileProvider from 'components/mobile-provider'
+import { config } from '@fortawesome/fontawesome-svg-core'
+
+config.autoAddCss = false
 
 export default class App extends NextApp {
   render() {

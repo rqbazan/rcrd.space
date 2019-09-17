@@ -42,6 +42,10 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-svg-core@1.2.22/styles.min.css"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
