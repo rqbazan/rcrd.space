@@ -5,7 +5,7 @@ export default function IndexPage() {
   return (
     <>
       <Head>
-        <title>@rqbazan | home</title>
+        <title>Ricardo Q. Bazan (@rqbazan)</title>
       </Head>
       <HomeScreen />
     </>
