@@ -7,6 +7,7 @@ import {
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons'
 import * as theme from 'src/theme'
+import data from 'src/data.json'
 import { CoverageImg, Main, Navigation } from './elements'
 
 export default function HomeScreen() {
@@ -16,21 +17,21 @@ export default function HomeScreen() {
       <Main>
         <HighlightJson />
         <Navigation>
-          <a href="https://github.com/rqbazan" target="__blank">
+          <a href={data.socialLinks.github} target="__blank">
             <FontAwesomeIcon
               icon={faGithub}
               color={theme.colors.selection}
               size="2x"
             />
           </a>
-          <a href="https://twitter.com/rqbazan" target="__blank">
+          <a href={data.socialLinks.twitter} target="__blank">
             <FontAwesomeIcon
               icon={faTwitter}
               color={theme.colors.selection}
               size="2x"
             />
           </a>
-          <a href="http://www.linkedin.com/in/rqbazan" target="__blank">
+          <a href={data.socialLinks.linkedin} target="__blank">
             <FontAwesomeIcon
               icon={faLinkedin}
               color={theme.colors.selection}

@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import { MobileContext } from 'src/contexts'
+import data from 'src/data.json'
 import prismTheme from './prism-theme'
 import { Pre } from './elements'
-import data from './data'
 
 const curlyBracketsIdentation = /^[{}]?\s{0,5}/gm
 
-const desktopCode = JSON.stringify(data, null, 4)
+const desktopCode = JSON.stringify(data.profile, null, 4)
 const mobileCode = desktopCode.replace(curlyBracketsIdentation, '')
 
 export default function HighlightCode() {

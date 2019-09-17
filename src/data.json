@@ -1,0 +1,19 @@
+{
+  "profile": {
+    "name": "Ricardo Q. Bazan",
+    "nickname": "Santiago",
+    "role": "Full-Stack JS Developer",
+    "location": "Trujillo, Perú",
+    "interests": [
+      "problem solving",
+      "clean code",
+      "web development",
+      "api architecture"
+    ]
+  },
+  "socialLinks": {
+    "github": "//github.com/rqbazan",
+    "twitter": "//twitter.com/rqbazan",
+    "linkedin": "//www.linkedin.com/in/rqbazan"
+  }
+}
