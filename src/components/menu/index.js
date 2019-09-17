@@ -39,7 +39,9 @@ export default function Menu(props) {
         <MenuItem href="/work" onClick={getOnItemClick('/work')}>
           Work
         </MenuItem>
-        <div role="button">Credits</div>
+        <MenuItem href="/credits" onClick={getOnItemClick('/credits')}>
+          Credits
+        </MenuItem>
       </Navigation>
     </Container>
   )
