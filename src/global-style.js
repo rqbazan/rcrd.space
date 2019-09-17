@@ -33,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.dark};
     text-decoration: none;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `
 
 export default GlobalStyle

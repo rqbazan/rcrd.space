@@ -12,6 +12,11 @@ export const Header = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
+
+  ${breakpoints.md`
+    background-color: ${theme.colors.dark};
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 16px 0px;
+  `}
 `
 
 export const Content = styled.div`
@@ -21,8 +26,30 @@ export const Content = styled.div`
   width: 100%;
 
   ${breakpoints.md`
-    height: 100vh;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: ${theme.breakpoints.md}px;
   `}
+`
+
+export const Navigation = styled.nav`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+  width: ${theme.breakpoints.md}px;
+
+  > a {
+    color: ${theme.colors.white};
+  }
+
+  > a:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  > a:last-child {
+    margin-left: auto;
+  }
 `
