@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
     color: black;
   }
 
+  *:focus {
+    outline: none;
+  }
+
   body {
     background-color: ${theme.colors.bgColor};
     font-family: 'Space Mono', monospace;
