@@ -2,7 +2,7 @@
   "profile": {
     "name": "Ricardo Q. Bazan",
     "nickname": "Santiago",
-    "role": "Full-Stack JS Developer",
+    "role": "FullStack JS Developer",
     "location": "Trujillo, Perú",
     "interests": [
       "problem solving",
@@ -15,5 +15,19 @@
     "github": "//github.com/rqbazan",
     "twitter": "//twitter.com/rqbazan",
     "linkedin": "//www.linkedin.com/in/rqbazan"
-  }
+  },
+  "workPosts": [
+    {
+      "title": "This Site",
+      "startDate": "Sep 2019",
+      "tags": "NextJS,StyledComponents,Cloudinary,Now",
+      "body": "Not a blog, I'm not a blogger. Just a side project to enjoy music while I code, and also to show things I've worked."
+    },
+    {
+      "title": "Zeit Toast Clone",
+      "startDate": "Sep 2019",
+      "tags": "Storybook,TypeScript,React,ReactSpring",
+      "body": "A front-end challenge required by myself, I worked with animation effects powered by the awesome spring library."
+    }
+  ]
 }

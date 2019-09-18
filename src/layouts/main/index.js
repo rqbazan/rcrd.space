@@ -6,7 +6,7 @@ import Burger from 'components/burger'
 import { Header, Content, Navigation } from './elements'
 
 export default function MainLayout(props) {
-  const { children } = props
+  const { children, className, style } = props
 
   const isMobile = useContext(MobileContext)
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -34,7 +34,9 @@ export default function MainLayout(props) {
           </Navigation>
         </Header>
       )}
-      <Content>{children}</Content>
+      <Content className={className} style={style}>
+        {children}
+      </Content>
     </>
   )
 }

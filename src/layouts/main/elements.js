@@ -15,13 +15,11 @@ export const Header = styled.header`
 
   ${breakpoints.md`
     background-color: ${theme.colors.dark};
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 16px 0px;
   `}
 `
 
 export const Content = styled.div`
   display: flex;
-  height: calc(100vh - ${theme.sizes.headerHeight}px);
   margin-top: ${theme.sizes.headerHeight}px;
   width: 100%;
 
