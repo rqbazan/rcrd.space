@@ -4,7 +4,7 @@ import { MobileContext } from 'src/contexts'
 import { breakpoints } from 'src/theme'
 
 const defaultQuery = {
-  maxWidth: breakpoints.lg
+  maxWidth: breakpoints.md
 }
 
 export default function MobileProvider(props) {
