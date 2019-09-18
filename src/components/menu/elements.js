@@ -30,9 +30,10 @@ export const Navigation = styled.nav`
 
   > a {
     font-size: 24px;
+    font-weight: bold;
   }
 
   > *:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
 `

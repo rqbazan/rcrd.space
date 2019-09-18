@@ -34,12 +34,19 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     color: ${theme.colors.dark};
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   a:hover {
     text-decoration: underline;
   }
+
+  ${breakpoints.md`
+    a { 
+      color: ${theme.colors.dark};
+      text-decoration: none;
+    }
+  `}
 
   #nprogress {
     pointer-events: none;
