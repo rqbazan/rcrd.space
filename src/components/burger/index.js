@@ -4,13 +4,13 @@ export default function Burger(props) {
   return (
     <div role="button" onClick={onClick} onKeyPress={onClick} tabIndex={0}>
       <img
-        src="/static/colorful-burger.png"
+        src="https://res.cloudinary.com/dpwoyjb1f/image/upload/q_auto/me/colorful-burger.png"
         alt="burger"
         height={32}
         style={{ display: isColorful ? 'block' : 'none' }}
       />
       <img
-        src="/static/grayscale-burger.png"
+        src="https://res.cloudinary.com/dpwoyjb1f/image/upload/q_auto/me/grayscale-burger.png"
         alt="burger"
         height={32}
         style={{ display: isColorful ? 'none' : 'block' }}
