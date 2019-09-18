@@ -32,6 +32,10 @@ export const Main = styled.main`
     justify-content: center;
     padding: 64px;
   `}
+
+  ${breakpoints.lg`
+    padding: 0;
+  `}
 `
 
 const navNonMobileStyle = css`
