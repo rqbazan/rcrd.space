@@ -1,22 +1,16 @@
 const cloudinaryUrl = 'https://res.cloudinary.com/dpwoyjb1f/image/upload'
-const defaults = 'q_auto,f_auto'
 
 const images = {
   hero: {
     resource: 'me/night_owl.jpg',
     transforms: {
-      lg: 'w_1024,h_680/w_500,h_680,c_crop,y_0,x_350'
+      lg: 'q_auto,f_png,o_50,w_1024,h_680/w_500,h_680,c_crop,y_0,x_350'
     }
   }
 }
 
-function getTransform(custom) {
-  return custom ? `${defaults},${custom}` : defaults
-}
-
 function getUrl(image, size) {
-  const customTransform = image.transforms[size]
-  return `${cloudinaryUrl}/${getTransform(customTransform)}/${image.resource}`
+  return `${cloudinaryUrl}/${image.transforms[size]}/${image.resource}`
 }
 
 export default {
