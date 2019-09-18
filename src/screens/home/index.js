@@ -13,7 +13,7 @@ import { CoverageImg, Main, Navigation } from './elements'
 export default function HomeScreen() {
   return (
     <MainLayout
-      style={{ height: `calc(100vh - ${theme.sizes.headerHeight}px)` }}
+      style={{ minHeight: `calc(100vh - ${theme.sizes.headerHeight}px)` }}
     >
       <CoverageImg />
       <Main>

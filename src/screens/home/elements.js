@@ -6,18 +6,17 @@ import * as theme from 'src/theme'
 export const CoverageImg = styled.div`
   background-color: ${theme.colors.dark};
   background-image: url('${cloudinary.lg('hero')}');
-  background-position: right -104px bottom -40%;
+  background-position: right -4rem bottom -40%;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100vh;
+  bottom: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   z-index: ${theme.stacks.coverageImg};
 
   ${breakpoints.md`
-    background-size: unset;
     background-position: right bottom;
   `}
 `
@@ -27,14 +26,11 @@ export const Main = styled.main`
   flex-direction: column;
   justify-content: flex-start;
   width: inherit;
-  padding: 24px;
+  padding: 10vw;
 
   ${breakpoints.md`
     justify-content: center;
-  `}
-
-  ${breakpoints.lg`
-    padding: 0;
+    padding: 64px;
   `}
 `
 

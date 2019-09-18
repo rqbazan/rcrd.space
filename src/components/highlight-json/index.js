@@ -8,7 +8,7 @@ import { Pre } from './elements'
 const curlyBracketsIdentation = /^[{}]?\s{0,5}/gm
 
 const desktopCode = JSON.stringify(data.profile, null, 4)
-const mobileCode = desktopCode.replace(curlyBracketsIdentation, '')
+const mobileCode = desktopCode.replace(curlyBracketsIdentation, '').trim()
 
 export default function HighlightCode() {
   const isMobile = useContext(MobileContext)

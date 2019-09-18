@@ -13,10 +13,12 @@ export const Header = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: ${theme.stacks.header};
 
   ${breakpoints.md`
     box-shadow: unset;
     background-color: ${theme.colors.dark};
+    padding: 0;
   `}
 `
 
