@@ -28,6 +28,10 @@ export const Navigation = styled.nav`
   justify-content: center;
   width: 100%;
 
+  > a {
+    font-size: 24px;
+  }
+
   > *:not(:last-child) {
     margin-bottom: 24px;
   }

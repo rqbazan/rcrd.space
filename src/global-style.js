@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${theme.colors.bgColor};
     font-family: 'Space Mono', monospace;
+    font-size: 16px;
   }
 
   a {
