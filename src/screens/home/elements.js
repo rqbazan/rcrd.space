@@ -27,7 +27,7 @@ export const Main = styled.main`
   flex-direction: column;
   justify-content: flex-start;
   width: inherit;
-  padding: 10%;
+  padding: 24px;
 
   ${breakpoints.md`
     justify-content: center;
