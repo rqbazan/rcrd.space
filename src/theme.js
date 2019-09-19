@@ -16,7 +16,7 @@ export const colors = {
   selection: '#00fff2',
   bgColor: '#f2f2f2',
   white: '#fff',
-  accent: '#ffc400',
+  accent: '#fcd303',
   dark: '#000'
 }
 
