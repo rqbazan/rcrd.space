@@ -52,17 +52,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #nprogress .bar {
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.selection};
     height: 2px;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: ${theme.stacks.nprogress};
-
-    ${breakpoints.md`
-      background-color: ${theme.colors.selection};
-    `}
   }
 `
 

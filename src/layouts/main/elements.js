@@ -4,7 +4,7 @@ import * as theme from 'src/theme'
 
 export const Header = styled.header`
   align-items: center;
-  background-color: ${theme.colors.accent};
+  background-color: ${theme.colors.dark};
   box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px 0px;
   display: flex;
   height: ${theme.sizes.headerHeight}px;
@@ -17,7 +17,6 @@ export const Header = styled.header`
 
   ${breakpoints.md`
     box-shadow: unset;
-    background-color: ${theme.colors.dark};
     padding: 0;
   `}
 `
