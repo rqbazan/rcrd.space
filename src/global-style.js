@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     min-width: 0;
     padding: 0;
     vertical-align: baseline;
-    border: none !important;
   }
 
   ::selection {

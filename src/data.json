@@ -21,13 +21,41 @@
       "title": "This Site",
       "startDate": "Sep 2019",
       "tags": "NextJS,StyledComponents,Cloudinary,Now",
+      "links": {
+        "github": "//github.com/rqbazan/me",
+        "deploy": "//me.rqbazan.now.sh"
+      },
       "body": "Not a blog, I'm not a blogger. Just a side project to enjoy music while I code, and also to show things I've worked."
     },
     {
       "title": "ZEIT Toast Clone",
       "startDate": "Sep 2019",
       "tags": "Storybook,TypeScript,React,ReactSpring",
+      "links": {
+        "github": "//github.com/rqbazan/zeit-toast-clone",
+        "deploy": "//zeit-toast-clone.rqbazan.now.sh"
+      },
       "body": "A front-end challenge required by myself, I worked with animation effects powered by the awesome spring library."
+    },
+    {
+      "title": "Hashing with PBKDF2",
+      "startDate": "Apr 2019",
+      "tags": "Crypto,Now",
+      "links": {
+        "github": "//github.com/rqbazan/hashing-with-pbkdf2",
+        "deploy": "//hashing-with-pbkdf2.rqbazan.now.sh"
+      },
+      "body": "Serverless application to use the pbkdf2 algorithm."
+    },
+    {
+      "title": "FeatFlag",
+      "startDate": "Mar 2019",
+      "tags": "Ava,Sinon,React,ReactTestingLibrary,TypeScript,Rollup",
+      "links": {
+        "github": "//github.com/rqbazan/featflag",
+        "npm": "//www.npmjs.com/package/@rqbazan/featflag"
+      },
+      "body": "A small and modern React library to use the feature toggling principle, using the power of contexts. I've used this technical principle for some of my bigger projects."
     }
   ]
 }

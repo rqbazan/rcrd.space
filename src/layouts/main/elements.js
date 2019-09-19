@@ -48,7 +48,7 @@ export const Navigation = styled.nav`
   }
 
   > a:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 32px;
   }
 
   > a:last-child {
