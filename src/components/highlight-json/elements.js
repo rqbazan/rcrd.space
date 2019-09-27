@@ -4,6 +4,7 @@ import breakpoints from 'src/breakpoints'
 export const Pre = styled.pre`
   display: block;
   font-size: 14px;
+  line-height: 1.8;
   white-space: pre-wrap;
   width: 100%;
 

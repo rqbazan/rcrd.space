@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components'
-import cloudinary from 'src/cloudinary'
 import breakpoints from 'src/breakpoints'
 import * as theme from 'src/theme'
 
 export const CoverageImg = styled.div`
   background-color: ${theme.colors.dark};
-  background-image: url('${cloudinary.lg('hero')}');
+  background-image: url('//res.cloudinary.com/dpwoyjb1f/image/upload/q_auto,f_png,o_50,w_1024,h_680/w_500,h_680,c_crop,y_0,x_350/me/night_owl.jpg');
   background-position: right -4rem bottom -40%;
   background-repeat: no-repeat;
   background-size: contain;
