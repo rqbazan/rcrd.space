@@ -18,6 +18,11 @@ export const Header = styled.header`
   ${breakpoints.md`
     box-shadow: unset;
     padding: 0;
+
+    /* burger button */
+    > div[role='button'] {
+      display: none;
+    }
   `}
 `
 
@@ -35,12 +40,16 @@ export const Content = styled.div`
 
 export const Navigation = styled.nav`
   align-items: center;
-  display: flex;
+  display: none;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0 24px;
   width: ${theme.breakpoints.md}px;
+
+  ${breakpoints.md`
+    display: flex;
+  `}
 
   > a {
     color: ${theme.colors.white};
