@@ -40,7 +40,7 @@ export default function WorkPost(props) {
                 href={links[iconName]}
                 key={links[iconName]}
                 target="__blank"
-                rel="noopener noreferrer"
+                rel="noopener"
               >
                 <FontAwesomeIcon
                   icon={theme.icons[iconName]}

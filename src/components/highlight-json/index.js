@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import { MobileContext } from 'src/contexts'
 import data from 'src/data.json'

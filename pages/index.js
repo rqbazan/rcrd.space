@@ -1,4 +1,5 @@
 /* eslint jsx-a11y/accessible-emoji: 0 */
+import React from 'react'
 import Head from 'next/head'
 import HomeScreen from 'screens/home'
 

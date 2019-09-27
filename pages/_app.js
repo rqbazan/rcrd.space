@@ -1,3 +1,4 @@
+import React from 'react'
 import NextApp from 'next/app'
 import Router from 'next/router'
 import GlobalStyle from 'src/global-style'

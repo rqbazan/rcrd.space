@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Media from 'react-media'
 import { MobileContext } from 'src/contexts'
 import { breakpoints } from 'src/theme'

@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function Burger(props) {
   const { isColorful, onClick } = props
 

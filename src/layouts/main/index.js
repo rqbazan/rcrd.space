@@ -1,5 +1,5 @@
+import React, { useContext, useState } from 'react'
 import Link from 'next/link'
-import { useContext, useState } from 'react'
 import { MobileContext } from 'src/contexts'
 import Menu from 'components/menu'
 import Burger from 'components/burger'

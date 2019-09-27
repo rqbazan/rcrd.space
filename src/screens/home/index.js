@@ -1,3 +1,4 @@
+import React from 'react'
 import HighlightJson from 'components/highlight-json'
 import MainLayout from 'layouts/main'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,7 +20,7 @@ export default function HomeScreen() {
               key={data.socialLinks[iconName]}
               href={data.socialLinks[iconName]}
               target="__blank"
-              rel="noopener noreferrer"
+              rel="noopener"
             >
               <FontAwesomeIcon
                 icon={theme.icons[iconName]}
