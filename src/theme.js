@@ -37,5 +37,5 @@ export const icons = {
   twitter: faTwitter,
   linkedin: faLinkedin,
   npm: faNpm,
-  deploy: faGlobeAmericas
+  website: faGlobeAmericas
 }
