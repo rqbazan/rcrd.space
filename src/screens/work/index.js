@@ -13,7 +13,13 @@ export default function WorkScreen({ workPosts }) {
             <ReactMarkdown
               source={workPost.body}
               escapeHtml={false}
-              linkTarget="_blank"
+              renderers={{
+                link: props => (
+                  <a href={props.href} rel="noreferrer" target="__blank">
+                    {props.children}
+                  </a>
+                )
+              }}
             />
           </WorkPost>
         ))}
