@@ -1,21 +1,12 @@
 import React from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Burger from '../burger'
 import { Container, Navigation } from './elements'
 
-function MenuItem(props) {
-  const { href, children, onClick } = props
-
-  return (
-    <Link href={href}>
-      {/* pass href manually to avoid eslint complain */}
-      <a href={href} onClick={onClick}>
-        {children}
-      </a>
-    </Link>
-  )
-}
+const menuItems = [
+  { href: '/', label: 'Home' },
+  { href: '/work', label: 'Work' }
+]
 
 export default function Menu(props) {
   const { isOpen, onClose } = props
@@ -23,9 +14,13 @@ export default function Menu(props) {
   const router = useRouter()
 
   function getOnItemClick(route) {
-    return () => {
+    return e => {
+      e.preventDefault()
+
       if (router.route === route) {
         onClose()
+      } else {
+        router.push(route)
       }
     }
   }
@@ -34,12 +29,15 @@ export default function Menu(props) {
     <Container isOpen={isOpen}>
       <Burger isColorful={false} onClick={onClose} />
       <Navigation>
-        <MenuItem href="/" onClick={getOnItemClick('/')}>
-          Home
-        </MenuItem>
-        <MenuItem href="/work" onClick={getOnItemClick('/work')}>
-          Work
-        </MenuItem>
+        {menuItems.map(item => (
+          <a
+            key={`mobile-menu-${item.href}`}
+            href={item.href}
+            onClick={getOnItemClick(item.href)}
+          >
+            {item.label}
+          </a>
+        ))}
       </Navigation>
     </Container>
   )
