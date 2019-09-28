@@ -45,7 +45,7 @@
         "github": "//github.com/rqbazan/hashing-with-pbkdf2",
         "website": "//hashing-with-pbkdf2.rqbazan.now.sh"
       },
-      "body": "Serverless application to use the pbkdf2 algorithm."
+      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)**."
     },
     {
       "title": "FeatFlag",
