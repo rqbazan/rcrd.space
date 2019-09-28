@@ -65,6 +65,10 @@ export default class Document extends NextDocument {
             type="text/css"
             media="screen"
           />
+          <meta
+            name="google-site-verification"
+            content="wvXG2Bj4EdcRG8LrO7G4ui-kkSvF-VK7gSjrFC-0a1M"
+          />
         </Head>
         <body>
           <Main />
