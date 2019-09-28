@@ -19,9 +19,6 @@ export default function MainLayout(props) {
           <Link href="/work">
             <a href="/work">Work</a>
           </Link>
-          <Link href="/credits">
-            <a href="/credits">Credits</a>
-          </Link>
         </Navigation>
         <Burger isColorful onClick={() => setMenuIsOpen(true)} />
       </Header>
