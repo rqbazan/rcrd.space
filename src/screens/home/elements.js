@@ -20,7 +20,7 @@ export const CoverageImg = styled.div`
   `}
 `
 
-export const Main = styled.main`
+export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

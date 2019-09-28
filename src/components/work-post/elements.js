@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import breakpoints from 'src/breakpoints'
 import * as theme from 'src/theme'
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -20,7 +20,7 @@ export const Dates = styled.div`
   `}
 `
 
-export const Contents = styled.section`
+export const Contents = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;

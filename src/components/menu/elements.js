@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import * as theme from 'src/theme'
 
-export const Container = styled.div`
+export const Container = styled.aside`
   background-color: white;
   display: ${props => (props.isOpen ? 'flex' : 'none')};
   height: 100vh;

@@ -4,7 +4,7 @@ import Icon from 'components/icon'
 import MainLayout from 'layouts/main'
 import * as theme from 'src/theme'
 import data from 'src/data.json'
-import { CoverageImg, Main, Navigation } from './elements'
+import { CoverageImg, InnerContainer, Navigation } from './elements'
 
 export default function HomeScreen() {
   return (
@@ -12,7 +12,7 @@ export default function HomeScreen() {
       style={{ minHeight: `calc(100vh - ${theme.sizes.headerHeight}px)` }}
     >
       <CoverageImg />
-      <Main>
+      <InnerContainer>
         <HighlightJson />
         <Navigation>
           {Object.keys(data.socialLinks).map(iconName => (
@@ -27,7 +27,7 @@ export default function HomeScreen() {
             </a>
           ))}
         </Navigation>
-      </Main>
+      </InnerContainer>
     </MainLayout>
   )
 }

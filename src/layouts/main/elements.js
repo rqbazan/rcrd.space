@@ -26,7 +26,7 @@ export const Header = styled.header`
   `}
 `
 
-export const Content = styled.div`
+export const Content = styled.main`
   display: flex;
   margin-top: ${theme.sizes.headerHeight}px;
   width: 100%;
