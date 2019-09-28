@@ -1,6 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as theme from 'src/theme'
+import Icon from 'components/icon'
 import {
   Container,
   Dates,
@@ -42,11 +41,7 @@ export default function WorkPost(props) {
                 target="__blank"
                 rel="noopener"
               >
-                <FontAwesomeIcon
-                  icon={theme.icons[iconName]}
-                  color={theme.colors.dark}
-                  size="2x"
-                />
+                <Icon size={32} name={iconName} />
               </a>
             ))}
           </Navigation>

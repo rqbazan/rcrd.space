@@ -1,11 +1,3 @@
-import {
-  faGithub,
-  faTwitter,
-  faLinkedin,
-  faNpm
-} from '@fortawesome/free-brands-svg-icons'
-import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
-
 export const breakpoints = {
   sm: 0,
   md: 737,
@@ -30,12 +22,4 @@ export const stacks = {
   header: 1,
   menu: 2,
   nprogress: 99
-}
-
-export const icons = {
-  github: faGithub,
-  twitter: faTwitter,
-  linkedin: faLinkedin,
-  npm: faNpm,
-  website: faGlobeAmericas
 }

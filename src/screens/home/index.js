@@ -1,7 +1,7 @@
 import React from 'react'
 import HighlightJson from 'components/highlight-json'
+import Icon from 'components/icon'
 import MainLayout from 'layouts/main'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as theme from 'src/theme'
 import data from 'src/data.json'
 import { CoverageImg, Main, Navigation } from './elements'
@@ -22,11 +22,7 @@ export default function HomeScreen() {
               target="__blank"
               rel="noopener"
             >
-              <FontAwesomeIcon
-                icon={theme.icons[iconName]}
-                color={theme.colors.selection}
-                size="2x"
-              />
+              <Icon name={iconName} color={theme.colors.selection} size={32} />
             </a>
           ))}
         </Navigation>

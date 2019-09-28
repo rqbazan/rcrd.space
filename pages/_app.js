@@ -2,10 +2,8 @@ import React from 'react'
 import NextApp from 'next/app'
 import Router from 'next/router'
 import GlobalStyle from 'src/global-style'
-import { config } from '@fortawesome/fontawesome-svg-core'
 import NProgress from 'nprogress'
 
-config.autoAddCss = false
 NProgress.configure({
   template: '<div class="bar" role="bar"></div>'
 })

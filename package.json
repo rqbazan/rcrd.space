@@ -21,10 +21,6 @@
     }
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.22",
-    "@fortawesome/free-brands-svg-icons": "^5.10.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "is-mobile": "^2.1.0",
     "next": "^9.0.5",
     "nprogress": "^0.2.0",
