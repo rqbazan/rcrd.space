@@ -18,12 +18,12 @@ export default function WorkPage({ workPosts }) {
 if (typeof window === 'undefined') {
   WorkPage.getInitialProps = async () => {
     // eslint-disable-next-line global-require
-    const remark = require('src/remark-twemoji')
+    const remarkTwemoji = require('src/remark-twemoji')
 
     const workPosts = data.workPosts.map(workPost => {
       return {
         ...workPost,
-        body: remark(workPost.body)
+        body: remarkTwemoji(workPost.body)
       }
     })
 
