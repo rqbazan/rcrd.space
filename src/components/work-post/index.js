@@ -34,21 +34,26 @@ export default function WorkPost(props) {
         </Article>
         <Metas>
           <Navigation>
-            {Object.keys(links).map(iconName => (
-              <a
-                href={links[iconName]}
-                key={links[iconName]}
-                target="__blank"
-                rel="noopener"
-              >
-                <Icon size={32} name={iconName} />
-              </a>
-            ))}
+            {Object.keys(links)
+              .sort()
+              .map(iconName => (
+                <a
+                  href={links[iconName]}
+                  key={links[iconName]}
+                  target="__blank"
+                  rel="noopener"
+                >
+                  <Icon size={32} name={iconName} />
+                </a>
+              ))}
           </Navigation>
           <Tags>
-            {tags.split(',').map(tag => (
-              <Tag key={tag}>{tag}</Tag>
-            ))}
+            {tags
+              .split(',')
+              .sort()
+              .map(tag => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
           </Tags>
         </Metas>
       </Contents>
