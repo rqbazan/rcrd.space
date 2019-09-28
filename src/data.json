@@ -18,6 +18,37 @@
   },
   "workPosts": [
     {
+      "title": "Sellers",
+      "startDate": "Feb 2018",
+      "endDate": "Oct 2019",
+      "tags": "ApolloClient,NextJS,StyledComponents,Heroku,Cloudinary",
+      "links": {
+        "website": "//www.riqra.com"
+      },
+      "body": "Ecommerce B2B for Riqra 🎉, offered as a SaaS solution. Some clients in production are: **[IL Pastificio](//www.ilpastificio.com/)**, **[Alicorp](//alicorp.riqra.com/)**, **[Quimica Suiza](//qmarket.riqra.com)**, **[Nestle](//sagatrans.riqra.com/)** and many others. (viewed on Sep-2019 👀)"
+    },
+    {
+      "title": "Sellers API",
+      "startDate": "Jul 2018",
+      "endDate": "Oct 2019",
+      "tags": "ApolloServer,Sequelize,NodeJS,Heroku,Docker,MySQL,BullJS,PostMark,Sentry,Jest,Redis",
+      "links": {
+        "website": "//www.riqra.com"
+      },
+      "body": "API for Riqra, exposed mainly as a GraphQL❤️ solution. Encapsulate bussiness logic for any generic ecommerce and also specific features for special vendors. Large codebase well-tested by hundred of integration tests 💪. Use background-workers for expensives and critial operations 💯."
+    },
+    {
+      "title": "Truck",
+      "startDate": "Feb 2018",
+      "endDate": "Oct 2019",
+      "tags": "React,StyledComponents,Rollup,SemanticRelease,CircleCI",
+      "links": {
+        "website": "//truck-master.surge.sh",
+        "npm": "//www.npmjs.com/package/@riqra/truck"
+      },
+      "body": "UI Components Library for Riqra 💅, used by all the frontend internal projects. Following the internal design system 👨‍🎨."
+    },
+    {
       "title": "This Site",
       "startDate": "Sep 2019",
       "tags": "NextJS,StyledComponents,Cloudinary,Now",
@@ -25,7 +56,7 @@
         "github": "//github.com/rqbazan/me",
         "website": "//sxntixgo.codes"
       },
-      "body": "Not a blog, I'm not a blogger. Just a side project to enjoy music while I code, and also to show things I've worked."
+      "body": "Not a blog, I'm not a blogger 🙃. Just a side project to enjoy music while I code, and also to show things I've worked ✌️."
     },
     {
       "title": "ZEIT Toast Clone",
@@ -35,17 +66,17 @@
         "github": "//github.com/rqbazan/zeit-toast-clone",
         "website": "//zeit-toast-clone.rqbazan.now.sh"
       },
-      "body": "A front-end challenge required by myself, I worked with animation effects powered by the awesome spring library. **[Here](//zeit.co/design/toast)** the original."
+      "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 **[Here](//zeit.co/design/toast)** the original."
     },
     {
       "title": "Hashing with PBKDF2",
       "startDate": "Apr 2019",
-      "tags": "Crypto,NextJS,Now",
+      "tags": "Crypto,NextJS,StyledComponents,Now",
       "links": {
         "github": "//github.com/rqbazan/hashing-with-pbkdf2",
         "website": "//hashing-with-pbkdf2.rqbazan.now.sh"
       },
-      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** and a sort of playground to hash any text like account safe passwords. My λ function is **[right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)**."
+      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** 👽 and a sort of playground to hash any text like account safe passwords. My λ function is **[right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)** ℹ️."
     },
     {
       "title": "FeatFlag",
@@ -56,7 +87,7 @@
         "website": "//nicedoc.io/rqbazan/featflag",
         "npm": "//www.npmjs.com/package/@rqbazan/featflag"
       },
-      "body": "A small and modern React library to use **[the feature toggling principle](//martinfowler.com/articles/feature-toggles.html)**, using the power of contexts. I've used this technical principle for some of my bigger projects."
+      "body": "A small and modern React library to use **[the feature toggling principle](//martinfowler.com/articles/feature-toggles.html)** 🤩, using the power of contexts. I've used this technical principle for some of my bigger projects."
     }
   ]
 }
