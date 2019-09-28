@@ -52,9 +52,9 @@ export default class Document extends NextDocument {
             property="og:image"
             content="https://res.cloudinary.com/dpwoyjb1f/image/upload/h_1200,w_1200,c_crop/me/night_owl.jpg"
           />
-          <meta property="og:url" content="https://me.rqbazan.now.sh" />
+          <meta property="og:url" content="https://sxntixgo.codes" />
           <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://me.rqbazan.now.sh" />
+          <link rel="canonical" href="https://sxntixgo.codes" />
           <link
             href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap"
             rel="stylesheet"
