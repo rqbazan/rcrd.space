@@ -32,15 +32,12 @@ export const Contents = styled.section`
 
 export const Article = styled.article`
   flex: 1;
+  font-size: 14px;
 
   > header {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 8px;
-  }
-
-  > p {
-    font-size: 14px;
   }
 
   ${breakpoints.lg`

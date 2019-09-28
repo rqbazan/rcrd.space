@@ -13,7 +13,7 @@ import {
 } from './elements'
 
 export default function WorkPost(props) {
-  const { title, body, startDate, endDate, tags, links } = props
+  const { title, startDate, endDate, tags, links, children } = props
 
   return (
     <Container>
@@ -31,7 +31,7 @@ export default function WorkPost(props) {
       <Contents>
         <Article>
           <header>{title}</header>
-          <p>{body}</p>
+          {children}
         </Article>
         <Metas>
           <Navigation>

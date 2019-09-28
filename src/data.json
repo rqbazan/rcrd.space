@@ -35,7 +35,7 @@
         "github": "//github.com/rqbazan/zeit-toast-clone",
         "website": "//zeit-toast-clone.rqbazan.now.sh"
       },
-      "body": "A front-end challenge required by myself, I worked with animation effects powered by the awesome spring library."
+      "body": "A front-end challenge required by myself, I worked with animation effects powered by the awesome spring library. **[Here](//zeit.co/design/toast)** the original."
     },
     {
       "title": "Hashing with PBKDF2",
@@ -56,7 +56,7 @@
         "npm": "//www.npmjs.com/package/@rqbazan/featflag",
         "website": "//nicedoc.io/rqbazan/featflag"
       },
-      "body": "A small and modern React library to use the feature toggling principle, using the power of contexts. I've used this technical principle for some of my bigger projects."
+      "body": "A small and modern React library to use **[the feature toggling principle](//martinfowler.com/articles/feature-toggles.html)**, using the power of contexts. I've used this technical principle for some of my bigger projects."
     }
   ]
 }
