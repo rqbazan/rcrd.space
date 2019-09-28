@@ -44,7 +44,6 @@ export const Navigation = styled.nav`
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 24px;
   width: ${theme.breakpoints.md}px;
 
   ${breakpoints.md`

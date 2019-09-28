@@ -1,8 +1,6 @@
 import React from 'react'
 
-export default function Burger(props) {
-  const { isColorful, onClick } = props
-
+export default function Burger({ isColorful, onClick }) {
   return (
     <div role="button" onClick={onClick} onKeyPress={onClick} tabIndex={0}>
       <img
