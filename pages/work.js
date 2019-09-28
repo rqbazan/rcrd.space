@@ -16,7 +16,7 @@ export default function WorkPage({ workPosts }) {
 }
 
 function getBaseUrl(req) {
-  if (process.env.NODE !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     return process.env.API
   }
 
