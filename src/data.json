@@ -40,12 +40,12 @@
     {
       "title": "Hashing with PBKDF2",
       "startDate": "Apr 2019",
-      "tags": "Crypto,Now",
+      "tags": "Crypto,NextJS,Now",
       "links": {
         "github": "//github.com/rqbazan/hashing-with-pbkdf2",
         "website": "//hashing-with-pbkdf2.rqbazan.now.sh"
       },
-      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)**."
+      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** and a sort of playground to hash any text like account safe passwords. My λ function is **[right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)**."
     },
     {
       "title": "FeatFlag",
@@ -53,8 +53,8 @@
       "tags": "Ava,Sinon,React,ReactTestingLibrary,TypeScript,Rollup",
       "links": {
         "github": "//github.com/rqbazan/featflag",
-        "npm": "//www.npmjs.com/package/@rqbazan/featflag",
-        "website": "//nicedoc.io/rqbazan/featflag"
+        "website": "//nicedoc.io/rqbazan/featflag",
+        "npm": "//www.npmjs.com/package/@rqbazan/featflag"
       },
       "body": "A small and modern React library to use **[the feature toggling principle](//martinfowler.com/articles/feature-toggles.html)**, using the power of contexts. I've used this technical principle for some of my bigger projects."
     }
