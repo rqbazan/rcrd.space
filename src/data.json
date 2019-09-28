@@ -39,7 +39,7 @@
     },
     {
       "title": "Truck",
-      "startDate": "Feb 2018",
+      "startDate": "Jun 2018",
       "endDate": "Oct 2019",
       "tags": "React,StyledComponents,Rollup,SemanticRelease,CircleCI",
       "links": {
