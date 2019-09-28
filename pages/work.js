@@ -1,10 +1,10 @@
 /* eslint jsx-a11y/accessible-emoji: 0 */
 import React from 'react'
 import Head from 'next/head'
+import fetch from 'isomorphic-unfetch'
 import WorkScreen from 'screens/work'
-import data from 'src/data.json'
 
-export default function WorkPage({ workPosts = data.workPosts }) {
+export default function WorkPage({ workPosts }) {
   return (
     <>
       <Head>
@@ -15,18 +15,22 @@ export default function WorkPage({ workPosts = data.workPosts }) {
   )
 }
 
-if (typeof window === 'undefined') {
-  WorkPage.getInitialProps = async () => {
-    // eslint-disable-next-line global-require
-    const remarkTwemoji = require('src/remark-twemoji')
-
-    const workPosts = data.workPosts.map(workPost => {
-      return {
-        ...workPost,
-        body: remarkTwemoji(workPost.body)
-      }
-    })
-
-    return { workPosts }
+function getBaseUrl(req) {
+  if (process.env.NODE !== 'production') {
+    return process.env.API
   }
+
+  if (!req) {
+    return ''
+  }
+
+  return `${req.protocol}://${req.headers['x-now-deployment-url']}`
+}
+
+WorkPage.getInitialProps = async ({ req }) => {
+  const baseUrl = getBaseUrl(req)
+  const response = await fetch(`${baseUrl}/api/works`)
+  const { workPosts } = await response.json()
+
+  return { workPosts }
 }

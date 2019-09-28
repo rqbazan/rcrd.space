@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "pre-dev": "rm -rf node_modules/.cache .next",
-    "dev": "next",
+    "dev": "node -r dotenv/config node_modules/.bin/next",
     "build": "next build",
     "start": "next start",
     "analyze": "ANALYZE=true next build"
@@ -23,6 +23,7 @@
   "dependencies": {
     "gatsby-remark-twemoji-shortcut": "^0.10.1",
     "is-mobile": "^2.1.0",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.0.5",
     "nprogress": "^0.2.0",
     "prism-react-renderer": "^0.1.7",
@@ -37,6 +38,7 @@
     "@next/bundle-analyzer": "^9.0.5",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-styled-components": "^1.11.0-0",
+    "dotenv": "^8.1.0",
     "eslint": "^6.4.0",
     "eslint-config-rqbazan-js": "^0.3.0",
     "eslint-import-resolver-babel-module": "^5.1.0",
