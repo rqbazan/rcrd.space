@@ -58,6 +58,8 @@ export default class Document extends NextDocument {
           <link
             href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap"
             rel="stylesheet"
+            type="text/css"
+            media="screen"
           />
         </Head>
         <body>
