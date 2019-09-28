@@ -42,6 +42,7 @@ export default function WorkPost(props) {
                   key={links[iconName]}
                   target="__blank"
                   rel="noopener"
+                  aria-label={iconName}
                 >
                   <Icon size={32} name={iconName} />
                 </a>
