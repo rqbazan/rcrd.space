@@ -21,6 +21,7 @@ export default function HomeScreen() {
               href={data.socialLinks[iconName]}
               target="__blank"
               rel="noopener"
+              aria-label={iconName}
             >
               <Icon name={iconName} color={theme.colors.selection} size={32} />
             </a>
