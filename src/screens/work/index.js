@@ -2,10 +2,9 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 import MainLayout from 'layouts/main'
 import WorkPost from 'components/work-post'
-import data from 'src/data.json'
 import { WorkPostsContainer } from './elements'
 
-export default function WorkScreen({ workPosts = data.workPosts }) {
+export default function WorkScreen({ workPosts }) {
   return (
     <MainLayout>
       <WorkPostsContainer>

@@ -4,7 +4,7 @@ import Head from 'next/head'
 import WorkScreen from 'screens/work'
 import data from 'src/data.json'
 
-export default function WorkPage({ workPosts }) {
+export default function WorkPage({ workPosts = data.workPosts }) {
   return (
     <>
       <Head>
