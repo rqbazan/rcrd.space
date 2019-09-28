@@ -66,7 +66,7 @@
         "github": "//github.com/rqbazan/zeit-toast-clone",
         "website": "//zeit-toast-clone.rqbazan.now.sh"
       },
-      "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 **[Here](//zeit.co/design/toast)** the original."
+      "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 **[Here the original](//zeit.co/design/toast)**."
     },
     {
       "title": "Hashing with PBKDF2",
@@ -76,7 +76,7 @@
         "github": "//github.com/rqbazan/hashing-with-pbkdf2",
         "website": "//hashing-with-pbkdf2.rqbazan.now.sh"
       },
-      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** 👽 and a sort of playground to hash any text like account safe passwords. My λ function is **[right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)** ℹ️."
+      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** 👽 and a sort of playground to hash any text like account safe passwords. **[My λ function is right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)** ℹ️."
     },
     {
       "title": "FeatFlag",
