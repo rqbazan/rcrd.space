@@ -3,6 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 import WorkScreen from 'screens/work'
+import { getBaseAPIUrl } from 'src/utils'
 
 export default function WorkPage({ workPosts }) {
   return (
@@ -15,21 +16,10 @@ export default function WorkPage({ workPosts }) {
   )
 }
 
-function getBaseUrl(req) {
-  if (process.env.NODE_ENV !== 'production') {
-    return process.env.API
-  }
-
-  if (!req) {
-    return ''
-  }
-
-  return `${req.protocol}://${req.headers['x-now-deployment-url']}`
-}
-
 WorkPage.getInitialProps = async ({ req }) => {
-  const baseUrl = getBaseUrl(req)
-  const response = await fetch(`${baseUrl}/api/works`)
+  const baseUrl = getBaseAPIUrl(req)
+
+  const response = await fetch(`${baseUrl}/works`)
   const { workPosts } = await response.json()
 
   return { workPosts }
