@@ -11,6 +11,7 @@ export default function IndexPage(props) {
     <MobileProvider fromMobile={fromMobile}>
       <Head>
         <title>👨🏻‍💻 Ricardo Q. Bazan (@rqbazan)</title>
+        <link rel="canonical" href="https://sxntixgo.codes" />
       </Head>
       <HomeScreen />
     </MobileProvider>

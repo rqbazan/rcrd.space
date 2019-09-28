@@ -58,7 +58,6 @@ export default class Document extends NextDocument {
           />
           <meta property="og:url" content="https://sxntixgo.codes" />
           <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://sxntixgo.codes" />
           <link
             href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap"
             rel="stylesheet"

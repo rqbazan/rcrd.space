@@ -10,6 +10,7 @@ export default function WorkPage({ workPosts }) {
     <>
       <Head>
         <title>🎉 Thing I’ve worked</title>
+        <link rel="canonical" href="https://sxntixgo.codes/work" />
       </Head>
       <WorkScreen workPosts={workPosts} />
     </>
