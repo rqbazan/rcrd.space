@@ -10,7 +10,7 @@ export default function IndexPage(props) {
   return (
     <MobileProvider fromMobile={fromMobile}>
       <Head>
-        <title>👨🏻‍💻 Ricardo Q. Bazan (@rqbazan)</title>
+        <title>Ricardo Q. Bazan (@rqbazan)</title>
         <link rel="canonical" href="https://sxntixgo.codes" />
       </Head>
       <HomeScreen />
