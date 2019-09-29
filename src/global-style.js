@@ -7,7 +7,9 @@ const GlobalStyle = createGlobalStyle`
   *::after {
     box-sizing: border-box;
     font-size: 100%;
+    font-weight: 400;
     font: inherit;
+    line-height: 1.6;
     margin: 0;
     min-height: 0;
     min-width: 0;
@@ -34,11 +36,6 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: ${theme.colors.dark};
     text-decoration: underline;
-  }
-
-  p {
-    line-height: 1.6;
-    font-weight: 400;
   }
 
   #nprogress {

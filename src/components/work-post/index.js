@@ -1,10 +1,10 @@
 import React from 'react'
 import Icon from 'components/icon'
+import Tag from 'components/tag'
 import {
   Container,
   Dates,
   Contents,
-  Tag,
   Article,
   Metas,
   Tags,
