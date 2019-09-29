@@ -25,7 +25,7 @@
       "links": {
         "website": "//www.riqra.com"
       },
-      "body": "Ecommerce B2B for Riqra 🎉, offered as a SaaS solution. Some clients in production are: **[IL Pastificio](//www.ilpastificio.com/)**, **[Alicorp](//alicorp.riqra.com/)**, **[Montana](//compraonline.corpmontana.com)**, **[Quimica Suiza](//qmarket.riqra.com)**, **[Nestle](//sagatrans.riqra.com/)** and **[many others](//directorio.riqra.com)**. (viewed on Sep-2019)"
+      "body": "Ecommerce B2C/B2B for Riqra 🎉, offered as a SaaS solution. Some clients in production are: **[IL Pastificio](//www.ilpastificio.com/)**, **[Alicorp](//alicorp.riqra.com/)**, **[Montana](//compraonline.corpmontana.com)**, **[Quimica Suiza](//qmarket.riqra.com)**, **[Nestle](//sagatrans.riqra.com/)** and **[many others](//directorio.riqra.com)**. (viewed on Sep-2019)"
     },
     {
       "title": "Sellers API",
@@ -35,7 +35,7 @@
       "links": {
         "website": "//www.riqra.com"
       },
-      "body": "API for Riqra, exposed mainly as a GraphQL❤️ solution. Encapsulate bussiness logic for any generic ecommerce and also specific features for special vendors. Large codebase well-tested by hundred of integration tests 💪. Use background-workers for expensives and critial operations 💯."
+      "body": "API for Riqra, exposed mainly as a GraphQL❤️ solution. Encapsulate bussiness logic for any generic B2C/B2B ecommerce and also specific features for special vendors. Large codebase well-tested by hundred of integration tests 💪. Use background-workers for expensives and critial operations 💯."
     },
     {
       "title": "Truck",
@@ -46,7 +46,7 @@
         "website": "//truck-master.surge.sh",
         "npm": "//www.npmjs.com/package/@riqra/truck"
       },
-      "body": "UI Components Library for Riqra 💅, used by all the frontend internal projects. Following the internal design system 👨‍🎨."
+      "body": "UI Components Library for Riqra 💅, used by all the frontend internal projects. Following the internal design system 👨‍🎨. Focused in CSS-in-JS."
     },
     {
       "title": "This Site",
