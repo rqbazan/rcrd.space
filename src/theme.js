@@ -9,7 +9,8 @@ export const colors = {
   bgColor: '#f2f2f2',
   white: '#fff',
   accent: '#fcd303',
-  dark: '#000'
+  dark: '#000',
+  body: '#474747'
 }
 
 export const sizes = {

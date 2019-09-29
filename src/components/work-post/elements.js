@@ -9,6 +9,7 @@ export const Container = styled.section`
 `
 
 export const Dates = styled.div`
+  color: ${theme.colors.body};
   font-size: 14px;
   margin-right: 16px;
   text-align: center;
@@ -38,6 +39,11 @@ export const Article = styled.article`
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 8px;
+  }
+
+  > p,
+  div {
+    color: ${theme.colors.body};
   }
 
   ${breakpoints.lg`
