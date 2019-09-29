@@ -44,7 +44,7 @@ export default function WorkPost(props) {
                   rel="noopener"
                   aria-label={iconName}
                 >
-                  <Icon size={32} name={iconName} />
+                  <Icon size={24} name={iconName} />
                 </a>
               ))}
           </Navigation>
