@@ -88,7 +88,6 @@ export const Navigation = styled.nav`
 
   > a {
     padding: 8px;
-    font-size: 14px;
   }
 
   ${breakpoints.lg`
