@@ -37,7 +37,7 @@ export const Article = styled.article`
 
   > header {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 8px;
   }
 

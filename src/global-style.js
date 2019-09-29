@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: ${theme.colors.bgColor};
-    font-family: 'Space Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
   }
@@ -36,8 +36,9 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: underline;
   }
 
-  strong {
-    font-weight: 700;
+  p {
+    line-height: 1.6;
+    font-weight: 400;
   }
 
   #nprogress {

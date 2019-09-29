@@ -30,7 +30,7 @@ export const Navigation = styled.nav`
 
   > a {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 300;
   }
 
   > *:not(:last-child) {
