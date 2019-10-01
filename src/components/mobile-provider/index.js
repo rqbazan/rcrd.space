@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Media from 'react-media'
 import { MobileContext } from 'src/contexts'
-import { breakpoints } from 'src/theme'
+import theme from 'src/theme'
 
 const defaultQuery = {
-  maxWidth: breakpoints.md
+  maxWidth: theme.breakpoints.md
 }
 
 export default function MobileProvider(props) {

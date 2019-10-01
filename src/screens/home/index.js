@@ -2,7 +2,7 @@ import React from 'react'
 import HighlightJson from 'components/highlight-json'
 import Icon from 'components/icon'
 import MainLayout from 'layouts/main'
-import * as theme from 'src/theme'
+import theme from 'src/theme'
 import data from 'src/data.json'
 import { CoverageImg, InnerContainer, Navigation } from './elements'
 

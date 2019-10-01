@@ -1,7 +1,7 @@
 import React from 'react'
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import * as theme from 'src/theme'
+import theme from 'src/theme'
 import data from 'src/data.json'
 
 export default class Document extends NextDocument {

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import breakpoints from 'utils/breakpoints'
-import * as theme from 'src/theme'
+import theme from 'src/theme'
 
 export const Header = styled.header`
   align-items: center;

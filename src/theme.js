@@ -1,10 +1,10 @@
-export const breakpoints = {
+const breakpoints = {
   sm: 0,
   md: 737,
   lg: 1025
 }
 
-export const colors = {
+const colors = {
   selection: '#00fff2',
   bgColor: '#f2f2f2',
   white: '#fff',
@@ -13,14 +13,21 @@ export const colors = {
   body: '#474747'
 }
 
-export const sizes = {
+const sizes = {
   headerHeight: 56,
   headerPadding: 24
 }
 
-export const stacks = {
+const stacks = {
   coverageImg: -1,
   header: 1,
   menu: 2,
   nprogress: 99
+}
+
+export default {
+  breakpoints,
+  colors,
+  sizes,
+  stacks
 }

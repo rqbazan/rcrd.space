@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import * as theme from 'src/theme'
+import theme from 'src/theme'
 
 export const Container = styled.aside`
   background-color: white;

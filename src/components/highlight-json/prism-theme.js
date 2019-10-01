@@ -1,4 +1,4 @@
-import * as theme from 'src/theme'
+import theme from 'src/theme'
 
 export default {
   styles: [

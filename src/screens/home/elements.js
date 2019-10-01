@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import breakpoints from 'utils/breakpoints'
-import * as theme from 'src/theme'
+import theme from 'src/theme'
 
 export const CoverageImg = styled.div`
   background-color: ${theme.colors.dark};
