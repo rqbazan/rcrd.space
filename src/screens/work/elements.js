@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoints from 'src/breakpoints'
+import breakpoints from 'utils/breakpoints'
 
 export const WorkPostsContainer = styled.div`
   margin: 32px 0;

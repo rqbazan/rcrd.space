@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 import WorkScreen from 'screens/work'
-import { getBaseAPIUrl } from 'src/utils'
+import getBaseAPIUrl from 'utils/get-base-api-url'
 
 export default function WorkPage({ workPosts }) {
   return (

@@ -1,4 +1,4 @@
-export function getBaseAPIUrl(req) {
+export default function getBaseAPIUrl(req) {
   // for development
   if (process.env.NODE_ENV !== 'production') {
     return `${process.env.API}/api`

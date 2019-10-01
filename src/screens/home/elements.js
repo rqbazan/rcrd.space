@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import breakpoints from 'src/breakpoints'
+import breakpoints from 'utils/breakpoints'
 import * as theme from 'src/theme'
 
 export const CoverageImg = styled.div`

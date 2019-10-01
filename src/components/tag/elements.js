@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoints from 'src/breakpoints'
+import breakpoints from 'utils/breakpoints'
 
 export const Container = styled.span`
   background-color: ${props => props.bgColor};
