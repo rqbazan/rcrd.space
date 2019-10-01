@@ -49,12 +49,9 @@ export default function WorkPost(props) {
               ))}
           </Navigation>
           <Tags>
-            {tags
-              .split(',')
-              .sort()
-              .map(tag => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
+            {tags.split(',').map(tag => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
           </Tags>
         </Metas>
       </Contents>

@@ -22,7 +22,7 @@
       "slug": "this-site",
       "startDate": "Sep 2019",
       "endDate": "∞",
-      "tags": "NextJS,StyledComponents,Cloudinary,Now",
+      "tags": "NextJS,Cloudinary,WorkBox,Now,StyledComponents",
       "links": {
         "github": "//github.com/rqbazan/me",
         "website": "//sxntixgo.codes"
@@ -33,7 +33,7 @@
       "title": "ZEIT Toast Clone",
       "slug": "zeit-toast-clone",
       "endDate": "Sep 2019",
-      "tags": "Storybook,TypeScript,React,ReactSpring",
+      "tags": "Storybook,React,ReactSpring,TypeScript",
       "links": {
         "github": "//github.com/rqbazan/zeit-toast-clone",
         "website": "//zeit-toast-clone.rqbazan.now.sh"
@@ -45,7 +45,7 @@
       "slug": "sellers",
       "startDate": "Feb 2018",
       "endDate": "Aug 2019",
-      "tags": "ApolloClient,NextJS,StyledComponents,Heroku,Cloudinary,Storybook,Algolia",
+      "tags": "ApolloClient,NextJS,Heroku,Cloudinary,Algolia,Storybook,StyledComponents",
       "links": {
         "website": "//www.riqra.com"
       },
@@ -67,7 +67,7 @@
       "slug": "truck",
       "startDate": "Jun 2018",
       "endDate": "Aug 2019",
-      "tags": "React,StyledComponents,Rollup,SemanticRelease,CircleCI,Storybook",
+      "tags": "React,Storybook,Rollup,CircleCI,StyledComponents,SemanticRelease",
       "links": {
         "website": "//truck-master.surge.sh",
         "npm": "//www.npmjs.com/package/@riqra/truck"
@@ -90,7 +90,7 @@
       "slug": "directory",
       "startDate": "Sep 2018",
       "endDate": "Mar 2019",
-      "tags": "Sequelize,Heroku,NextJS,ForestAdmin,Algolia",
+      "tags": "Sequelize,Heroku,ForestAdmin,NextJS,Algolia",
       "links": {
         "website": "//directorio.riqra.com"
       },
