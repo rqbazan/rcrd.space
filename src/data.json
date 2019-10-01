@@ -19,29 +19,43 @@
   "workPosts": [
     {
       "title": "Sellers",
+      "slug": "sellers",
       "startDate": "Feb 2018",
       "endDate": "Oct 2019",
-      "tags": "ApolloClient,NextJS,StyledComponents,Heroku,Cloudinary",
+      "tags": "ApolloClient,NextJS,StyledComponents,Heroku,Cloudinary,Storybook,Algolia",
       "links": {
         "website": "//www.riqra.com"
       },
-      "body": "Ecommerce B2C/B2B for Riqra 🎉, offered as a SaaS solution. Some clients in production are: **[IL Pastificio](//www.ilpastificio.com/)**, **[Alicorp](//alicorp.riqra.com/)**, **[Montana](//compraonline.corpmontana.com)**, **[Quimica Suiza](//qmarket.riqra.com)**, **[Nestle](//sagatrans.riqra.com/)** and **[many others](//directorio.riqra.com)**. (viewed on Sep-2019)"
+      "body": "Ecommerce B2C and B2B for Riqra 🎉, offered as a SaaS solution for different LATAM countries. Some clients in production are: **[IL Pastificio](//www.ilpastificio.com/)**, **[Alicorp](//alicorp.riqra.com/)**, **[Montana](//compraonline.corpmontana.com)**, **[Quimica Suiza](//qmarket.riqra.com)**, **[Nestle](//sagatrans.riqra.com/)** and **[many others](//directorio.riqra.com)**. (viewed on Sep-2019)"
     },
     {
       "title": "Sellers API",
+      "slug": "sellers-api",
       "startDate": "Jul 2018",
       "endDate": "Oct 2019",
       "tags": "ApolloServer,Sequelize,NodeJS,Heroku,Docker,MySQL,BullJS,PostMark,Sentry,Jest,Redis",
       "links": {
         "website": "//www.riqra.com"
       },
-      "body": "API for Riqra, exposed mainly as a GraphQL❤️ solution. Encapsulate bussiness logic for any generic B2C/B2B ecommerce and also specific features for special vendors. Large codebase well-tested by hundred of integration tests 💪. Use background-workers for expensives and critial operations 💯."
+      "body": "API for Riqra, exposed mainly as a GraphQL❤️ solution. Encapsulate bussiness logic for any generic ecommerce and also specific features for some vendors. Large codebase well-tested by hundred of integration tests 💪. Use background-workers for expensive and critial operations 💯."
+    },
+    {
+      "title": "Directory",
+      "slug": "directory",
+      "startDate": "Sep 2018",
+      "endDate": "Mar 2019",
+      "tags": "Sequelize,Heroku,NextJS,ForestAdmin,Algolia",
+      "links": {
+        "website": "//directorio.riqra.com"
+      },
+      "body": "Simple and useful monolithic application for Riqra to discover and contact vendors, taking advance of Algolia Instant Search 🔍. RESTful and NextJS solution first-time use of Truck. 🙌"
     },
     {
       "title": "Truck",
+      "slug": "truck",
       "startDate": "Jun 2018",
       "endDate": "Oct 2019",
-      "tags": "React,StyledComponents,Rollup,SemanticRelease,CircleCI",
+      "tags": "React,StyledComponents,Rollup,SemanticRelease,CircleCI,Storybook",
       "links": {
         "website": "//truck-master.surge.sh",
         "npm": "//www.npmjs.com/package/@riqra/truck"
@@ -50,6 +64,7 @@
     },
     {
       "title": "This Site",
+      "slug": "this-site",
       "startDate": "Sep 2019",
       "tags": "NextJS,StyledComponents,Cloudinary,Now",
       "links": {
@@ -60,6 +75,7 @@
     },
     {
       "title": "ZEIT Toast Clone",
+      "slug": "zeit-toast-clone",
       "startDate": "Sep 2019",
       "tags": "Storybook,TypeScript,React,ReactSpring",
       "links": {
@@ -70,6 +86,7 @@
     },
     {
       "title": "Hashing with PBKDF2",
+      "slug": "hashing-with-pbkdf2",
       "startDate": "Apr 2019",
       "tags": "Crypto,NextJS,StyledComponents,Now",
       "links": {
@@ -80,6 +97,7 @@
     },
     {
       "title": "FeatFlag",
+      "slug": "featflag",
       "startDate": "Mar 2019",
       "tags": "Ava,Sinon,React,ReactTestingLibrary,TypeScript,Rollup",
       "links": {
