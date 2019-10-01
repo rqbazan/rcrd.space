@@ -42,7 +42,6 @@
     "eslint": "^6.5.0",
     "eslint-config-rqbazan-js": "^0.3.0",
     "eslint-import-resolver-babel-module": "^5.1.0",
-    "next-offline": "^4.0.5",
     "prettier": "^1.18.2"
   }
 }
