@@ -18,26 +18,72 @@
   },
   "workPosts": [
     {
+      "title": "This Site",
+      "slug": "this-site",
+      "startDate": "Sep 2019",
+      "endDate": "∞",
+      "tags": "NextJS,StyledComponents,Cloudinary,Now",
+      "links": {
+        "github": "//github.com/rqbazan/me",
+        "website": "//sxntixgo.codes"
+      },
+      "body": "Not a blog, I'm not a blogger 🙃. Just a side project to enjoy music while I code, and also to show things I've worked ✌️."
+    },
+    {
+      "title": "ZEIT Toast Clone",
+      "slug": "zeit-toast-clone",
+      "endDate": "Sep 2019",
+      "tags": "Storybook,TypeScript,React,ReactSpring",
+      "links": {
+        "github": "//github.com/rqbazan/zeit-toast-clone",
+        "website": "//zeit-toast-clone.rqbazan.now.sh"
+      },
+      "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 **[Here the original](//zeit.co/design/toast)**."
+    },
+    {
       "title": "Sellers",
       "slug": "sellers",
       "startDate": "Feb 2018",
-      "endDate": "Oct 2019",
+      "endDate": "Aug 2019",
       "tags": "ApolloClient,NextJS,StyledComponents,Heroku,Cloudinary,Storybook,Algolia",
       "links": {
         "website": "//www.riqra.com"
       },
-      "body": "Ecommerce B2C and B2B for Riqra 🎉, offered as a SaaS solution for different LATAM countries. Some clients in production are: **[IL Pastificio](//www.ilpastificio.com/)**, **[Alicorp](//alicorp.riqra.com/)**, **[Montana](//compraonline.corpmontana.com)**, **[Quimica Suiza](//qmarket.riqra.com)**, **[Nestle](//sagatrans.riqra.com/)** and **[many others](//directorio.riqra.com)**. (viewed on Sep-2019)"
+      "body": "Ecommerce B2C and B2B for Riqra 🎉, offered as a SaaS solution for different LATAM countries 🌎. Some clients in production are: **[IL Pastificio](//www.ilpastificio.com/)**, **[Alicorp](//alicorp.riqra.com/)**, **[Montana](//compraonline.corpmontana.com)**, **[Quimica Suiza](//qmarket.riqra.com)**, **[Nestle](//sagatrans.riqra.com/)** and **[many others](//directorio.riqra.com)**. (viewed on Sep-2019)"
     },
     {
       "title": "Sellers API",
       "slug": "sellers-api",
-      "startDate": "Jul 2018",
-      "endDate": "Oct 2019",
+      "startDate": "Feb 2018",
+      "endDate": "Aug 2019",
       "tags": "ApolloServer,Sequelize,NodeJS,Heroku,Docker,MySQL,BullJS,PostMark,Sentry,Jest,Redis",
       "links": {
         "website": "//www.riqra.com"
       },
       "body": "API for Riqra, exposed mainly as a GraphQL❤️ solution. Encapsulate bussiness logic for any generic ecommerce and also specific features for some vendors. Large codebase well-tested by hundred of integration tests 💪. Use background-workers for expensive and critial operations 💯."
+    },
+    {
+      "title": "Truck",
+      "slug": "truck",
+      "startDate": "Jun 2018",
+      "endDate": "Aug 2019",
+      "tags": "React,StyledComponents,Rollup,SemanticRelease,CircleCI,Storybook",
+      "links": {
+        "website": "//truck-master.surge.sh",
+        "npm": "//www.npmjs.com/package/@riqra/truck"
+      },
+      "body": "UI Components Library for Riqra 💅, used by all the frontend internal projects. Following the internal design system 👨‍🎨. Focused in CSS-in-JS."
+    },
+    {
+      "title": "Hashing with PBKDF2",
+      "slug": "hashing-with-pbkdf2",
+      "endDate": "Apr 2019",
+      "tags": "Crypto,NextJS,StyledComponents,Now",
+      "links": {
+        "github": "//github.com/rqbazan/hashing-with-pbkdf2",
+        "website": "//hashing-with-pbkdf2.rqbazan.now.sh"
+      },
+      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** 👽 and a sort of playground to hash any text like account safe passwords. **[My λ function is right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)** ℹ️."
     },
     {
       "title": "Directory",
@@ -51,54 +97,9 @@
       "body": "Simple and useful monolithic application for Riqra to discover and contact vendors, taking advance of Algolia Instant Search 🔍. RESTful and NextJS solution first-time use of Truck. 🙌"
     },
     {
-      "title": "Truck",
-      "slug": "truck",
-      "startDate": "Jun 2018",
-      "endDate": "Oct 2019",
-      "tags": "React,StyledComponents,Rollup,SemanticRelease,CircleCI,Storybook",
-      "links": {
-        "website": "//truck-master.surge.sh",
-        "npm": "//www.npmjs.com/package/@riqra/truck"
-      },
-      "body": "UI Components Library for Riqra 💅, used by all the frontend internal projects. Following the internal design system 👨‍🎨. Focused in CSS-in-JS."
-    },
-    {
-      "title": "This Site",
-      "slug": "this-site",
-      "startDate": "Sep 2019",
-      "tags": "NextJS,StyledComponents,Cloudinary,Now",
-      "links": {
-        "github": "//github.com/rqbazan/me",
-        "website": "//sxntixgo.codes"
-      },
-      "body": "Not a blog, I'm not a blogger 🙃. Just a side project to enjoy music while I code, and also to show things I've worked ✌️."
-    },
-    {
-      "title": "ZEIT Toast Clone",
-      "slug": "zeit-toast-clone",
-      "startDate": "Sep 2019",
-      "tags": "Storybook,TypeScript,React,ReactSpring",
-      "links": {
-        "github": "//github.com/rqbazan/zeit-toast-clone",
-        "website": "//zeit-toast-clone.rqbazan.now.sh"
-      },
-      "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 **[Here the original](//zeit.co/design/toast)**."
-    },
-    {
-      "title": "Hashing with PBKDF2",
-      "slug": "hashing-with-pbkdf2",
-      "startDate": "Apr 2019",
-      "tags": "Crypto,NextJS,StyledComponents,Now",
-      "links": {
-        "github": "//github.com/rqbazan/hashing-with-pbkdf2",
-        "website": "//hashing-with-pbkdf2.rqbazan.now.sh"
-      },
-      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** 👽 and a sort of playground to hash any text like account safe passwords. **[My λ function is right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)** ℹ️."
-    },
-    {
       "title": "FeatFlag",
       "slug": "featflag",
-      "startDate": "Mar 2019",
+      "endDate": "Mar 2019",
       "tags": "Ava,Sinon,React,ReactTestingLibrary,TypeScript,Rollup",
       "links": {
         "github": "//github.com/rqbazan/featflag",

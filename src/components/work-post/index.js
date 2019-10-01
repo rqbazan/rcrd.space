@@ -17,13 +17,13 @@ export default function WorkPost(props) {
   return (
     <Container>
       <Dates>
-        {startDate}
-        {endDate && (
+        <span>{endDate}</span>
+        {startDate && (
           <>
             <br />
             {'|'}
             <br />
-            {endDate}
+            <span>{startDate}</span>
           </>
         )}
       </Dates>

@@ -10,7 +10,7 @@ export const Container = styled.section`
 
 export const Dates = styled.div`
   color: ${theme.colors.body};
-  font-size: 14px;
+  font-size: 12px;
   margin-right: 16px;
   text-align: center;
   width: 2.5em;
