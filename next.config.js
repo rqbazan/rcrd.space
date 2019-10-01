@@ -17,7 +17,6 @@ module.exports = withBundleAnalyzer(
           handler: 'CacheFirst',
           options: {
             cacheName: 'images',
-            networkTimeoutSeconds: 15,
             expiration: {
               maxEntries: 150,
               maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
