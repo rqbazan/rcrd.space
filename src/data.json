@@ -114,6 +114,7 @@
     {
       "title": "Programming Challenges",
       "slug": "programming-challenges",
+      "featured": true,
       "startDate": "Oct 2015",
       "endDate": "∞",
       "tags": "C++,DataStructure,Algorithm,ACMICPC,OnlineJudges",
