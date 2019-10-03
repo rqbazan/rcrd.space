@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from 'components/icon'
 import Tag from 'components/tag'
+import Star from 'components/star'
 import {
   Container,
   Dates,
@@ -11,9 +12,15 @@ import {
   Navigation
 } from './elements'
 
-export default function WorkPost(props) {
-  const { title, startDate, endDate, tags, links, children } = props
-
+export default function WorkPost({
+  title,
+  startDate,
+  endDate,
+  tags,
+  links,
+  featured,
+  children
+}) {
   return (
     <Container>
       <Dates>
@@ -29,7 +36,10 @@ export default function WorkPost(props) {
       </Dates>
       <Contents>
         <Article>
-          <header>{title}</header>
+          <header>
+            {featured && <Star style={{ marginRight: '0.3rem' }} />}
+            {title}
+          </header>
           {children}
         </Article>
         <Metas>

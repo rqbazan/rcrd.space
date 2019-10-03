@@ -43,6 +43,7 @@
     {
       "title": "Sellers",
       "slug": "sellers",
+      "featured": true,
       "startDate": "Feb 2018",
       "endDate": "Aug 2019",
       "tags": "ApolloClient,NextJS,Heroku,Cloudinary,Algolia,Storybook,StyledComponents",
@@ -54,6 +55,7 @@
     {
       "title": "Sellers API",
       "slug": "sellers-api",
+      "featured": true,
       "startDate": "Feb 2018",
       "endDate": "Aug 2019",
       "tags": "ApolloServer,Sequelize,NodeJS,Heroku,Docker,MySQL,BullJS,PostMark,Sentry,Jest,Redis",
@@ -65,6 +67,7 @@
     {
       "title": "Truck",
       "slug": "truck",
+      "featured": true,
       "startDate": "Jun 2018",
       "endDate": "Aug 2019",
       "tags": "React,Storybook,Rollup,CircleCI,StyledComponents,SemanticRelease",
