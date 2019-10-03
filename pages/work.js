@@ -18,9 +18,7 @@ export default function WorkPage({ workPosts }) {
 
 WorkPage.getInitialProps = async ({ req }) => {
   const baseUrl = getBaseAPIUrl(req)
-
   const response = await fetch(`${baseUrl}/works`)
-  const { workPosts } = await response.json()
 
-  return { workPosts }
+  return response.json()
 }

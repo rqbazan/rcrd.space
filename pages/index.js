@@ -1,29 +1,29 @@
 import React from 'react'
 import Head from 'next/head'
+import fetch from 'isomorphic-unfetch'
+import detectMobile from 'is-mobile'
 import HomeScreen from 'screens/home'
-import MobileProvider from 'components/mobile-provider'
+import getBaseAPIUrl from 'utils/get-base-api-url'
 
-export default function IndexPage(props) {
-  const { fromMobile } = props
-
+export default function IndexPage({ fromMobile, profile }) {
   return (
-    <MobileProvider fromMobile={fromMobile}>
+    <>
       <Head>
         <title>Ricardo Q. Bazan (@rqbazan)</title>
         <link rel="canonical" href="https://sxntixgo.codes" />
       </Head>
-      <HomeScreen />
-    </MobileProvider>
+      <HomeScreen fromMobile={fromMobile} profile={profile} />
+    </>
   )
 }
 
-if (typeof window === 'undefined') {
-  IndexPage.getInitialProps = async ctx => {
-    const isMobileOptions = { ua: ctx.req, tablet: true }
+IndexPage.getInitialProps = async ({ req }) => {
+  const baseUrl = getBaseAPIUrl(req)
 
-    return {
-      // eslint-disable-next-line global-require
-      fromMobile: require('is-mobile')(isMobileOptions)
-    }
-  }
+  const fromMobile = detectMobile({ ua: req, tablet: true })
+
+  const response = await fetch(`${baseUrl}/profile`)
+  const { profile } = await response.json()
+
+  return { profile, fromMobile }
 }

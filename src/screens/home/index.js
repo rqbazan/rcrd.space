@@ -3,22 +3,25 @@ import HighlightJson from 'components/highlight-json'
 import Icon from 'components/icon'
 import MainLayout from 'layouts/main'
 import theme from 'src/theme'
-import data from 'src/data.json'
 import { CoverageImg, InnerContainer, Navigation } from './elements'
 
-export default function HomeScreen() {
+export default function HomeScreen({ fromMobile, profile }) {
   return (
     <MainLayout
       style={{ minHeight: `calc(100vh - ${theme.sizes.headerHeight}px)` }}
     >
       <CoverageImg />
       <InnerContainer>
-        <HighlightJson />
+        <HighlightJson
+          fromMobile={fromMobile}
+          mobileCode={profile.mobileCode}
+          desktopCode={profile.desktopCode}
+        />
         <Navigation>
-          {Object.keys(data.socialLinks).map(iconName => (
+          {Object.keys(profile.socialLinks).map(iconName => (
             <a
-              key={data.socialLinks[iconName]}
-              href={data.socialLinks[iconName]}
+              key={profile.socialLinks[iconName]}
+              href={profile.socialLinks[iconName]}
               target="__blank"
               rel="noopener"
               aria-label={iconName}

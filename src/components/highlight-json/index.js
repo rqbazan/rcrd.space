@@ -1,36 +1,42 @@
-import React, { useContext } from 'react'
+import React, { useState } from 'react'
+import Media from 'react-media'
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import { MobileContext } from 'src/contexts'
-import data from 'src/data.json'
+import theme from 'src/theme'
 import prismTheme from './prism-theme'
 import { Pre } from './elements'
 
-const curlyBracketsIdentation = /^[{}]?\s{0,5}/gm
+const defaultQuery = {
+  maxWidth: theme.breakpoints.md
+}
 
-const desktopCode = JSON.stringify(data.profile, null, 4)
-const mobileCode = desktopCode.replace(curlyBracketsIdentation, '').trim()
-
-export default function HighlightCode() {
-  const isMobile = useContext(MobileContext)
+export default function HighlightCode({ fromMobile, desktopCode, mobileCode }) {
+  const [isMobile, setIsMobile] = useState(fromMobile)
 
   return (
-    <Highlight
-      {...defaultProps}
-      theme={prismTheme}
-      code={isMobile ? mobileCode : desktopCode}
-      language="json"
-    >
-      {({ tokens, getLineProps, getTokenProps }) => (
-        <Pre>
-          {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: `code-line-${i}` })}>
-              {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
-              ))}
-            </div>
-          ))}
-        </Pre>
-      )}
-    </Highlight>
+    <>
+      <Media
+        defaultMatches={fromMobile}
+        query={defaultQuery}
+        onChange={matches => setIsMobile(matches)}
+      />
+      <Highlight
+        {...defaultProps}
+        language="json"
+        theme={prismTheme}
+        code={isMobile ? mobileCode : desktopCode}
+      >
+        {({ tokens, getLineProps, getTokenProps }) => (
+          <Pre>
+            {tokens.map((line, i) => (
+              <div {...getLineProps({ line, key: `code-line-${i}` })}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))}
+          </Pre>
+        )}
+      </Highlight>
+    </>
   )
 }
