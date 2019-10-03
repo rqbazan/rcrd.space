@@ -107,6 +107,17 @@
         "npm": "//www.npmjs.com/package/@rqbazan/featflag"
       },
       "body": "A small and modern React library to use **[the feature toggling principle](//martinfowler.com/articles/feature-toggles.html)** 🤩, using the power of contexts. I've used this technical principle for some of my bigger projects."
+    },
+    {
+      "title": "Programming Challenges",
+      "slug": "programming-challenges",
+      "startDate": "Oct 2015",
+      "endDate": "∞",
+      "tags": "C++,DataStructure,Algorithm,ACMICPC,OnlineJudges",
+      "links": {
+        "github": "//github.com/rqbazan/Programming-Challenge"
+      },
+      "body": "Compilation of solutions for different programming challenges from ad-hoc problems to graph theory 🤓."
     }
   ]
 }
