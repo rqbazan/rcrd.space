@@ -54,6 +54,10 @@ export const Navigation = styled.nav`
     color: ${theme.colors.white};
   }
 
+  > a:last-child {
+    margin-left: auto;
+  }
+
   > a:not(:last-child) {
     margin-right: 32px;
   }

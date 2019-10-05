@@ -38,6 +38,9 @@ export default function Menu(props) {
             {item.label}
           </a>
         ))}
+        <a href="/static/resume.pdf" target="__blank" rel="noopener">
+          Resume
+        </a>
       </Navigation>
     </Container>
   )
