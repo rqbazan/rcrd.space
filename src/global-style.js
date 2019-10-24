@@ -38,6 +38,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: underline;
   }
 
+  strong {
+    font-weight: 500;
+  }
+
   #nprogress {
     pointer-events: none;
   }

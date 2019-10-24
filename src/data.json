@@ -18,6 +18,17 @@
   },
   "workPosts": [
     {
+      "title": "AIMO challenge",
+      "slug": "aimo-challenge",
+      "endDate": "Oct 2019",
+      "tags": "TailwindCSS,NextJS,TypeScript,Now,GithubActions",
+      "links": {
+        "github": "//github.com/rqbazan/aimo-challenge",
+        "website": "//aimo-challenge.rqbazan.now.sh"
+      },
+      "body": "The solution for [the AIMO challenge](https://github.com/aimo/prueba-frontend), in order to get the **Software Engineer Frontend** position of the company."
+    },
+    {
       "title": "This Site",
       "slug": "this-site",
       "startDate": "Sep 2019",
