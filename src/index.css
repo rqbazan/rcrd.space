@@ -1,0 +1,46 @@
+@tailwind utilities;
+
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+
+::selection {
+  background-color: theme('colors.selection');
+  color: black;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: theme('colors.body');
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: 500;
+}
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background-color: theme('colors.selection');
+  height: 2px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: theme('zIndex.50');
+}
+
+/* purgecss end ignore */

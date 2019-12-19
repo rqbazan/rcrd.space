@@ -3,7 +3,6 @@ import Media from 'react-media'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'src/theme'
 import prismTheme from './prism-theme'
-import { Pre } from './elements'
 
 const defaultQuery = {
   maxWidth: theme.breakpoints.md
@@ -26,7 +25,7 @@ export default function HighlightCode({ fromMobile, desktopCode, mobileCode }) {
         code={isMobile ? mobileCode : desktopCode}
       >
         {({ tokens, getLineProps, getTokenProps }) => (
-          <Pre>
+          <pre className="block text-sm leading-loose w-full lg:text-lg">
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: `code-line-${i}` })}>
                 {line.map((token, key) => (
@@ -34,7 +33,7 @@ export default function HighlightCode({ fromMobile, desktopCode, mobileCode }) {
                 ))}
               </div>
             ))}
-          </Pre>
+          </pre>
         )}
       </Highlight>
     </>
