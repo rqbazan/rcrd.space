@@ -21,9 +21,7 @@
     }
   },
   "dependencies": {
-    "gatsby-remark-twemoji-shortcut": "0.10.1",
     "is-mobile": "^2.1.0",
-    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.1.6",
     "nprogress": "^0.2.0",
     "prism-react-renderer": "^1.0.2",
@@ -36,6 +34,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^9.1.6",
+    "@zeit/next-css": "^1.0.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.11.0-0",
     "dotenv": "^8.2.0",

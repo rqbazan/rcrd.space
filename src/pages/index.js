@@ -1,9 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
-import fetch from 'isomorphic-unfetch'
 import detectMobile from 'is-mobile'
 import HomeScreen from 'screens/home'
-import getBaseAPIUrl from 'utils/get-base-api-url'
+import data from 'src/data.json'
+
+const curlyBracketsIdentation = /^[{}]?\s{0,5}/gm
 
 export default function IndexPage({ fromMobile, profile }) {
   return (
@@ -18,12 +19,17 @@ export default function IndexPage({ fromMobile, profile }) {
 }
 
 IndexPage.getInitialProps = async ({ req }) => {
-  const baseUrl = getBaseAPIUrl(req)
-
   const fromMobile = detectMobile({ ua: req, tablet: true })
 
-  const response = await fetch(`${baseUrl}/profile`)
-  const { profile } = await response.json()
+  const desktopCode = JSON.stringify(data.profile, null, 4)
+  const mobileCode = desktopCode.replace(curlyBracketsIdentation, '').trim()
 
-  return { profile, fromMobile }
+  return {
+    fromMobile,
+    profile: {
+      desktopCode,
+      mobileCode,
+      socialLinks: data.socialLinks
+    }
+  }
 }
