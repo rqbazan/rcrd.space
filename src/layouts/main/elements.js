@@ -15,7 +15,7 @@ export const Header = styled.header`
   width: 100%;
   z-index: ${theme.stacks.header};
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     box-shadow: unset;
     padding: 0;
 
@@ -31,7 +31,7 @@ export const Content = styled.main`
   margin-top: ${theme.sizes.headerHeight}px;
   width: 100%;
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     margin-left: auto;
     margin-right: auto;
     width: ${theme.breakpoints.md}px;
@@ -46,7 +46,7 @@ export const Navigation = styled.nav`
   margin-right: auto;
   width: ${theme.breakpoints.md}px;
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     display: flex;
   `}
 

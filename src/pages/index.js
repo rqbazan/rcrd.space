@@ -4,7 +4,6 @@ import fetch from 'isomorphic-unfetch'
 import detectMobile from 'is-mobile'
 import HomeScreen from 'screens/home'
 import getBaseAPIUrl from 'utils/get-base-api-url'
-import data from 'src/data.json'
 
 export default function IndexPage({ fromMobile, profile }) {
   return (

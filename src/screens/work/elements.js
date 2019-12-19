@@ -9,7 +9,7 @@ export const WorkPostsContainer = styled.div`
     margin-bottom: 24px;
   }
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     margin: 24px 0;
     padding: 0;
   `}

@@ -24,24 +24,24 @@
     "gatsby-remark-twemoji-shortcut": "0.10.1",
     "is-mobile": "^2.1.0",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.0.7",
+    "next": "^9.1.6",
     "nprogress": "^0.2.0",
-    "prism-react-renderer": "^1.0.1",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
+    "prism-react-renderer": "^1.0.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-markdown": "^4.2.2",
     "react-media": "^1.10.0",
-    "styled-components": "^5.0.0-beta.8",
-    "styled-components-breakpoint": "^2.1.1"
+    "styled-components": "^4.4.1",
+    "styled-components-breakpoint": "^3.0.0-preview.20"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^9.0.7",
-    "babel-plugin-module-resolver": "^3.2.0",
+    "@next/bundle-analyzer": "^9.1.6",
+    "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.11.0-0",
-    "dotenv": "^8.1.0",
-    "eslint": "^6.5.0",
-    "eslint-config-rqbazan-js": "^0.3.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.7.2",
+    "eslint-config-rqbazan-js": "^0.3.1",
     "eslint-import-resolver-babel-module": "^5.1.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   }
 }

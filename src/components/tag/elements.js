@@ -11,11 +11,11 @@ export const Container = styled.span`
   padding: 0 8px;
   user-select: none;
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     font-size: 14px;
   `}
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     font-size: 12px;
   `}
 `

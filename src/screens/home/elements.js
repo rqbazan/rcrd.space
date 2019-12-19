@@ -15,7 +15,7 @@ export const CoverageImg = styled.div`
   top: 0;
   z-index: ${theme.stacks.coverageImg};
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     background-position: right bottom;
   `}
 `
@@ -27,12 +27,12 @@ export const InnerContainer = styled.div`
   width: inherit;
   padding: 10vw;
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     justify-content: center;
     padding: 64px;
   `}
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     padding: 0;
   `}
 `
@@ -59,7 +59,7 @@ export const Navigation = styled.nav`
     margin-bottom: 32px;
   }
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     ${navNonMobileStyle}
   `}
 

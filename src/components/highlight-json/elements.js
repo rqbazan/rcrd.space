@@ -8,7 +8,7 @@ export const Pre = styled.pre`
   white-space: pre-wrap;
   width: 100%;
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     font-size: 16px;
   `}
 `

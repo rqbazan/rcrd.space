@@ -15,7 +15,7 @@ export const Dates = styled.div`
   text-align: center;
   width: 2.5em;
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     padding-top: 4px; /* visual perception */
     width: 5.2em;
   `}
@@ -26,7 +26,7 @@ export const Contents = styled.div`
   flex-direction: column;
   flex: 1;
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     flex-direction: row;
   `}
 `
@@ -46,7 +46,7 @@ export const Article = styled.article`
     color: ${theme.colors.body};
   }
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     margin-right: 24px;
   `}
 `
@@ -60,11 +60,11 @@ export const Tag = styled.span`
   user-select: none;
   font-size: 12px;
 
-  ${breakpoints.md`
+  ${breakpoints('md')`
     font-size: 14px;
   `}
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     font-size: 12px;
   `}
 `
@@ -72,7 +72,7 @@ export const Tag = styled.span`
 export const Metas = styled.div`
   margin-top: 8px;
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     margin-top: 0;
     width: 10em;
   `}
@@ -96,7 +96,7 @@ export const Navigation = styled.nav`
     padding: 8px;
   }
 
-  ${breakpoints.lg`
+  ${breakpoints('lg')`
     margin: 8px 0;
 
     > a {

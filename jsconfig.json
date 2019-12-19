@@ -1,12 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "src/*": ["./src/*"],
-      "layouts/*": ["./src/layouts/*"],
-      "components/*": ["./src/components/*"],
-      "screens/*": ["./src/screens/*"],
-      "utils/*": ["./src/utils/*"]
+      "*": ["*"]
     }
   }
 }
