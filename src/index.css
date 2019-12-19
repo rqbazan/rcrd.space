@@ -15,13 +15,13 @@
 
 body {
   background-color: theme('colors.body');
+  color: theme('colors.text');
   font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
 }
 
 a {
-  color: black;
   text-decoration: underline;
 }
 

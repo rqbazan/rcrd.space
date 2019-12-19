@@ -1,6 +1,5 @@
 /* eslint no-bitwise: 0 */
 import React from 'react'
-import { Container } from './elements'
 
 // reference: https://stackoverflow.com/q/3426404
 function getHashCode(string) {
@@ -21,8 +20,15 @@ export default function Tag({ children }) {
   const textColor = `hsl(${shortened},100%,20%)`
 
   return (
-    <Container bgColor={bgColor} textColor={textColor}>
+    <span
+      className="rounded text-xs m-1 px-2 select-none md:text-sm border"
+      style={{
+        backgroundColor: bgColor,
+        color: textColor,
+        borderColor: textColor
+      }}
+    >
       {children}
-    </Container>
+    </span>
   )
 }

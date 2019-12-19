@@ -1,16 +1,6 @@
 import React from 'react'
-import Icon from 'components/icon'
-import Tag from 'components/tag'
-import Star from 'components/star'
-import {
-  Container,
-  Dates,
-  Contents,
-  Article,
-  Metas,
-  Tags,
-  Navigation
-} from './elements'
+import Icon from '../icon'
+import Tag from '../tag'
 
 export default function WorkPost({
   title,
@@ -18,32 +8,30 @@ export default function WorkPost({
   endDate,
   tags,
   links,
-  featured,
   children
 }) {
   return (
-    <Container>
-      <Dates>
+    <section className="flex flex-wrap w-full">
+      <div className="text-text text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20">
         <span>{endDate}</span>
         {startDate && (
           <>
             <br />
-            {'|'}
+            |
             <br />
             <span>{startDate}</span>
           </>
         )}
-      </Dates>
-      <Contents>
-        <Article>
-          <header>
-            {featured && <Star style={{ marginRight: '0.3rem' }} />}
+      </div>
+      <div className="flex flex-col flex-1 lg:flex-row">
+        <article className="flex-1 text-sm lg:mr-6">
+          <header className="flex text-lg font-medium mb-2 uppercase">
             {title}
           </header>
           {children}
-        </Article>
-        <Metas>
-          <Navigation>
+        </article>
+        <div className="mt-2 lg:mt-0 lg:w-1/3">
+          <nav className="flex w-full lg:my-2 justify-end">
             {Object.keys(links)
               .sort()
               .map(iconName => (
@@ -53,18 +41,19 @@ export default function WorkPost({
                   target="__blank"
                   rel="noopener"
                   aria-label={iconName}
+                  className="p-2 mr-2 lg:p-0"
                 >
                   <Icon size={24} name={iconName} />
                 </a>
               ))}
-          </Navigation>
-          <Tags>
+          </nav>
+          <div className="flex flex-wrap w-full justify-end">
             {tags.split(',').map(tag => (
               <Tag key={tag}>{tag}</Tag>
             ))}
-          </Tags>
-        </Metas>
-      </Contents>
-    </Container>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
