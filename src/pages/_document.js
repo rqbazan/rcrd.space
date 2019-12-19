@@ -46,11 +46,7 @@ export default class Document extends NextDocument {
             name="keywords"
             content="javascript developer, full stack developer, web developer"
           />
-          <link
-            rel="shortcut icon"
-            href="/static/favicon.ico"
-            importance="low"
-          />
+          <link rel="shortcut icon" href="/favicon.ico" importance="low" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             property="og:image"
