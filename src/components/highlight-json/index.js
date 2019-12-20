@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import Media from 'react-media'
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import theme from 'src/theme'
 import prismTheme from './prism-theme'
 
 const defaultQuery = {
-  maxWidth: theme.breakpoints.md
+  maxWidth: 767
 }
 
 export default function HighlightCode({ fromMobile, desktopCode, mobileCode }) {
