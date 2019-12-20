@@ -1,7 +1,7 @@
 import NextApp from 'next/app'
 import Router from 'next/router'
 import NProgress from 'nprogress'
-import 'src/index.css'
+import './_app.css'
 
 NProgress.configure({
   template: '<div class="bar" role="bar"></div>'

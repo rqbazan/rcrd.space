@@ -1,9 +1,9 @@
 import React from 'react'
-import SEO from 'components/seo'
 import ReactMarkdown from 'react-markdown/with-html'
-import MainLayout from 'layouts/main'
-import WorkPost from 'components/work-post'
 import data from 'src/data.json'
+import SEO from '~/components/seo'
+import MainLayout from '~/layouts/main'
+import WorkPost from '~/components/work-post'
 
 export default function WorkPage() {
   return (

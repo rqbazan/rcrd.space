@@ -1,10 +1,10 @@
 import React from 'react'
 import detectMobile from 'is-mobile'
-import HighlightJson from 'components/highlight-json'
-import Icon from 'components/icon'
-import MainLayout from 'layouts/main'
-import SEO from 'components/seo'
 import data from 'src/data.json'
+import HighlightJson from '~/components/highlight-json'
+import Icon from '~/components/icon'
+import MainLayout from '~/layouts/main'
+import SEO from '~/components/seo'
 import './styles.css'
 
 const curlyBracketsIdentation = /^[{}]?\s{0,5}/gm

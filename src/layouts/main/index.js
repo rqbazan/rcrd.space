@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import Menu from 'components/menu'
-import Burger from 'components/burger'
+import Burger from '~/components/burger'
+import Menu from '~/components/menu'
 import './styles.css'
 
 export default function MainLayout({ children }) {
