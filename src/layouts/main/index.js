@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Menu from 'components/menu'
 import Burger from 'components/burger'
+import './styles.css'
 
-export default function MainLayout({ children, style }) {
+export default function MainLayout({ children }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
@@ -32,12 +33,9 @@ export default function MainLayout({ children, style }) {
         </div>
       </header>
       <Menu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
-      <div
-        className="flex mt-16 w-full md:mr-auto md:ml-auto md:max-w-3xl"
-        style={style}
-      >
+      <main className="flex mt-16 w-full md:mr-auto md:ml-auto md:max-w-3xl main-layout__content">
         {children}
-      </div>
+      </main>
     </>
   )
 }

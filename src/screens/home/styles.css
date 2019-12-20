@@ -1,0 +1,13 @@
+.home__coverage-img {
+  @apply bg-black bottom-0 left-0 right-0 top-0 fixed;
+
+  background-image: url('//res.cloudinary.com/dpwoyjb1f/image/upload/q_auto,f_png,o_50,w_1024,h_680/w_500,h_680,c_crop,y_0,x_350/me/night_owl.jpg');
+  background-position: right -4rem bottom -40%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+
+  @media md {
+    background-position: right bottom;
+  }
+}

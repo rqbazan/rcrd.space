@@ -7,9 +7,7 @@ const menuItems = [
   { href: '/work', label: 'Work' }
 ]
 
-export default function Menu(props) {
-  const { isOpen, onClose } = props
-
+export default function Menu({ isOpen, onClose }) {
   const router = useRouter()
 
   function getOnItemClick(route) {

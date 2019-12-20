@@ -6,9 +6,14 @@ module.exports = {
         body: '#f2f2f2',
         accent: '#fcd303',
         text: '#474747'
+      },
+      padding: {
+        '10vw': '10vw'
       }
     }
   },
-  variants: {},
+  variants: {
+    margin: ['responsive', 'last']
+  },
   plugins: []
 }

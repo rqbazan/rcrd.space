@@ -3,21 +3,19 @@ import HighlightJson from 'components/highlight-json'
 import Icon from 'components/icon'
 import MainLayout from 'layouts/main'
 import theme from 'src/theme'
-import { CoverageImg, InnerContainer, Navigation } from './elements'
+import './styles.css'
 
 export default function HomeScreen({ fromMobile, profile }) {
   return (
-    <MainLayout
-      style={{ minHeight: `calc(100vh - ${theme.sizes.headerHeight}px)` }}
-    >
-      <CoverageImg />
-      <InnerContainer>
+    <MainLayout>
+      <div className="home__coverage-img" />
+      <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full">
         <HighlightJson
           fromMobile={fromMobile}
           mobileCode={profile.mobileCode}
           desktopCode={profile.desktopCode}
         />
-        <Navigation>
+        <nav className="mt-6 flex flex-col md:flex-row">
           {Object.keys(profile.socialLinks).map(iconName => (
             <a
               key={profile.socialLinks[iconName]}
@@ -25,12 +23,13 @@ export default function HomeScreen({ fromMobile, profile }) {
               target="__blank"
               rel="noopener"
               aria-label={iconName}
+              className="self-start mb-8 md:mb-0 md:mr-8 last:mb-0"
             >
               <Icon name={iconName} color={theme.colors.selection} size={32} />
             </a>
           ))}
-        </Navigation>
-      </InnerContainer>
+        </nav>
+      </div>
     </MainLayout>
   )
 }

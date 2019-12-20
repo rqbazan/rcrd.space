@@ -25,7 +25,7 @@ export default function HighlightCode({ fromMobile, desktopCode, mobileCode }) {
         code={isMobile ? mobileCode : desktopCode}
       >
         {({ tokens, getLineProps, getTokenProps }) => (
-          <pre className="block text-sm leading-loose w-full lg:text-lg">
+          <pre className="block text-sm leading-loose w-full lg:text-base">
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: `code-line-${i}` })}>
                 {line.map((token, key) => (

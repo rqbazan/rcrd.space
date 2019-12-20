@@ -31,7 +31,7 @@ export default function WorkPost({
           {children}
         </article>
         <div className="mt-2 lg:mt-0 lg:w-1/3">
-          <nav className="flex w-full lg:my-2 justify-end">
+          <nav className="flex w-full lg:my-2 md:justify-end">
             {Object.keys(links)
               .sort()
               .map(iconName => (
@@ -47,7 +47,7 @@ export default function WorkPost({
                 </a>
               ))}
           </nav>
-          <div className="flex flex-wrap w-full justify-end">
+          <div className="flex flex-wrap w-full md:justify-end">
             {tags.split(',').map(tag => (
               <Tag key={tag}>{tag}</Tag>
             ))}
