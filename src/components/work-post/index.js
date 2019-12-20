@@ -8,10 +8,11 @@ export default function WorkPost({
   endDate,
   tags,
   links,
+  className,
   children
 }) {
   return (
-    <section className="flex flex-wrap w-full">
+    <section className={`flex flex-wrap w-full ${className}`}>
       <div className="text-text text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20">
         <span>{endDate}</span>
         {startDate && (
