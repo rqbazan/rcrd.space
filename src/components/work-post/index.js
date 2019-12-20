@@ -13,7 +13,7 @@ export default function WorkPost({
 }) {
   return (
     <section className={`flex flex-wrap w-full ${className}`}>
-      <div className="text-text text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20">
+      <div className="text-text text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20 text-text">
         <span>{endDate}</span>
         {startDate && (
           <>
@@ -32,7 +32,7 @@ export default function WorkPost({
           {children}
         </article>
         <div className="mt-2 lg:mt-0 lg:w-1/3">
-          <nav className="flex w-full lg:my-2 md:justify-end">
+          <nav className="flex w-full mb-3 md:justify-end">
             {Object.keys(links)
               .sort()
               .map(iconName => (
@@ -42,13 +42,13 @@ export default function WorkPost({
                   target="__blank"
                   rel="noopener"
                   aria-label={iconName}
-                  className="p-2 mr-2 lg:p-0"
+                  className="mr-2 last:mr-0 lg:p-0"
                 >
-                  <Icon size={24} name={iconName} />
+                  <Icon size={32} name={iconName} />
                 </a>
               ))}
           </nav>
-          <div className="flex flex-wrap w-full md:justify-end">
+          <div className="flex flex-wrap w-full md:justify-end -m-1 lg:m-0">
             {tags.split(',').map(tag => (
               <Tag key={tag}>{tag}</Tag>
             ))}

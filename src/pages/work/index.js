@@ -14,7 +14,7 @@ export default function WorkPage() {
           {data.workPosts.map(workPost => (
             <WorkPost
               key={workPost.title}
-              className="mb-6 last:mb-0"
+              className="mb-8 last:mb-0"
               {...workPost}
             >
               <ReactMarkdown

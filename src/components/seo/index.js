@@ -27,10 +27,14 @@ export default function SEO(props) {
       <meta property="og:url" content="https://sxntixgo.codes" />
       <meta property="og:type" content="website" />
       <link
-        href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500&display=swap"
+        href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500&display=swap"
         rel="stylesheet"
         type="text/css"
         media="screen"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Solway:300&display=swap"
+        rel="stylesheet"
       />
       <meta
         name="google-site-verification"

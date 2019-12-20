@@ -23,7 +23,7 @@
       "endDate": "Oct 2019",
       "tags": "TailwindCSS,NextJS,TypeScript,Now,GithubActions",
       "links": {
-        "github": "//github.com/rqbazan/aimo-challenge",
+        "git": "//github.com/rqbazan/aimo-challenge",
         "website": "//aimo-challenge.rqbazan.now.sh"
       },
       "body": "The solution for [the AIMO challenge](https://github.com/aimo/prueba-frontend), in order to get the **Software Engineer Frontend** position of the company."
@@ -35,7 +35,7 @@
       "endDate": "∞",
       "tags": "NextJS,Cloudinary,Now,Markdown,StyledComponents",
       "links": {
-        "github": "//github.com/rqbazan/me",
+        "git": "//github.com/rqbazan/me",
         "website": "//sxntixgo.codes"
       },
       "body": "Not a blog, I'm not a blogger 🙃. Just a side project to enjoy music while I code, and also to show things I've worked ✌️."
@@ -46,7 +46,7 @@
       "endDate": "Sep 2019",
       "tags": "Storybook,React,ReactSpring,TypeScript",
       "links": {
-        "github": "//github.com/rqbazan/zeit-toast-clone",
+        "git": "//github.com/rqbazan/zeit-toast-clone",
         "website": "//zeit-toast-clone.rqbazan.now.sh"
       },
       "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 **[Here the original](//zeit.co/design/toast)**."
@@ -94,7 +94,7 @@
       "endDate": "Apr 2019",
       "tags": "Crypto,NextJS,StyledComponents,Now",
       "links": {
-        "github": "//github.com/rqbazan/hashing-with-pbkdf2",
+        "git": "//github.com/rqbazan/hashing-with-pbkdf2",
         "website": "//hashing-with-pbkdf2.rqbazan.now.sh"
       },
       "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** 👽 and a sort of playground to hash any text like account safe passwords. **[My λ function is right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)** ℹ️."
@@ -116,7 +116,7 @@
       "endDate": "Mar 2019",
       "tags": "Ava,Sinon,React,ReactTestingLibrary,TypeScript,Rollup",
       "links": {
-        "github": "//github.com/rqbazan/featflag",
+        "git": "//github.com/rqbazan/featflag",
         "website": "//nicedoc.io/rqbazan/featflag",
         "npm": "//www.npmjs.com/package/@rqbazan/featflag"
       },
@@ -130,7 +130,7 @@
       "endDate": "∞",
       "tags": "C++,DataStructure,Algorithm,ACMICPC,OnlineJudges",
       "links": {
-        "github": "//github.com/rqbazan/Programming-Challenge"
+        "git": "//github.com/rqbazan/Programming-Challenge"
       },
       "body": "Compilation of solutions for different programming challenges from ad-hoc problems to graph theory 🤓."
     }
