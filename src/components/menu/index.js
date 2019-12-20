@@ -1,6 +1,5 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import theme from 'src/theme'
 import Burger from '../burger'
 
 const menuItems = [
@@ -30,13 +29,7 @@ export default function Menu(props) {
       className="bg-white h-screen fixed right-0 top-0 w-full z-50"
       style={{ display: isOpen ? 'flex' : 'none' }}
     >
-      <div
-        className="absolute flex items-center justify-end w-full"
-        style={{
-          height: theme.sizes.headerHeight,
-          padding: theme.sizes.headerPadding
-        }}
-      >
+      <div className="absolute flex items-center justify-end w-full h-16 px-6">
         <Burger isColorful={false} onClick={onClose} />
       </div>
       <nav className="flex items-center flex-col justify-center w-full">
