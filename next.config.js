@@ -4,10 +4,4 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
 
-module.exports = withCSS(
-  withBundleAnalyzer({
-    env: {
-      API: process.env.API
-    }
-  })
-)
+module.exports = withCSS(withBundleAnalyzer())
