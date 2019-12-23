@@ -58,7 +58,8 @@
       "tags": "Storybook,React,ReactSpring,TypeScript",
       "links": {
         "git": "//github.com/rqbazan/zeit-toast-clone",
-        "website": "//zeit-toast-clone.rqbazan.now.sh"
+        "website": "//zeit-toast-clone.rqbazan.now.sh",
+        "npm": "//www.npmjs.com/package/zeit-toast-clone"
       },
       "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 **[Here the original](//zeit.co/design/toast)**."
     },
