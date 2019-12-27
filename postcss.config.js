@@ -3,6 +3,7 @@ const PROD = process.env.NODE_ENV === 'production'
 
 const purgecss = require('@fullhuman/postcss-purgecss')({
   content: ['./src/**/*.js'],
+  whitelistPatterns: [/token/, /plain/],
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 })
 
