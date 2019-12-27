@@ -5,12 +5,15 @@
   "main": "index.js",
   "author": "Ricardo Alexis Quiroz Bazan <raquirozbazan@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "pre-dev": "rm -rf node_modules/.cache .next",
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export",
+    "now-build": "next build && next export",
     "analyze": "ANALYZE=true next build",
     "lint": "eslint --ignore-path .gitignore .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",

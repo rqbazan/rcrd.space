@@ -6,8 +6,7 @@
       "src": "package.json",
       "use": "@now/static-build",
       "config": {
-        "outputDirectory": "out",
-        "buildCommand": "npm run export"
+        "distDir": "out"
       }
     }
   ]
