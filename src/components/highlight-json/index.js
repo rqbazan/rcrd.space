@@ -1,40 +1,44 @@
-import React, { useState } from 'react'
-import Media from 'react-media'
+import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import prismTheme from './prism-theme'
+import './styles.css'
 
-const defaultQuery = {
-  maxWidth: 767
-}
-
-export default function HighlightCode({ fromMobile, desktopCode, mobileCode }) {
-  const [isMobile, setIsMobile] = useState(fromMobile)
-
+export default function HighlightCode({ profile }) {
   return (
-    <>
-      <Media
-        defaultMatches={fromMobile}
-        query={defaultQuery}
-        onChange={matches => setIsMobile(matches)}
-      />
-      <Highlight
-        {...defaultProps}
-        language="json"
-        theme={prismTheme}
-        code={isMobile ? mobileCode : desktopCode}
-      >
-        {({ tokens, getLineProps, getTokenProps }) => (
-          <pre className="block text-sm leading-loose w-full lg:text-base">
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: `code-line-${i}` })}>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
-          </pre>
-        )}
-      </Highlight>
-    </>
+    <Highlight
+      {...defaultProps}
+      language="json"
+      theme={prismTheme}
+      code={profile}
+    >
+      {({ tokens, getLineProps, getTokenProps }) => (
+        <pre className="block text-sm leading-loose w-full lg:text-base">
+          {tokens.map((line, i) => (
+            <div {...getLineProps({ line, key: `code-line-${i}` })}>
+              {line.map((token, key) => {
+                const tokenProps = getTokenProps({ token, key })
+
+                if (token.content !== '        ') {
+                  return <span {...tokenProps} />
+                }
+
+                const newKey = `fragment-${key}`
+                tokenProps.children = '    '
+                delete tokenProps.key
+
+                // the empty string token must be split on two part
+                // so the first one will be easily CSS manipulable
+                return (
+                  <React.Fragment key={newKey}>
+                    <span {...tokenProps} />
+                    <span {...tokenProps} />
+                  </React.Fragment>
+                )
+              })}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
   )
 }
