@@ -7,7 +7,7 @@ function onClick() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-export default function RoundedButton() {
+export default function UPButton() {
   const buttonRef = React.useRef()
 
   useScroll(() => {
