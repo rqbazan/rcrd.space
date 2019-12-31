@@ -29,7 +29,7 @@ export default function UPButton() {
       type="button"
       className="up-button"
     >
-      <Icon name="up-arrow" size={36} />
+      <Icon name="up-arrow" size={36} className="text-body" />
     </button>
   )
 }
