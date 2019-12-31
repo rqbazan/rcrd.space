@@ -1,0 +1,38 @@
+.up-button {
+  @apply rounded-full h-12 w-12 flex items-center justify-center;
+  @apply bg-black text-white shadow-lg opacity-0;
+}
+
+.up-button:focus {
+  @apply outline-none;
+}
+
+.up-button.fade-in {
+  animation: fadeIn 500ms forwards;
+}
+
+.up-button.fade-out {
+  animation: fadeOut 500ms forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-2turn);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(2turn);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(2turn);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(-2turn);
+  }
+}

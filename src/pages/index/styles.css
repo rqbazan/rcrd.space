@@ -7,7 +7,7 @@
   background-size: contain;
   z-index: -1;
 
-  @media md {
+  @screen md {
     background-position: right bottom;
   }
 }

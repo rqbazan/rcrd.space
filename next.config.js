@@ -6,6 +6,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withCSS(
   withBundleAnalyzer({
-    exportTrailingSlash: true
+    exportTrailingSlash: true,
+    devIndicators: {
+      autoPrerender: false
+    }
   })
 )
