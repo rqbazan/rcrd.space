@@ -1,7 +1,7 @@
 .home__coverage-img {
   @apply bg-black bottom-0 left-0 right-0 top-0 fixed;
 
-  background-image: url('//res.cloudinary.com/dpwoyjb1f/image/upload/v1578362573/me/night_owl_transparent.png');
+  background-image: url('//res.cloudinary.com/dpwoyjb1f/image/upload/v1578363102/me/night_owl_transparent.webp');
   background-position: right -4rem bottom -40%;
   background-repeat: no-repeat;
   background-size: contain;
