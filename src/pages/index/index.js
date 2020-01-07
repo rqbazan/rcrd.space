@@ -13,7 +13,22 @@ export default function IndexPage() {
     <>
       <SEO />
       <MainLayout>
-        <div className="home__coverage-img" />
+        <div className="home__coverage-img">
+          <picture>
+            <source
+              srcSet="https://res.cloudinary.com/dpwoyjb1f/image/upload/v1578363102/me/night_owl_transparent.webp"
+              type="image/webp"
+            />
+            <source
+              srcSet="https://res.cloudinary.com/dpwoyjb1f/image/upload/v1578363102/me/night_owl_transparent.png"
+              type="image/png"
+            />
+            <img
+              src="https://res.cloudinary.com/dpwoyjb1f/image/upload/v1578363102/me/night_owl_transparent.png"
+              alt="coverage"
+            />
+          </picture>
+        </div>
         <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full">
           <HighlightJson profile={JSON.stringify(profile, null, 4)} />
           <nav className="mt-6 flex flex-col md:flex-row">

@@ -1,13 +1,19 @@
 .home__coverage-img {
-  @apply bg-black bottom-0 left-0 right-0 top-0 fixed;
-
-  background-image: url('//res.cloudinary.com/dpwoyjb1f/image/upload/v1578363102/me/night_owl_transparent.webp');
-  background-position: right -4rem bottom -40%;
-  background-repeat: no-repeat;
-  background-size: contain;
+  @apply bg-black left-0 top-0 fixed w-full min-h-screen;
+  @apply flex items-center justify-end;
   z-index: -1;
 
-  @screen md {
-    background-position: right bottom;
+  & img {
+    min-height: 100vh;
+    object-fit: contain;
+    margin-top: 40%;
+    margin-left: 4rem;
+  }
+}
+
+@screen md {
+  .home__coverage-img img {
+    margin-top: 0;
+    margin-left: 0;
   }
 }
