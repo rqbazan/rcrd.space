@@ -1,13 +1,14 @@
 .home__coverage-img {
   @apply bg-black left-0 top-0 fixed w-full min-h-screen;
   @apply flex items-center justify-end;
+
   z-index: -1;
 
   & img {
+    margin-left: 4rem;
+    margin-top: 20%;
     min-height: 100vh;
     object-fit: contain;
-    margin-top: 40%;
-    margin-left: 4rem;
   }
 }
 
