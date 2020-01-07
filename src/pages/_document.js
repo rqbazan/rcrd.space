@@ -17,7 +17,7 @@ class Document extends NextDocument {
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `WebFont.load({ google: { families: ['IBM Plex Mono:400,500', 'Solway:300'] } });`
+            __html: `WebFont.load({ google: { families: ['IBM Plex Mono:400,500&display=swap', 'Solway:300&display=swap'] }});`
           }}
         />
       </Html>
