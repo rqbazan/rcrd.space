@@ -17,7 +17,11 @@ const env = require('postcss-preset-env')({
 
 const tw = require('tailwindcss')('./tailwind.config.js')
 
+const cssnano = require('cssnano')({
+  preset: 'default'
+})
+
 // preset-env config from https://bit.ly/2Pnlfg0
 module.exports = {
-  plugins: [tw, env, PROD && purgecss].filter(Boolean)
+  plugins: [tw, env, PROD && purgecss, PROD && cssnano].filter(Boolean)
 }
