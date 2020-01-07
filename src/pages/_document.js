@@ -14,10 +14,22 @@ class Document extends NextDocument {
           <Main />
           <NextScript />
         </body>
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `WebFont.load({ google: { families: ['IBM Plex Mono:400,500&display=swap', 'Solway:300&display=swap'] }});`
+            __html: `
+              WebFontConfig = {
+                google: {
+                  families: ['IBM+Plex+Mono:400,500', 'Solway:300&display=swap']
+                }
+              };
+
+              (function(d) {
+                  var wf = d.createElement('script'), s = d.scripts[0];
+                  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+                  wf.async = true;
+                  s.parentNode.insertBefore(wf, s);
+              })(document);
+            `
           }}
         />
       </Html>
