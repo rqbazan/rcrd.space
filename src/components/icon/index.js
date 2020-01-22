@@ -1,12 +1,11 @@
 import React from 'react'
-import icons from './icons.json'
+import icons from './icons'
 
 export default function Icon({ name, size, className }) {
-  const { path, viewBox, fill } = icons[name]
-
-  return (
-    <svg width={size} height={size} viewBox={viewBox} className={className}>
-      <path fill={fill || 'currentColor'} d={path} />
-    </svg>
-  )
+  return React.createElement(icons[name], {
+    className,
+    width: size,
+    height: size,
+    fill: 'currentColor'
+  })
 }
