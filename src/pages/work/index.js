@@ -6,6 +6,14 @@ import MainLayout from '~/layouts/main'
 import WorkPost from '~/components/work-post'
 import UPButton from '~/components/up-button'
 
+function Link({ href, children }) {
+  return (
+    <a href={href} rel="noreferrer" target="__blank">
+      {children}
+    </a>
+  )
+}
+
 export default function WorkPage() {
   return (
     <>
@@ -21,13 +29,7 @@ export default function WorkPage() {
               <ReactMarkdown
                 source={workPost.body}
                 escapeHtml={false}
-                renderers={{
-                  link: props => (
-                    <a href={props.href} rel="noreferrer" target="__blank">
-                      {props.children}
-                    </a>
-                  )
-                }}
+                renderers={{ link: Link }}
               />
             </WorkPost>
           ))}
