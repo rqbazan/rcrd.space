@@ -48,7 +48,8 @@
       "tags": "Gastby,ThreeJS,ReactThreeFiber,TypeScript,Firebase",
       "links": {
         "git": "//github.com/rqbazan/react-three-fiber-101",
-        "website": "//react-three-fiber-101.now.sh"
+        "website": "//react-three-fiber-101.now.sh",
+        "design": "//www.figma.com/file/7lGU5TbDcFUtiU5IatkNsI/react-three-fiber-101?node-id=11%3A14"
       },
       "body": "After watch [Animation and 3D in react-three-fiber (with Paul Henschel) — Learn With Jason](https://www.youtube.com/watch?v=1rP3nNY2hTo), I decided to try create this project just for fun, using [The Rubik's cube Doodle](https://www.google.com/doodles/rubiks-cube) for inspiration 👀."
     },
