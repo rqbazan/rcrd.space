@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Link from 'next/link'
+import { Link } from 'gatsby'
 import Burger from '~/components/burger'
 import Menu from '~/components/menu'
 import './styles.css'
@@ -11,13 +11,9 @@ export default function MainLayout({ children }) {
     <>
       <header className="px-6 items-center bg-black shadow-lg flex justify-end fixed top-0 w-full z-40 md:px-0 h-16">
         <nav className="hidden items-center h-full ml-auto mr-auto max-w-3xl w-1/2 md:w-full md:flex text-white">
-          <Link href="/">
-            <a href="/">Home</a>
-          </Link>
-          <Link href="/work">
-            <a className="ml-8" href="/work">
-              Work
-            </a>
+          <Link to="/">Home</Link>
+          <Link to="/work" className="ml-8">
+            Work
           </Link>
           <a
             className="ml-auto"

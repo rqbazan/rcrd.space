@@ -9,16 +9,14 @@
     "node": "12.x"
   },
   "scripts": {
-    "pre-dev": "rm -rf node_modules/.cache .next",
-    "dev": "next",
-    "build": "next build && next export",
-    "start": "next start",
-    "analyze": "ANALYZE=true next build",
+    "dev": "gatsby develop -H 0.0.0.0 -p 3000",
+    "build": "gatsby build",
+    "start": "gatsby develop",
     "lint": "eslint --ignore-path .gitignore .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
-    "validate": "npm-run-all --parallel check-format lint build"
+    "validate": "run-p check-format lint"
   },
   "husky": {
     "hooks": {
@@ -28,12 +26,10 @@
   },
   "lint-staged": {
     "*.{js,json}": [
-      "prettier --ignore-path .gitignore --write",
-      "git add"
+      "prettier --ignore-path .gitignore --write"
     ],
     "*.js": [
-      "eslint --ignore-path .gitignore --fix",
-      "git add"
+      "eslint --ignore-path .gitignore --fix"
     ]
   },
   "commitlint": {
@@ -42,11 +38,12 @@
     ]
   },
   "dependencies": {
-    "next": "^9.2.0",
+    "gatsby": "^2.19.12",
     "nprogress": "^0.2.0",
     "prism-react-renderer": "^1.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
     "react-markdown": "^4.3.1",
     "tailwindcss": "^1.1.4"
   },
@@ -54,14 +51,16 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@fullhuman/postcss-purgecss": "^2.0.5",
-    "@next/bundle-analyzer": "^9.2.0",
-    "@svgr/webpack": "^5.1.0",
-    "@zeit/next-css": "^1.0.1",
+    "@hot-loader/react-dom": "^16.11.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-rqbazan-js": "^0.3.1",
     "eslint-import-resolver-babel-module": "^5.1.1",
+    "gatsby-plugin-manifest": "^2.2.41",
+    "gatsby-plugin-postcss": "^2.1.20",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-svgr-loader": "^0.1.0",
     "husky": "^4.2.0",
     "lint-staged": "^10.0.1",
     "npm-run-all": "^4.1.5",

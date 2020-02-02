@@ -45,7 +45,7 @@
       "title": "Mr. Rubik",
       "slug": "mr-rubik",
       "endDate": "Dec 2019",
-      "tags": "Gastby,ThreeJS,ReactThreeFiber,TypeScript,Firebase",
+      "tags": "Gatsby,ThreeJS,ReactThreeFiber,TypeScript,Firebase",
       "links": {
         "git": "//github.com/rqbazan/react-three-fiber-101",
         "website": "//react-three-fiber-101.now.sh",
@@ -69,7 +69,7 @@
       "slug": "this-site",
       "startDate": "Sep 2019",
       "endDate": "∞",
-      "tags": "NextJS,Cloudinary,Now,Markdown,TailwindCSS",
+      "tags": "Gatsby,Cloudinary,Now,Markdown,TailwindCSS",
       "links": {
         "git": "//github.com/rqbazan/me",
         "website": "//sxntixgo.codes"
