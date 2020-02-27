@@ -18,6 +18,17 @@
   },
   "workPosts": [
     {
+      "title": "My Resume with React PDF",
+      "slug": "my-resume-with-react-pdf",
+      "endDate": "Feb 2020",
+      "tags": "CRA,ReactPDF,JavaScript",
+      "links": {
+        "git": "//github.com/rqbazan/my-resume-with-react-pdf",
+        "website": "//my-resume-with-react-pdf.now.sh/"
+      },
+      "body": "I've used [Enhancv](https://enhancv.com) to build my resumes 🥰, it's an awesome tool, really easy to use. But, in order to save some money 💸, I decided to build my own resume. 💯"
+    },
+    {
       "title": "Search GraphQL Jobs",
       "slug": "search-graphql-jobs",
       "endDate": "Jan 2020",

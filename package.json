@@ -6,7 +6,7 @@
   "author": "Ricardo Alexis Quiroz Bazan <raquirozbazan@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "12.x"
+    "node": "10.x"
   },
   "scripts": {
     "dev": "gatsby develop -H 0.0.0.0 -p 3000",
