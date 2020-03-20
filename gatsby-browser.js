@@ -1,3 +1,4 @@
+import '~/fonts.css'
 import '~/global.css'
 import NProgress from 'nprogress'
 import * as scripts from '~/scripts'
@@ -10,7 +11,7 @@ export const onClientEntry = () => {
   const node = document.createElement('script')
   node.innerHTML = scripts.webfont({
     google: {
-      families: ['IBM+Plex+Mono:400,500', 'Solway:300&display=swap']
+      families: ['Solway:300&display=swap']
     }
   })
   document.body.appendChild(node)

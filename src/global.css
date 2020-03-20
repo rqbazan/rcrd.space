@@ -16,7 +16,7 @@
 body {
   background-color: theme('colors.body');
   color: theme('colors.text');
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'JetBrains', monospace;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
 }
@@ -26,6 +26,10 @@ p {
   color: theme('colors.text');
   font-weight: 300;
   font-size: 16px;
+}
+
+span.code {
+  font-family: 'JetBrains', monospace;
 }
 
 a {

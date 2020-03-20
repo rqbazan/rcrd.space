@@ -12,11 +12,20 @@ export default function HighlightCode({ profile }) {
       code={profile}
     >
       {({ tokens, getLineProps, getTokenProps }) => (
-        <pre className="block text-sm leading-loose w-full lg:text-base">
+        <pre className="block text-sm leading-loose w-full">
           {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: `code-line-${i}` })}>
+            <div
+              {...getLineProps({
+                line,
+                key: `code-line-${i}`
+              })}
+            >
               {line.map((token, key) => {
-                const tokenProps = getTokenProps({ token, key })
+                const tokenProps = getTokenProps({
+                  token,
+                  key,
+                  className: 'code'
+                })
 
                 if (token.content !== '        ') {
                   return <span {...tokenProps} />
