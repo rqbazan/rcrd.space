@@ -28,6 +28,10 @@ p {
   font-size: 16px;
 }
 
+div.token-line {
+  line-height: 1.75;
+}
+
 span.code {
   font-family: 'JetBrains', monospace;
 }
