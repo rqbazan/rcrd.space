@@ -4,6 +4,20 @@
 @tailwind base;
 @tailwind components;
 
+@font-face {
+  font-family: 'JetBrains';
+  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: bold;
+}
+
 ::selection {
   background-color: theme('colors.selection');
   color: black;
@@ -30,6 +44,20 @@ p {
 
 div.token-line {
   line-height: 1.75;
+}
+
+.token-line:first-of-type,
+.token-line:last-of-type,
+.token.plain:first-of-type {
+  display: none;
+}
+
+@screen md {
+  .token-line:first-of-type,
+  .token-line:last-of-type,
+  .token.plain:first-of-type {
+    display: inline;
+  }
 }
 
 span.code {

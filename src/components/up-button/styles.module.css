@@ -1,17 +1,17 @@
-.up-button {
+.upButton {
   @apply rounded-full h-12 w-12 flex items-center justify-center;
   @apply bg-black text-white shadow-lg opacity-0;
 }
 
-.up-button:focus {
+.upButton:focus {
   @apply outline-none;
 }
 
-.up-button.fade-in {
+.fadeIn {
   animation: fadeIn 500ms forwards;
 }
 
-.up-button.fade-out {
+.fadeOut {
   animation: fadeOut 500ms forwards;
 }
 

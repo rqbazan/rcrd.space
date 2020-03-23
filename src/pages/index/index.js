@@ -4,7 +4,7 @@ import HighlightJson from '~/components/highlight-json'
 import Icon from '~/components/icon'
 import MainLayout from '~/layouts/main'
 import SEO from '~/components/seo'
-import './styles.css'
+import styles from './styles.module.css'
 
 export default function IndexPage() {
   const { profile, socialLinks } = data
@@ -13,7 +13,7 @@ export default function IndexPage() {
     <>
       <SEO />
       <MainLayout>
-        <div className="home__coverage-img">
+        <div className={styles.coverage}>
           <picture>
             <source
               srcSet="https://res.cloudinary.com/dpwoyjb1f/image/upload/v1578363102/me/night_owl_transparent.webp"

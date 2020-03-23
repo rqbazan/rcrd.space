@@ -1,31 +1,19 @@
 import React from 'react'
-import Head from 'react-helmet'
-import { useStaticQuery, graphql as gql } from 'gatsby'
+import Head from 'next/head'
 
-const query = gql`
-  query siteMetadataQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-      }
-    }
-  }
-`
+const defaults = {
+  title: 'Ricardo Q. Bazan',
+  description: "I'm a software developer",
+  siteUrl: 'https://sxntixgo.codes'
+}
 
 export default function SEO(props) {
-  const data = useStaticQuery(query)
-
-  const defaults = data.site.siteMetadata
-
   const title = props.title || defaults.title
   const description = props.description || defaults.description
   const url = props.url || defaults.siteUrl
 
   return (
     <Head>
-      <html lang="en" />
       <meta charSet="utf-8" />
       <meta name="theme-color" content="#000" />
       <meta name="description" content={description} />

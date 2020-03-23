@@ -1,7 +1,7 @@
 import React from 'react'
 import useScroll from '~/hooks/use-scroll'
 import Icon from '../icon'
-import './styles.css'
+import styles from './styles.module.css'
 
 function onClick() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -14,11 +14,11 @@ export default function UPButton() {
     const el = buttonRef.current
 
     if (window.pageYOffset > 100) {
-      el.classList.remove('fade-out')
-      el.classList.add('fade-in')
-    } else if (el.classList.contains('fade-in')) {
-      el.classList.remove('fade-in')
-      el.classList.add('fade-out')
+      el.classList.remove(styles.fadeOut)
+      el.classList.add(styles.fadeIn)
+    } else if (el.classList.contains(styles.fadeIn)) {
+      el.classList.remove(styles.fadeIn)
+      el.classList.add(styles.fadeOut)
     }
   })
 
@@ -27,7 +27,7 @@ export default function UPButton() {
       ref={buttonRef}
       onClick={onClick}
       type="button"
-      className="up-button"
+      className={styles.upButton}
     >
       <Icon name="up-arrow" size={36} className="text-body" />
     </button>

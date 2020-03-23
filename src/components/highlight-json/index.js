@@ -1,7 +1,6 @@
 import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import prismTheme from './prism-theme'
-import './styles.css'
 
 export default function HighlightCode({ profile }) {
   return (

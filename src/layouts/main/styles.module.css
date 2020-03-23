@@ -1,3 +1,3 @@
-.main-layout__content {
+.content {
   min-height: calc(100vh - theme('height.16'));
 }
