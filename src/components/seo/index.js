@@ -19,7 +19,7 @@ export default function SEO(props) {
       <meta name="description" content={description} />
       <meta
         name="keywords"
-        content="javascript developer, full stack developer, web developer"
+        content="javascript developer, full stack developer, web developer, mobile developer"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
