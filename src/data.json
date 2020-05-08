@@ -73,7 +73,7 @@
         "git": "//github.com/rqbazan/aimo-challenge",
         "website": "//aimo-challenge.rqbazan.now.sh"
       },
-      "body": "The solution for [the AIMO challenge](https://github.com/aimo/prueba-frontend) 🙌, in order to get the **Software Engineer Frontend** position of the company."
+      "body": "The solution for [the AIMO challenge](https://github.com/aimo/prueba-frontend) 🙌, in order to get the Software Engineer Frontend position of the company."
     },
     {
       "title": "This Site",
@@ -97,7 +97,7 @@
         "website": "//zeit-toast-clone.rqbazan.now.sh",
         "npm": "//www.npmjs.com/package/zeit-toast-clone"
       },
-      "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 **[Here the original](//zeit.co/design/toast)**."
+      "body": "A front-end challenge required by myself 😅, I worked with animation effects powered by the awesome spring library. 😍 [Here the original](//zeit.co/design/toast)."
     },
     {
       "title": "Sellers",
@@ -109,7 +109,7 @@
       "links": {
         "website": "//www.riqra.com"
       },
-      "body": "Ecommerce B2C and B2B for Riqra 🎉, offered as a SaaS solution for different LATAM countries 🌎. Some clients in production are: **[IL Pastificio](//www.ilpastificio.com/)**, **[Alicorp](//alicorp.riqra.com/)**, **[Montana](//compraonline.corpmontana.com)**, **[Quimica Suiza](//qmarket.riqra.com)**, **[Nestle](//sagatrans.riqra.com/)** and **[many others](//directorio.riqra.com)**. (viewed on Sep-2019)"
+      "body": "Ecommerce B2C and B2B for Riqra 🎉, offered as a SaaS solution for different LATAM countries 🌎. Some clients in production are: [IL Pastificio](//www.ilpastificio.com/), [Alicorp](//alicorp.riqra.com/), [Montana](//compraonline.corpmontana.com), [Quimica Suiza](//qmarket.riqra.com), [Nestle](//sagatrans.riqra.com/) and [many others](//directorio.riqra.com). (viewed on Sep-2019)"
     },
     {
       "title": "Sellers API",
@@ -145,7 +145,7 @@
         "git": "//github.com/rqbazan/hashing-with-pbkdf2",
         "website": "//hashing-with-pbkdf2.rqbazan.now.sh"
       },
-      "body": "Serverless application to use **[the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2)** 👽 and a sort of playground to hash any text like account safe passwords. **[My λ function is right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)** ℹ️."
+      "body": "Serverless application to use [the pbkdf2 algorithm](//en.wikipedia.org/wiki/PBKDF2) 👽 and a sort of playground to hash any text like account safe passwords. [My λ function is right here](//github.com/rqbazan/hashing-with-pbkdf2/blob/master/pages/api/index.js)."
     },
     {
       "title": "Directory",
@@ -168,7 +168,7 @@
         "website": "//nicedoc.io/rqbazan/featflag",
         "npm": "//www.npmjs.com/package/@rqbazan/featflag"
       },
-      "body": "A small and modern React library to use **[the feature toggling principle](//martinfowler.com/articles/feature-toggles.html)** 🤩, using the power of contexts. I've used this technical principle for some of my bigger projects."
+      "body": "A small and modern React library to use [the feature toggling principle](//martinfowler.com/articles/feature-toggles.html) 🤩, using the power of contexts. I've used this technical principle for some of my bigger projects."
     },
     {
       "title": "Programming Challenges",

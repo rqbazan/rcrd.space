@@ -26,7 +26,7 @@ export default function WorkPost({
       </div>
       <div className="flex flex-col flex-1 lg:flex-row">
         <article className="flex-1 text-sm lg:mr-6">
-          <header className="flex text-lg font-medium mb-2 uppercase">
+          <header className="flex text-lg font-bold mb-2 uppercase">
             {title}
           </header>
           {children}
