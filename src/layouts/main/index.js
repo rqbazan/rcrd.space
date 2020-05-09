@@ -4,13 +4,13 @@ import Burger from '~/components/burger'
 import Menu from '~/components/menu'
 import styles from './styles.module.css'
 
-export default function MainLayout({ children }) {
+export default function MainLayout({ children, className }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-    <>
+    <div className={className}>
       <header className="px-6 items-center bg-black shadow-lg flex justify-end fixed top-0 w-full z-40 md:px-0 h-16">
-        <nav className="hidden items-center h-full ml-auto mr-auto max-w-3xl w-1/2 md:w-full md:flex text-white">
+        <nav className="hidden items-center h-full ml-auto mr-auto max-w-3xl w-1/2 text-white md:w-full md:flex">
           <Link href="/">
             <a href="/">Home</a>
           </Link>
@@ -38,6 +38,6 @@ export default function MainLayout({ children }) {
       >
         {children}
       </main>
-    </>
+    </div>
   )
 }

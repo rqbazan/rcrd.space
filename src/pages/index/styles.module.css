@@ -18,3 +18,7 @@
     margin-left: 0;
   }
 }
+
+.layout header {
+  right: 4px;
+}

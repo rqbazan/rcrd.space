@@ -12,7 +12,7 @@ export default function IndexPage() {
   return (
     <>
       <SEO />
-      <MainLayout>
+      <MainLayout className={styles.layout}>
         <div className={styles.coverage}>
           <picture>
             <source
