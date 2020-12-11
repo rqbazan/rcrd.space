@@ -19,13 +19,9 @@ export default function WorkPage() {
     <>
       <SEO title="Thing I’ve worked" />
       <MainLayout>
-        <div className="my-8 px-6 md:px-0 md:my-6">
+        <div className="my-8 px-6 md:px-0 md:my-6 space-y-8">
           {data.workPosts.map(workPost => (
-            <WorkPost
-              key={workPost.title}
-              className="mb-8 last:mb-0"
-              {...workPost}
-            >
+            <WorkPost key={workPost.title} {...workPost}>
               <ReactMarkdown
                 source={workPost.body}
                 escapeHtml={false}

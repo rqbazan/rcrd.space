@@ -13,7 +13,7 @@ export default function WorkPost({
 }) {
   return (
     <section className={`flex flex-wrap w-full ${className}`}>
-      <div className="text-text text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20 text-text">
+      <div className="text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20 text-text">
         <span>{endDate}</span>
         {startDate && (
           <>
@@ -25,14 +25,14 @@ export default function WorkPost({
         )}
       </div>
       <div className="flex flex-col flex-1 lg:flex-row">
-        <article className="flex-1 text-sm lg:mr-6">
+        <article className="flex-1 lg:mr-6">
           <header className="flex text-lg font-bold mb-2 uppercase">
             {title}
           </header>
           {children}
         </article>
         <div className="mt-2 lg:mt-0 lg:w-1/3">
-          <nav className="flex w-full mb-3 md:justify-end">
+          <nav className="flex w-full mb-3 md:justify-end space-x-2">
             {Object.keys(links)
               .sort()
               .map(iconName => (
@@ -42,7 +42,7 @@ export default function WorkPost({
                   target="__blank"
                   rel="noopener"
                   aria-label={iconName}
-                  className="mr-2 last:mr-0 lg:p-0"
+                  className="lg:p-0"
                 >
                   <Icon size={32} name={iconName} />
                 </a>
