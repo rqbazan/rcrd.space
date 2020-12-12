@@ -22,10 +22,6 @@
   color: black;
 }
 
-*:focus {
-  outline: none;
-}
-
 body {
   background-color: theme('colors.body');
   color: theme('colors.text');
@@ -60,6 +56,12 @@ div.token-line {
   .token.plain:first-of-type {
     display: inline;
   }
+}
+
+.token.property,
+.token.operator,
+.token.punctuation {
+  font-weight: 700;
 }
 
 span.code {

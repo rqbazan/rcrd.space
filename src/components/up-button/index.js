@@ -1,5 +1,5 @@
 import React from 'react'
-import useScroll from '~/hooks/use-scroll'
+import { useScroll } from '~/hooks/use-scroll'
 import Icon from '../icon'
 import styles from './styles.module.css'
 

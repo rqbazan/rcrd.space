@@ -13,8 +13,6 @@ module.exports = {
       }
     }
   },
-  variants: {
-    margin: ['responsive']
-  },
+  variants: {},
   plugins: []
 }

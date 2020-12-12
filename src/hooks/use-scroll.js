@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function useScroll(callback) {
+export function useScroll(callback) {
   React.useEffect(() => {
     const listener = callback
 
