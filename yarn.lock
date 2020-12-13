@@ -2315,6 +2315,11 @@ cliui@^6.0.0:
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
 
+clsx@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
+
 coa@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
@@ -6960,6 +6965,11 @@ static-extend@^0.1.1:
   version "1.5.0"
   resolved "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+
+storage-available@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/storage-available/-/storage-available-1.1.0.tgz#0988c893d3a35ff637b986045688a3f334371ba8"
+  integrity sha512-uFHjhmUxyxjEhoEl2sB+ogNWpPoFihk59cfSzPs0wXcCVRtpRti7u3G0O3VEyUuJJIg0oj0g7VGldsNSuhOoqQ==
 
 stream-browserify@3.0.0:
   version "3.0.0"

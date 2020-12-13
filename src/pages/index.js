@@ -16,25 +16,10 @@ export default function IndexPage() {
 
   return (
     <>
-      <style jsx global>{`
-        header {
-          right: 4px;
-        }
-      `}</style>
       <SEO />
-      <MainLayout>
-        <div className="bg-black pt-24 md:pt-0 left-0 top-0 fixed w-full min-h-screen flex items-center justify-end select-none">
-          <picture>
-            <source
-              srcSet="https://res.cloudinary.com/dpwoyjb1f/image/upload/v1578363102/me/night_owl_transparent.webp"
-              type="image/webp"
-            />
-            <source
-              srcSet="https://res.cloudinary.com/dpwoyjb1f/image/upload/v1578363102/me/night_owl_transparent.png"
-              type="image/png"
-            />
-            <OwlParallax />
-          </picture>
+      <MainLayout className="main-layout-on-full-screen-page">
+        <div className="flex items-end justify-end bg-black left-0 top-0 bottom-0 right-0 fixed select-none">
+          <OwlParallax />
         </div>
         <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full z-10">
           <HighlightJson profile={JSON.stringify(profile, null, 4)} />

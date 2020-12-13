@@ -6,10 +6,10 @@ import { useRandomMouseMove } from '~/hooks/use-random-mouse-move'
 
 const AnimatedOwlImage = animated(OwlImage)
 
-export default function OwlParallax() {
+export default function OwlParallax(props) {
   const { style } = useMouseMoveParallax()
 
   useRandomMouseMove()
 
-  return <AnimatedOwlImage style={style} />
+  return <AnimatedOwlImage style={style} {...props} />
 }

@@ -13,7 +13,7 @@ export default function WorkPost({
 }) {
   return (
     <section className={`flex flex-wrap w-full ${className}`}>
-      <div className="text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20 text-text">
+      <div className="text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20">
         <span>{endDate}</span>
         {startDate && (
           <>

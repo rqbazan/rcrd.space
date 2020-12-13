@@ -12,7 +12,7 @@ export default function Menu({ isOpen, onClose }) {
 
   return (
     <aside
-      className="bg-white h-screen fixed right-0 top-0 w-full z-50"
+      className="bg-white dark:bg-wording h-screen fixed right-0 top-0 w-full z-50"
       style={{ display: isOpen ? 'flex' : 'none' }}
     >
       <div className="absolute flex items-center justify-end w-full h-16 px-6">

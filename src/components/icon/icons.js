@@ -6,6 +6,7 @@ import UpArrow from '~/icons/up-arrow.svg'
 import Twitter from '~/icons/twitter.svg'
 import Linkedin from '~/icons/linkedin.svg'
 import Design from '~/icons/design.svg'
+import Burger from '~/icons/burger.svg'
 
 export default {
   github: Github,
@@ -15,5 +16,6 @@ export default {
   'up-arrow': UpArrow,
   twitter: Twitter,
   linkedin: Linkedin,
-  design: Design
+  design: Design,
+  burger: Burger
 }

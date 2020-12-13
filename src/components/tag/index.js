@@ -1,5 +1,6 @@
 /* eslint no-bitwise: 0 */
 import React from 'react'
+import styles from './styles.module.css'
 
 // reference: https://stackoverflow.com/q/3426404
 function getHashCode(string) {
@@ -14,20 +15,10 @@ function getHashCode(string) {
 }
 
 export default function Tag({ children }) {
-  const shortened = getHashCode(children) % 360
-
-  const bgColor = `hsl(${shortened},50%,90%)`
-  const textColor = `hsl(${shortened},100%,20%)`
+  const hash = getHashCode(children) % 360
 
   return (
-    <span
-      className="rounded text-xs m-1 px-2 select-none md:text-sm border"
-      style={{
-        backgroundColor: bgColor,
-        color: textColor,
-        borderColor: textColor
-      }}
-    >
+    <span style={{ '--hash': hash }} className={styles.tag}>
       {children}
     </span>
   )

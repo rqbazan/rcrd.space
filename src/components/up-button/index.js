@@ -13,6 +13,10 @@ export default function UPButton() {
   useScroll(() => {
     const el = buttonRef.current
 
+    if (!el) {
+      return
+    }
+
     if (window.pageYOffset > 100) {
       el.classList.remove(styles.fadeOut)
       el.classList.add(styles.fadeIn)

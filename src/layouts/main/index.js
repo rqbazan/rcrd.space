@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import clsx from 'clsx'
 import Burger from '~/components/burger'
 import Menu from '~/components/menu'
+import NightModeToggle from '~/components/night-mode-toggle'
 import styles from './styles.module.css'
 
 export default function MainLayout({ children, className }) {
@@ -10,31 +12,30 @@ export default function MainLayout({ children, className }) {
   return (
     <div className={className}>
       <header className="px-6 items-center bg-black shadow-lg flex justify-end fixed top-0 w-full z-40 md:px-0 h-16">
-        <nav className="hidden items-center h-full ml-auto mr-auto max-w-3xl w-1/2 text-white md:w-full md:flex">
-          <Link href="/">
-            <a href="/">Home</a>
-          </Link>
-          <Link href="/work">
-            <a href="/work" className="ml-8">
-              Work
+        <div className="flex h-full ml-auto mr-auto md:px-8 lg:px-0 max-w-3xl w-full items-center justify-between">
+          <nav className="hidden md:flex items-center text-white space-x-8">
+            <Link href="/">
+              <a href="/">Home</a>
+            </Link>
+            <Link href="/work">
+              <a href="/work">Work</a>
+            </Link>
+            <a href="/resume.pdf" target="__blank" rel="noopener">
+              Resume
             </a>
-          </Link>
-          <a
-            className="ml-auto"
-            href="/resume.pdf"
-            target="__blank"
-            rel="noopener"
-          >
-            Resume
-          </a>
-        </nav>
+          </nav>
+          <NightModeToggle />
+        </div>
         <div className="md:hidden">
           <Burger isColorful onClick={() => setMenuIsOpen(true)} />
         </div>
       </header>
       <Menu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
       <main
-        className={`flex mt-16 w-full md:mr-auto md:ml-auto md:max-w-3xl ${styles.content}`}
+        className={clsx(
+          'flex mt-16 w-full md:mr-auto md:ml-auto md:max-w-3xl md:px-8 lg:px-0',
+          styles.content
+        )}
       >
         {children}
       </main>
