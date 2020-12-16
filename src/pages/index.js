@@ -18,9 +18,7 @@ export default function IndexPage() {
     <>
       <SEO />
       <MainLayout className="main-layout-on-full-screen-page">
-        <div className="flex items-end justify-end bg-black inset-0 fixed select-none">
-          <OwlParallax />
-        </div>
+        <OwlParallax />
         <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full z-10">
           <HighlightJson profile={JSON.stringify(profile, null, 4)} />
           <nav className="mt-6 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
