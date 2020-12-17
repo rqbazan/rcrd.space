@@ -11,8 +11,8 @@ export default function MainLayout({ children, className }) {
 
   return (
     <div className={className}>
-      <header className="px-6 items-center bg-black shadow-lg flex justify-end fixed top-0 w-full z-40 md:px-0 h-16">
-        <div className="flex h-full ml-auto mr-auto md:px-8 lg:px-0 max-w-3xl w-full items-center justify-between">
+      <header className="px-6 items-center justify-center bg-black shadow-lg flex fixed top-0 w-full z-40 md:px-0 h-16">
+        <div className="flex h-full md:px-8 lg:px-0 max-w-3xl w-full items-center justify-between">
           <nav className="hidden md:flex items-center text-white space-x-8">
             <Link href="/">
               <a href="/">Home</a>

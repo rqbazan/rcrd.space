@@ -7,8 +7,6 @@
   background-color: var(--bg-color);
   color: var(--text-color);
   border-color: var(--text-color);
-
-  transition: all 0.2s linear;
 }
 
 :global(.dark) .tag {

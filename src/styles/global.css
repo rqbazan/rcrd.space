@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+:root {
+  --scrollbar-width: 8px;
+}
+
 ::selection {
   background-color: theme('colors.selection');
   color: black;
@@ -25,7 +29,6 @@ body {
   font-family: 'JetBrains', monospace;
   font-weight: normal;
   font-size: 16px;
-  transition: background 0.2s linear;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -89,13 +92,13 @@ strong {
 }
 
 @screen md {
-  .main-layout-on-full-screen-page header {
-    right: 4px;
+  .main-layout-on-full-screen-page header > div {
+    margin-right: var(--scrollbar-width);
   }
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-track {

@@ -1,8 +1,11 @@
-import storageAvailable from 'storage-available'
-
 function decorator(fn) {
   return (...args) => {
-    return storageAvailable('localStorage') ? fn(...args) : undefined
+    try {
+      return fn(...args)
+    } catch (e) {
+      console.error('localStorage is disabled or unsupported')
+      return undefined
+    }
   }
 }
 
