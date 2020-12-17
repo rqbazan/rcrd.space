@@ -6,12 +6,12 @@ import Menu from '~/components/menu'
 import NightModeToggle from '~/components/night-mode-toggle'
 import styles from './styles.module.css'
 
-export default function MainLayout({ children, className }) {
+export default function MainLayout({ children }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-    <div className={className}>
-      <header className="px-6 items-center justify-center bg-black shadow-lg flex fixed top-0 w-full z-40 md:px-0 h-16">
+    <>
+      <header className="px-6 items-center justify-center bg-black shadow-lg flex fixed top-0 inset-x-0 z-40 md:px-0 h-16">
         <div className="flex h-full md:px-8 lg:px-0 max-w-3xl w-full items-center justify-between">
           <nav className="hidden md:flex items-center text-white space-x-8">
             <Link href="/">
@@ -39,6 +39,6 @@ export default function MainLayout({ children, className }) {
       >
         {children}
       </main>
-    </div>
+    </>
   )
 }

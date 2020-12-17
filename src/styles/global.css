@@ -14,13 +14,15 @@
   font-display: swap;
 }
 
-:root {
-  --scrollbar-width: 8px;
+::selection {
+  @apply bg-selection text-black;
 }
 
-::selection {
-  background-color: theme('colors.selection');
-  color: black;
+/* https://css-tricks.com/elegant-fix-jumping-scrollbar-issue/ */
+@screen md {
+  #__next > header {
+    padding-left: calc(100vw - 100%);
+  }
 }
 
 body {
@@ -91,14 +93,8 @@ strong {
   z-index: theme('zIndex.50');
 }
 
-@screen md {
-  .main-layout-on-full-screen-page header > div {
-    margin-right: var(--scrollbar-width);
-  }
-}
-
 ::-webkit-scrollbar {
-  width: var(--scrollbar-width);
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
