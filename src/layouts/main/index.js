@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import clsx from 'clsx'
 import Burger from '~/components/burger'
 import Menu from '~/components/menu'
 import NightModeToggle from '~/components/night-mode-toggle'
@@ -31,14 +30,7 @@ export default function MainLayout({ children }) {
         </div>
       </header>
       <Menu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
-      <main
-        className={clsx(
-          'flex mt-16 w-full md:mr-auto md:ml-auto md:max-w-3xl md:px-8 lg:px-0',
-          styles.content
-        )}
-      >
-        {children}
-      </main>
+      <main className={styles.content}>{children}</main>
     </>
   )
 }

@@ -11,11 +11,20 @@
       "api architecture"
     ]
   },
-  "socialLinks": {
-    "github": "//github.com/rqbazan",
-    "twitter": "//twitter.com/rqbazan",
-    "linkedin": "//www.linkedin.com/in/rqbazan"
-  },
+  "socialLinks": [
+    {
+      "iconName": "github",
+      "url": "https://github.com/rqbazan"
+    },
+    {
+      "iconName": "twitter",
+      "url": "https://twitter.com/rqbazan"
+    },
+    {
+      "iconName": "linkedin",
+      "url": "https://www.linkedin.com/in/rqbazan"
+    }
+  ],
   "workPosts": [
     {
       "title": "My Resume with React PDF",

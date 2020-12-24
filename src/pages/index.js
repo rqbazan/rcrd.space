@@ -1,6 +1,6 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-import data from '~/data.json'
+import * as api from '~/lib/api'
 import HighlightJson from '~/components/highlight-json'
 import Icon from '~/components/icon'
 import MainLayout from '~/layouts/main'
@@ -11,21 +11,19 @@ const OwlParallax = dynamic(() => import('~/components/owl-parallax'), {
   loading: () => <OwlImage />
 })
 
-export default function IndexPage() {
-  const { profile, socialLinks } = data
-
+export default function IndexPage({ profile, socialLinks }) {
   return (
     <>
       <SEO />
       <MainLayout>
         <OwlParallax />
         <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full z-10">
-          <HighlightJson profile={JSON.stringify(profile, null, 4)} />
+          <HighlightJson data={profile} />
           <nav className="mt-6 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-            {Object.keys(socialLinks).map(iconName => (
+            {socialLinks.map(({ iconName, url }) => (
               <a
-                key={socialLinks[iconName]}
-                href={socialLinks[iconName]}
+                key={iconName}
+                href={url}
                 target="__blank"
                 rel="noopener"
                 aria-label={iconName}
@@ -39,4 +37,18 @@ export default function IndexPage() {
       </MainLayout>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const [profile, socialLinks] = await Promise.all([
+    api.getProfile(),
+    api.getSocialLinks()
+  ])
+
+  return {
+    props: {
+      profile,
+      socialLinks
+    }
+  }
 }

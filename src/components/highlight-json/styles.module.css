@@ -1,0 +1,38 @@
+.container {
+  --accent: theme('colors.accent');
+  --white: theme('colors.white');
+
+  @apply block text-sm leading-loose w-full;
+
+  font-family: 'JetBrains', monospace;
+
+  :global(.token-line) {
+    line-height: 1.75;
+  }
+
+  :global(.token.property),
+  :global(.token.operator),
+  :global(.token.punctuation) {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  :global(.token.string),
+  :global(.token.number) {
+    color: var(--white);
+  }
+
+  @screen md {
+    :global(.token-line:first-of-type),
+    :global(.token-line:last-of-type),
+    :global(.token.plain:first-of-type) {
+      display: inline-block;
+    }
+  }
+
+  :global(.token-line:first-of-type),
+  :global(.token-line:last-of-type),
+  :global(.token.plain:first-of-type) {
+    display: none;
+  }
+}

@@ -14,10 +14,6 @@
   font-display: swap;
 }
 
-::selection {
-  @apply bg-selection text-black;
-}
-
 /* https://css-tricks.com/elegant-fix-jumping-scrollbar-issue/ */
 @screen md {
   #__next > header {
@@ -43,34 +39,6 @@ p {
   font-size: 16px;
 }
 
-div.token-line {
-  line-height: 1.75;
-}
-
-.token-line:first-of-type,
-.token-line:last-of-type,
-.token.plain:first-of-type {
-  display: none;
-}
-
-@screen md {
-  .token-line:first-of-type,
-  .token-line:last-of-type,
-  .token.plain:first-of-type {
-    display: inline;
-  }
-}
-
-.token.property,
-.token.operator,
-.token.punctuation {
-  font-weight: 700;
-}
-
-span.code {
-  font-family: 'JetBrains', monospace;
-}
-
 a {
   text-decoration: underline;
 }
@@ -80,17 +48,12 @@ strong {
 }
 
 #nprogress {
-  pointer-events: none;
-}
+  @apply pointer-events-none;
 
-#nprogress .bar {
-  background-color: theme('colors.selection');
-  height: 2px;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: theme('zIndex.50');
+  .bar {
+    @apply bg-selection left-0 top-0 w-full z-50 fixed;
+    height: 2px;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -107,4 +70,8 @@ strong {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-700;
+}
+
+::selection {
+  @apply bg-selection text-black;
 }

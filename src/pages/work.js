@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
-import data from 'src/data.json'
+import * as api from '~/lib/api'
 import SEO from '~/components/seo'
 import MainLayout from '~/layouts/main'
 import WorkPost from '~/components/work-post'
@@ -14,13 +14,13 @@ function Link({ href, children }) {
   )
 }
 
-export default function WorkPage() {
+export default function WorkPage({ workPosts }) {
   return (
     <>
       <SEO title="Thing I’ve worked" />
       <MainLayout>
         <div className="my-8 px-6 md:px-0 md:my-6 space-y-8">
-          {data.workPosts.map(workPost => (
+          {workPosts.map(workPost => (
             <WorkPost key={workPost.title} {...workPost}>
               <ReactMarkdown
                 source={workPost.body}
@@ -36,4 +36,14 @@ export default function WorkPage() {
       </MainLayout>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const workPosts = await api.getWorkPost()
+
+  return {
+    props: {
+      workPosts
+    }
+  }
 }

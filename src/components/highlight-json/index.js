@@ -1,50 +1,47 @@
 import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import prismTheme from './prism-theme'
+import styles from './styles.module.css'
 
-export default function HighlightCode({ profile }) {
+export default function HighlightJson({ data, identation = 4 }) {
   return (
     <Highlight
       {...defaultProps}
       language="json"
-      theme={prismTheme}
-      code={profile}
+      theme={{ styles: [] }}
+      code={JSON.stringify(data, null, identation)}
     >
-      {({ tokens, getLineProps, getTokenProps }) => (
-        <pre className="block text-sm leading-loose w-full">
-          {tokens.map((line, i) => (
-            <div
-              {...getLineProps({
-                line,
-                key: `code-line-${i}`
-              })}
-            >
-              {line.map((token, key) => {
-                const tokenProps = getTokenProps({
-                  token,
-                  key,
-                  className: 'code'
-                })
+      {({ tokens: tokensMatrix, getLineProps, getTokenProps }) => (
+        <pre className={styles.container}>
+          {tokensMatrix.map((line, i) => {
+            return (
+              <div {...getLineProps({ line, key: `ln-${i}` })}>
+                {line.map((token, ii) => {
+                  const tokenProps = getTokenProps({ token, key: `tk-${ii}` })
 
-                if (token.content !== '        ') {
-                  return <span {...tokenProps} />
-                }
+                  const { content } = token
 
-                const newKey = `fragment-${key}`
-                tokenProps.children = '    '
-                delete tokenProps.key
+                  const isIdentation = /^ *$/g.test(content)
+                  const isNested = content.length > identation
 
-                // the empty string token must be split on two part
-                // so the first one will be easily CSS manipulable
-                return (
-                  <React.Fragment key={newKey}>
-                    <span {...tokenProps} />
-                    <span {...tokenProps} />
-                  </React.Fragment>
-                )
-              })}
-            </div>
-          ))}
+                  if (!isIdentation || !isNested) {
+                    return <span {...tokenProps} />
+                  }
+
+                  // the nested identation token must be split on two part
+                  // so the first one will be easily CSS manipulable
+                  const { key: tokenKey, ...rest } = tokenProps
+                  rest.children = content.substr(0, content.length / 2)
+
+                  return (
+                    <React.Fragment key={tokenKey}>
+                      <span {...rest} />
+                      <span {...rest} />
+                    </React.Fragment>
+                  )
+                })}
+              </div>
+            )
+          })}
         </pre>
       )}
     </Highlight>

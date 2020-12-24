@@ -1,3 +1,5 @@
 .content {
+  @apply flex mt-16 w-full md:mr-auto md:ml-auto md:max-w-3xl md:px-8 lg:px-0;
+
   min-height: calc(100vh - theme('height.16'));
 }
