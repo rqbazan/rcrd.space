@@ -9,7 +9,7 @@ export default function WorkPost({
   tags,
   links,
   className,
-  children
+  body
 }) {
   return (
     <section className={`flex flex-wrap w-full ${className}`}>
@@ -29,7 +29,7 @@ export default function WorkPost({
           <header className="flex text-lg font-bold mb-2 uppercase">
             {title}
           </header>
-          {children}
+          <div dangerouslySetInnerHTML={{ __html: body }} />
         </article>
         <div className="mt-2 lg:mt-0 lg:w-1/3">
           <nav className="flex w-full mb-3 md:justify-end space-x-2">

@@ -47,6 +47,10 @@ strong {
   font-weight: 500;
 }
 
+.emoji {
+  @apply inline-block h-4 w-4;
+}
+
 #nprogress {
   @apply pointer-events-none;
 

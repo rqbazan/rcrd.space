@@ -9,5 +9,8 @@
         }
       }
     }
+  },
+  "rules": {
+    "react/no-danger": "off"
   }
 }
