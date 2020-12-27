@@ -10,9 +10,9 @@ import Burger from '~/icons/burger.svg'
 
 export default {
   github: Github,
-  npm: NPM,
-  website: Website,
-  git: Git,
+  pkg: NPM,
+  deploy: Website,
+  source: Git,
   'up-arrow': UpArrow,
   twitter: Twitter,
   linkedin: Linkedin,

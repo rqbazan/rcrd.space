@@ -11,7 +11,7 @@ const OwlParallax = dynamic(() => import('~/components/owl-parallax'), {
   loading: () => <OwlImage />
 })
 
-export default function IndexPage({ profile, socialLinks }) {
+export default function IndexPage({ profile, socialNetworks }) {
   return (
     <>
       <SEO />
@@ -20,16 +20,16 @@ export default function IndexPage({ profile, socialLinks }) {
         <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full z-10">
           <HighlightJson data={profile} />
           <nav className="mt-6 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-            {socialLinks.map(({ iconName, url }) => (
+            {socialNetworks.map(({ icon, url }) => (
               <a
-                key={iconName}
+                key={icon}
                 href={url}
                 target="__blank"
                 rel="noopener"
-                aria-label={iconName}
+                aria-label={icon}
                 className="self-start md:transform md:ease-in-out md:duration-300 hover:-translate-y-2 text-selection"
               >
-                <Icon name={iconName} size={32} />
+                <Icon name={icon} size={32} />
               </a>
             ))}
           </nav>
@@ -40,15 +40,12 @@ export default function IndexPage({ profile, socialLinks }) {
 }
 
 export async function getStaticProps() {
-  const [profile, socialLinks] = await Promise.all([
-    api.getProfile(),
-    api.getSocialLinks()
-  ])
+  const techProfile = await api.getTechProfile()
 
   return {
     props: {
-      profile,
-      socialLinks
-    }
+      ...techProfile
+    },
+    revalidate: 1
   }
 }
