@@ -18,10 +18,10 @@ export default function Menu({ isOpen, onClose }) {
       <div className="absolute flex items-center justify-end w-full h-16 px-6">
         <Burger isColorful={false} onClick={onClose} />
       </div>
-      <nav className="flex items-center flex-col justify-center w-full">
+      <nav className="flex items-center flex-col justify-center w-full space-y-10">
         {menuItems.map(item => (
           <a
-            className="text-2xl font-light mb-10"
+            className="text-2xl font-light"
             key={`mobile-menu-${item.href}`}
             href={item.href}
             onClick={e => {
@@ -37,6 +37,9 @@ export default function Menu({ isOpen, onClose }) {
             {item.label}
           </a>
         ))}
+        <a className="text-2xl font-light" href="https://weeks.sxntixgo.codes">
+          Weeks
+        </a>
         <a
           className="text-2xl font-light"
           href="/resume.pdf"
