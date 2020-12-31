@@ -19,7 +19,7 @@ export default function MainLayout({ children }) {
             <Link href="/work">
               <a href="/work">Work</a>
             </Link>
-            <a href="https://weeks.sxntixgo.codes">Weeks</a>
+            <a href="https://weeks.sxntixgo.codes/pe/1996-05-17">Weeks</a>
             <a href="/resume.pdf" target="__blank" rel="noopener">
               Resume
             </a>

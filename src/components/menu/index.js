@@ -37,7 +37,10 @@ export default function Menu({ isOpen, onClose }) {
             {item.label}
           </a>
         ))}
-        <a className="text-2xl font-light" href="https://weeks.sxntixgo.codes">
+        <a
+          className="text-2xl font-light"
+          href="https://weeks.sxntixgo.codes/pe/1996-05-17"
+        >
           Weeks
         </a>
         <a
