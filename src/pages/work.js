@@ -33,6 +33,6 @@ export async function getStaticProps() {
     props: {
       techProjects
     },
-    revalidate: 1
+    revalidate: 10
   }
 }

@@ -20,16 +20,16 @@ export default function IndexPage({ profile, socialNetworks }) {
         <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full z-10">
           <HighlightJson data={profile} />
           <nav className="mt-6 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-            {socialNetworks.map(({ icon, url }) => (
+            {Object.keys(socialNetworks).map(key => (
               <a
-                key={icon}
-                href={url}
+                key={key}
+                href={socialNetworks[key]}
                 target="__blank"
                 rel="noopener"
-                aria-label={icon}
+                aria-label={key}
                 className="self-start md:transform md:ease-in-out md:duration-300 hover:-translate-y-2 text-selection"
               >
-                <Icon name={icon} size={32} />
+                <Icon name={key} size={32} />
               </a>
             ))}
           </nav>
@@ -46,6 +46,6 @@ export async function getStaticProps() {
     props: {
       ...techProfile
     },
-    revalidate: 1
+    revalidate: 10
   }
 }

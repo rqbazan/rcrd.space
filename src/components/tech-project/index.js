@@ -35,25 +35,22 @@ export default function TechProject({
         </article>
         <div className="mt-2 lg:mt-0 lg:w-1/3">
           <nav className="flex w-full mb-3 md:justify-end space-x-2">
-            {Object.keys(accessInfo)
-              .sort()
-              .filter(iconName => typeof accessInfo[iconName] === 'string')
-              .map(iconName => (
-                <a
-                  href={accessInfo[iconName]}
-                  key={accessInfo[iconName]}
-                  target="__blank"
-                  rel="noopener"
-                  aria-label={iconName}
-                  className="lg:p-0"
-                >
-                  <Icon size={32} name={iconName} />
-                </a>
-              ))}
+            {accessInfo.map(({ icon, url }) => (
+              <a
+                key={url}
+                href={url}
+                target="__blank"
+                rel="noopener"
+                aria-label={icon}
+                className="lg:p-0"
+              >
+                <Icon size={32} name={icon} />
+              </a>
+            ))}
           </nav>
           <div className="flex flex-wrap w-full md:justify-end -m-1 lg:m-0">
             {tags.map(tag => (
-              <Tag key={tag.name}>{tag.name}</Tag>
+              <Tag key={`${name}-${tag}`}>{tag}</Tag>
             ))}
           </div>
         </div>

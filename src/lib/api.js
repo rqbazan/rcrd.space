@@ -1,37 +1,39 @@
+import Airtable from 'airtable'
 import mdToHtml from '@rqbazan/md-to-html'
 import externalLinks from 'remark-external-links'
 import { format as dateFormat, parse as parseDate } from 'date-fns'
-import { httpClient } from './client'
-import * as auth from './auth'
+
+const db = Airtable.base(process.env.AIRTABLE_BASE)
 
 export async function getTechProfile() {
-  const token = await auth.getJWT()
-
-  const { data } = await httpClient.get('/tech-profiles/1', {
-    headers: { authorization: `Bearer ${token}` }
-  })
+  const record = await db('Tech Profiles').find(process.env.AIRTABLE_RECORD_ID)
 
   return {
     profile: {
-      name: data.shortName,
-      'a.k.a': data.nickname,
-      role: data.freelanceRole,
-      location: `${data.geoLocation.divisionLevel1}, ${data.geoLocation.countryName}`,
-      interests: data.interests
+      name: record.fields.name,
+      'a.k.a': record.fields.nickname,
+      role: record.fields.freelanceRole,
+      location: record.fields.location,
+      interests: record.fields.interests
     },
-    socialNetworks: data.contactInfo.socialNetworks
+    socialNetworks: {
+      github: record.fields.github,
+      linkedin: record.fields.linkedin,
+      twitter: record.fields.twitter
+    }
   }
 }
 
 export async function getTechProjects() {
-  const token = await auth.getJWT()
-
-  const { data } = await httpClient.get('/tech-projects', {
-    headers: { authorization: `Bearer ${token}` },
-    params: {
-      _sort: 'startAt:desc,endAt:desc,name:asc'
-    }
-  })
+  const records = await db('Tech Projects')
+    .select({
+      sort: [
+        { field: 'startAt', direction: 'desc' },
+        { field: 'endAt', direction: 'desc' },
+        { field: 'name', direction: 'asc' }
+      ]
+    })
+    .all()
 
   function formatDate(strDate) {
     return strDate
@@ -39,13 +41,17 @@ export async function getTechProjects() {
       : null
   }
 
-  return data.map(item => ({
-    ...item,
-    startAt: formatDate(item.startAt),
-    endAt: formatDate(item.endAt),
+  return records.map(record => ({
+    ...record.fields,
+    startAt: formatDate(record.fields.startAt),
+    endAt: formatDate(record.fields.endAt),
+    accessInfo: ['package', 'website', 'design', 'source']
+      .map(key => [key, record.fields[key]])
+      .filter(item => item[1])
+      .map(([key, value]) => ({ icon: key, url: value })),
     description: mdToHtml()
       .use(externalLinks, { rel: ['noopener', 'noreferrer'] })
-      .processSync(item.description)
+      .processSync(record.fields.description)
       .toString()
   }))
 }
