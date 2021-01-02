@@ -42,6 +42,7 @@ export async function getTechProjects() {
   }
 
   return records.map(record => ({
+    id: record.id,
     ...record.fields,
     startAt: formatDate(record.fields.startAt),
     endAt: formatDate(record.fields.endAt),
