@@ -8,6 +8,7 @@ class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head />
+        <script src="https://unpkg.com/@rqbazan/set-initial-color-mode@1.0.1" />
         <body>
           <Main />
           <NextScript />

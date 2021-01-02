@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import Storage from '~/utils/storage-manager'
+import React, { useState } from 'react'
 import NightModeSwith from '../night-mode-switch'
 
-const STORAGE_KEY = 'prefers-night-mode'
+const STORAGE_KEY = 'color-mode'
 
 export default function NightModeToggle(props) {
-  const [checked, setChecked] = useState(() => {
-    return Storage.get(STORAGE_KEY, false)
-  })
+  const initialChecked =
+    typeof localStorage !== 'undefined'
+      ? localStorage.getItem(STORAGE_KEY) === 'dark'
+      : false
+
+  const [checked, setChecked] = useState(initialChecked)
 
   function onCheckedChange(isChecked) {
     setChecked(isChecked)
 
-    Storage.set(STORAGE_KEY, isChecked)
+    localStorage.setItem(STORAGE_KEY, isChecked ? 'dark' : 'light')
 
     if (isChecked) {
       document.documentElement.classList.add('dark')
@@ -20,10 +22,6 @@ export default function NightModeToggle(props) {
       document.documentElement.classList.remove('dark')
     }
   }
-
-  useEffect(() => {
-    onCheckedChange(Storage.get(STORAGE_KEY, false))
-  }, [])
 
   return (
     <NightModeSwith

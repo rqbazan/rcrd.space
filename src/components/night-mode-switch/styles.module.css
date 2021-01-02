@@ -22,6 +22,6 @@
   @apply hidden;
 }
 
-.checkbox:checked + .label .thumb {
+:global(.dark) .checkbox + .label .thumb {
   transform: translateX(24px);
 }
