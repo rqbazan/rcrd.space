@@ -1,18 +1,4 @@
-@font-face {
-  font-family: 'JetBrains';
-  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'JetBrains';
-  src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: bold;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 /* https://css-tricks.com/elegant-fix-jumping-scrollbar-issue/ */
 @screen md {
@@ -22,46 +8,32 @@
 }
 
 body {
-  @apply bg-body dark:bg-wording text-wording dark:text-white;
-
-  font-family: 'JetBrains', monospace;
-  font-weight: normal;
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
+  @apply bg-body dark:bg-body-dark text-wording dark:text-wording-dark;
 }
 
-p {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  color: inherit;
-  font-weight: normal;
-  font-size: 16px;
-}
+.\$markdown {
+  @apply dark:text-gray-400 text-wording;
 
-a {
-  text-decoration: underline;
-}
+  .emoji {
+    @apply inline-block h-4 w-4;
+  }
 
-strong {
-  font-weight: 500;
-}
-
-.emoji {
-  @apply inline-block h-4 w-4;
+  a {
+    @apply underline;
+  }
 }
 
 #nprogress {
   @apply pointer-events-none;
 
   .bar {
-    @apply bg-selection left-0 top-0 w-full z-50 fixed;
+    @apply bg-wording left-0 top-0 w-full z-50 fixed;
     height: 2px;
   }
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  @apply w-1;
 }
 
 ::-webkit-scrollbar-track {
@@ -77,5 +49,5 @@ strong {
 }
 
 ::selection {
-  @apply bg-selection text-black;
+  @apply bg-accent dark:bg-accent-dark text-wording dark:text-white;
 }

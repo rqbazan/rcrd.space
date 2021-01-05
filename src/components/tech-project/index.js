@@ -15,7 +15,7 @@ export default function TechProject({
 }) {
   return (
     <section className={clsx('flex flex-wrap w-full', className)}>
-      <div className="text-xs mr-4 text-center w-10 lg:pt-1 lg:w-20">
+      <div className="text-xs font-mono mr-4 text-center w-10 lg:pt-1 lg:w-20">
         <span>{isLTS ? '∞' : endAt || '[WIP]'}</span>
         {(endAt !== startAt || isLTS) && (
           <>
@@ -28,10 +28,13 @@ export default function TechProject({
       </div>
       <div className="flex flex-col flex-1 lg:flex-row">
         <article className="flex-1 lg:mr-6">
-          <header className="flex text-lg font-bold mb-2 uppercase">
+          <header className="flex text-lg font-bold mb-2 uppercase text-wording dark:text-wording-dark">
             {name}
           </header>
-          <div dangerouslySetInnerHTML={{ __html: description }} />
+          <div
+            className="$markdown"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </article>
         <div className="mt-2 lg:mt-0 lg:w-1/3">
           <nav className="flex w-full mb-3 md:justify-end space-x-2">
@@ -42,9 +45,9 @@ export default function TechProject({
                 target="__blank"
                 rel="noopener"
                 aria-label={icon}
-                className="lg:p-0"
+                className="p-1 md:p-0 text-wording dark:text-wording-dark"
               >
-                <Icon size={32} name={icon} />
+                <Icon name={icon} className="h-8 w-8" />
               </a>
             ))}
           </nav>

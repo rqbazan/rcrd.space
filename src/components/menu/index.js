@@ -12,11 +12,11 @@ export default function Menu({ isOpen, onClose }) {
 
   return (
     <aside
-      className="bg-white dark:bg-wording h-screen fixed right-0 top-0 w-full z-50"
+      className="bg-body dark:bg-body-dark h-screen fixed right-0 top-0 w-full z-50"
       style={{ display: isOpen ? 'flex' : 'none' }}
     >
       <div className="absolute flex items-center justify-end w-full h-16 px-6">
-        <Burger isColorful={false} onClick={onClose} />
+        <Burger closable onClick={onClose} />
       </div>
       <nav className="flex items-center flex-col justify-center w-full space-y-10">
         {menuItems.map(item => (
@@ -37,12 +37,6 @@ export default function Menu({ isOpen, onClose }) {
             {item.label}
           </a>
         ))}
-        <a
-          className="text-2xl font-light"
-          href="https://weeks.sxntixgo.codes/pe/1996-05-17"
-        >
-          Weeks
-        </a>
         <a
           className="text-2xl font-light"
           href="/resume.pdf"

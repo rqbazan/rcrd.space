@@ -1,21 +1,22 @@
 import Github from '~/icons/github.svg'
-import NPM from '~/icons/npm.svg'
 import Website from '~/icons/website.svg'
-import Git from '~/icons/git.svg'
 import UpArrow from '~/icons/up-arrow.svg'
 import Twitter from '~/icons/twitter.svg'
 import Linkedin from '~/icons/linkedin.svg'
-import Design from '~/icons/design.svg'
-import Burger from '~/icons/burger.svg'
+import Times from '~/icons/times.svg'
+import Figma from '~/icons/figma.svg'
+import Menu from '~/icons/menu.svg'
+import Package from '~/icons/package.svg'
 
 export default {
   github: Github,
-  package: NPM,
+  package: Package,
   website: Website,
-  source: Git,
+  source: Github,
   'up-arrow': UpArrow,
   twitter: Twitter,
   linkedin: Linkedin,
-  design: Design,
-  burger: Burger
+  design: Figma,
+  times: Times,
+  menu: Menu
 }

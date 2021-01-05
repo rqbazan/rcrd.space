@@ -1,14 +1,13 @@
 .label {
-  @apply cursor-pointer flex items-center justify-between relative rounded-full;
+  @apply cursor-pointer flex items-center justify-between relative rounded-full bg-wording;
 
-  background-color: #324e60;
   padding: 5px;
   height: 26px;
   width: 50px;
 }
 
 .thumb {
-  @apply bg-white rounded-full absolute;
+  @apply bg-wording-dark rounded-full absolute;
 
   top: 2px;
   left: 2px;

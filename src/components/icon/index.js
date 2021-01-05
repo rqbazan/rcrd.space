@@ -5,7 +5,6 @@ export default function Icon({ name, size, className }) {
   return React.createElement(icons[name], {
     className,
     width: size,
-    height: size,
-    fill: 'currentColor'
+    height: size
   })
 }

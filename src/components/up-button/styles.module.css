@@ -1,6 +1,9 @@
 .upButton {
-  @apply rounded-full h-12 w-12 flex items-center justify-center;
-  @apply bg-black text-white shadow-lg opacity-0;
+  @apply rounded-full h-12 w-12 flex items-center justify-center bg-wording shadow-lg opacity-0;
+}
+
+:global(.dark) .upButton {
+  @apply bg-black;
 }
 
 .upButton:focus {

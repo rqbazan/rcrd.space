@@ -10,6 +10,6 @@
 }
 
 :global(.dark) .tag {
-  --bg-color: hsl(var(--hash), 50%, 30%);
+  --bg-color: hsl(var(--hash), 10%, 30%);
   --text-color: hsl(var(--hash), 100%, 70%);
 }

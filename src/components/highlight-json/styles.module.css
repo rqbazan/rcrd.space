@@ -1,10 +1,8 @@
 .container {
-  --accent: theme('colors.accent');
+  --accent: theme('colors.accent.DEFAULT');
   --white: theme('colors.white');
 
-  @apply block text-sm leading-loose w-full;
-
-  font-family: 'JetBrains', monospace;
+  @apply block text-sm w-full font-mono font-normal;
 
   :global(.token-line) {
     line-height: 1.75;
@@ -35,4 +33,8 @@
   :global(.token.plain:first-of-type) {
     display: none;
   }
+}
+
+:global(.dark) .container {
+  --accent: theme('colors.accent.dark');
 }

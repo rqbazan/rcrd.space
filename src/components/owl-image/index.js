@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 
 export default function OwlImage({ className, ...props }) {
   return (
-    <picture className="flex items-end justify-end bg-black inset-0 fixed select-none">
+    <picture className="flex items-end justify-end bg-black left-0 right-0 bottom-0 top-16 fixed select-none">
       <source
         media="(min-width:1280px)"
         srcSet="https://res.cloudinary.com/dpwoyjb1f/image/upload/q_auto,f_auto/v1608151568/me/night-owl-remove-bg.png"
