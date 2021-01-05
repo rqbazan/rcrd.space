@@ -7,7 +7,7 @@ class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head />
-        <script async src="https://cdn.splitbee.io/sb.js" />
+        <script async data-api="/_hive" src="/bee.js" />
         <script src="https://unpkg.com/@rqbazan/set-initial-color-mode@1.0.1" />
         <body>
           <Main />

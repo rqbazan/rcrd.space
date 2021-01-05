@@ -45,6 +45,9 @@ export default function TechProject({
                 rel="noopener"
                 aria-label={icon}
                 className="p-1 md:p-0 text-wording dark:text-wording-dark"
+                data-splitbee-event="View Tech Project"
+                data-splitbee-event-name={name}
+                data-splitbee-event-link-type={icon}
               >
                 <Icon name={icon} className="h-8 w-8" />
               </a>

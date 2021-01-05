@@ -37,6 +37,7 @@ export default function Menu({ isOpen, onClose }) {
           </a>
         ))}
         <a
+          data-splitbee-event="View Resume"
           className="text-2xl font-light"
           href="/resume.pdf"
           target="__blank"

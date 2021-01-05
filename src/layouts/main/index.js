@@ -27,7 +27,12 @@ export default function MainLayout({ children }) {
               <Link href="/work">
                 <a href="/work">Work</a>
               </Link>
-              <a href="/resume.pdf" target="__blank" rel="noopener">
+              <a
+                data-splitbee-event="View Resume"
+                href="/resume.pdf"
+                target="__blank"
+                rel="noopener"
+              >
                 Resume
               </a>
             </nav>

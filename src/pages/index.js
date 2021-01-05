@@ -27,6 +27,8 @@ export default function IndexPage({ profile, socialNetworks }) {
                 rel="noopener"
                 aria-label={key}
                 className="text-accent dark:text-accent-dark"
+                data-splitbee-event="View Social Network"
+                data-splitbee-event-network={key}
               >
                 <Icon name={key} className="h-8 w-8 md:h-10 md:w-10" />
               </a>

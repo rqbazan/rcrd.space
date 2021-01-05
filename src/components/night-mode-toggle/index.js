@@ -14,12 +14,18 @@ export default function NightModeToggle(props) {
   function onCheckedChange(isChecked) {
     setChecked(isChecked)
 
-    localStorage.setItem(STORAGE_KEY, isChecked ? 'dark' : 'light')
+    const colorMode = isChecked ? 'dark' : 'light'
+
+    localStorage.setItem(STORAGE_KEY, colorMode)
 
     if (isChecked) {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
+    }
+
+    if (typeof splitbee !== 'undefined') {
+      window.splitbee.track('Change Color Mode', { colorMode })
     }
   }
 
