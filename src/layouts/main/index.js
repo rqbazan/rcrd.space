@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import * as React from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
 import Burger from '~/components/burger'
@@ -7,7 +7,7 @@ import NightModeToggle from '~/components/night-mode-toggle'
 import styles from './styles.module.css'
 
 export default function MainLayout({ children }) {
-  const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const [menuIsOpen, setMenuIsOpen] = React.useState(false)
 
   return (
     <>

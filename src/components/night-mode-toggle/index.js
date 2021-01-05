@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import * as React from 'react'
 import NightModeSwith from '../night-mode-switch'
 
 const STORAGE_KEY = 'color-mode'
@@ -9,7 +9,7 @@ export default function NightModeToggle(props) {
       ? localStorage.getItem(STORAGE_KEY) === 'dark'
       : false
 
-  const [checked, setChecked] = useState(initialChecked)
+  const [checked, setChecked] = React.useState(initialChecked)
 
   function onCheckedChange(isChecked) {
     setChecked(isChecked)

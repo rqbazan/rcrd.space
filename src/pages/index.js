@@ -1,4 +1,3 @@
-import React from 'react'
 import dynamic from 'next/dynamic'
 import * as api from '~/lib/api'
 import HighlightJson from '~/components/highlight-json'

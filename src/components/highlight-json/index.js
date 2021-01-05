@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import styles from './styles.module.css'
 

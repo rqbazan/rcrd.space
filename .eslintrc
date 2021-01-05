@@ -11,6 +11,7 @@
     }
   },
   "rules": {
-    "react/no-danger": "off"
+    "react/no-danger": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

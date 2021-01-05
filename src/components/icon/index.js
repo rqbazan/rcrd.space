@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import icons from './icons'
 
 export default function Icon({ name, size, className }) {

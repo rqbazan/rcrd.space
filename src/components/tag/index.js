@@ -1,5 +1,4 @@
 /* eslint no-bitwise: 0 */
-import React from 'react'
 import styles from './styles.module.css'
 
 // reference: https://stackoverflow.com/q/3426404

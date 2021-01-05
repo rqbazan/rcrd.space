@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import * as React from 'react'
 import { useSpring } from 'react-spring'
 
 const transform = (x, y) => `translate(${x / 10}px,${y / 10}px)`
@@ -13,7 +13,7 @@ export function useMouseMoveParallax() {
     transform: props.xy.interpolate(transform)
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     function onMouseMove({ clientX: x, clientY: y }) {
       set({ xy: [x - window.innerWidth / 2, y - window.innerHeight / 2] })
     }

@@ -1,4 +1,3 @@
-import React from 'react'
 import * as api from '~/lib/api'
 import SEO from '~/components/seo'
 import MainLayout from '~/layouts/main'

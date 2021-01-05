@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import * as React from 'react'
 import useMedia from 'use-media'
 import random from 'lodash.random'
 
@@ -27,7 +27,7 @@ function getRandomMouseMoveEvent() {
 export function useRandomMouseMove() {
   const isSmall = useMedia({ maxWidth: 768 })
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!isSmall) {
       return () => {}
     }
