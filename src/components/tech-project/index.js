@@ -41,8 +41,8 @@ export default function TechProject({
               <a
                 key={url}
                 href={url}
-                target="__blank"
-                rel="noopener"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={icon}
                 className="p-1 md:p-0 text-wording dark:text-wording-dark"
                 data-splitbee-event="View Tech Project"

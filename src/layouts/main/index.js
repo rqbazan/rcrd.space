@@ -30,8 +30,8 @@ export default function MainLayout({ children }) {
               <a
                 data-splitbee-event="View Resume"
                 href="/resume.pdf"
-                target="__blank"
-                rel="noopener"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Resume
               </a>

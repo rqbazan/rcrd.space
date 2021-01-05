@@ -40,8 +40,8 @@ export default function Menu({ isOpen, onClose }) {
           data-splitbee-event="View Resume"
           className="text-2xl font-light"
           href="/resume.pdf"
-          target="__blank"
-          rel="noopener"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Resume
         </a>

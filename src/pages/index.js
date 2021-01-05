@@ -23,8 +23,8 @@ export default function IndexPage({ profile, socialNetworks }) {
               <a
                 key={key}
                 href={socialNetworks[key]}
-                target="__blank"
-                rel="noopener"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={key}
                 className="text-accent dark:text-accent-dark"
                 data-splitbee-event="View Social Network"
