@@ -7,6 +7,12 @@
   }
 }
 
+html,
+body,
+#__next {
+  height: 100%;
+}
+
 body {
   @apply bg-body dark:bg-body-dark text-wording dark:text-wording-dark;
 }

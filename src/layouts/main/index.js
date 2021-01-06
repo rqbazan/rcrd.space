@@ -44,12 +44,7 @@ export default function MainLayout({ children }) {
         </div>
       </header>
       <Menu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
-      <main
-        className={clsx(
-          'flex mt-16 w-full md:mr-auto md:ml-auto md:max-w-3xl md:px-8 lg:px-0',
-          styles.content
-        )}
-      >
+      <main className="flex w-full pt-16 min-h-full md:mr-auto md:ml-auto md:max-w-3xl md:px-8 lg:px-0">
         {children}
       </main>
     </>
