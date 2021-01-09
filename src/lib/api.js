@@ -8,20 +8,7 @@ const db = Airtable.base(process.env.AIRTABLE_BASE)
 export async function getTechProfile() {
   const record = await db('Tech Profiles').find(process.env.AIRTABLE_RECORD_ID)
 
-  return {
-    profile: {
-      name: record.fields.name,
-      'a.k.a': record.fields.nickname,
-      role: record.fields.freelanceRole,
-      location: record.fields.location,
-      interests: record.fields.interests
-    },
-    socialNetworks: {
-      github: record.fields.github,
-      linkedin: record.fields.linkedin,
-      twitter: record.fields.twitter
-    }
-  }
+  return record.fields
 }
 
 export async function getTechProjects() {

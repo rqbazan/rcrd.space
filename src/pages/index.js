@@ -10,27 +10,37 @@ const OwlParallax = dynamic(() => import('~/components/owl-parallax'), {
   loading: () => <OwlImage />
 })
 
-export default function IndexPage({ profile, socialNetworks }) {
+function getJSON(techProfile) {
+  return {
+    name: techProfile.name,
+    'a.k.a': techProfile.nickname,
+    role: techProfile.freelanceRole,
+    location: techProfile.location,
+    interests: techProfile.interests
+  }
+}
+
+export default function IndexPage({ techProfile }) {
   return (
     <>
-      <SEO />
+      <SEO techProfile={techProfile} />
       <MainLayout>
         <OwlParallax />
         <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full z-10">
-          <HighlightJson data={profile} />
+          <HighlightJson data={getJSON(techProfile)} />
           <nav className="mt-6 flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-8">
-            {Object.keys(socialNetworks).map(key => (
+            {['github', 'linkedin', 'twitter'].map(icon => (
               <a
-                key={key}
-                href={socialNetworks[key]}
+                key={icon}
+                href={techProfile[icon]}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={key}
+                aria-label={icon}
                 className="text-accent dark:text-accent-dark"
                 data-splitbee-event="View Social Network"
-                data-splitbee-event-network={key}
+                data-splitbee-event-network={icon}
               >
-                <Icon name={key} className="h-8 w-8 md:h-10 md:w-10" />
+                <Icon name={icon} className="h-8 w-8 md:h-10 md:w-10" />
               </a>
             ))}
           </nav>
@@ -45,7 +55,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      ...techProfile
+      techProfile
     },
     revalidate: 10
   }

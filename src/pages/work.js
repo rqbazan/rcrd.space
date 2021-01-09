@@ -4,10 +4,10 @@ import MainLayout from '~/layouts/main'
 import TechProject from '~/components/tech-project'
 import UPButton from '~/components/up-button'
 
-export default function WorkPage({ techProjects }) {
+export default function WorkPage({ techProjects, techProfile }) {
   return (
     <>
-      <SEO title="Thing I’ve worked" />
+      <SEO techProfile={techProfile} title="Thing I’ve worked" />
       <MainLayout>
         <div className="my-8 px-6 md:px-0 md:my-6 space-y-8">
           {techProjects.map(techProject => (
@@ -26,11 +26,15 @@ export default function WorkPage({ techProjects }) {
 }
 
 export async function getStaticProps() {
-  const techProjects = await api.getTechProjects()
+  const [techProjects, techProfile] = await Promise.all([
+    api.getTechProjects(),
+    api.getTechProfile()
+  ])
 
   return {
     props: {
-      techProjects
+      techProjects,
+      techProfile
     },
     revalidate: 10
   }
