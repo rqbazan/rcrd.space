@@ -39,7 +39,7 @@ export default function Menu({ isOpen, onClose }) {
         <a
           data-splitbee-event="View Resume"
           className="text-2xl font-light"
-          href="/resume.pdf"
+          href="https://resume.sxntixgo.codes"
           target="_blank"
           rel="noopener noreferrer"
         >

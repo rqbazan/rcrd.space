@@ -29,7 +29,7 @@ export default function MainLayout({ children }) {
               </Link>
               <a
                 data-splitbee-event="View Resume"
-                href="/resume.pdf"
+                href="https://resume.sxntixgo.codes"
                 target="_blank"
                 rel="noopener noreferrer"
               >
