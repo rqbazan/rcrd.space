@@ -27,7 +27,7 @@ export default function HighlightJson({ data, identation = 4 }) {
                     return <span {...tokenProps} />
                   }
 
-                  // the nested identation token must be split on two part
+                  // the nested identation token must be split in two part
                   // so the first one will be easily CSS manipulable
                   const { key: tokenKey, ...rest } = tokenProps
                   rest.children = content.substr(0, content.length / 2)

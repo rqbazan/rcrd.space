@@ -26,7 +26,7 @@ export default function IndexPage({ techProfile }) {
       <SEO techProfile={techProfile} />
       <MainLayout>
         <OwlParallax />
-        <div className="flex flex-col justify-start p-10vw md:p-0 md:justify-center w-full z-10">
+        <div className="flex flex-col justify-start p-[10vw] md:p-0 md:justify-center w-full z-10">
           <HighlightJson data={getJSON(techProfile)} />
           <nav className="mt-6 flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-8">
             {['github', 'linkedin', 'twitter'].map(icon => (

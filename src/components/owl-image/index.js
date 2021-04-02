@@ -1,6 +1,3 @@
-import clsx from 'clsx'
-import styles from './styles.module.css'
-
 export default function OwlImage({ className, ...props }) {
   return (
     <picture className="flex items-end justify-end bg-black left-0 right-0 bottom-0 top-16 fixed select-none">
@@ -19,7 +16,7 @@ export default function OwlImage({ className, ...props }) {
       <img
         src="https://res.cloudinary.com/dpwoyjb1f/image/upload/q_auto,f_auto,w_400,c_scale/v1608151568/me/night-owl-remove-bg.png"
         alt="coverage"
-        className={clsx(styles.img, className)}
+        className="h-[60%] md:h-[85%] md:mr-0 lg:mr-[10%] xl:mr-[20%] transition-all duration-200 ease-linear dark:filter-contrast-200"
         {...props}
       />
     </picture>

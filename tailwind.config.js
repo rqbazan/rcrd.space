@@ -1,5 +1,6 @@
 const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
+const twFiltersPlugin = require('tailwindcss-filters')
 
 module.exports = {
   purge: ['./src/**/*.js'],
@@ -23,11 +24,16 @@ module.exports = {
           dark: colors.blue[700]
         }
       },
-      padding: {
-        '10vw': '10vw'
+      backdropFilter: {
+        'blur-4': 'blur(4px)'
+      },
+      filter: {
+        'contrast-200': 'contrast(200%)'
       }
     }
   },
-  variants: {},
-  plugins: []
+  variants: {
+    filter: ['responsive', 'dark']
+  },
+  plugins: [twFiltersPlugin]
 }
