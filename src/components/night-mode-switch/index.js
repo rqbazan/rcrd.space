@@ -1,15 +1,27 @@
 export function NightModeSwitch({ checked, onCheckedChange, className }) {
+  const onClick = () => onCheckedChange(!checked)
+
   return (
-    <div className={className}>
+    <div
+      className={className}
+      tabIndex={0}
+      role="checkbox"
+      aria-checked={checked ? 'true' : 'false'}
+      onKeyPress={e => {
+        if (e.code === 'Enter') {
+          onClick()
+        }
+      }}
+    >
       <input
         readOnly
         className="hidden"
         id="night-mode-checkbox"
         type="checkbox"
         checked={checked}
-        onClick={() => onCheckedChange(!checked)}
+        onClick={onClick}
       />
-      {/* eslint-disable-next-line */}
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label
         className="cursor-pointer flex items-center justify-between relative rounded-full bg-wording p-[5px] h-[26px] w-[50px]"
         htmlFor="night-mode-checkbox"

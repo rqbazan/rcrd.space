@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import { NavItem } from '../nav-item'
 import { Burger } from '../burger'
 
 const menuItems = [
@@ -6,9 +6,7 @@ const menuItems = [
   { href: '/work', label: 'Work' }
 ]
 
-export function Menu({ isOpen, onClose }) {
-  const router = useRouter()
-
+export function Menu({ isOpen, router, onClose }) {
   return (
     <aside
       className="bg-body dark:bg-body-dark h-screen fixed right-0 top-0 w-full z-50"
@@ -17,12 +15,13 @@ export function Menu({ isOpen, onClose }) {
       <div className="absolute flex items-center justify-end w-full h-16 px-6">
         <Burger closable onClick={onClose} />
       </div>
-      <nav className="flex items-center flex-col justify-center w-full space-y-10">
+      <nav className="flex items-center flex-col justify-center w-full space-y-7">
         {menuItems.map(item => (
-          <a
-            className="text-2xl font-light"
+          <NavItem
             key={`mobile-menu-${item.href}`}
+            className="text-2xl font-light min-h-[56px]"
             href={item.href}
+            currentRoute={router.route}
             onClick={e => {
               e.preventDefault()
 
@@ -34,17 +33,17 @@ export function Menu({ isOpen, onClose }) {
             }}
           >
             {item.label}
-          </a>
+          </NavItem>
         ))}
-        <a
+        <NavItem
           data-splitbee-event="View Resume"
-          className="text-2xl font-light"
+          className="text-2xl font-light min-h-[56px]"
           href="https://resume.sxntixgo.codes"
           target="_blank"
           rel="noopener noreferrer"
         >
           Resume
-        </a>
+        </NavItem>
       </nav>
     </aside>
   )
