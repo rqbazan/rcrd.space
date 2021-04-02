@@ -35,7 +35,7 @@ function getSEOProps(techProfile, overrides) {
   }
 }
 
-export default function SEO({ techProfile, ...props }) {
+export function SEO({ techProfile, ...props }) {
   return (
     <>
       <Head>

@@ -1,9 +1,9 @@
 import * as React from 'react'
-import NightModeSwith from '../night-mode-switch'
+import { NightModeSwitch } from '../night-mode-switch'
 
 const STORAGE_KEY = 'color-mode'
 
-export default function NightModeToggle(props) {
+export function NightModeToggle(props) {
   const initialChecked =
     typeof localStorage !== 'undefined'
       ? localStorage.getItem(STORAGE_KEY) === 'dark'
@@ -30,7 +30,7 @@ export default function NightModeToggle(props) {
   }
 
   return (
-    <NightModeSwith
+    <NightModeSwitch
       {...props}
       checked={checked}
       onCheckedChange={onCheckedChange}

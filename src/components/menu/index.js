@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
-import Burger from '../burger'
+import { Burger } from '../burger'
 
 const menuItems = [
   { href: '/', label: 'Home' },
   { href: '/work', label: 'Work' }
 ]
 
-export default function Menu({ isOpen, onClose }) {
+export function Menu({ isOpen, onClose }) {
   const router = useRouter()
 
   return (

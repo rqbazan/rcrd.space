@@ -1,6 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
-class Document extends NextDocument {
+export default class Document extends NextDocument {
   static getInitialProps = NextDocument.getInitialProps
 
   render() {
@@ -17,5 +17,3 @@ class Document extends NextDocument {
     )
   }
 }
-
-export default Document

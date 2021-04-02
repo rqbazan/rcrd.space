@@ -1,14 +1,17 @@
 import dynamic from 'next/dynamic'
 import * as api from '~/lib/api'
-import HighlightJson from '~/components/highlight-json'
-import Icon from '~/components/icon'
-import MainLayout from '~/layouts/main'
-import SEO from '~/components/seo'
-import OwlImage from '~/components/owl-image'
+import { HighlightJson } from '~/components/highlight-json'
+import { Icon } from '~/components/icon'
+import { MainLayout } from '~/layouts/main'
+import { SEO } from '~/components/seo'
+import { OwlImage } from '~/components/owl-image'
 
-const OwlParallax = dynamic(() => import('~/components/owl-parallax'), {
-  loading: () => <OwlImage />
-})
+const OwlParallax = dynamic(
+  () => import('~/components/owl-parallax').then(mod => mod.OwlParallax),
+  {
+    loading: () => <OwlImage />
+  }
+)
 
 function getJSON(techProfile) {
   return {

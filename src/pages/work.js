@@ -1,8 +1,8 @@
 import * as api from '~/lib/api'
-import SEO from '~/components/seo'
-import MainLayout from '~/layouts/main'
-import TechProject from '~/components/tech-project'
-import UPButton from '~/components/up-button'
+import { SEO } from '~/components/seo'
+import { MainLayout } from '~/layouts/main'
+import { TechProject } from '~/components/tech-project'
+import { UPButton } from '~/components/up-button'
 
 export default function WorkPage({ techProjects, techProfile }) {
   return (

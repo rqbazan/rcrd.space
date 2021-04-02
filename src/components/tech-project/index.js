@@ -1,8 +1,8 @@
 import clsx from 'clsx'
-import Icon from '../icon'
-import Tag from '../tag'
+import { Icon } from '../icon'
+import { Tag } from '../tag'
 
-export default function TechProject({
+export function TechProject({
   className,
   name,
   endAt,

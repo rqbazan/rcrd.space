@@ -1,8 +1,4 @@
-export default function NightModeSwitch({
-  checked,
-  onCheckedChange,
-  className
-}) {
+export function NightModeSwitch({ checked, onCheckedChange, className }) {
   return (
     <div className={className}>
       <input

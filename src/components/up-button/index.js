@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { useScroll } from '~/hooks/use-scroll'
-import Icon from '../icon'
+import { Icon } from '../icon'
 
-export default function UPButton() {
+export function UPButton() {
   const buttonRef = React.useRef()
 
   useScroll(() => {

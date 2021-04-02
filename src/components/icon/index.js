@@ -1,7 +1,7 @@
 import * as React from 'react'
 import icons from './icons'
 
-export default function Icon({ name, size, className }) {
+export function Icon({ name, size, className }) {
   return React.createElement(icons[name], {
     className,
     width: size,

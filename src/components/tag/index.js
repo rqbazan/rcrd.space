@@ -13,7 +13,7 @@ function getHashCode(string) {
   return hash
 }
 
-export default function Tag({ children }) {
+export function Tag({ children }) {
   const hash = getHashCode(children) % 360
 
   return (

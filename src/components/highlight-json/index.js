@@ -2,7 +2,7 @@ import * as React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import styles from './styles.module.css'
 
-export default function HighlightJson({ data, identation = 4 }) {
+export function HighlightJson({ data, identation = 4 }) {
   return (
     <Highlight
       {...defaultProps}

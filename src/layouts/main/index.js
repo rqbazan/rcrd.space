@@ -1,10 +1,10 @@
 import * as React from 'react'
 import Link from 'next/link'
-import Burger from '~/components/burger'
-import Menu from '~/components/menu'
-import NightModeToggle from '~/components/night-mode-toggle'
+import { Burger } from '~/components/burger'
+import { Menu } from '~/components/menu'
+import { NightModeToggle } from '~/components/night-mode-toggle'
 
-export default function MainLayout({ children }) {
+export function MainLayout({ children }) {
   const [menuIsOpen, setMenuIsOpen] = React.useState(false)
 
   return (

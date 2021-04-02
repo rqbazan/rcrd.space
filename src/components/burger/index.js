@@ -1,7 +1,7 @@
 import clsx from 'clsx'
-import Icon from '../icon'
+import { Icon } from '../icon'
 
-export default function Burger({ onClick, closable, className, ...props }) {
+export function Burger({ onClick, closable, className, ...props }) {
   return (
     <div
       role="button"
