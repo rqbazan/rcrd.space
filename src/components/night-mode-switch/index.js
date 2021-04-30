@@ -3,7 +3,7 @@ export function NightModeSwitch({ checked, onCheckedChange }) {
 
   return (
     <div
-      className="outline-none rounded-full overflow-hidden focus:ring-2 ring-offset-2 ring-offset-body dark:ring-offset-body-dark ring-accent dark:ring-accent-dark"
+      className="outline-none rounded-full overflow-hidden focus:ring-2 ring-yellow-300 dark:ring-blue-700"
       role="button"
       tabIndex={0}
       onKeyPress={e => {
@@ -22,7 +22,7 @@ export function NightModeSwitch({ checked, onCheckedChange }) {
       />
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label
-        className="cursor-pointer flex items-center justify-between rounded-full relative bg-wording p-[5px] h-[26px] w-[50px]"
+        className="cursor-pointer flex items-center justify-between rounded-full relative bg-title p-[5px] h-[26px] w-[50px]"
         htmlFor="night-mode-checkbox"
       >
         <div className="h-4 w-4 select-none">
@@ -39,7 +39,7 @@ export function NightModeSwitch({ checked, onCheckedChange }) {
             className="h-full w-full"
           />
         </div>
-        <div className="dark:translate-x-[24px] bg-wording-dark rounded-full absolute top-[2px] left-[2px] h-[22px] w-[22px] transition-transform translate-x-0 transform duration-200" />
+        <div className="dark:translate-x-[24px] bg-title-dark rounded-full absolute top-[2px] left-[2px] h-[22px] w-[22px] transition-transform translate-x-0 transform duration-200" />
       </label>
     </div>
   )

@@ -27,7 +27,7 @@ export default function IndexPage({ techProfile }) {
   return (
     <>
       <SEO techProfile={techProfile} />
-      <MainLayout>
+      <MainLayout single>
         <OwlParallax />
         <div className="flex flex-col justify-start p-[10vw] md:p-0 md:justify-center w-full z-10">
           <HighlightJson data={getJSON(techProfile)} />
@@ -43,7 +43,7 @@ export default function IndexPage({ techProfile }) {
                 data-splitbee-event="View Social Network"
                 data-splitbee-event-network={icon}
               >
-                <Icon name={icon} className="h-8 w-8 md:h-10 md:w-10" />
+                <Icon name={icon} className="h-8 w-8 md:h-9 md:w-9" />
               </a>
             ))}
           </nav>

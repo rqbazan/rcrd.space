@@ -20,18 +20,18 @@
     color: var(--white);
   }
 
+  :global(.token-line:first-of-type),
+  :global(.token-line:last-of-type),
+  :global(.token.plain:first-of-type) {
+    display: none;
+  }
+
   @screen md {
     :global(.token-line:first-of-type),
     :global(.token-line:last-of-type),
     :global(.token.plain:first-of-type) {
       display: inline-block;
     }
-  }
-
-  :global(.token-line:first-of-type),
-  :global(.token-line:last-of-type),
-  :global(.token.plain:first-of-type) {
-    display: none;
   }
 }
 

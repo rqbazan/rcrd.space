@@ -1,9 +1,9 @@
 const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
-const twFiltersPlugin = require('tailwindcss-filters')
 
 module.exports = {
-  purge: ['./src/**/*.js'],
+  mode: 'jit',
+  purge: ['./src/**/*.js', './src/**/*.css'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -15,25 +15,22 @@ module.exports = {
           DEFAULT: colors.gray[100],
           dark: colors.gray[900]
         },
-        wording: {
+        accent: {
+          DEFAULT: colors.red[500],
+          dark: colors.blue[600]
+        },
+        title: {
           DEFAULT: colors.gray[900],
           dark: colors.gray[100]
         },
-        accent: {
-          DEFAULT: colors.yellow[300],
-          dark: colors.blue[700]
+        wording: {
+          DEFAULT: colors.gray[600],
+          dark: colors.gray[300]
+        },
+        gray: {
+          transparent: 'rgba(255,255,255,0.2)'
         }
-      },
-      backdropFilter: {
-        'blur-4': 'blur(4px)'
-      },
-      filter: {
-        'contrast-200': 'contrast(200%)'
       }
     }
-  },
-  variants: {
-    filter: ['responsive', 'dark']
-  },
-  plugins: [twFiltersPlugin]
+  }
 }

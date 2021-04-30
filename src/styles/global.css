@@ -15,25 +15,53 @@ body {
   @apply bg-body dark:bg-body-dark text-wording dark:text-wording-dark;
 }
 
-.\$markdown {
-  @apply dark:text-gray-400 text-wording;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-title dark:text-title-dark;
+}
 
+.\$markdown {
   .emoji {
     @apply inline-block h-4 w-4;
   }
 
+  ul {
+    @apply list-disc ml-4 space-y-2;
+  }
+
   a {
-    @apply underline;
+    @apply underline transition-colors duration-300;
+  }
+
+  a:hover {
+    @apply text-accent dark:text-accent-dark;
+  }
+
+  h2 a {
+    @apply no-underline;
+  }
+
+  h2 {
+    @apply text-lg font-bold uppercase mb-4;
+  }
+
+  section:not(:last-child) {
+    @apply mb-6;
   }
 }
 
-#nprogress {
-  @apply pointer-events-none;
-
-  .bar {
-    @apply bg-wording left-0 top-0 w-full z-50 fixed;
-    height: 2px;
+.dark .\$markdown {
+  a:hover {
+    @apply text-accent-dark;
   }
+}
+
+#nprogress .bar {
+  @apply h-2 pointer-events-none bg-title dark:bg-title-dark opacity-20 left-0 top-0 w-full z-50 fixed;
 }
 
 ::-webkit-scrollbar {
@@ -53,5 +81,5 @@ body {
 }
 
 ::selection {
-  @apply bg-accent dark:bg-accent-dark text-wording dark:text-white;
+  @apply bg-yellow-300 dark:bg-blue-700;
 }

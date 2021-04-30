@@ -14,7 +14,7 @@ export function TechProject({
 }) {
   return (
     <section className={clsx('flex flex-wrap w-full', className)}>
-      <div className="text-xs font-mono mr-4 text-center w-10 lg:pt-1 lg:w-20">
+      <div className="text-xs font-mono mr-4 text-center w-10 lg:pt-1 lg:w-20 text-title dark:text-title-dark">
         <span>{isLTS ? '∞' : endAt || '[WIP]'}</span>
         {(endAt !== startAt || isLTS) && (
           <>
@@ -27,7 +27,7 @@ export function TechProject({
       </div>
       <div className="flex flex-col flex-1 lg:flex-row">
         <article className="flex-1 lg:mr-6">
-          <header className="flex text-lg font-bold mb-2 uppercase text-wording dark:text-wording-dark">
+          <header className="flex text-lg font-bold mb-2 uppercase text-title dark:text-title-dark">
             {name}
           </header>
           <div
@@ -44,7 +44,7 @@ export function TechProject({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={icon}
-                className="p-1 md:p-0 text-wording dark:text-wording-dark"
+                className="p-1 md:p-0 text-title dark:text-title-dark"
                 data-splitbee-event="View Tech Project"
                 data-splitbee-event-name={name}
                 data-splitbee-event-link-type={icon}

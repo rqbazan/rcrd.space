@@ -8,7 +8,7 @@ export function Burger({ onClick, closable, className, ...props }) {
       onClick={onClick}
       onKeyPress={onClick}
       tabIndex={0}
-      className={clsx('text-wording dark:text-wording-dark', className)}
+      className={clsx('text-title dark:text-title-dark', className)}
       {...props}
     >
       <Icon name={closable ? 'times' : 'menu'} size={32} />
