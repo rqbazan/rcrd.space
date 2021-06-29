@@ -17,8 +17,8 @@ export async function getTechProjects() {
       sort: [
         { field: 'startAt', direction: 'desc' },
         { field: 'endAt', direction: 'desc' },
-        { field: 'name', direction: 'asc' }
-      ]
+        { field: 'name', direction: 'asc' },
+      ],
     })
     .all()
 
@@ -40,6 +40,6 @@ export async function getTechProjects() {
     description: mdToHtml()
       .use(externalLinks, { rel: ['noopener', 'noreferrer'] })
       .processSync(record.fields.description)
-      .toString()
+      .toString(),
   }))
 }

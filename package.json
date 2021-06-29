@@ -13,7 +13,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "next lint",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
@@ -38,12 +38,23 @@
       "eslint --ignore-path .gitignore --fix"
     ]
   },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": [
+      "next",
+      "next/core-web-vitals"
+    ]
+  },
   "dependencies": {
     "@rqbazan/md-to-html": "^0.0.2",
     "@svgr/webpack": "^5.5.0",
     "airtable": "^0.11.1",
     "autoprefixer": "^10.2.6",
-    "babel-plugin-module-resolver": "^4.1.0",
     "clsx": "^1.1.1",
     "date-fns": "^2.22.1",
     "lodash.random": "^3.2.0",
@@ -65,8 +76,6 @@
     "@commitlint/config-conventional": "^12.1.4",
     "eslint": "^7.29.0",
     "eslint-config-next": "^11.0.1",
-    "eslint-config-rqbazan-js": "^0.3.2",
-    "eslint-import-resolver-babel-module": "^5.3.1",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "npm-run-all": "^4.1.5",

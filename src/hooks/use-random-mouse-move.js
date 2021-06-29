@@ -5,12 +5,12 @@ import random from 'lodash.random'
 function getRandomMouseMoveEvent() {
   const center = {
     x: window.innerWidth / 2,
-    y: window.innerHeight / 2
+    y: window.innerHeight / 2,
   }
 
   const bounds = {
     h: window.innerHeight / 20,
-    w: (2 * window.innerWidth) / 30
+    w: (2 * window.innerWidth) / 30,
   }
 
   const x = random(center.x - bounds.w, center.x + bounds.w)

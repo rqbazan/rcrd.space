@@ -18,7 +18,7 @@ const icons = {
   linkedin: Linkedin,
   design: Figma,
   times: Times,
-  menu: Menu
+  menu: Menu,
 }
 
 export default icons

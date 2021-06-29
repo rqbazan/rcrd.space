@@ -24,14 +24,14 @@ export default function WorkPage({ techProjects, techProfile }) {
 export async function getStaticProps() {
   const [techProjects, techProfile] = await Promise.all([
     api.getTechProjects(),
-    api.getTechProfile()
+    api.getTechProfile(),
   ])
 
   return {
     props: {
       techProjects,
-      techProfile
+      techProfile,
     },
-    revalidate: 10
+    revalidate: 10,
   }
 }

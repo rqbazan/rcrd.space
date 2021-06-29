@@ -10,7 +10,7 @@ const OwlParallax = dynamic(
   () => import('~/components/owl-parallax').then(mod => mod.OwlParallax),
   {
     // eslint-disable-next-line react/display-name
-    loading: () => <OwlImage />
+    loading: () => <OwlImage />,
   }
 )
 
@@ -20,7 +20,7 @@ function getJSON(techProfile) {
     'a.k.a': techProfile.nickname,
     role: techProfile.freelanceRole,
     location: techProfile.location,
-    interests: techProfile.interests
+    interests: techProfile.interests,
   }
 }
 
@@ -59,8 +59,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      techProfile
+      techProfile,
     },
-    revalidate: 10
+    revalidate: 10,
   }
 }

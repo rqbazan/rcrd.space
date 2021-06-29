@@ -13,7 +13,7 @@ export const NavItem = React.forwardRef(function NavItem(
         ref={ref}
         href={href}
         className={clsx('h-full flex items-center', {
-          'font-semibold': isActive
+          'font-semibold': isActive,
         })}
         {...props}
       >

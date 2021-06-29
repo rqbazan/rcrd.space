@@ -6,7 +6,7 @@ import 'tailwindcss/utilities.css'
 import '~/styles/global.css'
 
 NProgress.configure({
-  template: '<div class="bar" role="bar"></div>'
+  template: '<div class="bar" role="bar"></div>',
 })
 
 Router.events.on('routeChangeStart', () => {

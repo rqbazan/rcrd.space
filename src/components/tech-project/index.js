@@ -10,7 +10,7 @@ export function TechProject({
   tags,
   accessInfo,
   description,
-  isLTS
+  isLTS,
 }) {
   return (
     <section className={clsx('flex flex-wrap w-full', className)}>

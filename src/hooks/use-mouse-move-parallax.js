@@ -6,11 +6,11 @@ const transform = (x, y) => `translate(${x / 10}px,${y / 10}px)`
 export function useMouseMoveParallax() {
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
-    config: { mass: 5, tension: 500, friction: 100 }
+    config: { mass: 5, tension: 500, friction: 100 },
   }))
 
   const style = {
-    transform: props.xy.interpolate(transform)
+    transform: props.xy.interpolate(transform),
   }
 
   React.useEffect(() => {

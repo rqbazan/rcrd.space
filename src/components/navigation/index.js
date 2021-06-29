@@ -9,7 +9,7 @@ export function Navigation({ className }) {
     <nav className={className}>
       <ul className="flex flex-col md:flex-row md:space-x-8 md:space-y-0 space-y-8">
         <Link href="/" passHref>
-          <NavItem currentRoute={router.route}>Home</NavItem>
+          <NavItem currentRoute={router.route}>About</NavItem>
         </Link>
         <Link href="/work" passHref>
           <NavItem currentRoute={router.route}>Work</NavItem>

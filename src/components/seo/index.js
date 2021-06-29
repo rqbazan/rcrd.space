@@ -22,16 +22,16 @@ function getSEOProps(techProfile, overrides) {
           url: techProfile.seoBanner,
           alt: title,
           width: 2240,
-          height: 1260
-        }
-      ]
+          height: 1260,
+        },
+      ],
     },
     twitter: {
       title,
       handle: '@rqbazan',
       site: '@rqbazan',
-      cardType: 'summary_large_image'
-    }
+      cardType: 'summary_large_image',
+    },
   }
 }
 

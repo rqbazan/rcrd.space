@@ -5,6 +5,6 @@ export function Icon({ name, size, className }) {
   return React.createElement(icons[name], {
     className,
     width: size,
-    height: size
+    height: size,
   })
 }
