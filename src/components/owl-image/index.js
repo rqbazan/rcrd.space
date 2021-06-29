@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export function OwlImage({ className, ...props }) {
   return (
     <picture className="flex items-end justify-end bg-black left-0 right-0 bottom-0 top-16 fixed select-none">

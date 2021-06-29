@@ -14,7 +14,7 @@ export function HighlightJson({ data, identation = 4 }) {
         <pre className={styles.container}>
           {tokensMatrix.map((line, i) => {
             return (
-              <div {...getLineProps({ line, key: `ln-${i}` })}>
+              <div key={`ln-${i}`} {...getLineProps({ line, key: `ln-${i}` })}>
                 {line.map((token, ii) => {
                   const tokenProps = getTokenProps({ token, key: `tk-${ii}` })
 

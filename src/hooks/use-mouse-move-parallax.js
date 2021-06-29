@@ -29,6 +29,7 @@ export function useMouseMoveParallax() {
       document.removeEventListener('mousemove', onMouseMove)
       document.removeEventListener('mouseleave', onMouseLeave)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return { style }

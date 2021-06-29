@@ -8,7 +8,7 @@ import Figma from '~/icons/figma.svg'
 import Menu from '~/icons/menu.svg'
 import Package from '~/icons/package.svg'
 
-export default {
+const icons = {
   github: Github,
   package: Package,
   website: Website,
@@ -20,3 +20,5 @@ export default {
   times: Times,
   menu: Menu
 }
+
+export default icons

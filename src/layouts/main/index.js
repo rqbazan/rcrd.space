@@ -12,7 +12,7 @@ export function MainLayout({ children, single, techProfile }) {
 
   return (
     <>
-      <header className="px-6 items-center justify-center shadow-md flex flex-col fixed top-0 inset-x-0 z-40 md:px-0 h-16 backdrop-filter backdrop-blur-sm text-title dark:text-title-dark bg-gray-transparent dark:bg-transparent">
+      <header className="px-6 items-center justify-center shadow-sm flex flex-col fixed top-0 inset-x-0 z-40 md:px-0 h-16 backdrop-filter backdrop-blur-sm text-title dark:text-title-dark bg-gray-transparent dark:bg-transparent">
         <div className="h-2 fixed top-0 inset-x-0 w-full bg-gradient-to-r from-yellow-300 via-yellow-500 to-red-500 dark:from-blue-700 dark:via-purple-500" />
         <div className="pt-2 flex items-center justify-between h-full md:px-8 lg:px-0 max-w-3xl w-full">
           <Navigation className="hidden md:flex h-full" />
@@ -51,8 +51,10 @@ export function MainLayout({ children, single, techProfile }) {
   )
 }
 
-MainLayout.Content = ({ children, className }) => (
-  <div className={clsx('my-5 md:my-7 px-6 md:px-0 w-full', className)}>
-    {children}
-  </div>
-)
+MainLayout.Content = function MainLayoutContent({ children, className }) {
+  return (
+    <div className={clsx('my-5 md:my-7 px-6 md:px-0 w-full', className)}>
+      {children}
+    </div>
+  )
+}

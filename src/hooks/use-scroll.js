@@ -9,5 +9,6 @@ export function useScroll(callback) {
     return () => {
       window.removeEventListener('scroll', listener)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 }

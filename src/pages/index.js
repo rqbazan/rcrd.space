@@ -9,6 +9,7 @@ import { OwlImage } from '~/components/owl-image'
 const OwlParallax = dynamic(
   () => import('~/components/owl-parallax').then(mod => mod.OwlParallax),
   {
+    // eslint-disable-next-line react/display-name
     loading: () => <OwlImage />
   }
 )
