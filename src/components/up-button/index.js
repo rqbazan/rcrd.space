@@ -5,6 +5,8 @@ import { Icon } from '../icon'
 export function UPButton() {
   const buttonRef = React.useRef()
 
+  const [isOnScreen, setIsOnScreen] = React.useState(false)
+
   useScroll(() => {
     const el = buttonRef.current
 
@@ -21,12 +23,29 @@ export function UPButton() {
     }
   })
 
+  React.useEffect(() => {
+    const el = buttonRef.current
+
+    function onTransitionend() {
+      setIsOnScreen(el.classList.contains('opacity-100'))
+    }
+
+    el?.addEventListener('transitionend', onTransitionend, false)
+
+    return () => {
+      el?.removeEventListener('transitionend', onTransitionend)
+    }
+  }, [])
+
   return (
     <button
       ref={buttonRef}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       type="button"
-      className="transition-opacity duration-500 ease-in-out transform rounded-full h-12 w-12 flex items-center justify-center bg-title dark:bg-title-dark shadow-lg opacity-0 focus:outline-none"
+      aria-label="Scroll Up"
+      aria-hidden={isOnScreen ? 'false' : 'true'}
+      tabIndex={isOnScreen ? '0' : '-1'}
+      className="transition-opacity duration-500 ease-in-out transform rounded-full h-12 w-12 items-center justify-center bg-title dark:bg-title-dark shadow-lg opacity-0 focus:outline-none flex"
     >
       <Icon
         name="up-arrow"

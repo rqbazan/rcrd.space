@@ -1,5 +1,5 @@
 import Airtable from 'airtable'
-import mdToHtml from '@rqbazan/md-to-html'
+import { buildProcessor } from '@rqbazan/md-to-html'
 import externalLinks from 'remark-external-links'
 import { format as dateFormat, parse as parseDate } from 'date-fns'
 
@@ -27,6 +27,15 @@ export async function getTechProjects() {
       ? dateFormat(parseDate(strDate, 'yyyy-MM-dd', new Date()), 'LLL yyyy')
       : null
   }
+
+  const mdToHtml = buildProcessor({
+    twemoji: {
+      attributes: () => ({
+        height: '16',
+        width: '16',
+      }),
+    },
+  })
 
   return records.map(record => ({
     id: record.id,

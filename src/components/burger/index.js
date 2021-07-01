@@ -3,15 +3,14 @@ import { Icon } from '../icon'
 
 export function Burger({ onClick, closable, className, ...props }) {
   return (
-    <div
-      role="button"
+    <button
       onClick={onClick}
       onKeyPress={onClick}
-      tabIndex={0}
+      aria-label={`${closable ? 'Close' : 'Open'} Menu`}
       className={clsx('text-title dark:text-title-dark', className)}
       {...props}
     >
       <Icon name={closable ? 'times' : 'menu'} size={32} />
-    </div>
+    </button>
   )
 }

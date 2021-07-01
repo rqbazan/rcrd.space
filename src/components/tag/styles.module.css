@@ -2,7 +2,7 @@
   @apply rounded text-xs m-1 px-2 select-none md:text-sm border;
 
   --bg-color: hsl(var(--hash), 50%, 90%);
-  --text-color: hsl(var(--hash), 100%, 30%);
+  --text-color: hsl(var(--hash), 100%, 20%);
 
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -10,6 +10,6 @@
 }
 
 :global(.dark) .tag {
-  --bg-color: hsl(var(--hash), 30%, 20%);
-  --text-color: hsl(var(--hash), 100%, 70%);
+  --bg-color: hsl(var(--hash), 70%, 10%);
+  --text-color: hsl(var(--hash), 100%, 75%);
 }
