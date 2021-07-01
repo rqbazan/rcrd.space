@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { DefaultSeo } from 'next-seo'
 
 function getSEOProps(techProfile, overrides) {
@@ -11,7 +12,7 @@ function getSEOProps(techProfile, overrides) {
   return {
     title,
     description,
-    canonical: techProfile.website,
+    canonical: overrides.canonical,
     openGraph: {
       type: 'website',
       url: techProfile.website,
@@ -36,6 +37,8 @@ function getSEOProps(techProfile, overrides) {
 }
 
 export function SEO({ techProfile, ...props }) {
+  const { route } = useRouter()
+
   return (
     <>
       <Head>
@@ -48,7 +51,12 @@ export function SEO({ techProfile, ...props }) {
           type="image/png"
         />
       </Head>
-      <DefaultSeo {...getSEOProps(techProfile, props)} />
+      <DefaultSeo
+        {...getSEOProps(techProfile, {
+          ...props,
+          canonical: `${techProfile.website}${route}`,
+        })}
+      />
     </>
   )
 }
