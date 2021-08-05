@@ -4,22 +4,22 @@ import { useSpring } from 'react-spring'
 const transform = (x, y) => `translate(${x / 10}px,${y / 10}px)`
 
 export function useMouseMoveParallax() {
-  const [props, set] = useSpring(() => ({
+  const [props, api] = useSpring(() => ({
     xy: [0, 0],
-    config: { mass: 5, tension: 500, friction: 100 },
+    config: { mass: 2, tension: 700, friction: 100 },
   }))
 
   const style = {
-    transform: props.xy.interpolate(transform),
+    transform: props.xy.to(transform),
   }
 
   React.useEffect(() => {
     function onMouseMove({ clientX: x, clientY: y }) {
-      set({ xy: [x - window.innerWidth / 2, y - window.innerHeight / 2] })
+      api.start({ xy: [x - window.innerWidth / 2, y - window.innerHeight / 2] })
     }
 
     function onMouseLeave() {
-      set({ xy: [0, 0] })
+      api.start({ xy: [0, 0] })
     }
 
     document.addEventListener('mousemove', onMouseMove)

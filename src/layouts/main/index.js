@@ -4,10 +4,9 @@ import { Icon } from '~/components/icon'
 import { Burger } from '~/components/burger'
 import { Menu } from '~/components/menu'
 import { NightModeToggle } from '~/components/night-mode-toggle'
-import { UPButton } from '~/components/up-button'
 import { Navigation } from '~/components/navigation'
 
-export function MainLayout({ children, single, techProfile }) {
+export function MainLayout({ children, techProfile }) {
   const [menuIsOpen, setMenuIsOpen] = React.useState(false)
 
   return (
@@ -24,29 +23,24 @@ export function MainLayout({ children, single, techProfile }) {
       <main className="flex w-full pt-16 min-h-full md:mx-auto md:max-w-3xl md:px-8 lg:px-0">
         {children}
       </main>
-      {!single && (
-        <>
-          <footer className="flex w-full md:mx-auto md:max-w-3xl md:px-8 lg:px-0 space-x-8 items-center justify-center pt-4 pb-10">
-            {['github', 'linkedin', 'twitter'].map(icon => (
-              <a
-                key={icon}
-                href={techProfile[icon]}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={icon}
-                className="text-accent dark:text-accent-dark"
-                data-splitbee-event="View Social Network"
-                data-splitbee-event-network={icon}
-              >
-                <Icon name={icon} className="h-6 w-6 md:h-7 md:w-7" />
-              </a>
-            ))}
-          </footer>
-          <div className="fixed bottom-0 right-0 mr-4 mb-4 lg:mr-8 lg:mb-8">
-            <UPButton />
-          </div>
-        </>
-      )}
+      {techProfile ? (
+        <footer className="flex w-full md:mx-auto md:max-w-3xl md:px-8 lg:px-0 space-x-8 items-center justify-center pt-4 pb-10">
+          {['github', 'linkedin', 'twitter'].map(icon => (
+            <a
+              key={icon}
+              href={techProfile[icon]}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={icon}
+              className="text-accent dark:text-accent-dark"
+              data-splitbee-event="View Social Network"
+              data-splitbee-event-network={icon}
+            >
+              <Icon name={icon} className="h-6 w-6 md:h-7 md:w-7" />
+            </a>
+          ))}
+        </footer>
+      ) : null}
     </>
   )
 }

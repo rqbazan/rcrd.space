@@ -37,10 +37,6 @@ h6 {
     @apply underline transition-colors duration-300;
   }
 
-  a:hover {
-    @apply text-accent dark:text-accent-dark;
-  }
-
   h2 a {
     @apply no-underline;
   }
@@ -51,12 +47,6 @@ h6 {
 
   section:not(:last-child) {
     @apply mb-6;
-  }
-}
-
-.dark .\$markdown {
-  a:hover {
-    @apply text-accent-dark;
   }
 }
 

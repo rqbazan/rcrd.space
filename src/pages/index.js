@@ -28,7 +28,7 @@ export default function IndexPage({ techProfile }) {
   return (
     <>
       <SEO techProfile={techProfile} />
-      <MainLayout single>
+      <MainLayout>
         <OwlParallax />
         <div className="flex flex-col justify-start p-[10vw] md:p-0 md:justify-center w-full z-10">
           <HighlightJson data={getJSON(techProfile)} />
