@@ -22,7 +22,7 @@ export function HomeView() {
         }
         content={
           <React.Fragment>
-            I&rsquo;m a sofware developer from Trujillo - Peru. I work as the Frontend Lead at{' '}
+            I&rsquo;m a sofware developer from Trujillo - Peru. I work as Frontend Lead at{' '}
             <Anchor href="https://riqra.com">Riqra</Anchor>. You’ve found my personal place of the
             internet.
           </React.Fragment>

@@ -8,11 +8,5 @@
       "source": "/_hive/:slug",
       "destination": "https://hive.splitbee.io/:slug"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/resume.pdf",
-      "destination": "https://resume.sxntixgo.codes"
-    }
   ]
 }

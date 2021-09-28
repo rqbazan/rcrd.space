@@ -153,7 +153,7 @@ export function ProjectsView() {
           links={[
             { href: 'https://github.com/rqbazan/me#readme', icon: GithubSvg },
             {
-              href: 'https://sxntixgo.codes',
+              href: 'https://rcrd.space',
               icon: ExternalLinkSvg,
               ['data-splitbee-event']: 'View My Personal Site',
             },
@@ -171,7 +171,7 @@ export function ProjectsView() {
           links={[
             { href: 'https://github.com/rqbazan/hashing-with-pbkdf2#readme', icon: GithubSvg },
             {
-              href: 'https://hash.sxntixgo.codes',
+              href: 'https://hashing-with-pbkdf2.vercel.app',
               icon: ExternalLinkSvg,
               ['data-splitbee-event']: 'View Hashing With Pbkdf2',
             },

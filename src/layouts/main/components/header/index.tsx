@@ -22,7 +22,7 @@ export function MainHeader({ className, ...props }: MainHeaderProps) {
         <Link href="/projects" passHref>
           <MainNavLink data-splitbee-event="View Projects">Projects</MainNavLink>
         </Link>
-        <MainNavLink href="https://resume.sxntixgo.codes" data-splitbee-event="View Resume">
+        <MainNavLink href="https://resume.rcrd.space" data-splitbee-event="View Resume">
           CV
         </MainNavLink>
       </nav>

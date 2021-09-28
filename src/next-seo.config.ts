@@ -9,7 +9,7 @@ export const defaultSEO: DefaultSeoProps = {
   defaultTitle,
   description,
   titleTemplate: '%s | Ricardo Q. Bazan',
-  canonical: 'https://sxntixgo.codes',
+  canonical: 'https://rcrd.space',
   openGraph: {
     description,
     images: [
@@ -19,7 +19,7 @@ export const defaultSEO: DefaultSeoProps = {
     ],
     type: 'website',
     locale: 'en_US',
-    url: 'https://sxntixgo.codes',
+    url: 'https://rcrd.space',
     site_name: 'Ricardo Q. Bazan',
     title: defaultTitle,
     profile: {
