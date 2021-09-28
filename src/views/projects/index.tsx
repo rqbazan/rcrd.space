@@ -151,7 +151,7 @@ export function ProjectsView() {
           projectName="My Personal Site"
           techs={['NextJS', 'TailwindCSS', 'Stitches', 'Typescript']}
           links={[
-            { href: 'https://github.com/rqbazan/me#readme', icon: GithubSvg },
+            { href: 'https://github.com/rqbazan/rcrd.space#readme', icon: GithubSvg },
             {
               href: 'https://rcrd.space',
               icon: ExternalLinkSvg,
