@@ -1,0 +1,25 @@
+@keyframes rainbow {
+  0% {
+    color: #52ff00;
+  }
+  25% {
+    color: #4afff4;
+  }
+  50% {
+    color: #ccff00;
+  }
+  75% {
+    color: #ff002e;
+  }
+  100% {
+    color: #5200ff;
+  }
+}
+
+.rainbow {
+  animation: rainbow linear 5s infinite alternate;
+}
+
+.isologo {
+  color: rgba(0, 0, 0, 0.4);
+}
