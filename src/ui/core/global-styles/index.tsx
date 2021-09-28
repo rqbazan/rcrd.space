@@ -5,9 +5,14 @@ export const globalStyles = globalCss({
     fontSize: 16,
     background: '$body',
     color: '$text',
+    height: '100%',
   },
   body: {
     paddingLeft: 'calc(100vw - 100%)',
+    height: '100%',
+  },
+  '#__next': {
+    height: '100%',
   },
   '.Typewriter': {
     display: 'inline-block',
