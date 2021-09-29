@@ -20,7 +20,6 @@ export function UsesView() {
         priority
         placeholder="blur"
         blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoEAAMAAUAmJYgCdLoAAwj3j3AA/vNVvvznom3i88rPZ8D9H9Q62K7flf03xTcMWN+nf9u9TMjMNGABQmHUAAAA"
-        data-splitbee-event="Interact With Uses Cover"
       />
       <Typography className="mt-9 mb-8" fontStyle="h3">
         Office
