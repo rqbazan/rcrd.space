@@ -29,7 +29,7 @@ export const TechTag = React.memo(function TechTag({ children }: TechTagProps) {
   return (
     <Typography
       as="span"
-      className="rounded px-2 select-none border inline-flex items-center"
+      className="rounded px-2 py-1 select-none border inline-flex items-center"
       style={{ background: bgColor, color: textColor, borderColor: textColor }}
       fontStyle="small"
     >
