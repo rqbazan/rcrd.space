@@ -42,7 +42,7 @@ export function ProjectsView() {
       <div className="flex flex-col gap-8">
         <ProjectPost
           projectName="Seach GraphQL Jobs"
-          techs={['Typescript', 'React', 'ReactTestingLibrary', 'tsdx']}
+          techs={['NextJS', 'TailwindCSS', 'Codegen', 'Storybook', 'Apollo', 'Typescript']}
           links={[
             { href: 'https://github.com/rqbazan/graphql-jobs#readme', icon: GithubSvg },
             {
