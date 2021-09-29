@@ -1,7 +1,7 @@
 /* eslint no-bitwise: 0 */
-import { Typography } from '~/ui'
+import React from 'react'
 
-import styles from './styles.module.css'
+import { Typography } from '~/ui'
 
 export interface TechTagProps {
   children: string
@@ -19,13 +19,21 @@ function getHashCode(string: string) {
   return hash
 }
 
-export function TechTag({ children }: TechTagProps) {
+export const TechTag = React.memo(function TechTag({ children }: TechTagProps) {
   const hash = getHashCode(children) % 360
 
+  const bgColor = `hsl(${hash}, 50%, 10%)`
+
+  const textColor = `hsl(${hash}, 60%, 75%)`
+
   return (
-    // @ts-expect-error
-    <span style={{ '--hash': hash }} className={styles.tag}>
-      <Typography fontStyle="small">{children}</Typography>
-    </span>
+    <Typography
+      as="span"
+      className="rounded px-2 select-none border inline-flex items-center"
+      style={{ background: bgColor, color: textColor, borderColor: textColor }}
+      fontStyle="small"
+    >
+      {children}
+    </Typography>
   )
-}
+})

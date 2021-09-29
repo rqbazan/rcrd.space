@@ -1,15 +1,37 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 
-import styles from './styles.module.css'
+import { keyframes, styled } from '~/stitches.config'
 
 export interface MainLogoProps {
   className?: string
 }
 
+const rainbow = keyframes({
+  '0%': {
+    color: '#52ff00',
+  },
+  '25%': {
+    color: '#4afff4',
+  },
+  '50%': {
+    color: '#ccff00',
+  },
+  '75%': {
+    color: '#ff002e',
+  },
+  '100%': {
+    color: '#5200ff',
+  },
+})
+
+const Box = styled('div', {
+  animation: `${rainbow} linear 5s infinite alternate`,
+})
+
 export function MainLogo({ className, ...props }: MainLogoProps) {
   return (
-    <div className={clsx('p-2 relative', styles.rainbow, className)} {...props}>
+    <Box className={clsx('p-2 relative', className)} {...props}>
       <Link href="/">
         <a>
           <svg
@@ -21,12 +43,7 @@ export function MainLogo({ className, ...props }: MainLogoProps) {
           >
             <path d="M51.4413 9.524C57.5568 13.2095 63.8343 17.4215 64.9683 22.808C66.1023 28.235 62.0928 34.877 59.7843 42.0455C57.4758 49.2545 56.8683 57.0305 52.7373 61.8905C48.6468 66.7505 41.0733 68.735 34.3908 67.52C27.7083 66.2645 21.9168 61.85 16.1658 57.5165C10.4148 53.183 4.66383 48.971 2.31482 43.2605C0.00632441 37.5905 1.05933 30.4625 2.88183 23.1725C4.74483 15.923 7.37733 8.5115 12.6018 4.5425C17.8263 0.5735 25.6428 -0.0339997 32.5278 1.3025C39.4128 2.5985 45.3663 5.798 51.4413 9.524Z" />
           </svg>
-          <span
-            className={clsx(
-              'absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2',
-              styles.isologo
-            )}
-          >
+          <span className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 text-black opacity-40">
             <svg
               width="22"
               height="34"
@@ -39,6 +56,6 @@ export function MainLogo({ className, ...props }: MainLogoProps) {
           </span>
         </a>
       </Link>
-    </div>
+    </Box>
   )
 }

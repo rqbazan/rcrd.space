@@ -46,7 +46,7 @@ export function ProjectPost({ projectName, content, techs, links, className }: P
         <Typography>{content}</Typography>
       </div>
       <div className="flex mt-4">
-        <div className="flex mr-1 flex-wrap">
+        <div className="flex mr-1 flex-wrap gap-2">
           {Array.from(techs)
             .sort()
             .map(tech => (
