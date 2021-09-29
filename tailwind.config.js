@@ -1,35 +1,40 @@
-const colors = require('tailwindcss/colors')
+// @preval
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
-  purge: ['./src/**/*.js', './src/**/*.css'],
+  purge: ['./src/**/*.tsx', './src/**/*.css'],
   darkMode: 'class',
   theme: {
+    /**
+     * I've re-exported some keys intentionally in order
+     * to use the values from `~/stitches.config.ts`
+     */
     extend: {
+      screen: defaultTheme.screens,
       fontFamily: {
-        mono: ['JetBrains\\ Mono', ...defaultTheme.fontFamily.mono],
+        ...defaultTheme.fontFamily,
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        body: {
-          DEFAULT: colors.gray[100],
-          dark: colors.gray[900],
-        },
-        accent: {
-          DEFAULT: colors.red[500],
-          dark: colors.blue[600],
-        },
-        title: {
-          DEFAULT: colors.gray[900],
-          dark: colors.gray[100],
-        },
-        wording: {
-          DEFAULT: colors.gray[600],
-          dark: colors.gray[300],
-        },
-        gray: {
-          transparent: 'rgba(255,255,255,0.2)',
-        },
+        text: '#ffffff',
+        body: '#0D0E12',
+        muted: '#B1B1B1',
+        selection: '#FFD29D',
+      },
+      fontWeight: {
+        regular: 400,
+        medium: 500,
+        semibold: 600,
+      },
+      fontSize: {
+        small: 12,
+        p: 14,
+        h5: 13,
+        h4: 20,
+        h3: 24,
+        h2: 32,
+        h1: 40,
       },
     },
   },
