@@ -20,7 +20,6 @@ module.exports = {
         text: '#ffffff',
         body: '#0D0E12',
         muted: '#B1B1B1',
-        riqra: '#3679FB',
         selection: '#FFD29D',
       },
       fontWeight: {

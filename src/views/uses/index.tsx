@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Image from 'next/image'
 
 import { MainHeading } from '~/layouts'
 import { Cover, Li, Typography } from '~/ui'
@@ -31,7 +30,7 @@ export function UsesView() {
           Dell Inspiron Gaming 2017 Laptop, 16 GB RAM, 256GB SSD, 1TB HDD, Intel Core i7-7700HQ
           2.80GHz, Windows 10 Pro
         </Li>
-        <Li>Monitor Dell Ultrasharp 27’’ 4K</Li>
+        <Li>Monitor Dell Ultrasharp 27inch 4K</Li>
         <Li>Magic Mouse v2, Magic Keyboard v2, Airpods v1 and IPhone 7 Plus 128GB</Li>
         <Li>Sony Headphones WH-1000XM4 Black</Li>
         <Li>Mouse Razer Deathadder V2 Mini</Li>

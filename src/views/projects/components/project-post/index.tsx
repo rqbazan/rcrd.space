@@ -4,7 +4,7 @@ import kebabCase from 'just-kebab-case'
 import { useRouter } from 'next/router'
 
 import { styled } from '~/stitches.config'
-import { BaseTypography, Typography } from '~/ui'
+import { AnchorIcon, BaseTypography, Typography } from '~/ui'
 
 import { TechTag } from '../tech-tag'
 
@@ -54,11 +54,11 @@ export function ProjectPost({ projectName, content, techs, links, className }: P
             ))}
         </div>
         {links?.length > 0 && (
-          <div className="flex gap-3 ml-auto">
+          <div className="flex gap-3 ml-auto items-start">
             {links.map(({ href, icon, ...rest }) => (
-              <a key={href} href={href} target="_blank" rel="noreferrer" {...rest}>
+              <AnchorIcon key={href} href={href} {...rest}>
                 {React.createElement(icon, { className: 'h-5 w-5' })}
-              </a>
+              </AnchorIcon>
             ))}
           </div>
         )}

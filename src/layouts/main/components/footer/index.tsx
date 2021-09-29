@@ -1,7 +1,8 @@
 import * as React from 'react'
 import clsx from 'clsx'
 
-import { GithubSvg, LinkedinSvg, MailSvg, TwitterSvg } from '~/ui'
+import { AnchorIcon } from '~/ui'
+import { GithubSvg, LinkedinSvg, MailSvg, TwitterSvg } from '~/ui/icons'
 
 export interface MainFooterProps {
   className?: string
@@ -43,17 +44,14 @@ export function MainFooter({ className, ...props }: MainFooterProps) {
       className={clsx('flex justify-center items-center space-x-4 mt-auto pt-16', className)}
     >
       {contacts.map(contact => (
-        <a
+        <AnchorIcon
           key={contact.network}
           href={contact.href}
-          className="hover:text-muted transition-colors"
-          target="_blank"
-          rel="noreferrer"
           data-splitbee-event="View Social Network"
           data-splitbee-event-network={contact.network}
         >
           {React.createElement(contact.icon, { className: 'h-6 w-6' })}
-        </a>
+        </AnchorIcon>
       ))}
     </footer>
   )
