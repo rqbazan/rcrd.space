@@ -11,9 +11,11 @@
   },
   "scripts": {
     "dev": "next",
+    "start": "next start",
     "build": "next build",
+    "boot": "run-s build start",
     "lint": "next lint",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|ts|tsx|json)\"",
+    "prettier": "prettier \"**/*.+(js|ts|tsx|json)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
     "typecheck": "tsc",

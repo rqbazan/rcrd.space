@@ -2,7 +2,7 @@ import * as React from 'react'
 import type { ComponentProps } from '@stitches/react'
 import { useRouter } from 'next/router'
 
-import { styled } from '~/stitches.config'
+import { CSS, styled } from '~/stitches.config'
 import { BaseTypography, Typography } from '~/ui'
 import { getExternalLinkProps } from '~/ui/utils'
 
@@ -13,22 +13,27 @@ export interface NavLinkProps extends AnchorProps {
 
 export type AnchorProps = ComponentProps<typeof Anchor>
 
+const selectedVariant: CSS = {
+  color: '$text',
+  [`& > ${BaseTypography}`]: {
+    fontWeight: '$semibold',
+  },
+}
+
 const Anchor = styled('a', {
   color: '$muted',
+  '&:active': {
+    ...selectedVariant,
+  },
   variants: {
     selected: {
-      true: {
-        color: '$text',
-        [`& > ${BaseTypography}`]: {
-          fontWeight: '$semibold',
-        },
-      },
+      true: selectedVariant,
     },
   },
 })
 
 export const MainNavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(function MainNavLink(
-  { children, href, ...props },
+  { children, href, className, ...props },
   ref
 ) {
   const router = useRouter()
@@ -36,8 +41,10 @@ export const MainNavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(fun
   const selected = router.pathname === href
 
   return (
-    <Anchor ref={ref} selected={selected} {...getExternalLinkProps(href)} href={href} {...props}>
-      <Typography fontStyle="h5">{children}</Typography>
+    <Anchor ref={ref} href={href} selected={selected} {...getExternalLinkProps(href)} {...props}>
+      <Typography as="span" fontStyle="h5">
+        {children}
+      </Typography>
     </Anchor>
   )
 })
