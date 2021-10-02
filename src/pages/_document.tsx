@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 /* eslint-disable @next/next/no-document-import-in-page */
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
 
@@ -16,6 +17,7 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
             rel="stylesheet"
           />
+          <script src="https://unpkg.com/@rqbazan/set-initial-color-mode@1.0.2" />
           {env.PROD && <script async data-api="/_hive" src="/bee.js" />}
         </Head>
         <body>

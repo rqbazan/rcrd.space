@@ -17,10 +17,22 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        text: '#ffffff',
-        body: '#0D0E12',
-        muted: '#B1B1B1',
-        selection: '#FFD29D',
+        text: {
+          dark: defaultTheme.colors.gray[50],
+          DEFAULT: defaultTheme.colors.gray[900],
+        },
+        body: {
+          dark: '#0D0E12',
+          DEFAULT: defaultTheme.colors.yellow[100],
+        },
+        muted: {
+          dark: '#B1B1B1',
+          DEFAULT: defaultTheme.colors.gray[600],
+        },
+        selection: {
+          dark: '#FFD29D',
+          DEFAULT: '#374151',
+        },
       },
       fontWeight: {
         regular: 400,

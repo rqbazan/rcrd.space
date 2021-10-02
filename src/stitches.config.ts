@@ -6,14 +6,29 @@ import twConfig from '../tailwind.config'
 
 const twCustomTheme = twConfig.theme.extend
 
-export const { css, styled, getCssText, globalCss, config, theme, keyframes } = createStitches({
+export const {
+  css,
+  styled,
+  getCssText,
+  globalCss,
+  config,
+  theme,
+  keyframes,
+  createTheme,
+  prefix,
+  reset,
+} = createStitches({
   media: mapValues(twCustomTheme.screen, px => `(min-width: ${px})`),
   theme: {
     fonts: mapValues(twCustomTheme.fontFamily, font => font.join(',')),
-    colors: twCustomTheme.colors,
+    colors: mapValues(twCustomTheme.colors, color => color.DEFAULT),
     fontWeights: twCustomTheme.fontWeight,
     fontSizes: twCustomTheme.fontSize,
   },
+})
+
+export const darkTheme = createTheme('dark', {
+  colors: mapValues(twCustomTheme.colors, color => color.dark),
 })
 
 export type CSS = Stitches.CSS<typeof config>

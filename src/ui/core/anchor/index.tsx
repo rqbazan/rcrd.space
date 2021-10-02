@@ -18,7 +18,7 @@ export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(function 
           as="span"
           fontStyle="p"
           fontWeight="medium"
-          className="text-blue-400 hover:text-blue-300 transition-colors"
+          className="dark:text-blue-400 dark:hover:text-blue-300 text-blue-700 hover:text-blue-600 transition-colors"
         >
           {children}
         </Typography>
