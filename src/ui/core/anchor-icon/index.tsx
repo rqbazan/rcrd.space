@@ -18,7 +18,7 @@ export const AnchorIcon = React.forwardRef<HTMLAnchorElement, AnchorIconProps>(f
       // @ts-expect-error
       ref={ref}
       {...props}
-      className={clsx('hover:text-muted transition-colors', className)}
+      className={clsx('hover:text-muted transition-colors ease-in-out duration-300', className)}
     />
   )
 })
