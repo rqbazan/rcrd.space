@@ -15,10 +15,13 @@ export interface NavLinkProps extends AnchorProps {
 
 export type AnchorProps = ComponentProps<typeof Anchor>
 
+// TODO: review `selected` variant typing
+
 const Anchor = styled('a', {
   color: '$muted',
   variants: {
     selected: {
+      // @ts-ignore
       true: {
         color: '$text',
         [`& > ${BaseTypography}`]: {
@@ -43,7 +46,8 @@ export const MainNavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(fun
         as="span"
         fontStyle="h5"
         className={clsx({
-          'hover:text-gray-300 transition-colors ease-in-out duration-300': !selected,
+          'dark:hover:text-gray-300 hover:text-gray-400 transition-colors ease-in-out duration-300':
+            !selected,
         })}
       >
         {children}
@@ -52,7 +56,7 @@ export const MainNavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(fun
         <motion.div
           animate
           transition={{ duration: 0.3 }}
-          className="h-1 bg-text w-full rounded-lg mt-1.5"
+          className="h-1 bg-text dark:bg-text-dark w-full rounded-lg mt-1.5"
           layoutId="nav-link__underline"
         />
       )}

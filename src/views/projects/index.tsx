@@ -19,21 +19,21 @@ export function ProjectsView() {
       <div className="flex flex-col md:flex-row gap-4 mb-8">
         <LatestProject
           href="https://github.com/rqbazan/ff#readme"
-          className="from-green-200 to-green-400 bg-gradient-to-tr"
+          className="from-green-200 to-green-300 dark:to-green-400 bg-gradient-to-tr"
           projectName="FF Library"
           data-splitbee-event="View FF Library"
           logoIcon={<SwitchSvg />}
         />
         <LatestProject
           href="https://github.com/rqbazan/weeks#readme"
-          className="from-red-200 to-red-400 bg-gradient-to-tr"
+          className="from-red-200 to-red-300 dark:to-red-400 bg-gradient-to-tr"
           projectName="Weeks Life"
           data-splitbee-event="View Weeks Life"
           logoIcon={<CalendarSvg />}
         />
         <LatestProject
           href="https://github.com/rqbazan/my-resume-with-react-pdf#readme"
-          className="from-yellow-200 to-yellow-400 bg-gradient-to-tr"
+          className="from-yellow-200 to-yellow-300 dark:to-yellow-400 bg-gradient-to-tr"
           projectName="My React CV"
           data-splitbee-event="View My React CV"
           logoIcon={<PdfSvg />}

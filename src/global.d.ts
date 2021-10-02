@@ -1,5 +1,5 @@
 // TODO: add PR to the type definition package of `just-map-values`
-module 'just-map-valuess' {
+module 'just-map-values' {
   declare function mapValues<Input extends {}, ItemOutput>(
     item: Input,
     callback: (value: Input[keyof Input], key: string, object: Input) => ItemOutput

@@ -1,6 +1,7 @@
-import { globalCss } from '~/stitches.config'
+import { darkTheme, globalCss } from '~/stitches.config'
 
 export const globalStyles = globalCss({
+  [`${darkTheme}`]: {},
   html: {
     fontSize: 16,
     background: '$body',
