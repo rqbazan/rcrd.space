@@ -52,7 +52,7 @@ export const MainNavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(fun
         <motion.div
           animate
           transition={{ duration: 0.3 }}
-          className="h-1 bg-red-50 w-full rounded-lg mt-1.5"
+          className="h-1 bg-text w-full rounded-lg mt-1.5"
           layoutId="nav-link__underline"
         />
       )}
