@@ -11,9 +11,9 @@ export interface MainHeaderProps {
 
 export function MainHeader({ className, ...props }: MainHeaderProps) {
   return (
-    <AnimateSharedLayout>
-      <header {...props} className={clsx(className, 'flex justify-between items-start')}>
-        <MainLogo data-splitbee-event="Interact with Logo" />
+    <header {...props} className={clsx(className, 'flex justify-between items-start')}>
+      <MainLogo data-splitbee-event="Interact with Logo" />
+      <AnimateSharedLayout>
         <nav className="flex space-x-4">
           <Link href="/" passHref>
             <MainNavLink>Home</MainNavLink>
@@ -28,7 +28,7 @@ export function MainHeader({ className, ...props }: MainHeaderProps) {
             CV
           </MainNavLink>
         </nav>
-      </header>
-    </AnimateSharedLayout>
+      </AnimateSharedLayout>
+    </header>
   )
 }
