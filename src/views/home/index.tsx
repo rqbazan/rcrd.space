@@ -1,12 +1,18 @@
 import * as React from 'react'
+import { motion } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 
-import { MainHeading, MainTransition } from '~/layouts'
+import { MainHeading } from '~/layouts'
 import { Anchor } from '~/ui'
 
 export function HomeView() {
   return (
-    <MainTransition>
+    <motion.div
+      transition={{ duration: 0.2 }}
+      initial={{ opacity: 0, x: -16 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -16 }}
+    >
       <MainHeading
         title={
           <React.Fragment>
@@ -28,6 +34,6 @@ export function HomeView() {
           </React.Fragment>
         }
       />
-    </MainTransition>
+    </motion.div>
   )
 }
