@@ -1,12 +1,12 @@
 import * as React from 'react'
 import Typewriter from 'typewriter-effect'
 
-import { MainHeading } from '~/layouts'
+import { MainHeading, MainTransition } from '~/layouts'
 import { Anchor } from '~/ui'
 
 export function HomeView() {
   return (
-    <React.Fragment>
+    <MainTransition>
       <MainHeading
         title={
           <React.Fragment>
@@ -28,6 +28,6 @@ export function HomeView() {
           </React.Fragment>
         }
       />
-    </React.Fragment>
+    </MainTransition>
   )
 }

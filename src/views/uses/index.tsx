@@ -1,11 +1,11 @@
 import * as React from 'react'
 
-import { MainHeading } from '~/layouts'
+import { MainHeading, MainTransition } from '~/layouts'
 import { Cover, Li, Typography } from '~/ui'
 
 export function UsesView() {
   return (
-    <React.Fragment>
+    <MainTransition>
       <MainHeading
         title="Uses"
         content={`Here's what tech I'm currently using for coding, studying or chill. Most of these have been accumulated over the past ${
@@ -47,6 +47,6 @@ export function UsesView() {
         <Li>Brave Navigator</Li>
         <Li>Github Desktop</Li>
       </ul>
-    </React.Fragment>
+    </MainTransition>
   )
 }

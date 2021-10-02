@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { MainHeading } from '~/layouts'
+import { MainHeading, MainTransition } from '~/layouts'
 import { Anchor, Typography } from '~/ui'
 import { ExternalLinkSvg, FigmaSvg, GithubSvg, PackageSvg } from '~/ui/icons'
 
@@ -8,7 +8,7 @@ import { CalendarSvg, LatestProject, PdfSvg, ProjectPost, SwitchSvg } from './co
 
 export function ProjectsView() {
   return (
-    <React.Fragment>
+    <MainTransition>
       <MainHeading
         title="Projects"
         content="Here&rsquo;s a list of open source projects writen mostly using JavaScript and TypeScript."
@@ -204,6 +204,6 @@ export function ProjectsView() {
           }
         />
       </div>
-    </React.Fragment>
+    </MainTransition>
   )
 }
