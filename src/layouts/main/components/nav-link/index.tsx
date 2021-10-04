@@ -10,7 +10,7 @@ import { getExternalLinkProps } from '~/ui/utils'
 
 export interface NavLinkProps extends AnchorProps {
   href?: string // injected by NextJS
-  children: string
+  children: React.ReactNode
 }
 
 export type AnchorProps = ComponentProps<typeof Anchor>
