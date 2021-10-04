@@ -2,6 +2,8 @@ import clsx from 'clsx'
 import { AnimateSharedLayout } from 'framer-motion'
 import Link from 'next/link'
 
+import { FileTextSvg, HardDriveSvg, HomeSvg, TerminalSvg } from '~/ui/icons'
+
 import { MainLogo } from '../logo'
 import { MainNavLink } from '../nav-link'
 
@@ -16,16 +18,22 @@ export function MainHeader({ className, ...props }: MainHeaderProps) {
       <AnimateSharedLayout>
         <nav className="flex space-x-4">
           <Link href="/" passHref>
-            <MainNavLink>Home</MainNavLink>
+            <MainNavLink>
+              <HomeSvg />
+            </MainNavLink>
           </Link>
           <Link href="/uses" passHref>
-            <MainNavLink>Uses</MainNavLink>
+            <MainNavLink>
+              <HardDriveSvg />
+            </MainNavLink>
           </Link>
           <Link href="/projects" passHref>
-            <MainNavLink>Projects</MainNavLink>
+            <MainNavLink>
+              <TerminalSvg />
+            </MainNavLink>
           </Link>
           <MainNavLink href="https://resume.rcrd.space" data-splitbee-event="View Resume">
-            CV
+            <FileTextSvg />
           </MainNavLink>
         </nav>
       </AnimateSharedLayout>
