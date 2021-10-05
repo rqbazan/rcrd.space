@@ -13,7 +13,9 @@
     "dev": "next",
     "start": "next start",
     "build": "next build",
+    "postbuild": "next-sitemap --config sitemap.config.js",
     "boot": "run-s build start",
+    "analyze": "npx cross-env ANALYZE=true yarn build",
     "lint": "next lint",
     "prettier": "prettier \"**/*.+(js|ts|tsx|json)\"",
     "format": "yarn prettier --write",
@@ -22,11 +24,12 @@
     "validate": "run-p check-format lint typecheck"
   },
   "engines": {
-    "node": ">=12.x"
+    "node": ">=14.x"
   },
   "dependencies": {
     "@capsizecss/core": "^3.0.0",
     "@capsizecss/metrics": "^0.1.0",
+    "@next/bundle-analyzer": "^11.1.2",
     "@stitches/react": "^1.2.1",
     "@svgr/webpack": "^5.5.0",
     "autoprefixer": "^10.3.5",
@@ -37,6 +40,7 @@
     "just-map-values": "^1.2.1",
     "next": "^11.1.2",
     "next-seo": "^4.28.1",
+    "next-sitemap": "^1.6.173",
     "postcss": "^8.3.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
