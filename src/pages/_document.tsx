@@ -17,7 +17,7 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
             rel="stylesheet"
           />
-          <script src="https://unpkg.com/@rqbazan/set-initial-color-mode@1.0.2" />
+          <script dangerouslySetInnerHTML={{ __html: process.env.SET_INITIAL_COLOR_MODE_SCRIPT }} />
           {env.PROD && <script async data-api="/_hive" src="/bee.js" />}
         </Head>
         <body>

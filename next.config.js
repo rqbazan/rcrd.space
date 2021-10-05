@@ -1,8 +1,14 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+const fs = require('fs')
 
-module.exports = withBundleAnalyzer({
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  env: {
+    SET_INITIAL_COLOR_MODE_SCRIPT: fs
+      .readFileSync(require.resolve('@rqbazan/set-initial-color-mode'))
+      .toString(),
+  },
   webpack: config => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,
@@ -24,4 +30,6 @@ module.exports = withBundleAnalyzer({
 
     return config
   },
-})
+}
+
+module.exports = nextConfig
