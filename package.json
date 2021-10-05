@@ -15,7 +15,6 @@
     "build": "next build",
     "postbuild": "next-sitemap --config sitemap.config.js",
     "boot": "run-s build start",
-    "analyze": "npx cross-env ANALYZE=true yarn build",
     "lint": "next lint",
     "prettier": "prettier \"**/*.+(js|ts|tsx|json)\"",
     "format": "yarn prettier --write",
@@ -29,7 +28,7 @@
   "dependencies": {
     "@capsizecss/core": "^3.0.0",
     "@capsizecss/metrics": "^0.1.0",
-    "@next/bundle-analyzer": "^11.1.2",
+    "@rqbazan/set-initial-color-mode": "^1.0.2",
     "@stitches/react": "^1.2.1",
     "@svgr/webpack": "^5.5.0",
     "autoprefixer": "^10.3.5",
