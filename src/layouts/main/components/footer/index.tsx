@@ -47,6 +47,7 @@ export function MainFooter({ className, ...props }: MainFooterProps) {
         <AnchorIcon
           key={contact.network}
           href={contact.href}
+          aria-label={contact.network}
           data-splitbee-event="View Social Network"
           data-splitbee-event-network={contact.network}
         >
