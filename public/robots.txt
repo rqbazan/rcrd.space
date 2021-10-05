@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://rcrd.space/sitemap.xml

@@ -13,7 +13,9 @@
     "dev": "next",
     "start": "next start",
     "build": "next build",
+    "postbuild": "node ./scripts/postbuild.mjs",
     "boot": "run-s build start",
+    "analyze": "npx cross-env ANALYZE=true yarn build",
     "lint": "next lint",
     "prettier": "prettier \"**/*.+(js|ts|tsx|json)\"",
     "format": "yarn prettier --write",
@@ -22,11 +24,13 @@
     "validate": "run-p check-format lint typecheck"
   },
   "engines": {
-    "node": ">=12.x"
+    "node": ">=14.x"
   },
   "dependencies": {
     "@capsizecss/core": "^3.0.0",
     "@capsizecss/metrics": "^0.1.0",
+    "@next/bundle-analyzer": "^11.1.2",
+    "@sergeymyssak/nextjs-sitemap": "^2.0.3",
     "@stitches/react": "^1.2.1",
     "@svgr/webpack": "^5.5.0",
     "autoprefixer": "^10.3.5",
