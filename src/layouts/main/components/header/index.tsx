@@ -18,21 +18,25 @@ export function MainHeader({ className, ...props }: MainHeaderProps) {
       <AnimateSharedLayout>
         <nav className="flex space-x-4">
           <Link href="/" passHref>
-            <MainNavLink>
+            <MainNavLink aria-label="Home">
               <HomeSvg />
             </MainNavLink>
           </Link>
           <Link href="/uses" passHref>
-            <MainNavLink>
+            <MainNavLink aria-label="Uses">
               <HardDriveSvg />
             </MainNavLink>
           </Link>
           <Link href="/projects" passHref>
-            <MainNavLink>
+            <MainNavLink aria-label="Projects">
               <TerminalSvg />
             </MainNavLink>
           </Link>
-          <MainNavLink href="https://resume.rcrd.space" data-splitbee-event="View Resume">
+          <MainNavLink
+            href="https://resume.rcrd.space"
+            data-splitbee-event="View Resume"
+            aria-label="Resume"
+          >
             <FileTextSvg />
           </MainNavLink>
         </nav>
