@@ -9,7 +9,7 @@ export function MainLayout({ children }: MainLayoutProps) {
     <main className="flex flex-col min-h-full max-w-[720px] px-6 md:px-4 py-8 md:py-24 mx-auto">
       <MainHeader className="mb-6" />
       {children}
-      <MainFooter className="mt-auto" />
+      <MainFooter className="mt-auto pt-16" />
     </main>
   )
 }

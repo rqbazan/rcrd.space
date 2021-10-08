@@ -14,23 +14,23 @@ module.exports = {
       screen: defaultTheme.screens,
       fontFamily: {
         ...defaultTheme.fontFamily,
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         text: {
           dark: defaultTheme.colors.gray[50],
-          DEFAULT: defaultTheme.colors.gray[900],
+          DEFAULT: defaultTheme.colors.gray[800],
         },
         body: {
-          dark: '#0D0E12',
-          DEFAULT: defaultTheme.colors.yellow[100],
+          dark: defaultTheme.colors.black,
+          DEFAULT: defaultTheme.colors.gray[100],
         },
         muted: {
-          dark: '#B1B1B1',
+          dark: defaultTheme.colors.gray[400],
           DEFAULT: defaultTheme.colors.gray[600],
         },
         selection: {
-          dark: '#FFD29D',
+          dark: '#ffa73c',
           DEFAULT: '#374151',
         },
       },

@@ -11,11 +11,12 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head>
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            href="/fonts/ibm-plex-sans-var.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
           />
           <script dangerouslySetInnerHTML={{ __html: process.env.SET_INITIAL_COLOR_MODE_SCRIPT }} />
           {env.PROD && <script async data-api="/_hive" src="/bee.js" />}

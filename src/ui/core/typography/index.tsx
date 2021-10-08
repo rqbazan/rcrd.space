@@ -1,5 +1,5 @@
 import * as React from 'react'
-import fontMetrics from '@capsizecss/metrics/inter'
+import fontMetrics from '@capsizecss/metrics/iBMPlexSans'
 import type { ComponentProps } from '@stitches/react'
 
 import { styled, theme } from '~/stitches.config'
