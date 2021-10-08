@@ -2,6 +2,13 @@ import { darkTheme, globalCss } from '~/stitches.config'
 
 export const globalStyles = globalCss({
   [`${darkTheme}`]: {},
+  '@font-face': {
+    fontFamily: 'IBM Plex Sans',
+    fontStyle: 'normal',
+    fontWeight: '100 900',
+    fontDisplay: 'swap',
+    src: "url(/fonts/ibm-plex-sans-var.woff2) format('woff2')",
+  },
   html: {
     fontSize: 16,
     background: '$body',

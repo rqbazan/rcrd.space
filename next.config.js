@@ -9,7 +9,7 @@ const nextConfig = {
       .readFileSync(require.resolve('@rqbazan/set-initial-color-mode'))
       .toString(),
   },
-  webpack: config => {
+  webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,
       use: [
@@ -27,6 +27,14 @@ const nextConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
+
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        react: 'preact/compat',
+        'react-dom/test-utils': 'preact/test-utils',
+        'react-dom': 'preact/compat',
+      })
+    }
 
     return config
   },

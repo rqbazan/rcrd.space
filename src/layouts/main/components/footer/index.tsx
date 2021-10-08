@@ -39,10 +39,7 @@ const contacts: Contact[] = [
 
 export function MainFooter({ className, ...props }: MainFooterProps) {
   return (
-    <footer
-      {...props}
-      className={clsx('flex justify-center items-center space-x-4 mt-auto pt-16', className)}
-    >
+    <footer {...props} className={clsx('flex justify-center items-center space-x-4', className)}>
       {contacts.map(contact => (
         <AnchorIcon
           key={contact.network}
