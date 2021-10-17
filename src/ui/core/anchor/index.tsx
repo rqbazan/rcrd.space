@@ -10,21 +10,25 @@ export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(function 
   { children, href, ...props },
   ref
 ) {
-  return (
+  const anchorElement = (
     <a ref={ref} href={href} {...getExternalLinkProps(href)} {...props}>
-      {typeof children === 'string' ? (
-        <Typography
-          uncapsized
-          as="span"
-          fontStyle="p"
-          fontWeight="medium"
-          className="dark:text-blue-400 dark:hover:text-blue-300 text-blue-700 hover:text-blue-600 transition-colors"
-        >
-          {children}
-        </Typography>
-      ) : (
-        children
-      )}
+      {children}
     </a>
+  )
+
+  if (typeof children !== 'string') {
+    return anchorElement
+  }
+
+  return (
+    <Typography
+      uncapsized
+      asChild
+      fontStyle="p"
+      fontWeight="medium"
+      className="dark:text-blue-400 dark:hover:text-blue-300 text-blue-700 hover:text-blue-600 transition-colors"
+    >
+      {anchorElement}
+    </Typography>
   )
 })

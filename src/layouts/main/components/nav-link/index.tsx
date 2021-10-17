@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 
 import { styled } from '~/stitches.config'
-import { BaseTypography, Typography } from '~/ui'
+import { Typography } from '~/ui'
 import { getExternalLinkProps } from '~/ui/utils'
 
 export interface NavLinkProps extends AnchorProps {
@@ -15,18 +15,12 @@ export interface NavLinkProps extends AnchorProps {
 
 export type AnchorProps = ComponentProps<typeof Anchor>
 
-// TODO: review `selected` variant typing
-
 const Anchor = styled('a', {
   color: '$muted',
   variants: {
     selected: {
-      // @ts-ignore
       true: {
         color: '$text',
-        [`& > ${BaseTypography}`]: {
-          fontWeight: '$semibold',
-        },
       },
     },
   },
@@ -43,14 +37,14 @@ export const MainNavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(fun
   return (
     <Anchor ref={ref} href={href} selected={selected} {...getExternalLinkProps(href)} {...props}>
       <Typography
-        as="span"
+        asChild
         fontStyle="h5"
         className={clsx({
           'dark:hover:text-gray-300 hover:text-gray-400 transition-colors ease-in-out duration-300':
             !selected,
         })}
       >
-        {children}
+        <span>{children}</span>
       </Typography>
       {selected && (
         <motion.div
