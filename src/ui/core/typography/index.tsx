@@ -1,24 +1,28 @@
 import * as React from 'react'
 import fontMetrics from '@capsizecss/metrics/iBMPlexSans'
-import type { ComponentProps } from '@stitches/react'
+import { Slot } from '@radix-ui/react-slot'
+import type { VariantProps } from '@stitches/react'
+import clsx from 'clsx'
 
-import { styled, theme } from '~/stitches.config'
+import { CSS, css, theme } from '~/stitches.config'
 
 import { capsized } from './capsized'
 
-// TODO: fix `as` prop, because it shouldn't re-declared here
-export interface TypographyProps extends BaseTypographyProps {
-  as?: string | React.ComponentType<any>
+export interface TypographyProps extends TypographyVariants {
+  children: React.ReactNode
+  className?: string
+  asChild?: boolean
+  css?: CSS
 }
 
-export type BaseTypographyProps = ComponentProps<typeof BaseTypography>
+export type TypographyVariants = VariantProps<typeof BaseTypography>
 
 type ComponentMap = Record<
-  Extract<BaseTypographyProps['fontStyle'], string>, // `fontStyle` name like 'h1', 'h2', etc
+  Extract<TypographyVariants['fontStyle'], string>, // `fontStyle` name like 'h1', 'h2', etc
   React.ComponentType<any> | string // tag element like `<h1 />`, `<h2 />`, etc
 >
 
-export const BaseTypography = styled('p', {
+export const BaseTypography = css({
   fontFamily: 'inherit',
   variants: {
     fontWeight: {
@@ -126,11 +130,15 @@ const componentMap: ComponentMap = {
   h5: 'h5',
 }
 
-export function Typography(props: TypographyProps) {
+export const Typography = React.forwardRef<HTMLElement, TypographyProps>(function Typography(
+  { uncapsized, fontStyle, fontWeight, muted, css, className, asChild, ...props },
+  forwadedRef
+) {
+  const baseClassName = BaseTypography({ uncapsized, fontStyle, fontWeight, muted, css })
+
+  const Component = asChild ? Slot : typeof fontStyle === 'string' ? componentMap[fontStyle] : 'p'
+
   return (
-    <BaseTypography
-      as={typeof props.fontStyle === 'string' ? componentMap[props.fontStyle] : 'p'}
-      {...props}
-    />
+    <Component ref={forwadedRef} {...props} className={clsx(baseClassName.toString(), className)} />
   )
-}
+})
