@@ -6,6 +6,7 @@ import { Typography } from '~/ui'
 
 export interface TechTagProps {
   children: string
+  className?: string
 }
 
 // reference: https://stackoverflow.com/q/3426404
@@ -20,7 +21,7 @@ function getHashCode(string: string) {
   return hash
 }
 
-const Box = styled('div', {
+const Box = styled('span', {
   '--bg-saturation': '50%',
   '--bg-lightness': '90%',
   '--txt-saturation': '100%',
@@ -36,22 +37,18 @@ const Box = styled('div', {
   },
 })
 
-export const TechTag = React.memo(function TechTag({ children }: TechTagProps) {
+export const TechTag = React.memo(function TechTag({ children, className }: TechTagProps) {
   const hash = getHashCode(children) % 360
 
-  const bgColor = `hsl(${hash}, 50%, 10%)`
-
-  const textColor = `hsl(${hash}, 60%, 75%)`
-
   return (
-    <Box
-      // @ts-expect-error
-      style={{ '--hash': hash }}
-      className="rounded px-2 py-1 select-none border inline-flex items-center"
-    >
-      <Typography uncapsized fontStyle="small">
+    <Typography uncapsized fontStyle="small" asChild className={className}>
+      <Box
+        // @ts-expect-error
+        style={{ '--hash': hash }}
+        className="rounded px-2 pt-1.5 pb-1 select-none border"
+      >
         {children}
-      </Typography>
-    </Box>
+      </Box>
+    </Typography>
   )
 })
