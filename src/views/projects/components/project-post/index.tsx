@@ -1,5 +1,4 @@
 import * as React from 'react'
-import clsx from 'clsx'
 import kebabCase from 'just-kebab-case'
 import { useRouter } from 'next/router'
 
@@ -32,7 +31,7 @@ export function ProjectPost({ projectName, content, techs, links, className }: P
   const htmlId = kebabCase(projectName.toLowerCase())
 
   return (
-    <div className={clsx('-mt-6 pt-6', className)} id={htmlId}>
+    <div className={className} id={htmlId}>
       <div className="flex flex-col">
         <TitleBox
           className="flex relative mb-6"
@@ -46,15 +45,17 @@ export function ProjectPost({ projectName, content, techs, links, className }: P
         <Typography>{content}</Typography>
       </div>
       <div className="flex mt-4">
-        <div className="flex mr-1 flex-wrap gap-2">
+        <div className="flex mr-1 flex-wrap -m-1">
           {Array.from(techs)
             .sort()
             .map(tech => (
-              <TechTag key={tech}>{tech}</TechTag>
+              <TechTag key={tech} className="m-1">
+                {tech}
+              </TechTag>
             ))}
         </div>
         {links?.length > 0 && (
-          <div className="flex gap-3 ml-auto items-start">
+          <div className="flex space-x-3 ml-auto items-start">
             {links.map(({ href, icon, ...rest }) => (
               <AnchorIcon key={href} href={href} {...rest}>
                 {React.createElement(icon, { className: 'h-5 w-5' })}

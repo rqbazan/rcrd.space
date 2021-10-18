@@ -16,7 +16,7 @@ export function ProjectsView() {
       <Typography fontStyle="h3" className="mb-6">
         Latests
       </Typography>
-      <div className="flex flex-col md:flex-row gap-4 mb-8">
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-8">
         <LatestProject
           href="https://github.com/rqbazan/ff#readme"
           className="from-green-200 to-green-300 dark:to-green-400 bg-gradient-to-tr"
@@ -39,7 +39,7 @@ export function ProjectsView() {
           logoIcon={<PdfSvg />}
         />
       </div>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col space-y-8">
         <ProjectPost
           projectName="Seach GraphQL Jobs"
           techs={['NextJS', 'TailwindCSS', 'Codegen', 'Storybook', 'Apollo', 'Typescript']}
