@@ -33,6 +33,7 @@ export function UsesView() {
         <Li>Magic Mouse v2, Magic Keyboard v2, Airpods v1 and IPhone 7 Plus 128GB</Li>
         <Li>Sony Headphones WH-1000XM4 Black</Li>
         <Li>Mouse Razer Deathadder V2 Mini</Li>
+        <Li>Mouse Logitech Mx Master 3</Li>
         <Li>Kindle Paperwhite 10th generation 8GB</Li>
         <Li>Nintendo Switch 2019</Li>
       </ul>
