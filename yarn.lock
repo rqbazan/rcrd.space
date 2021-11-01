@@ -3392,15 +3392,15 @@ jsonfile@^6.0.1:
     array-includes "^3.1.3"
     object.assign "^4.1.2"
 
-just-kebab-case@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/just-kebab-case/-/just-kebab-case-3.1.0.tgz#99d3f60adf1d6cdfbb359bafb9044bce9353399a"
-  integrity sha512-mwDy1Cj5Enn5gcx9Zwq3Ez5YG2paHTEfG75vsCRKy4R6JKnLI8v61ml7fbWfST6rBALHs1w1oN9W5dCkMf8yJA==
+just-kebab-case@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/just-kebab-case/-/just-kebab-case-3.1.1.tgz#e88a13347cd12830b233d9f8c00d41792781581a"
+  integrity sha512-/2ORPfWcyLyGFhHmzVVthL84yD2oWl9dUvP1/yO+DcZAsDujNN+FwG5jSdZ+MlOIaxGr4cxmwbo23omD2lAXgA==
 
-just-map-values@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/just-map-values/-/just-map-values-2.2.0.tgz#1e92224e88cb9ccac248b1b57c8111f7e5ae5f4b"
-  integrity sha512-DG2gLnJErP+5CXImR/HhW2ZreYKKxjg6QsGAdEvs33OfHCWZhqJK2f242QeFELdYQmIC3Wx562/9bTClpkb4bw==
+just-map-values@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/just-map-values/-/just-map-values-2.2.1.tgz#79599266b679a0966fb0f003c3499e4ccd0d26a9"
+  integrity sha512-76gn29H7KrLYyrFm521IbbabtLpRV9a/JCAnrnaBSMHn5dxCIrGZLgK6U54d0KjQvQPV7r75y47r3ptmtc+ZJA==
 
 language-subtag-registry@~0.3.2:
   version "0.3.21"
