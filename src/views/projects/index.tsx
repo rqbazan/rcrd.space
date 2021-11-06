@@ -18,10 +18,10 @@ export function ProjectsView() {
       </Typography>
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-8">
         <LatestProject
-          href="https://github.com/rqbazan/ff#readme"
+          href="https://github.com/rqbazan/toggled#readme"
           className="from-green-200 to-green-300 dark:to-green-400 bg-gradient-to-tr"
-          projectName="FF Library"
-          data-splitbee-event="View FF Library"
+          projectName="Toggled Library"
+          data-splitbee-event="View Toggled Library"
           logoIcon={<SwitchSvg />}
         />
         <LatestProject
