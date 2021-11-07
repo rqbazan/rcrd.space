@@ -1,8 +1,12 @@
 import clsx from 'clsx'
 import { AnimateSharedLayout } from 'framer-motion'
 import Link from 'next/link'
-
-import { FileTextSvg, HardDriveSvg, HomeSvg, TerminalSvg } from '~/ui/icons'
+import {
+  FileText as FileTextIconSvg,
+  HardDrive as HardDriveIconSvg,
+  Home as HomeIconSvg,
+  Terminal as TerminalIconSvg,
+} from 'react-feather'
 
 import { MainLogo } from '../logo'
 import { MainNavLink } from '../nav-link'
@@ -19,17 +23,17 @@ export function MainHeader({ className, ...props }: MainHeaderProps) {
         <nav className="flex space-x-4">
           <Link href="/" passHref>
             <MainNavLink aria-label="Home">
-              <HomeSvg />
+              <HomeIconSvg />
             </MainNavLink>
           </Link>
           <Link href="/uses" passHref>
             <MainNavLink aria-label="Uses">
-              <HardDriveSvg />
+              <HardDriveIconSvg />
             </MainNavLink>
           </Link>
           <Link href="/projects" passHref>
             <MainNavLink aria-label="Projects">
-              <TerminalSvg />
+              <TerminalIconSvg />
             </MainNavLink>
           </Link>
           <MainNavLink
@@ -37,7 +41,7 @@ export function MainHeader({ className, ...props }: MainHeaderProps) {
             data-splitbee-event="View Resume"
             aria-label="Resume"
           >
-            <FileTextSvg />
+            <FileTextIconSvg />
           </MainNavLink>
         </nav>
       </AnimateSharedLayout>

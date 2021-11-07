@@ -1,8 +1,13 @@
 import * as React from 'react'
 import clsx from 'clsx'
+import {
+  GitHub as GitHubSvgIcon,
+  Linkedin as LinkedinSvgIcon,
+  Mail as MailSvgIcon,
+  Twitter as TwitterSvgIcon,
+} from 'react-feather'
 
 import { AnchorIcon } from '~/ui'
-import { GithubSvg, LinkedinSvg, MailSvg, TwitterSvg } from '~/ui/icons'
 
 export interface MainFooterProps {
   className?: string
@@ -16,22 +21,22 @@ type Contact = {
 
 const contacts: Contact[] = [
   {
-    icon: GithubSvg,
+    icon: GitHubSvgIcon,
     network: 'github',
     href: 'https://github.com/rqbazan',
   },
   {
-    icon: TwitterSvg,
+    icon: TwitterSvgIcon,
     network: 'twitter',
     href: 'https://twitter.com/rqbazan',
   },
   {
-    icon: LinkedinSvg,
+    icon: LinkedinSvgIcon,
     network: 'linkedin',
     href: 'https://www.linkedin.com/in/rqbazan',
   },
   {
-    icon: MailSvg,
+    icon: MailSvgIcon,
     network: 'mail',
     href: 'mailto:raquirozbazan@gmail.com',
   },
