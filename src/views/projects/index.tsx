@@ -37,7 +37,7 @@ export function ProjectsView() {
           logoIcon={<CalendarSvg />}
         />
         <LatestProject
-          href="https://github.com/rqbazan/my-resume-with-react-pdf#readme"
+          href="https://github.com/rqbazan/resume#readme"
           className="from-yellow-200 to-yellow-300 dark:to-yellow-400 bg-gradient-to-tr"
           projectName="My React CV"
           data-splitbee-event="View My React CV"
