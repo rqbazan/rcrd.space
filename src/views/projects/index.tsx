@@ -1,8 +1,13 @@
 import * as React from 'react'
+import {
+  ExternalLink as ExternalLinkIconSvg,
+  Figma as FigmaIconSvg,
+  GitHub as GitHubSvgIcon,
+  Package as PackageSvgIcon,
+} from 'react-feather'
 
 import { MainHeading, MainTransition } from '~/layouts'
 import { Anchor, Typography } from '~/ui'
-import { ExternalLinkSvg, FigmaSvg, GithubSvg, PackageSvg } from '~/ui/icons'
 
 import { CalendarSvg, LatestProject, PdfSvg, ProjectPost, SwitchSvg } from './components'
 
@@ -44,14 +49,14 @@ export function ProjectsView() {
           projectName="Seach GraphQL Jobs"
           techs={['NextJS', 'TailwindCSS', 'Codegen', 'Storybook', 'Apollo', 'Typescript']}
           links={[
-            { href: 'https://github.com/rqbazan/graphql-jobs#readme', icon: GithubSvg },
+            { href: 'https://github.com/rqbazan/graphql-jobs#readme', icon: GitHubSvgIcon },
             {
               href: 'https://www.figma.com/file/vnoMxFemCYynPFt37BFPK0/GraphQL-jobs?node-id=0%3A1',
-              icon: FigmaSvg,
+              icon: FigmaIconSvg,
             },
             {
               href: 'https://graphql-jobs.now.sh/',
-              icon: ExternalLinkSvg,
+              icon: ExternalLinkIconSvg,
               ['data-splitbee-event']: 'View Seach GraphQL Jobs',
             },
           ]}
@@ -67,10 +72,13 @@ export function ProjectsView() {
           projectName="Prisma Anonymous Chat"
           techs={['xstyled', 'Prisma', 'YogaGraphQL', 'Express', 'GraphQL Subscriptions']}
           links={[
-            { href: 'https://github.com/rqbazan/prisma-anonymous-chat#readme', icon: GithubSvg },
+            {
+              href: 'https://github.com/rqbazan/prisma-anonymous-chat#readme',
+              icon: GitHubSvgIcon,
+            },
             {
               href: 'https://prisma-anonymous-chat-staging.herokuapp.com/',
-              icon: ExternalLinkSvg,
+              icon: ExternalLinkIconSvg,
               ['data-splitbee-event']: 'View Prisma Anonymous Chat',
             },
           ]}
@@ -86,14 +94,17 @@ export function ProjectsView() {
           projectName="Mr. Rubik"
           techs={['Gastby', 'ThreeJS', 'ReactThreeFiber', 'Typescript', 'Firebase']}
           links={[
-            { href: 'https://github.com/rqbazan/react-three-fiber-101#readme', icon: GithubSvg },
+            {
+              href: 'https://github.com/rqbazan/react-three-fiber-101#readme',
+              icon: GitHubSvgIcon,
+            },
             {
               href: 'https://www.figma.com/file/7lGU5TbDcFUtiU5IatkNsI/react-three-fiber-101?node-id=11%3A14',
-              icon: FigmaSvg,
+              icon: FigmaIconSvg,
             },
             {
               href: 'https://react-three-fiber-101.now.sh/',
-              icon: ExternalLinkSvg,
+              icon: ExternalLinkIconSvg,
               ['data-splitbee-event']: 'View Mr. Rubik',
             },
           ]}
@@ -112,10 +123,10 @@ export function ProjectsView() {
           projectName="AIMO Challenge"
           techs={['TailwindCSS', 'NextJS', 'Typescript', 'GithubAPI', 'Vercel']}
           links={[
-            { href: 'https://github.com/rqbazan/aimo-challenge#readme', icon: GithubSvg },
+            { href: 'https://github.com/rqbazan/aimo-challenge#readme', icon: GitHubSvgIcon },
             {
               href: 'https://aimo-challenge.rqbazan.now.sh/',
-              icon: ExternalLinkSvg,
+              icon: ExternalLinkIconSvg,
               ['data-splitbee-event']: 'View AIMO Challenge',
             },
           ]}
@@ -131,11 +142,11 @@ export function ProjectsView() {
           projectName="Vercel Toast Clone"
           techs={['Storybook', 'React', 'ReactSpring', 'Typescript']}
           links={[
-            { href: 'https://github.com/rqbazan/zeit-toast-clone#readme', icon: GithubSvg },
-            { href: 'https://www.npmjs.com/package/zeit-toast-clone', icon: PackageSvg },
+            { href: 'https://github.com/rqbazan/zeit-toast-clone#readme', icon: GitHubSvgIcon },
+            { href: 'https://www.npmjs.com/package/zeit-toast-clone', icon: PackageSvgIcon },
             {
               href: 'https://zeit-toast-clone.rqbazan.now.sh/',
-              icon: ExternalLinkSvg,
+              icon: ExternalLinkIconSvg,
               ['data-splitbee-event']: 'View Vercel Toast Clone',
             },
           ]}
@@ -151,10 +162,10 @@ export function ProjectsView() {
           projectName="My Personal Site"
           techs={['NextJS', 'TailwindCSS', 'Stitches', 'Typescript']}
           links={[
-            { href: 'https://github.com/rqbazan/rcrd.space#readme', icon: GithubSvg },
+            { href: 'https://github.com/rqbazan/rcrd.space#readme', icon: GitHubSvgIcon },
             {
               href: 'https://rcrd.space',
-              icon: ExternalLinkSvg,
+              icon: ExternalLinkIconSvg,
               ['data-splitbee-event']: 'View My Personal Site',
             },
           ]}
@@ -169,10 +180,10 @@ export function ProjectsView() {
           projectName="Hashing With Pbkdf2"
           techs={['Svelte', 'CrytoHashing', 'TailwindCSS', 'Vite.js']}
           links={[
-            { href: 'https://github.com/rqbazan/hashing-with-pbkdf2#readme', icon: GithubSvg },
+            { href: 'https://github.com/rqbazan/hashing-with-pbkdf2#readme', icon: GitHubSvgIcon },
             {
               href: 'https://hashing-with-pbkdf2.vercel.app',
-              icon: ExternalLinkSvg,
+              icon: ExternalLinkIconSvg,
               ['data-splitbee-event']: 'View Hashing With Pbkdf2',
             },
           ]}
@@ -192,7 +203,7 @@ export function ProjectsView() {
           links={[
             {
               href: 'https://github.com/rqbazan/programming-challenges#readme',
-              icon: GithubSvg,
+              icon: GitHubSvgIcon,
               ['data-splitbee-event']: 'View Programming Challenges',
             },
           ]}

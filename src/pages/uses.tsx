@@ -1,13 +1,13 @@
 import * as React from 'react'
-import { DefaultSeo } from 'next-seo'
 
 import { MainLayout } from '~/layouts'
+import { SEO } from '~/ui'
 import { UsesView } from '~/views'
 
 export default function UsesPage() {
   return (
     <React.Fragment>
-      <DefaultSeo title="Uses" />
+      <SEO title="Uses" />
       <UsesView />
     </React.Fragment>
   )

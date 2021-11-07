@@ -1,6 +1,6 @@
 import { DefaultSeoProps } from 'next-seo'
 
-const defaultTitle = 'Ricardo Q. Bazan - Software Developer'
+const defaultTitle = 'Ricardo Q. Bazan – Software Developer.'
 
 // prettier-ignore
 const description = "Software developer mostly with NodeJS 💚 I love to write clean beautiful code even when it's unnecessary."
@@ -8,7 +8,7 @@ const description = "Software developer mostly with NodeJS 💚 I love to write 
 export const defaultSEO: DefaultSeoProps = {
   defaultTitle,
   description,
-  titleTemplate: '%s | Ricardo Q. Bazan',
+  titleTemplate: '%s – Ricardo Q. Bazan',
   canonical: 'https://rcrd.space',
   openGraph: {
     description,
