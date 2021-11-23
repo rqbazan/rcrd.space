@@ -22,7 +22,7 @@
     "validate": "run-p check-format lint typecheck"
   },
   "engines": {
-    "node": ">=14.x"
+    "node": "14.x"
   },
   "dependencies": {
     "@capsizecss/core": "^3.0.0",
