@@ -6,6 +6,14 @@ import twConfig from '../tailwind.config'
 
 const twCustomTheme = twConfig.theme.extend
 
+interface TailwindCSSMedia {
+  sm: string
+  md: string
+  lg: string
+  xl: string
+  '2xl': string
+}
+
 export const {
   css,
   styled,
@@ -18,7 +26,10 @@ export const {
   prefix,
   reset,
 } = createStitches({
-  media: mapValues(twCustomTheme.screen, px => `(min-width: ${px})`),
+  media: mapValues(
+    twCustomTheme.screens as any,
+    width => `(min-width: ${width})`
+  ) as unknown as TailwindCSSMedia,
   theme: {
     fonts: mapValues(twCustomTheme.fontFamily, font => font.join(',')),
     colors: mapValues(twCustomTheme.colors, color => color.DEFAULT),

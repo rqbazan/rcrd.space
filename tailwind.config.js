@@ -1,9 +1,9 @@
 // @preval
 const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultColors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.tsx', './src/**/*.css'],
+  content: ['./src/**/*.{tsx,css}'],
   darkMode: 'class',
   theme: {
     /**
@@ -11,23 +11,23 @@ module.exports = {
      * to use the values from `~/stitches.config.ts`
      */
     extend: {
-      screen: defaultTheme.screens,
+      screens: defaultTheme.screens,
       fontFamily: {
         ...defaultTheme.fontFamily,
         sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         text: {
-          dark: defaultTheme.colors.gray[50],
-          DEFAULT: defaultTheme.colors.gray[800],
+          dark: defaultColors.gray[50],
+          DEFAULT: defaultColors.gray[800],
         },
         body: {
-          dark: defaultTheme.colors.black,
-          DEFAULT: defaultTheme.colors.gray[100],
+          dark: defaultColors.black,
+          DEFAULT: defaultColors.gray[100],
         },
         muted: {
-          dark: defaultTheme.colors.gray[400],
-          DEFAULT: defaultTheme.colors.gray[600],
+          dark: defaultColors.gray[400],
+          DEFAULT: defaultColors.gray[600],
         },
         selection: {
           dark: '#ffa73c',
