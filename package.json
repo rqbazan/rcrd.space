@@ -27,21 +27,21 @@
   "dependencies": {
     "@capsizecss/core": "^3.0.0",
     "@capsizecss/metrics": "^0.1.0",
-    "@radix-ui/react-slot": "^0.1.1",
+    "@radix-ui/react-slot": "^0.1.2",
     "@rqbazan/set-initial-color-mode": "^1.0.2",
-    "@stitches/react": "^1.2.5",
+    "@stitches/react": "^1.2.6",
     "@svgr/webpack": "^5.5.0",
     "autoprefixer": "^10.4.0",
     "babel-plugin-preval": "^5.0.0",
     "clsx": "^1.1.1",
-    "framer-motion": "^5.0.0",
+    "framer-motion": "^5.5.5",
     "just-kebab-case": "^3.1.1",
     "just-map-values": "^2.2.1",
-    "next": "^12.0.2",
+    "next": "^12.0.7",
     "next-seo": "^4.28.1",
-    "next-sitemap": "^1.6.192",
-    "postcss": "^8.3.11",
-    "preact": "^10.5.15",
+    "next-sitemap": "^1.6.203",
+    "postcss": "^8.4.5",
+    "preact": "^10.6.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
@@ -49,14 +49,14 @@
     "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
-    "@types/react": "^17.0.33",
-    "@types/tailwindcss": "^2.2.2",
+    "@types/react": "^17.0.38",
+    "@types/tailwindcss": "^2.2.4",
     "eslint": "<8.0.0",
-    "eslint-config-next": "12.0.2",
+    "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
   }
 }
