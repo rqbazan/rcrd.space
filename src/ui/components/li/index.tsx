@@ -9,11 +9,8 @@ export interface LiProps {
 
 export function Li({ className, children, ...props }: LiProps) {
   return (
-    <li {...props} className={clsx('flex', className)}>
-      <span className="mr-2 mt-1">
-        <div className="rounded-[50%] h-1 w-1 bg-muted" />
-      </span>
-      <Typography>{children}</Typography>
-    </li>
+    <Typography asChild uncapsized className={clsx('list-disc', className)} {...props}>
+      <li>{children}</li>
+    </Typography>
   )
 }
