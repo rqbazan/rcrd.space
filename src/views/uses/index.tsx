@@ -24,7 +24,7 @@ export function UsesView() {
       <Typography className="mt-9 mb-8" fontStyle="h3">
         Computer
       </Typography>
-      <ul className="space-y-6">
+      <ul className="space-y-2 ml-3">
         <Li>
           Dell Inspiron Gaming 2017 Laptop, 16 GB RAM, 256GB SSD, 1TB HDD, Intel Core i7-7700HQ
           2.80GHz, Windows 10 Pro
@@ -37,7 +37,7 @@ export function UsesView() {
       <Typography className="mt-9 mb-8" fontStyle="h3">
         Chat
       </Typography>
-      <ul className="space-y-6">
+      <ul className="space-y-2 ml-3">
         <Li>Sony Headphones WH-1000XM4 Black</Li>
         <Li>Logitech StreamCam Black</Li>
         <Li>Blue Yeti X Black</Li>
@@ -45,7 +45,7 @@ export function UsesView() {
       <Typography className="mt-9 mb-8" fontStyle="h3">
         Coding
       </Typography>
-      <ul className="space-y-6">
+      <ul className="space-y-2 ml-3">
         <Li>Visual Studio Code</Li>
         <Li>Window Terminal + Cmder</Li>
         <Li>JetBrains DataGrip</Li>
@@ -56,7 +56,7 @@ export function UsesView() {
       <Typography className="mt-9 mb-8" fontStyle="h3">
         Other
       </Typography>
-      <ul className="space-y-6">
+      <ul className="space-y-2 ml-3">
         <Li>Kindle Paperwhite 10th generation 8GB</Li>
         <Li>Nintendo Switch 2019</Li>
       </ul>
