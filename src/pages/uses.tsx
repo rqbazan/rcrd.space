@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { MainLayout } from '~/layouts'
+import { getLayout } from '~/layouts'
 import { SEO } from '~/ui'
 import { UsesView } from '~/views'
 
@@ -13,4 +13,4 @@ export default function UsesPage() {
   )
 }
 
-UsesPage.Layout = MainLayout
+UsesPage.getLayout = getLayout
