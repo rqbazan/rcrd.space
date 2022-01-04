@@ -10,18 +10,18 @@ import 'tailwindcss/tailwind.css'
 
 export default function App({ Component: Page, pageProps, router }: AppProps) {
   // @ts-expect-error
-  const Layout = Page.Layout || React.Fragment
+  const getLayout = Page.getLayout || ((el: React.ReactElement) => el)
 
   globalStyles()
 
   return (
     <React.Fragment>
       <DefaultSeo {...defaultSEO} />
-      <Layout>
+      {getLayout(
         <AnimatePresence initial={false} exitBeforeEnter>
           <Page key={router.route} {...pageProps} />
         </AnimatePresence>
-      </Layout>
+      )}
     </React.Fragment>
   )
 }

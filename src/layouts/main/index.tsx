@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import { MainFooter, MainHeader } from './components'
 
 export interface MainLayoutProps {
@@ -12,6 +14,10 @@ export function MainLayout({ children }: MainLayoutProps) {
       <MainFooter className="mt-auto pt-16" />
     </main>
   )
+}
+
+export function getLayout(element: React.ReactElement) {
+  return <MainLayout>{element}</MainLayout>
 }
 
 export * from './components'
