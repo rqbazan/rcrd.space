@@ -36,12 +36,28 @@ export const defaultSEO: DefaultSeoProps = {
   additionalLinkTags: [
     {
       rel: 'icon',
-      href: '/favicon/32x32.png',
+      href: '/favicon.ico',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon-16x16.png',
+      sizes: '16x16',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon-32x32.png',
+      sizes: '32x32',
     },
     {
       rel: 'apple-touch-icon',
-      href: '/favicon/128x128.png',
-      sizes: '128x128',
+      href: '/apple-touch-icon.png',
+      sizes: '180x180',
+    },
+    {
+      rel: 'manifest',
+      href: '/site.webmanifest',
     },
   ],
   additionalMetaTags: [
