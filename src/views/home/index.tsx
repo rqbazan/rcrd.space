@@ -21,9 +21,9 @@ export function HomeView() {
       }
       content={
         <React.Fragment>
-          I&rsquo;m a software developer from Trujillo - Peru. I work as Frontend Lead at{' '}
-          <Anchor href="https://riqra.com">Riqra</Anchor>. You’ve found my personal place on the
-          internet.
+          I&rsquo;m a software developer from Trujillo - Peru. I work as Sr. Software Engineer at{' '}
+          <Anchor href="https://www.linkedin.com/company/pedidosya/mycompany">PedidosYa</Anchor>.
+          You’ve found my personal place on the internet.
         </React.Fragment>
       }
     />
