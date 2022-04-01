@@ -44,6 +44,31 @@ export function ProjectsView() {
       </div>
       <div className="flex flex-col space-y-8">
         <ProjectPost
+          projectName="Set Initial Color Mode"
+          techs={['Rollup', 'React', 'SSR', 'Typescript']}
+          links={[
+            {
+              href: 'https://github.com/rqbazan/set-initial-color-mode#readme',
+              icon: GitHubSvgIcon,
+            },
+            {
+              href: 'https://www.npmjs.com/package/@rqbazan/set-initial-color-mode',
+              icon: PackageSvgIcon,
+            },
+          ]}
+          content={
+            <React.Fragment>
+              After reading{' '}
+              <Anchor href="https://www.joshwcomeau.com/react/dark-mode/">
+                The Quest for the Perfect Dark Mode
+              </Anchor>{' '}
+              by <Anchor href="https://twitter.com/JoshWComeau">Josh Comeau</Anchor>, I&rsquo;ve
+              created a reusable solution for the dark-mode-flick-problem. My own website use this
+              solution.
+            </React.Fragment>
+          }
+        />
+        <ProjectPost
           projectName="Seach GraphQL Jobs"
           techs={['NextJS', 'TailwindCSS', 'Codegen', 'Storybook', 'Apollo', 'Typescript']}
           links={[
@@ -143,7 +168,7 @@ export function ProjectsView() {
             { href: 'https://github.com/rqbazan/zeit-toast-clone#readme', icon: GitHubSvgIcon },
             { href: 'https://www.npmjs.com/package/zeit-toast-clone', icon: PackageSvgIcon },
             {
-              href: 'https://zeit-toast-clone.rqbazan.now.sh/',
+              href: 'https://zeit-toast-clone.vercel.app',
               icon: ExternalLinkIconSvg,
               ['data-splitbee-event']: 'View Vercel Toast Clone',
             },
