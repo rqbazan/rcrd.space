@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Typewriter from 'typewriter-effect'
-import { MainHeading } from '~/layouts'
 import { Anchor } from '~/ui'
+import { MainHeading } from '~/ui/layouts'
 
 export function HomeView() {
   return (

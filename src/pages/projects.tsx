@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { getLayout } from '~/layouts'
 import { SEO } from '~/ui'
+import { getMainLayout } from '~/ui/layouts'
 import { ProjectsView } from '~/views'
 
 export default function ProjectsPage() {
@@ -12,4 +12,4 @@ export default function ProjectsPage() {
   )
 }
 
-ProjectsPage.getLayout = getLayout
+ProjectsPage.getLayout = getMainLayout
