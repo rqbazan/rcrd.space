@@ -1,6 +1,5 @@
 /* eslint no-bitwise: 0 */
 import React from 'react'
-
 import { styled } from '~/stitches.config'
 import { Typography } from '~/ui'
 

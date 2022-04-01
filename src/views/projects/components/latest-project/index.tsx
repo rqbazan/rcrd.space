@@ -1,6 +1,5 @@
 import * as React from 'react'
 import clsx from 'clsx'
-
 import { Typography } from '~/ui'
 
 export interface LatestProjectProps {

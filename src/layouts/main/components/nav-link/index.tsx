@@ -3,7 +3,6 @@ import type { ComponentProps } from '@stitches/react'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-
 import { styled } from '~/stitches.config'
 import { Typography } from '~/ui'
 import { getExternalLinkProps } from '~/ui/utils'

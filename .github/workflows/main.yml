@@ -11,13 +11,10 @@ jobs:
 
       - uses: actions/setup-node@master
         with:
-          node-version: '14.x'
+          node-version: 14.x
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Static testing
-        run: yarn validate
-
-        env:
-          CI: true
+        run: yarn test:static

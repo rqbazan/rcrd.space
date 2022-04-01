@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { MainHeading, MainTransition } from '~/layouts'
 import { Cover, Li, Typography } from '~/ui'
 

@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-
 import { Typography } from '~/ui'
 
 export interface MainHeadingProps {
