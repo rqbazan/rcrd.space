@@ -6,18 +6,18 @@
       "error",
       {
         "groups": [
-          // Side effect imports.
-          ["^\\u0000"],
-          // Packages. `react` related packages come first.
-          ["^react$", "^@?\\w"],
-          // Internal modules.
-          ["^~"],
-          // Parent imports. Put `..` last.
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          // Other relative imports. Put same-folder imports and `.` last.
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-          // Style imports.
-          ["^.+\\.css$"]
+          [
+            "^\\u0000",
+            "^react$",
+            "^@?\\w",
+            "^~",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$",
+            "^.+\\.css$"
+          ]
         ]
       }
     ],

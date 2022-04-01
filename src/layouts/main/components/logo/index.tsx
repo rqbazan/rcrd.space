@@ -1,6 +1,5 @@
 import * as React from 'react'
 import clsx from 'clsx'
-
 import { useColorModeToggle } from '~/lib/use-color-mode-toggle'
 import { darkTheme, keyframes, styled } from '~/stitches.config'
 

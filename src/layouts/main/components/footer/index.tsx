@@ -6,7 +6,6 @@ import {
   Mail as MailSvgIcon,
   Twitter as TwitterSvgIcon,
 } from 'react-feather'
-
 import { AnchorIcon } from '~/ui'
 
 export interface MainFooterProps {

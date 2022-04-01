@@ -1,5 +1,4 @@
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
-
 import env from '~/env'
 import { getCssText } from '~/stitches.config'
 

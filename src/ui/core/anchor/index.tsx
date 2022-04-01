@@ -1,7 +1,5 @@
 import * as React from 'react'
-
 import { getExternalLinkProps } from '~/ui/utils'
-
 import { Typography } from '../typography'
 
 export interface AnchorProps extends React.HTMLProps<HTMLAnchorElement> {}

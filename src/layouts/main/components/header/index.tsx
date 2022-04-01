@@ -7,7 +7,6 @@ import {
   Home as HomeIconSvg,
   Terminal as TerminalIconSvg,
 } from 'react-feather'
-
 import { MainLogo } from '../logo'
 import { MainNavLink } from '../nav-link'
 

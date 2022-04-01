@@ -3,9 +3,7 @@ import fontMetrics from '@capsizecss/metrics/iBMPlexSans'
 import { Slot } from '@radix-ui/react-slot'
 import type { VariantProps } from '@stitches/react'
 import clsx from 'clsx'
-
 import { CSS, css, theme } from '~/stitches.config'
-
 import { capsized } from './capsized'
 
 export interface TypographyProps extends TypographyVariants {

@@ -1,7 +1,6 @@
 import type * as Stitches from '@stitches/react'
 import { createStitches } from '@stitches/react'
 import mapValues from 'just-map-values'
-
 import twConfig from '../tailwind.config'
 
 const twCustomTheme = twConfig.theme.extend

@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { MainFooter, MainHeader } from './components'
 
 export interface MainLayoutProps {

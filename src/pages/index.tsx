@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { getLayout } from '~/layouts'
 import { HomeView } from '~/views'
 

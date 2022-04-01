@@ -1,6 +1,5 @@
 import * as React from 'react'
 import clsx from 'clsx'
-
 import { Anchor, AnchorProps } from '../anchor'
 
 export interface AnchorIconProps extends AnchorProps {
