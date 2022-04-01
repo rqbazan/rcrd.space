@@ -1,4 +1,5 @@
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
+import { getJsText } from '@rqbazan/set-initial-color-mode'
 import env from '~/env'
 import { getCssText } from '~/stitches.config'
 
@@ -15,7 +16,7 @@ export default class Document extends NextDocument {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <script dangerouslySetInnerHTML={{ __html: process.env.SET_INITIAL_COLOR_MODE_SCRIPT }} />
+          <script id="set-initial-color-mode" dangerouslySetInnerHTML={{ __html: getJsText() }} />
           {env.PROD && <script async data-api="/_hive" src="/bee.js" />}
         </Head>
         <body>

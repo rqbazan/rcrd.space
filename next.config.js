@@ -4,11 +4,6 @@ const fs = require('fs')
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  env: {
-    SET_INITIAL_COLOR_MODE_SCRIPT: fs
-      .readFileSync(require.resolve('@rqbazan/set-initial-color-mode'))
-      .toString(),
-  },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.svg$/,
