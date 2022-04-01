@@ -9,7 +9,7 @@ import { getExternalLinkProps } from '~/ui/utils'
 
 export interface NavLinkProps extends AnchorProps {
   href?: string // injected by NextJS
-  children: React.ReactNode
+  children: React.ReactElement
 }
 
 export type AnchorProps = ComponentProps<typeof Anchor>
@@ -43,7 +43,7 @@ export const MainNavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(fun
             !selected,
         })}
       >
-        <span>{children}</span>
+        <span>{React.cloneElement(children, { className: 'h-6 w-6' })}</span>
       </Typography>
       {selected && (
         <motion.div

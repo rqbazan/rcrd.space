@@ -20,7 +20,6 @@ export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(function 
 
   return (
     <Typography
-      uncapsized
       asChild
       fontStyle="p"
       fontWeight="medium"

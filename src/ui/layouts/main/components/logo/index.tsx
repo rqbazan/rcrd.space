@@ -41,7 +41,11 @@ export function MainLogo({ className, ...props }: MainLogoProps) {
   }, [colorMode])
 
   return (
-    <Box className={clsx('p-2 relative', className)} {...props} onClick={() => onToggle()}>
+    <Box
+      className={clsx('p-2 relative lg:scale-[1.45]', className)}
+      {...props}
+      onClick={() => onToggle()}
+    >
       <svg width="66" height="68" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path d="M51.441 9.524c6.116 3.686 12.393 7.898 13.527 13.284 1.134 5.427-2.875 12.069-5.184 19.237-2.308 7.21-2.916 14.986-7.047 19.846-4.09 4.86-11.664 6.844-18.346 5.629-6.683-1.255-12.474-5.67-18.225-10.003C10.415 53.183 4.664 48.97 2.315 43.26c-2.309-5.67-1.256-12.797.567-20.087 1.863-7.25 4.495-14.661 9.72-18.63 5.224-3.97 13.04-4.577 19.926-3.24 6.885 1.296 12.838 4.495 18.913 8.221Z" />
       </svg>

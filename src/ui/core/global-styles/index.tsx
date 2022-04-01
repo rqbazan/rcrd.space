@@ -41,4 +41,19 @@ export const globalStyles = globalCss({
     background: '$selection',
     color: '$body',
   },
+  '@md': {
+    html: {
+      fontSize: 18,
+    },
+  },
+  '@lg': {
+    html: {
+      fontSize: 20,
+    },
+  },
+  '@xl': {
+    html: {
+      fontSize: 22,
+    },
+  },
 })

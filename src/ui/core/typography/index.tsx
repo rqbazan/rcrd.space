@@ -1,10 +1,8 @@
 import * as React from 'react'
-import fontMetrics from '@capsizecss/metrics/iBMPlexSans'
 import { Slot } from '@radix-ui/react-slot'
 import type { VariantProps } from '@stitches/react'
 import clsx from 'clsx'
 import { CSS, css, theme } from '~/stitches.config'
-import { capsized } from './capsized'
 
 export interface TypographyProps extends TypographyVariants {
   children: React.ReactNode
@@ -22,6 +20,7 @@ type ComponentMap = Record<
 
 export const BaseTypography = css({
   fontFamily: 'inherit',
+  lineHeight: 1,
   variants: {
     fontWeight: {
       regular: {
@@ -37,61 +36,34 @@ export const BaseTypography = css({
     fontStyle: {
       small: {
         fontWeight: '$regular',
-        ...capsized({
-          fontMetrics,
-          fontSize: Number(theme.fontSizes.small.value),
-          lineGap: 0,
-        }),
+        fontSize: '$small',
       },
       p: {
         fontWeight: '$regular',
         color: '$muted',
-        ...capsized({
-          fontMetrics,
-          fontSize: Number(theme.fontSizes.p.value),
-          lineGap: 14,
-        }),
+        fontSize: '$p',
+        lineHeight: 1.5,
       },
       h5: {
         fontWeight: '$medium',
         textTransform: 'uppercase',
-        ...capsized({
-          fontMetrics,
-          fontSize: Number(theme.fontSizes.h5.value),
-          lineGap: 0,
-        }),
+        fontSize: '$h5',
       },
       h4: {
         fontWeight: '$regular',
-        ...capsized({
-          fontMetrics,
-          fontSize: Number(theme.fontSizes.h4.value),
-          lineGap: 0,
-        }),
+        fontSize: '$h4',
       },
       h3: {
         fontWeight: '$medium',
-        ...capsized({
-          fontMetrics,
-          fontSize: Number(theme.fontSizes.h3.value),
-          lineGap: 0,
-        }),
+        fontSize: '$h3',
       },
       h2: {
         fontWeight: '$semibold',
-        ...capsized({
-          fontMetrics,
-          fontSize: Number(theme.fontSizes.h2.value),
-          lineGap: 0,
-        }),
+        fontSize: '$h2',
       },
       h1: {
         fontWeight: '$semibold',
-        ...capsized({
-          fontMetrics,
-          fontSize: Number(theme.fontSizes.h1.value),
-          lineGap: 0,
-        }),
+        fontSize: '$h1',
       },
     },
     muted: {
@@ -100,16 +72,6 @@ export const BaseTypography = css({
       },
       false: {
         color: '$text',
-      },
-    },
-    uncapsized: {
-      true: {
-        '&::before': {
-          content: 'none',
-        },
-        '&::after': {
-          content: 'none',
-        },
       },
     },
   },
@@ -129,10 +91,10 @@ const componentMap: ComponentMap = {
 }
 
 export const Typography = React.forwardRef<HTMLElement, TypographyProps>(function Typography(
-  { uncapsized, fontStyle, fontWeight, muted, css, className, asChild, ...props },
+  { fontStyle, fontWeight, muted, css, className, asChild, ...props },
   forwadedRef
 ) {
-  const baseClassName = BaseTypography({ uncapsized, fontStyle, fontWeight, muted, css })
+  const baseClassName = BaseTypography({ fontStyle, fontWeight, muted, css })
 
   const Component = asChild ? Slot : typeof fontStyle === 'string' ? componentMap[fontStyle] : 'p'
 
