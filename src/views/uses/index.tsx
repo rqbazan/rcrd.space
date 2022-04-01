@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { MainHeading, MainTransition } from '~/layouts'
 import { Cover, Li, Typography } from '~/ui'
+import { MainHeading, MainTransition } from '~/ui/layouts'
 
 export function UsesView() {
   return (

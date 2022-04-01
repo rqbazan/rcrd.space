@@ -15,7 +15,7 @@ export function MainLayout({ children }: MainLayoutProps) {
   )
 }
 
-export function getLayout(element: React.ReactElement) {
+export function getMainLayout(element: React.ReactElement) {
   return <MainLayout>{element}</MainLayout>
 }
 

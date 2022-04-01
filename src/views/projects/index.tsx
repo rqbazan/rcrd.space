@@ -5,8 +5,8 @@ import {
   GitHub as GitHubSvgIcon,
   Package as PackageSvgIcon,
 } from 'react-feather'
-import { MainHeading, MainTransition } from '~/layouts'
 import { Anchor, Typography } from '~/ui'
+import { MainHeading, MainTransition } from '~/ui/layouts'
 import { CalendarSvg, LatestProject, PdfSvg, ProjectPost, SwitchSvg } from './components'
 
 export function ProjectsView() {
