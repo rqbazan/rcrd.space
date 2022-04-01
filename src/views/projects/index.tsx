@@ -16,7 +16,7 @@ export function ProjectsView() {
         title="Projects"
         content="Here&rsquo;s a list of open source projects writen mostly using JavaScript and TypeScript."
       />
-      <Typography fontStyle="h3" className="mb-6">
+      <Typography fontStyle="h3" className="mb-4">
         Latests
       </Typography>
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-8">

@@ -8,7 +8,7 @@ export interface LiProps {
 
 export function Li({ className, children, ...props }: LiProps) {
   return (
-    <Typography asChild uncapsized className={clsx('list-disc', className)} {...props}>
+    <Typography asChild className={clsx('list-disc', className)} {...props}>
       <li>{children}</li>
     </Typography>
   )

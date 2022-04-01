@@ -4,7 +4,7 @@ import { Typography } from '~/ui'
 
 export interface LatestProjectProps {
   projectName: string
-  logoIcon: React.ReactNode
+  logoIcon: React.ReactElement
   href: string
   className?: string
 }
@@ -18,7 +18,7 @@ export function LatestProject({ projectName, logoIcon, href, className }: Latest
           className
         )}
       >
-        {logoIcon}
+        {React.cloneElement(logoIcon, { className: 'lg:scale-[1.3] lg:mr-0.5' })}
         <Typography fontStyle="h5" fontWeight="semibold" className="text-body-dark ml-2">
           {projectName}
         </Typography>

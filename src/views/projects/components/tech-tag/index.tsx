@@ -40,11 +40,11 @@ export const TechTag = React.memo(function TechTag({ children, className }: Tech
   const hash = getHashCode(children) % 360
 
   return (
-    <Typography uncapsized fontStyle="small" asChild className={className}>
+    <Typography fontStyle="small" asChild className={className}>
       <Box
         // @ts-expect-error
         style={{ '--hash': hash }}
-        className="rounded px-2 pt-1.5 pb-1 select-none border"
+        className="rounded px-2 py-1 select-none border h-5"
       >
         {children}
       </Box>

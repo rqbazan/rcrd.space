@@ -32,7 +32,7 @@ export function ProjectPost({ projectName, content, techs, links, className }: P
     <div className={className} id={htmlId}>
       <div className="flex flex-col">
         <TitleBox
-          className="flex relative mb-6"
+          className="flex relative mb-4"
           onClick={() => {
             router.push(`${router.pathname}/#${htmlId}`)
           }}
