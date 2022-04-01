@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import clsx from 'clsx'
 import { AnimateSharedLayout } from 'framer-motion'
-import Link from 'next/link'
 import {
   FileText as FileTextIconSvg,
   HardDrive as HardDriveIconSvg,

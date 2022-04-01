@@ -1,6 +1,6 @@
 import * as React from 'react'
-import kebabCase from 'just-kebab-case'
 import { useRouter } from 'next/router'
+import kebabCase from 'just-kebab-case'
 import { styled } from '~/stitches.config'
 import { AnchorIcon, BaseTypography, Typography } from '~/ui'
 import { TechTag } from '../tech-tag'

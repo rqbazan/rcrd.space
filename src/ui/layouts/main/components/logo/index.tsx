@@ -1,6 +1,6 @@
 import * as React from 'react'
+import { ColorModes, useColorModeToggle } from '@rqbazan/set-initial-color-mode'
 import clsx from 'clsx'
-import { useColorModeToggle } from '~/lib/use-color-mode-toggle'
 import { darkTheme, keyframes, styled } from '~/stitches.config'
 
 export interface MainLogoProps {
@@ -33,9 +33,9 @@ export function MainLogo({ className, ...props }: MainLogoProps) {
   const { onToggle, colorMode } = useColorModeToggle()
 
   React.useEffect(() => {
-    if (colorMode === 'dark') {
+    if (colorMode === ColorModes.DARK) {
       document.documentElement.classList.add(darkTheme)
-    } else if (colorMode === 'light') {
+    } else if (colorMode === ColorModes.LIGHT) {
       document.documentElement.classList.remove(darkTheme)
     }
   }, [colorMode])

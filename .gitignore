@@ -3,3 +3,5 @@ node_modules
 .vercel
 *.tsbuildinfo
 *.log
+.yalc
+yalc.lock

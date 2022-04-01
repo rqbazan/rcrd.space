@@ -1325,10 +1325,10 @@
     "@babel/runtime" "^7.13.10"
     "@radix-ui/react-compose-refs" "0.1.0"
 
-"@rqbazan/set-initial-color-mode@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@rqbazan/set-initial-color-mode/-/set-initial-color-mode-1.0.2.tgz#eb47605202865347b797b826c57375511b14231e"
-  integrity sha512-GQZsTDNBcZTDmC9+MEyj2YQ4AviqOrlJN+Qy4gSuPabtHV2tjnO2YCJBYBrUOmiGRuHOUCgXGIQ7lqSYpCaVUA==
+"@rqbazan/set-initial-color-mode@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@rqbazan/set-initial-color-mode/-/set-initial-color-mode-1.1.0.tgz#853c325e58cc984afde4249954684c584a7d1195"
+  integrity sha512-7KIi3/LxVNeItvV3a0RDtPfgMamJLjsmEZ4L7e0YY1b5FRbUOb2o3xBTU06Oe8t26ip3pwK0K+hBW1WWGpsDWw==
 
 "@rushstack/eslint-patch@1.0.8":
   version "1.0.8"
