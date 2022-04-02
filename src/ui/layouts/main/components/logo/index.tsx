@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { ColorModes, useColorModeToggle } from '@rqbazan/set-initial-color-mode'
+import { useColorModeToggle } from '@rqbazan/set-initial-color-mode'
 import clsx from 'clsx'
-import { darkTheme, keyframes, styled } from '~/stitches.config'
+import { keyframes, styled } from '~/stitches.config'
 
 export interface MainLogoProps {
   className?: string
@@ -30,20 +30,12 @@ const Box = styled('div', {
 })
 
 export function MainLogo({ className, ...props }: MainLogoProps) {
-  const { onToggle, colorMode } = useColorModeToggle()
-
-  React.useEffect(() => {
-    if (colorMode === ColorModes.DARK) {
-      document.documentElement.classList.add(darkTheme)
-    } else if (colorMode === ColorModes.LIGHT) {
-      document.documentElement.classList.remove(darkTheme)
-    }
-  }, [colorMode])
+  const { onToggle } = useColorModeToggle()
 
   return (
     <Box
-      className={clsx('p-2 relative lg:scale-[1.45]', className)}
       {...props}
+      className={clsx('p-2 relative lg:scale-[1.45]', className)}
       onClick={() => onToggle()}
     >
       <svg width="66" height="68" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

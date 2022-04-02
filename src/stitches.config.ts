@@ -1,3 +1,4 @@
+import { ColorModes } from '@rqbazan/set-initial-color-mode'
 import type * as Stitches from '@stitches/react'
 import { createStitches } from '@stitches/react'
 import mapValues from 'just-map-values'
@@ -37,7 +38,7 @@ export const {
   },
 })
 
-export const darkTheme = createTheme('dark', {
+export const darkTheme = createTheme(ColorModes.DARK, {
   colors: mapValues(twCustomTheme.colors, color => color.dark),
 })
 
