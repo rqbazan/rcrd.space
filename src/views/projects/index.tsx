@@ -50,7 +50,7 @@ export function ProjectsView() {
           techs={['Next.js', 'TypeScript', 'Cypress', 'Storybook', 'MaterialUI']}
           links={[
             {
-              href: 'https://github.com/rqbazan/ravn-challenge-v2-ricardo-q-bazan#readme',
+              href: 'https://github.com/rqbazan/cometa-challenge#readme',
               icon: GitHubSvgIcon,
             },
             {
