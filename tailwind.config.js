@@ -40,6 +40,7 @@ module.exports = {
         semibold: 600,
       },
       fontSize: {
+        tiny: '0.5rem',
         small: '0.75rem',
         p: '0.875rem',
         h5: '0.8125rem',

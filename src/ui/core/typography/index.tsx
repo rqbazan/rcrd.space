@@ -22,18 +22,11 @@ export const BaseTypography = css({
   fontFamily: 'inherit',
   lineHeight: 1,
   variants: {
-    fontWeight: {
-      regular: {
-        fontWeight: '$regular',
-      },
-      medium: {
-        fontWeight: '$medium',
-      },
-      semibold: {
-        fontWeight: '$semibold',
-      },
-    },
     fontStyle: {
+      tiny: {
+        fontWeight: '$regular',
+        fontSize: '$tiny',
+      },
       small: {
         fontWeight: '$regular',
         fontSize: '$small',
@@ -66,6 +59,17 @@ export const BaseTypography = css({
         fontSize: '$h1',
       },
     },
+    fontWeight: {
+      regular: {
+        fontWeight: '$regular',
+      },
+      medium: {
+        fontWeight: '$medium',
+      },
+      semibold: {
+        fontWeight: '$semibold',
+      },
+    },
     muted: {
       true: {
         color: '$muted',
@@ -81,6 +85,7 @@ export const BaseTypography = css({
 })
 
 const componentMap: ComponentMap = {
+  tiny: 'small',
   small: 'small',
   p: 'p',
   h1: 'h1',
@@ -99,6 +104,6 @@ export const Typography = React.forwardRef<HTMLElement, TypographyProps>(functio
   const Component = asChild ? Slot : typeof fontStyle === 'string' ? componentMap[fontStyle] : 'p'
 
   return (
-    <Component ref={forwadedRef} {...props} className={clsx(baseClassName.toString(), className)} />
+    <Component {...props} ref={forwadedRef} className={clsx(baseClassName.toString(), className)} />
   )
 })
