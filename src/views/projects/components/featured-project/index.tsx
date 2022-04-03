@@ -2,14 +2,14 @@ import * as React from 'react'
 import clsx from 'clsx'
 import { Typography } from '~/ui'
 
-export interface LatestProjectProps {
+export interface FeturedProjectProps {
   projectName: string
   logoIcon: React.ReactElement
   href: string
   className?: string
 }
 
-export function LatestProject({ projectName, logoIcon, href, className }: LatestProjectProps) {
+export function FeaturedProject({ projectName, logoIcon, href, className }: FeturedProjectProps) {
   return (
     <a href={href} className="md:flex-1" target="_blank" rel="noreferrer">
       <div

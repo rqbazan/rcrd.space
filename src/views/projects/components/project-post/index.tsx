@@ -1,12 +1,13 @@
 import * as React from 'react'
 import { useRouter } from 'next/router'
 import kebabCase from 'just-kebab-case'
-import { styled } from '~/stitches.config'
-import { AnchorIcon, BaseTypography, Typography } from '~/ui'
+import { AnchorIcon, NewTag, Typography } from '~/ui'
+import { dateDiffInDays } from '~/uitls'
 import { TechTag } from '../tech-tag'
 
 export interface ProjectPostProps {
   projectName: string
+  postedAt?: string
   content: string | React.ReactNode
   techs: string[]
   className?: string
@@ -17,13 +18,26 @@ export interface ProjectPostProps {
   }>
 }
 
-const TitleBox = styled('div', {
-  [`& > ${BaseTypography}:hover + span`]: {
-    display: 'inline-block',
-  },
-})
+const MAX_DAYS_TO_BE_NEW = 30
 
-export function ProjectPost({ projectName, content, techs, links, className }: ProjectPostProps) {
+function isNew(postedAt?: string) {
+  if (!postedAt) {
+    return false
+  }
+
+  const diffInDays = dateDiffInDays(new Date(postedAt))
+
+  return diffInDays <= MAX_DAYS_TO_BE_NEW
+}
+
+export function ProjectPost({
+  projectName,
+  postedAt,
+  content,
+  techs,
+  links,
+  className,
+}: ProjectPostProps) {
   const router = useRouter()
 
   const htmlId = kebabCase(projectName.toLowerCase())
@@ -31,16 +45,16 @@ export function ProjectPost({ projectName, content, techs, links, className }: P
   return (
     <div className={className} id={htmlId}>
       <div className="flex flex-col">
-        <TitleBox
-          className="flex relative mb-4"
+        <div
+          className="inline-flex items-center"
           onClick={() => {
             router.push(`${router.pathname}/#${htmlId}`)
           }}
         >
           <Typography fontStyle="h5">{projectName}</Typography>
-          <span className="hidden absolute -left-4 -top-2 text-muted">#</span>
-        </TitleBox>
-        <Typography>{content}</Typography>
+          {isNew(postedAt) && <NewTag className="ml-1 -mt-2" />}
+        </div>
+        <Typography className="mt-4">{content}</Typography>
       </div>
       <div className="flex mt-4">
         <div className="flex mr-1 flex-wrap -m-1">

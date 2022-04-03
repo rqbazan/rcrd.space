@@ -7,7 +7,7 @@ import {
 } from 'react-feather'
 import { Anchor, Typography } from '~/ui'
 import { MainHeading, MainTransition } from '~/ui/layouts'
-import { CalendarSvg, LatestProject, PdfSvg, ProjectPost, SwitchSvg } from './components'
+import { CalendarSvg, FeaturedProject, PdfSvg, ProjectPost, SwitchSvg } from './components'
 
 export function ProjectsView() {
   return (
@@ -17,24 +17,24 @@ export function ProjectsView() {
         content="Here&rsquo;s a list of open source projects writen mostly using JavaScript and TypeScript."
       />
       <Typography fontStyle="h3" className="mb-4">
-        Latests
+        Featured
       </Typography>
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-8">
-        <LatestProject
+        <FeaturedProject
           href="https://github.com/rqbazan/toggled#readme"
           className="from-green-200 to-green-300 dark:to-green-400 bg-gradient-to-tr"
           projectName="Toggled Library"
           data-splitbee-event="View Toggled Library"
           logoIcon={<SwitchSvg />}
         />
-        <LatestProject
+        <FeaturedProject
           href="https://github.com/rqbazan/weeks#readme"
           className="from-red-200 to-red-300 dark:to-red-400 bg-gradient-to-tr"
           projectName="Weeks Life"
           data-splitbee-event="View Weeks Life"
           logoIcon={<CalendarSvg />}
         />
-        <LatestProject
+        <FeaturedProject
           href="https://github.com/rqbazan/resume#readme"
           className="from-yellow-200 to-yellow-300 dark:to-yellow-400 bg-gradient-to-tr"
           projectName="My React CV"
@@ -45,6 +45,7 @@ export function ProjectsView() {
       <div className="flex flex-col space-y-8">
         <ProjectPost
           projectName="Set Initial Color Mode"
+          postedAt="04-01-2022"
           techs={['Rollup', 'React', 'SSR', 'Typescript']}
           links={[
             {
