@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {
+  Edit2 as PencilSvgIcon,
   ExternalLink as ExternalLinkIconSvg,
   Figma as FigmaIconSvg,
   GitHub as GitHubSvgIcon,
@@ -44,9 +45,71 @@ export function ProjectsView() {
       </div>
       <div className="flex flex-col space-y-8">
         <ProjectPost
+          projectName="Cometa Challenge"
+          postedAt="04-03-2022"
+          techs={['Next.js', 'TypeScript', 'Cypress', 'Storybook', 'MaterialUI']}
+          links={[
+            {
+              href: 'https://github.com/rqbazan/cometa-challenge#readme',
+              icon: GitHubSvgIcon,
+            },
+            {
+              href: 'https://cometa.rcrd.space',
+              icon: ExternalLinkIconSvg,
+              ['data-splitbee-event']: 'View Cometa Challenge',
+            },
+          ]}
+          content={
+            <React.Fragment>
+              The solution for{' '}
+              <Anchor href="https://cometa.notion.site/48h-React-Frontend-Challenge-faaa3f5ff28a408799f374b6279793d8">
+                the Cometa challenge
+              </Anchor>
+              , in order to get the Frontend Engineer position of the company.
+            </React.Fragment>
+          }
+        />
+        <ProjectPost
+          projectName="Ravn Challenge"
+          postedAt="04-03-2022"
+          techs={[
+            'Next.js',
+            'TypeScript',
+            'Cypress',
+            'Storybook',
+            'TailwindCSS',
+            'GraphQL',
+            'SemanticRelease',
+          ]}
+          links={[
+            {
+              href: 'https://github.com/rqbazan/ravn-challenge-v2-ricardo-q-bazan#readme',
+              icon: GitHubSvgIcon,
+            },
+            {
+              href: 'https://excalidraw.com/#json=k6pQGzgskJz0DcXvO7xDt,bYqI9PPcI8CB3vue35JRGQ',
+              icon: PencilSvgIcon,
+            },
+            {
+              href: 'https://sw.rcrd.space',
+              icon: ExternalLinkIconSvg,
+              ['data-splitbee-event']: 'View RAVN Challenge',
+            },
+          ]}
+          content={
+            <React.Fragment>
+              The solution for{' '}
+              <Anchor href="https://docs.google.com/document/d/1hPVfun_1mxDokJ-qrFqIaUT5EfrYCL5X0pLGioEcDXk">
+                the RAVN challenge
+              </Anchor>
+              , in order to get the Software Engineer position of the company.
+            </React.Fragment>
+          }
+        />
+        <ProjectPost
           projectName="Set Initial Color Mode"
           postedAt="04-01-2022"
-          techs={['Rollup', 'React', 'SSR', 'Typescript']}
+          techs={['Rollup', 'React', 'SSR', 'TypeScript']}
           links={[
             {
               href: 'https://github.com/rqbazan/set-initial-color-mode#readme',
@@ -71,7 +134,7 @@ export function ProjectsView() {
         />
         <ProjectPost
           projectName="Seach GraphQL Jobs"
-          techs={['NextJS', 'TailwindCSS', 'Codegen', 'Storybook', 'Apollo', 'Typescript']}
+          techs={['Next.js', 'TailwindCSS', 'Codegen', 'Storybook', 'Apollo', 'TypeScript']}
           links={[
             { href: 'https://github.com/rqbazan/graphql-jobs#readme', icon: GitHubSvgIcon },
             {
@@ -116,7 +179,7 @@ export function ProjectsView() {
         />
         <ProjectPost
           projectName="Mr. Rubik"
-          techs={['Gastby', 'ThreeJS', 'ReactThreeFiber', 'Typescript', 'Firebase']}
+          techs={['Gastby', 'ThreeJS', 'ReactThreeFiber', 'TypeScript', 'Firebase']}
           links={[
             {
               href: 'https://github.com/rqbazan/react-three-fiber-101#readme',
@@ -145,7 +208,7 @@ export function ProjectsView() {
         />
         <ProjectPost
           projectName="AIMO Challenge"
-          techs={['TailwindCSS', 'NextJS', 'Typescript', 'GithubAPI', 'Vercel']}
+          techs={['TailwindCSS', 'Next.js', 'TypeScript', 'GithubAPI', 'Vercel']}
           links={[
             { href: 'https://github.com/rqbazan/aimo-challenge#readme', icon: GitHubSvgIcon },
             {
@@ -164,7 +227,7 @@ export function ProjectsView() {
         />
         <ProjectPost
           projectName="Vercel Toast Clone"
-          techs={['Storybook', 'React', 'ReactSpring', 'Typescript']}
+          techs={['Storybook', 'React', 'ReactSpring', 'TypeScript']}
           links={[
             { href: 'https://github.com/rqbazan/zeit-toast-clone#readme', icon: GitHubSvgIcon },
             { href: 'https://www.npmjs.com/package/zeit-toast-clone', icon: PackageSvgIcon },
@@ -184,7 +247,7 @@ export function ProjectsView() {
         />
         <ProjectPost
           projectName="My Personal Site"
-          techs={['NextJS', 'TailwindCSS', 'Stitches', 'Typescript']}
+          techs={['Next.js', 'TailwindCSS', 'Stitches', 'TypeScript']}
           links={[
             { href: 'https://github.com/rqbazan/rcrd.space#readme', icon: GitHubSvgIcon },
             {
