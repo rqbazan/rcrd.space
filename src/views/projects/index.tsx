@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {
+  Edit2 as PencilSvgIcon,
   ExternalLink as ExternalLinkIconSvg,
   Figma as FigmaIconSvg,
   GitHub as GitHubSvgIcon,
@@ -84,6 +85,10 @@ export function ProjectsView() {
             {
               href: 'https://github.com/rqbazan/ravn-challenge-v2-ricardo-q-bazan#readme',
               icon: GitHubSvgIcon,
+            },
+            {
+              href: 'https://excalidraw.com/#json=k6pQGzgskJz0DcXvO7xDt,bYqI9PPcI8CB3vue35JRGQ',
+              icon: PencilSvgIcon,
             },
             {
               href: 'https://sw.rcrd.space',
