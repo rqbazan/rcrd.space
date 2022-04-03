@@ -51,9 +51,4 @@ export const globalStyles = globalCss({
       fontSize: 20,
     },
   },
-  '@xl': {
-    html: {
-      fontSize: 22,
-    },
-  },
 })
