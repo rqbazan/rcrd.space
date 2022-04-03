@@ -5,3 +5,5 @@ node_modules
 *.log
 .yalc
 yalc.lock
+public/sitemap.xml
+public/robots.txt
