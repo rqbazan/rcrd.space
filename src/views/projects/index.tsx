@@ -46,7 +46,7 @@ export function ProjectsView() {
       <div className="flex flex-col space-y-8">
         <ProjectPost
           projectName="Cometa Challenge"
-          postedAt="04-03-2022"
+          postedAt="2022-04-03"
           techs={['Next.js', 'TypeScript', 'Cypress', 'Storybook', 'MaterialUI']}
           links={[
             {
@@ -71,7 +71,7 @@ export function ProjectsView() {
         />
         <ProjectPost
           projectName="Ravn Challenge"
-          postedAt="04-03-2022"
+          postedAt="2022-04-03"
           techs={[
             'Next.js',
             'TypeScript',
@@ -108,7 +108,7 @@ export function ProjectsView() {
         />
         <ProjectPost
           projectName="Set Initial Color Mode"
-          postedAt="04-01-2022"
+          postedAt="2022-04-01"
           techs={['Rollup', 'React', 'SSR', 'TypeScript']}
           links={[
             {
