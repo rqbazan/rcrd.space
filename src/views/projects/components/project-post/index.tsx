@@ -52,7 +52,7 @@ export function ProjectPost({
           }}
         >
           <Typography fontStyle="h5">{projectName}</Typography>
-          {isNew(postedAt) && <NewTag className="ml-1 -mt-3 md:-mt-2" />}
+          {isNew(postedAt) && <NewTag className="ml-1 -mt-2" />}
         </div>
         <Typography className="mt-4">{content}</Typography>
       </div>
