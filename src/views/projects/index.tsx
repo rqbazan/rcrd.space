@@ -47,7 +47,7 @@ export function ProjectsView() {
         <ProjectPost
           projectName="Cometa Challenge"
           postedAt="2022-04-03"
-          techs={['Next.js', 'TypeScript', 'Cypress', 'Storybook', 'MaterialUI']}
+          techs={['Next.js', 'TypeScript', 'Storybook', 'MaterialUI']}
           links={[
             {
               href: 'https://github.com/rqbazan/cometa-challenge#readme',
