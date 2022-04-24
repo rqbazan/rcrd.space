@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import type { VariantProps } from '@stitches/react'
 import clsx from 'clsx'
-import { CSS, css, theme } from '~/stitches.config'
+import { CSS, css } from '~/stitches.config'
 
 export interface TypographyProps extends TypographyVariants {
   children: React.ReactNode
@@ -23,6 +23,10 @@ export const BaseTypography = css({
   lineHeight: 1,
   variants: {
     fontStyle: {
+      inherit: {
+        fontWeight: 'inherit',
+        fontSize: 'inherit',
+      },
       tiny: {
         fontWeight: '$regular',
         fontSize: '$tiny',
@@ -43,7 +47,7 @@ export const BaseTypography = css({
         fontSize: '$h5',
       },
       h4: {
-        fontWeight: '$regular',
+        fontWeight: '$medium',
         fontSize: '$h4',
       },
       h3: {
@@ -87,6 +91,7 @@ export const BaseTypography = css({
 const componentMap: ComponentMap = {
   tiny: 'small',
   small: 'small',
+  inherit: 'span',
   p: 'p',
   h1: 'h1',
   h2: 'h2',

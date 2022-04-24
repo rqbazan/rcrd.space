@@ -1,8 +1,11 @@
 import * as React from 'react'
-import { Cover, Li, Typography } from '~/ui'
+import { usePageProps } from '~/hooks'
+import { CoverImage, Li, Typography } from '~/ui'
 import { MainHeading, MainTransition } from '~/ui/layouts'
 
 export function UsesView() {
+  const { coverImageProps } = usePageProps()
+
   return (
     <MainTransition>
       <MainHeading
@@ -11,16 +14,14 @@ export function UsesView() {
           new Date().getFullYear() - 2017
         } years.`}
       />
-      <Cover
-        src="/img/cover/uses-v2.webp"
-        alt="My office 2021"
-        height={758}
-        width={1008}
+      <CoverImage
+        {...coverImageProps}
         priority
-        placeholder="blur"
-        blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoEAAMAAUAmJYgCdLoAAwj3j3AA/vNVvvznom3i88rPZ8D9H9Q62K7flf03xTcMWN+nf9u9TMjMNGABQmHUAAAA"
+        alt="My office 2021"
+        className="mb-9"
+        description="Photo by Me at my home office"
       />
-      <Typography className="mt-9 mb-8" fontStyle="h3">
+      <Typography className="mb-8" fontStyle="h3">
         Computer
       </Typography>
       <ul className="space-y-2 ml-3">

@@ -46,7 +46,7 @@ export function ProjectPost({
     <div className={className} id={htmlId}>
       <div className="flex flex-col">
         <div
-          className="inline-flex items-center"
+          className="flex items-center cursor-pointer self-start"
           onClick={() => {
             router.push(`${router.pathname}/#${htmlId}`)
           }}

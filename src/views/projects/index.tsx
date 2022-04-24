@@ -6,43 +6,37 @@ import {
   GitHub as GitHubSvgIcon,
   Package as PackageSvgIcon,
 } from 'react-feather'
-import { Anchor, Typography } from '~/ui'
+import { usePageProps } from '~/hooks'
+import { Anchor, CoverImage, Typography } from '~/ui'
 import { MainHeading, MainTransition } from '~/ui/layouts'
-import { CalendarSvg, FeaturedProject, PdfSvg, ProjectPost, SwitchSvg } from './components'
+import { ProjectPost } from './components'
 
 export function ProjectsView() {
+  const { coverImageProps } = usePageProps()
+
   return (
     <MainTransition>
       <MainHeading
         title="Projects"
         content="Here&rsquo;s a list of open source projects writen mostly using JavaScript and TypeScript."
       />
-      <Typography fontStyle="h3" className="mb-4">
-        Featured
-      </Typography>
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-8">
-        <FeaturedProject
-          href="https://github.com/rqbazan/toggled#readme"
-          className="from-green-200 to-green-300 dark:to-green-400 bg-gradient-to-tr"
-          projectName="Toggled Library"
-          data-splitbee-event="View Toggled Library"
-          logoIcon={<SwitchSvg />}
-        />
-        <FeaturedProject
-          href="https://github.com/rqbazan/weeks#readme"
-          className="from-red-200 to-red-300 dark:to-red-400 bg-gradient-to-tr"
-          projectName="Weeks Life"
-          data-splitbee-event="View Weeks Life"
-          logoIcon={<CalendarSvg />}
-        />
-        <FeaturedProject
-          href="https://github.com/rqbazan/resume#readme"
-          className="from-yellow-200 to-yellow-300 dark:to-yellow-400 bg-gradient-to-tr"
-          projectName="My React CV"
-          data-splitbee-event="View My React CV"
-          logoIcon={<PdfSvg />}
-        />
-      </div>
+      <CoverImage
+        {...coverImageProps}
+        priority
+        className="mb-9"
+        description={
+          <Typography fontStyle="small" muted>
+            Photo by{' '}
+            <Anchor fontStyle="inherit" href="https://unsplash.com/@fakurian">
+              Milad Fakurian
+            </Anchor>{' '}
+            on{' '}
+            <Anchor fontStyle="inherit" href="https://unsplash.com/s/photos/abstract">
+              Unsplash
+            </Anchor>
+          </Typography>
+        }
+      />
       <div className="flex flex-col space-y-8">
         <ProjectPost
           projectName="Cometa Challenge"
@@ -129,6 +123,66 @@ export function ProjectsView() {
               by <Anchor href="https://twitter.com/JoshWComeau">Josh Comeau</Anchor>, I&rsquo;ve
               created a reusable solution for the dark-mode-flick-problem. My own website use this
               solution.
+            </React.Fragment>
+          }
+        />
+        <ProjectPost
+          projectName="Toggled Library"
+          techs={['React.js', 'TypeScript', 'ReactTestingLibrary', 'SemanticRelease']}
+          links={[
+            { href: 'https://github.com/rqbazan/toggled#readme', icon: GitHubSvgIcon },
+            {
+              href: 'https://www.npmjs.com/package/toggled',
+              icon: PackageSvgIcon,
+            },
+          ]}
+          content={
+            <React.Fragment>
+              Tiny library to use{' '}
+              <Anchor href="https://martinfowler.com/articles/feature-toggles.html">
+                feature flags
+              </Anchor>{' '}
+              in React. Get features by its slug identifier or get a binary output using flag
+              queries.
+            </React.Fragment>
+          }
+        />
+        <ProjectPost
+          projectName="Weeks of my Life"
+          techs={['Next.js', 'TailwindCSS', 'SyncScroll', 'Math', 'JavaScript']}
+          links={[
+            { href: 'https://github.com/rqbazan/weeks#readme', icon: GitHubSvgIcon },
+            {
+              href: 'https://weeks.rcrd.space/pe/1996-05-17',
+              icon: ExternalLinkIconSvg,
+              ['data-splitbee-event']: 'View Weeks Life',
+            },
+          ]}
+          content={
+            <React.Fragment>
+              Based on the poster of{' '}
+              <Anchor href="https://www.weeksofmylife.com">www.weeksofmylife.com</Anchor>.
+              It&rsquo;s a calculator to see how many weeks of life you just consumed. Based on the
+              average life expectancy for some country: USA, Italy and Peru.
+            </React.Fragment>
+          }
+        />
+        <ProjectPost
+          projectName="My React CV"
+          techs={['Vite.js', 'ReactPDF', 'Airtable', 'LambdaFunction', 'TypeScript']}
+          links={[
+            { href: 'https://github.com/rqbazan/resume#readme', icon: GitHubSvgIcon },
+            {
+              href: 'https://resume.rcrd.space',
+              icon: ExternalLinkIconSvg,
+              ['data-splitbee-event']: 'View My React CV',
+            },
+          ]}
+          content={
+            <React.Fragment>
+              I created my CV using <Anchor href="https://react-pdf.org/">ReactPDF</Anchor>, which
+              is another renderer instead of ReactDOM. The information is saved in my personal
+              Airtable and consumed in real-time using a Vercel Lambda Function.
             </React.Fragment>
           }
         />

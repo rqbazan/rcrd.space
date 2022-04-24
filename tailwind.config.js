@@ -18,12 +18,12 @@ module.exports = {
       },
       colors: {
         text: {
-          dark: defaultColors.gray[50],
+          dark: defaultColors.white,
           DEFAULT: defaultColors.gray[800],
         },
         body: {
-          dark: defaultColors.black,
-          DEFAULT: defaultColors.gray[100],
+          dark: '#1D1D1E',
+          DEFAULT: '#fff6e3',
         },
         muted: {
           dark: defaultColors.gray[400],
