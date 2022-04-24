@@ -5,12 +5,24 @@ export interface PagePropsProviderProps {
   children: React.ReactNode
 }
 
+export type PageType<TProps> = React.ComponentType<TProps> & {
+  getLayout?: (element: React.ReactNode) => React.ReactNode
+}
+
 const PagePropsContext = React.createContext(null)
 
 export function usePageProps() {
   return React.useContext(PagePropsContext)
 }
 
-export function PagePropsProvider({ pageProps, children }: PagePropsProviderProps) {
-  return <PagePropsContext.Provider value={pageProps}>{children}</PagePropsContext.Provider>
+export function withPageProps<TProps>(Component: React.ComponentType<TProps>) {
+  const ComponentWithPageProps: PageType<TProps> = (props: TProps) => {
+    return (
+      <PagePropsContext.Provider value={props}>
+        <Component {...props} />
+      </PagePropsContext.Provider>
+    )
+  }
+
+  return ComponentWithPageProps
 }
