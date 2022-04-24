@@ -19,7 +19,7 @@ export default function App({ Component: Page, pageProps, router }: AppProps) {
       {getLayout(
         <AnimatePresence initial={false} exitBeforeEnter>
           <PagePropsProvider key={router.route} pageProps={pageProps}>
-            <Page {...pageProps} />
+            <Page key={router.route} {...pageProps} />
           </PagePropsProvider>
         </AnimatePresence>
       )}
