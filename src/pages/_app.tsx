@@ -2,6 +2,7 @@ import * as React from 'react'
 import { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 import { AnimatePresence } from 'framer-motion'
+import { PagePropsProvider } from '~/hooks'
 import { defaultSEO } from '~/next-seo.config'
 import { globalStyles } from '~/ui'
 import 'tailwindcss/tailwind.css'
@@ -17,7 +18,9 @@ export default function App({ Component: Page, pageProps, router }: AppProps) {
       <DefaultSeo {...defaultSEO} />
       {getLayout(
         <AnimatePresence initial={false} exitBeforeEnter>
-          <Page key={router.route} {...pageProps} />
+          <PagePropsProvider key={router.route} pageProps={pageProps}>
+            <Page {...pageProps} />
+          </PagePropsProvider>
         </AnimatePresence>
       )}
     </React.Fragment>

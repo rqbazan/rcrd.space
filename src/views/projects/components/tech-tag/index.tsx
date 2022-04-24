@@ -24,12 +24,12 @@ const Box = styled('span', {
   '--bg-saturation': '50%',
   '--bg-lightness': '90%',
   '--txt-saturation': '100%',
-  '--txt-lightness': '20%',
+  '--txt-lightness': '10%',
   background: `hsl(var(--hash), var(--bg-saturation), var(--bg-lightness))`,
   color: `hsl(var(--hash), var(--txt-saturation), var(--txt-lightness))`,
   borderColor: `hsl(var(--hash), var(--txt-saturation), var(--txt-lightness))`,
   [`.dark &`]: {
-    '--bg-saturation': '50%',
+    '--bg-saturation': '70%',
     '--bg-lightness': '10%',
     '--txt-saturation': '60%',
     '--txt-lightness': '75%',
@@ -44,7 +44,7 @@ export const TechTag = React.memo(function TechTag({ children, className }: Tech
       <Box
         // @ts-expect-error
         style={{ '--hash': hash }}
-        className="rounded px-2 py-1 select-none border h-5"
+        className="rounded-lg px-2 py-1 select-none border h-5"
       >
         {children}
       </Box>
