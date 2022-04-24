@@ -22,7 +22,7 @@ module.exports = {
           DEFAULT: defaultColors.gray[800],
         },
         body: {
-          dark: '#2B2B2D',
+          dark: '#1D1D1E',
           DEFAULT: '#fff6e3',
         },
         muted: {
