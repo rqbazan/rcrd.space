@@ -23586,6 +23586,10 @@ export type WorkflowRunPendingDeploymentRequestsArgs = {
   last?: InputMaybe<Scalars['Int']>
 }
 
+export type IssueFragment = { __typename?: 'Issue'; title: string; bodyHTML: any; locked: boolean }
+
+export type TopicFragment = { __typename?: 'Topic'; id: string; name: string }
+
 export type RepoFragment = {
   __typename?: 'Repository'
   id: string
@@ -23593,11 +23597,23 @@ export type RepoFragment = {
   description?: string | null
   homepageUrl?: any | null
   primaryLanguage?: { __typename?: 'Language'; id: string; name: string } | null
+  pinnedIssues?: {
+    __typename?: 'PinnedIssueConnection'
+    nodes?: Array<{
+      __typename?: 'PinnedIssue'
+      id: string
+      issue: { __typename?: 'Issue'; title: string; bodyHTML: any; locked: boolean }
+    } | null> | null
+  } | null
+  repositoryTopics: {
+    __typename?: 'RepositoryTopicConnection'
+    nodes?: Array<{
+      __typename?: 'RepositoryTopic'
+      id: string
+      topic: { __typename?: 'Topic'; id: string; name: string }
+    } | null> | null
+  }
 }
-
-export type IssueFragment = { __typename?: 'Issue'; title: string; bodyHTML: any }
-
-export type TopicFragment = { __typename?: 'Topic'; id: string; name: string }
 
 export type StartedReposQueryVariables = Exact<{ [key: string]: never }>
 
@@ -23613,12 +23629,13 @@ export type StartedReposQuery = {
         name: string
         description?: string | null
         homepageUrl?: any | null
+        primaryLanguage?: { __typename?: 'Language'; id: string; name: string } | null
         pinnedIssues?: {
           __typename?: 'PinnedIssueConnection'
           nodes?: Array<{
             __typename?: 'PinnedIssue'
             id: string
-            issue: { __typename?: 'Issue'; title: string; bodyHTML: any }
+            issue: { __typename?: 'Issue'; title: string; bodyHTML: any; locked: boolean }
           } | null> | null
         } | null
         repositoryTopics: {
@@ -23629,7 +23646,6 @@ export type StartedReposQuery = {
             topic: { __typename?: 'Topic'; id: string; name: string }
           } | null> | null
         }
-        primaryLanguage?: { __typename?: 'Language'; id: string; name: string } | null
       } | null> | null
     }
   }

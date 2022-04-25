@@ -1,6 +1,17 @@
 import gql from 'graphql-tag'
 
 export default gql`
+  fragment Issue on Issue {
+    title
+    bodyHTML
+    locked
+  }
+
+  fragment Topic on Topic {
+    id
+    name
+  }
+
   fragment Repo on Repository {
     id
     name
@@ -10,16 +21,22 @@ export default gql`
       id
       name
     }
-  }
-
-  fragment Issue on Issue {
-    title
-    bodyHTML
-  }
-
-  fragment Topic on Topic {
-    id
-    name
+    pinnedIssues(first: 3) {
+      nodes {
+        id
+        issue {
+          ...Issue
+        }
+      }
+    }
+    repositoryTopics(first: 10) {
+      nodes {
+        id
+        topic {
+          ...Topic
+        }
+      }
+    }
   }
 
   query startedRepos {
@@ -27,22 +44,6 @@ export default gql`
       starredRepositories(first: 100, ownedByViewer: true) {
         nodes {
           ...Repo
-          pinnedIssues(first: 5) {
-            nodes {
-              id
-              issue {
-                ...Issue
-              }
-            }
-          }
-          repositoryTopics(first: 10) {
-            nodes {
-              id
-              topic {
-                ...Topic
-              }
-            }
-          }
         }
       }
     }

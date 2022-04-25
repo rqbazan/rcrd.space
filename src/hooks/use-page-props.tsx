@@ -11,11 +11,11 @@ export type PageType<TProps> = React.ComponentType<TProps> & {
 
 const PagePropsContext = React.createContext(null)
 
-export function usePageProps() {
-  return React.useContext(PagePropsContext)
+export function usePageProps<T = any>() {
+  return React.useContext(PagePropsContext) as T
 }
 
-export function withPageProps<TProps>(Component: React.ComponentType<TProps>) {
+export function withPagePropsProvider<TProps>(Component: React.ComponentType<TProps>) {
   const ComponentWithPageProps: PageType<TProps> = (props: TProps) => {
     return (
       <PagePropsContext.Provider value={props}>
