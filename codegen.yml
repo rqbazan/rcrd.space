@@ -1,0 +1,16 @@
+overwrite: true
+schema:
+  - ${NEXT_PUBLIC_GITHUB_API_URL}:
+      method: GET
+      headers:
+        Authorization: Bearer ${GITHUB_TOKEN}
+documents: 'src/gql/**/*.ts'
+generates:
+  src/gql/types.ts:
+    hooks:
+      afterOneFileWrite:
+        - prettier --write
+    plugins:
+      - typescript
+      - typescript-operations
+      - urql-introspection
