@@ -14,19 +14,23 @@ export function processIssue(issue: IssueFragment) {
   const titleStartIndex = titleHeadingMatch[0].length
   const titleEndIndex = descriptionHeadingMatch.index
   const titleHTML = bodyHTML.slice(titleStartIndex, titleEndIndex)
+  const title = titleHTML.match(TITLE_REGEX)[1] as string
 
   const descriptionStartIndex = descriptionHeadingMatch.index + descriptionHeadingMatch[0].length
   const descriptionEndIndex = extraLinksHeadingMatch.index
-  const descriptionHTML = bodyHTML.slice(descriptionStartIndex, descriptionEndIndex).trim()
+  const descriptionHTML = bodyHTML
+    .slice(descriptionStartIndex, descriptionEndIndex)
+    .trim() as string
 
   const extraLinksStartIndex = extraLinksHeadingMatch.index + extraLinksHeadingMatch[0].length
   const extraLinksHTML = bodyHTML.slice(extraLinksStartIndex)
+  const extraLinks = Array.from(extraLinksHTML.matchAll(EXTRA_LINK_REGEX)).map(
+    match => match[1]
+  ) as string[]
 
   return {
-    title: titleHTML.match(TITLE_REGEX)[1] as string,
-    descriptionHTML: descriptionHTML as string,
-    extraLinks: Array.from(extraLinksHTML.matchAll(EXTRA_LINK_REGEX)).map(
-      match => match[1] as string
-    ),
+    title,
+    descriptionHTML,
+    extraLinks,
   }
 }
