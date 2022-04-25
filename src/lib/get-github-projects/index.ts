@@ -2,6 +2,7 @@ import { createClient } from 'urql'
 import env from '~/env'
 import startedReposQuery from '~/gql/queries/started-repos'
 import type { RepoFragment, StartedReposQuery } from '~/gql/types'
+import { Project } from '~/types/project'
 import { findPinnedReadmeIssue } from './find-pinned-readme-issue'
 import { getProjectLinks } from './get-project-links'
 import { getSortedTags } from './get-sorted-tags'
@@ -16,7 +17,7 @@ const gqlClient = createClient({
   }),
 })
 
-function convertToProject(repository: RepoFragment) {
+function convertToProject(repository: RepoFragment): Project {
   const readmeIssue = findPinnedReadmeIssue(repository)
 
   if (!readmeIssue) {
