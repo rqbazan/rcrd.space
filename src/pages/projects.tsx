@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { withPageProps } from '~/hooks'
+import { withPagePropsProvider } from '~/hooks'
 import { getStaticImageProps } from '~/lib/get-static-image-props'
 import { SEO } from '~/ui'
 import { getMainLayout } from '~/ui/layouts'
@@ -15,7 +15,7 @@ export async function getStaticProps() {
   }
 }
 
-const ProjectsPage = withPageProps(function ProjectsPage() {
+const ProjectsPage = withPagePropsProvider(function ProjectsPage() {
   return (
     <React.Fragment>
       <SEO title="Projects" />
