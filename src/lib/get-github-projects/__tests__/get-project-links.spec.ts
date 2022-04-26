@@ -6,6 +6,7 @@ describe('Get Project Links', () => {
       homepageUrl: null,
     }
 
+    // @ts-expect-error
     const links = getProjectLinks(mockedRepo, [
       'https://excalidraw.com/#json=k6pQGzgskJz0DcXvO7xDt,bYqI9PPcI8CB3vue35JRGQ',
       'https://www.npmjs.com/package/@rqbazan/set-initial-color-mode',
@@ -28,6 +29,7 @@ describe('Get Project Links', () => {
       homepageUrl: 'https://rcrd.space',
     }
 
+    // @ts-expect-error
     const links = getProjectLinks(mockedRepo)
 
     expect(links).toMatchObject([{ url: 'https://rcrd.space', type: 'homepage' }])
@@ -38,6 +40,7 @@ describe('Get Project Links', () => {
       homepageUrl: 'https://rcrd.space',
     }
 
+    // @ts-expect-error
     const links = getProjectLinks(mockedRepo, [
       'https://excalidraw.com/#json=k6pQGzgskJz0DcXvO7xDt,bYqI9PPcI8CB3vue35JRGQ',
       'https://www.npmjs.com/package/@rqbazan/set-initial-color-mode',

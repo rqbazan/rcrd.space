@@ -21,7 +21,7 @@ function inferProjectLinkType(url: string): ProjectLinkType {
   return 'homepage'
 }
 
-export function getProjectLinks(repository: RepoFragment, extraLinks: string[]) {
+export function getProjectLinks(repository: RepoFragment, extraLinks?: string[]) {
   let links: string[] = []
 
   if (typeof repository.homepageUrl === 'string') {
