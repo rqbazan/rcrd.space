@@ -25,12 +25,12 @@ function convertToProject(repository: RepoFragment): Project {
   }
 
   const tags = getSortedTags(repository)
-  const { title, descriptionHTML, extraLinks } = processIssue(readmeIssue)
+  const { descriptionHTML, extraLinks } = processIssue(readmeIssue)
   const links = getProjectLinks(repository, extraLinks)
 
   return {
     id: repository.id,
-    title,
+    title: repository.name,
     descriptionHTML,
     tags,
     links,
