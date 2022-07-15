@@ -4,6 +4,7 @@
 const sitemapConfig = {
   siteUrl: 'https://rcrd.space',
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
 }
 
 module.exports = sitemapConfig
