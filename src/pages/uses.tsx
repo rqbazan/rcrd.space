@@ -6,7 +6,7 @@ import { getMainLayout } from '~/ui/layouts'
 import { UsesView } from '~/views'
 
 export async function getStaticProps() {
-  const coverImageProps = await getStaticImageProps('/img/cover/uses-v2.webp')
+  const coverImageProps = await getStaticImageProps('/img/cover/uses-v3.webp')
 
   return {
     props: {
