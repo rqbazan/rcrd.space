@@ -38,7 +38,7 @@
     "just-map-values": "^3.0.2",
     "next": "^12.2.2",
     "next-seo": "^5.4.0",
-    "next-sitemap": "^3.1.11",
+    "next-sitemap": "^3.1.19",
     "plaiceholder": "^2.4.0",
     "postcss": "^8.4.14",
     "react": "^18.2.0",
@@ -70,6 +70,6 @@
     "typescript": "^4.7.4"
   },
   "engines": {
-    "node": ">=14.x"
+    "node": ">=16.x"
   }
 }

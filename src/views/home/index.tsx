@@ -12,7 +12,7 @@ export function HomeView() {
             Hey, I’m{' '}
             <Typewriter
               options={{
-                strings: ['Santiago', 'Ricardo', 'Alexis'],
+                strings: ['Santiago', 'Ricardo', 'Alexis', 'Rick'],
                 autoStart: true,
                 loop: true,
               }}

@@ -22,16 +22,12 @@ export function UsesView() {
         description="Photo by Me at my home office"
       />
       <Typography className="mb-8" fontStyle="h3">
-        Computer
+        Desktop
       </Typography>
       <ul className="space-y-2 ml-3">
-        <Li>
-          Dell Inspiron Gaming 2017 Laptop, 16 GB RAM, 256GB SSD, 1TB HDD, Intel Core i7-7700HQ
-          2.80GHz, Windows 10 Pro
-        </Li>
+        <Li>Macbook Pro 16inch 2019</Li>
         <Li>Monitor Dell Ultrasharp 27inch 4K</Li>
-        <Li>Magic Mouse v2, Magic Keyboard v2, Airpods v1 and IPhone 7 Plus 128GB</Li>
-        <Li>Mouse Razer Deathadder V2 Mini</Li>
+        <Li>Magic Keyboard v2</Li>
         <Li>Mouse Logitech Mx Master 3</Li>
       </ul>
       <Typography className="mt-9 mb-8" fontStyle="h3">
@@ -47,7 +43,7 @@ export function UsesView() {
       </Typography>
       <ul className="space-y-2 ml-3">
         <Li>Visual Studio Code</Li>
-        <Li>Window Terminal + Cmder</Li>
+        <Li>iTerm</Li>
         <Li>JetBrains DataGrip</Li>
         <Li>Docker Desktop</Li>
         <Li>Brave Navigator</Li>
