@@ -19,7 +19,7 @@
     "fix:format": "yarn prettier --write",
     "check:lint": "eslint .",
     "check:format": "yarn prettier --list-different",
-    "check:types": "tsc",
+    "check:types": "tsc --noEmit",
     "test:static": "run-p check:*",
     "test:unit": "jest"
   },

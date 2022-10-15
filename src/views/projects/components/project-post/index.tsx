@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useRouter } from 'next/router'
 import kebabCase from 'just-kebab-case'
 import { AnchorIcon, NewTag, Typography } from '~/ui'
-import { dateDiffInDays } from '~/uitls'
+import { dateDiffInDays } from '~/utils'
 import { TechTag } from '../tech-tag'
 
 export interface ProjectPostProps {
