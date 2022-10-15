@@ -16,7 +16,7 @@ export default function App({ Component: Page, pageProps, router }: AppProps) {
     <React.Fragment>
       <DefaultSeo {...defaultSEO} />
       {getLayout(
-        <AnimatePresence initial={false} exitBeforeEnter>
+        <AnimatePresence initial={false} mode="wait">
           <Page key={router.route} {...pageProps} />
         </AnimatePresence>
       )}

@@ -38,7 +38,7 @@ function convertToProject(repository: RepoFragment): Project {
 }
 
 export async function getGithubProjects() {
-  const { data } = await gqlClient.query<StartedReposQuery>(startedReposQuery).toPromise()
+  const { data } = await gqlClient.query<StartedReposQuery>(startedReposQuery, {}).toPromise()
 
   return data.viewer.starredRepositories?.nodes?.map(convertToProject).filter(Boolean)
 }
