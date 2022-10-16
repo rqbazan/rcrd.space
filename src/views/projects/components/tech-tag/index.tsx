@@ -44,7 +44,7 @@ export const TechTag = React.memo(function TechTag({ children, className }: Tech
       <Box
         // @ts-expect-error
         style={{ '--hash': hash }}
-        className="rounded-lg px-2 py-1 select-none border h-5"
+        className="rounded-full px-2 py-1 select-none border h-5"
       >
         {children}
       </Box>

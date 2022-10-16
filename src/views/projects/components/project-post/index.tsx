@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import kebabCase from 'just-kebab-case'
 import { AnchorIcon, NewTag, Typography } from '~/ui'
@@ -45,15 +46,12 @@ export function ProjectPost({
   return (
     <div className={className} id={htmlId}>
       <div className="flex flex-col">
-        <div
-          className="flex items-center cursor-pointer self-start"
-          onClick={() => {
-            router.push(`${router.pathname}/#${htmlId}`)
-          }}
-        >
-          <Typography fontStyle="h5">{projectName}</Typography>
-          {isNew(postedAt) && <NewTag className="ml-1 -mt-2" />}
-        </div>
+        <Link href={`${router.pathname}/#${htmlId}`}>
+          <div className="flex items-center cursor-pointer self-start">
+            <Typography fontStyle="h5">{projectName}</Typography>
+            {isNew(postedAt) && <NewTag className="ml-1 -mt-2" />}
+          </div>
+        </Link>
         <Typography className="mt-4">{content}</Typography>
       </div>
       <div className="flex mt-4">
