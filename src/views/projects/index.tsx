@@ -37,7 +37,7 @@ export function ProjectsView() {
           </Typography>
         }
       />
-      <div className="flex flex-col space-y-8">
+      <div className="flex flex-col space-y-8 scroll-pt-4">
         <ProjectPost
           projectName="Cometa Challenge"
           postedAt="2022-04-03"

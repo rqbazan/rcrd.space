@@ -14,6 +14,7 @@ export const globalStyles = globalCss({
     background: '$body',
     color: '$text',
     height: '100%',
+    scrollPaddingTop: '1.5rem',
   },
   body: {
     paddingLeft: 'calc(100vw - 100%)',
