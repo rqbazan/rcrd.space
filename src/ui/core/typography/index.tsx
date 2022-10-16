@@ -42,7 +42,7 @@ export const BaseTypography = css({
         lineHeight: 1.5,
       },
       h5: {
-        fontWeight: '$medium',
+        fontWeight: '$semibold',
         textTransform: 'uppercase',
         fontSize: '$h5',
       },
