@@ -18,17 +18,17 @@ export function MainHeader({ className, ...props }: MainHeaderProps) {
     <header {...props} className={clsx(className, 'flex justify-between items-start')}>
       <MainLogo data-splitbee-event="Interact with Logo" />
       <nav className="flex space-x-4">
-        <Link href="/" passHref>
+        <Link href="/" passHref legacyBehavior>
           <MainNavLink aria-label="Home">
             <HomeIconSvg />
           </MainNavLink>
         </Link>
-        <Link href="/uses" passHref>
+        <Link href="/uses" passHref legacyBehavior>
           <MainNavLink aria-label="Uses">
             <HardDriveIconSvg />
           </MainNavLink>
         </Link>
-        <Link href="/projects" passHref>
+        <Link href="/projects" passHref legacyBehavior>
           <MainNavLink aria-label="Projects">
             <TerminalIconSvg />
           </MainNavLink>
