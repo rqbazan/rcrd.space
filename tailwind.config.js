@@ -1,33 +1,60 @@
-// @preval
-const defaultTheme = require('tailwindcss/defaultTheme')
-const defaultColors = require('tailwindcss/colors')
-
+/**
+ * I've re-declared intentionally in order to use the values from `~/stitches.config.ts`
+ */
 module.exports = {
   content: ['./src/**/*.{tsx,css}'],
   darkMode: 'class',
   theme: {
-    /**
-     * I've re-exported some keys intentionally in order
-     * to use the values from `~/stitches.config.ts`
-     */
     extend: {
-      screens: defaultTheme.screens,
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
       fontFamily: {
-        ...defaultTheme.fontFamily,
-        sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
+        sans: [
+          'IBM Plex Sans',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+        serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+        mono: [
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          '"Liberation Mono"',
+          '"Courier New"',
+          'monospace',
+        ],
       },
       colors: {
         text: {
-          dark: defaultColors.white,
-          DEFAULT: defaultColors.gray[800],
+          dark: '#fff',
+          DEFAULT: '#1f2937',
         },
         body: {
           dark: '#1D1D1E',
           DEFAULT: '#fff6e3',
         },
         muted: {
-          dark: defaultColors.gray[400],
-          DEFAULT: defaultColors.gray[600],
+          dark: '#9ca3af',
+          DEFAULT: '#4b5563',
         },
         selection: {
           dark: '#ffa73c',
