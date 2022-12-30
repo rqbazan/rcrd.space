@@ -39,7 +39,7 @@ jobs:
         run: pnpm install
 
       - name: Static testing
-        run: yarn test:static
+        run: pnpm run test:static
 
       - name: Unit testing
-        run: yarn test:unit
+        run: pnpm run test:unit
