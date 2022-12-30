@@ -47,4 +47,4 @@ jobs:
         run: pnpm run test:static
 
       - name: ⚡ Unit testing
-        run: pnpm run test:unit
+        run: pnpm run test:unit --passWithNoTests
