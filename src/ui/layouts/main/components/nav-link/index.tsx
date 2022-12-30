@@ -1,18 +1,16 @@
 import * as React from 'react'
 import { useRouter } from 'next/router'
-import type { ComponentProps } from '@stitches/react'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import { styled } from '~/stitches.config'
 import { Typography } from '~/ui'
 import { getExternalLinkProps } from '~/ui/utils'
 
-export interface NavLinkProps extends AnchorProps {
+export interface NavLinkProps {
   href?: string // injected by NextJS
   children: React.ReactElement
+  className?: string
 }
-
-export type AnchorProps = ComponentProps<typeof Anchor>
 
 const Anchor = styled('a', {
   color: '$muted',
