@@ -1,4 +1,4 @@
-import { IssueFragment } from '~/gql/types'
+import { IssueFragment } from '@/codegen/types'
 
 const ISSUE_BODY_REGEX = /<h\d[^>]*>[\w\s]+<\/h\d>/g
 const EXTRA_LINK_REGEX = /href=\\?"([^"]*)"/g

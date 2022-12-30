@@ -1,4 +1,4 @@
-import { RepoFragment } from '~/gql/types'
+import { RepoFragment } from '@/codegen/types'
 
 export function getSortedTags(repository: RepoFragment) {
   const tags = repository.repositoryTopics?.nodes?.map(node => node.topic.name)

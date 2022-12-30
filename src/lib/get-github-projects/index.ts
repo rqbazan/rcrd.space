@@ -1,7 +1,7 @@
 import { createClient } from 'urql'
+import type { RepoFragment, StartedReposQuery } from '@/codegen/types'
 import env from '~/env'
 import startedReposQuery from '~/gql/queries/started-repos'
-import type { RepoFragment, StartedReposQuery } from '~/gql/types'
 import { Project } from '~/types/project'
 import { findPinnedReadmeIssue } from './find-pinned-readme-issue'
 import { getProjectLinks } from './get-project-links'

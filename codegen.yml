@@ -6,11 +6,15 @@ schema:
         Authorization: Bearer ${GITHUB_TOKEN}
 documents: 'src/gql/**/*.ts'
 generates:
-  src/gql/types.ts:
+  codegen/types.ts:
     hooks:
       afterOneFileWrite:
         - prettier --write
     plugins:
+      - add:
+          content:
+            - '// @ts-nocheck'
+            - '// eslint-disable'
       - typescript
       - typescript-operations
       - urql-introspection
