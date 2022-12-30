@@ -55,8 +55,11 @@ export function ProjectsView() {
           ]}
           content={
             <React.Fragment>
-              A simple API to generate a cover image for the PedidosYa repositories. Powered by the
-              awesome{' '}
+              A simple API to generate a cover image for the{' '}
+              <Anchor href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807">
+                PedidosYa
+              </Anchor>{' '}
+              repositories. Powered by the awesome{' '}
               <Anchor href="https://vercel.com/templates/next.js/og-image-generation">
                 Open Graph Image Generator template.
               </Anchor>
