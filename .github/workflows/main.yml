@@ -7,10 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
         uses: actions/checkout@master
 
-      - name: Install Node.js
+      - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -35,11 +38,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
+      - name: 📥 Install dependencies
         run: pnpm install
 
-      - name: Static testing
+      - name: 🔎 Static testing
         run: pnpm run test:static
 
-      - name: Unit testing
+      - name: ⚡ Unit testing
         run: pnpm run test:unit
