@@ -1,4 +1,4 @@
-import { RepoFragment } from '~/gql/types'
+import { RepoFragment } from '@/codegen/types'
 import { ProjectLinkType } from '~/types/project'
 
 function inferProjectLinkType(url: string): ProjectLinkType {

@@ -1,4 +1,4 @@
-import { RepoFragment } from '~/gql/types'
+import { RepoFragment } from '@/codegen/types'
 
 const README_WORD_REGEX = /readme/i
 
