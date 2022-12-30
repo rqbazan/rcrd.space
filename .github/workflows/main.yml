@@ -4,6 +4,8 @@ on: [push]
 
 jobs:
   testing:
+    name: 👀 Testing
+
     runs-on: ubuntu-latest
 
     steps:
