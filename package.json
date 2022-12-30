@@ -9,7 +9,7 @@
     "url": "https://rcrd.space"
   },
   "scripts": {
-    "dev": "next --turbo",
+    "dev": "next",
     "start": "next start",
     "build": "next build",
     "postbuild": "next-sitemap --config sitemap.config.js",
