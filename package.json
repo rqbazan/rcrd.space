@@ -13,12 +13,12 @@
     "start": "next start",
     "build": "next build",
     "postbuild": "next-sitemap --config sitemap.config.js",
-    "gen": "graphql-codegen -r dotenv/config --config codegen.yml",
-    "prettier": "prettier \"**/*.+(js|ts|tsx|json)\"",
-    "fix:lint": "eslint . --fix",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|ts|tsx|json)\"",
+    "eslint": "eslint --ignore-path .gitignore",
+    "fix:lint": "yarn eslint . --fix",
     "fix:format": "yarn prettier --write",
-    "check:lint": "eslint .",
-    "check:format": "yarn prettier --list-different",
+    "check:lint": "yarn eslint .",
+    "check:format": "yarn prettier --check",
     "check:types": "tsc --noEmit",
     "test:static": "concurrently npm:check:*",
     "test:unit": "jest"
@@ -32,8 +32,6 @@
     "babel-plugin-preval": "^5.1.0",
     "clsx": "^1.2.1",
     "framer-motion": "^7.5.3",
-    "graphql": "^16.6.0",
-    "graphql-tag": "^2.12.6",
     "just-kebab-case": "^4.2.0",
     "just-map-values": "^3.2.0",
     "next": "^13.1.1",
@@ -46,16 +44,10 @@
     "react-feather": "^2.0.10",
     "sharp": "^0.31.3",
     "tailwindcss": "^3.2.4",
-    "typewriter-effect": "^2.19.0",
-    "urql": "^3.0.3"
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
-    "@graphql-codegen/cli": "2.16.2",
-    "@graphql-codegen/introspection": "2.2.3",
-    "@graphql-codegen/typescript": "2.8.6",
-    "@graphql-codegen/typescript-operations": "2.5.11",
-    "@graphql-codegen/urql-introspection": "2.2.1",
     "@next/env": "^13.1.1",
     "@types/jest": "^29.2.4",
     "@types/node": "^18.11.18",
@@ -74,5 +66,11 @@
   },
   "engines": {
     "node": ">=16.x"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
   }
 }
