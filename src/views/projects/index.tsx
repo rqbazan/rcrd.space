@@ -18,7 +18,7 @@ export function ProjectsView() {
     <MainTransition>
       <MainHeading
         title="Projects"
-        content="Here&rsquo;s a list of open source projects writen mostly using JavaScript and TypeScript."
+        content="Here&rsquo;s a list of my open source projects writen mostly using JavaScript and TypeScript."
       />
       <CoverImage
         {...coverImageProps}
@@ -38,6 +38,60 @@ export function ProjectsView() {
         }
       />
       <div className="flex flex-col space-y-8">
+        <ProjectPost
+          projectName="PeYa Cover OG"
+          postedAt="2022-12-30"
+          techs={['Next.js', 'Edge Runtime', 'TaildwindCSS', 'TypeScript']}
+          links={[
+            {
+              href: 'https://github.com/rqbazan/peya-cover-og#readme',
+              icon: GitHubSvgIcon,
+            },
+            {
+              href: 'https://peya-cover-og.vercel.app/api?title=React%20OCTA&subtitle=Q-Commerce%20Tribe',
+              icon: ExternalLinkIconSvg,
+              ['data-splitbee-event']: 'View PeYa Cover OG',
+            },
+          ]}
+          content={
+            <React.Fragment>
+              A simple API to generate a cover image for the{' '}
+              <Anchor href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807">
+                PedidosYa
+              </Anchor>{' '}
+              repositories. Powered by the awesome{' '}
+              <Anchor href="https://vercel.com/templates/next.js/og-image-generation">
+                Open Graph Image Generator template.
+              </Anchor>
+            </React.Fragment>
+          }
+        />
+        <ProjectPost
+          projectName="Ultra Fresh Sorting"
+          postedAt="2022-12-30"
+          techs={['Next.js', 'TaildwindCSS', 'DnD', 'Algorithms', 'JavaScript']}
+          links={[
+            {
+              href: 'https://github.com/rqbazan/ultra-fresh-sorting#readme',
+              icon: GitHubSvgIcon,
+            },
+            {
+              href: 'https://ultra-fresh-sorting.vercel.app',
+              icon: ExternalLinkIconSvg,
+              ['data-splitbee-event']: 'View Ultra Fresh Sorting',
+            },
+          ]}
+          content={
+            <React.Fragment>
+              Takes a list of strings and sorts them by alphabetical order, but it uses a priority
+              algorithm to sort the items that are more important to the user. The name was inspired
+              by the project in{' '}
+              <Anchor href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807">
+                PedidosYa.
+              </Anchor>
+            </React.Fragment>
+          }
+        />
         <ProjectPost
           projectName="Cometa Challenge"
           postedAt="2022-04-03"
