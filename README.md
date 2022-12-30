@@ -9,6 +9,6 @@
 ```bash
 git clone https://github.com/rqbazan/rcrd.space.git
 cd rcrd.space
-yarn
-yarn dev
+pnpm i
+pnpm dev
 ```
