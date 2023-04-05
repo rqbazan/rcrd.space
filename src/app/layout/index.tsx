@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css'
+import localFont from 'next/font/local'
 import { getJsText } from '@rqbazan/set-initial-color-mode'
 import { Footer } from './components/footer'
 import { Header } from './components/header'
@@ -10,9 +11,15 @@ export const metadata = {
     "Software developer mostly with NodeJS 💚 I love to write clean beautiful code even when it's unnecessary.",
 }
 
+const ibmPlexFont = localFont({
+  src: '../../../public/fonts/ibm-plex-sans-var.woff2',
+  variable: '--font-ibm-plex-sans',
+  display: 'swap',
+})
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={ibmPlexFont.className}>
       <head>
         <script id="set-initial-color-mode" dangerouslySetInnerHTML={{ __html: getJsText() }} />
       </head>
