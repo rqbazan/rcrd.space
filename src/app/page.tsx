@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Anchor } from '~/ui/components/anchor'
 import { Heading } from '~/ui/components/heading'
-import { Hi } from '~/ui/components/Hi'
+import { Hi } from '~/ui/components/hi'
 
 export default function HomePage() {
   return (
