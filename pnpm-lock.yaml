@@ -17,7 +17,7 @@ dependencies:
     specifier: ^1.2.1
     version: 1.2.1
   framer-motion:
-    specifier: ^7.5.3
+    specifier: ^7.10.3
     version: 7.10.3(react-dom@18.2.0)(react@18.2.0)
   just-kebab-case:
     specifier: ^4.2.0

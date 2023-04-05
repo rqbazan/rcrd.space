@@ -1,6 +1,6 @@
 import Image, { ImageProps } from 'next/image'
 import clsx from 'clsx'
-import { Typography } from '~/ui/core'
+import { Typography } from '~/ui/components/typography'
 
 export interface CoverProps extends ImageProps {
   src: string
