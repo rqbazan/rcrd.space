@@ -52,3 +52,4 @@ cypress/screenshots
 yalc.lock
 public/sitemap.xml
 public/robots.txt
+.vscode
