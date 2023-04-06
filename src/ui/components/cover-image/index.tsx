@@ -17,6 +17,7 @@ export function CoverImage({ className, description, ...props }: CoverProps) {
           alt="cover"
           className="object-cover border-[6px] md:border-8"
           placeholder="blur"
+          priority
           {...props}
         />
       </div>
