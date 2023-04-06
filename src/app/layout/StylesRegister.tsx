@@ -1,4 +1,5 @@
 'use client'
+
 import { useServerInsertedHTML } from 'next/navigation'
 import { getCssText } from '~/stitches.config'
 import { globalStyles } from '~/ui/global-styles'
