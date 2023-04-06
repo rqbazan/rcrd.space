@@ -18,7 +18,12 @@ export default function UsesPage() {
           new Date().getFullYear() - 2017
         } years.`}
       />
-      <CoverImage src={usesImageSrc} alt="Picture of my desk setup" />
+      <CoverImage
+        src={usesImageSrc}
+        alt="Picture of my desk setup"
+        className="mb-9"
+        description="Photo by Me at my home office"
+      />
       <Typography className="mb-8" fontStyle="h3">
         Desktop
       </Typography>

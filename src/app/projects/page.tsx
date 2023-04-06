@@ -9,8 +9,9 @@ import {
 import { Anchor } from '~/ui/components/anchor'
 import { CoverImage } from '~/ui/components/cover-image'
 import { Heading } from '~/ui/components/heading'
+import { Typography } from '~/ui/components/typography'
 import projectsImageSrc from '../../../public/images/cover/projects.webp'
-import { ProjectPost } from './components'
+import { ProjectPost } from './components/project-post'
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -23,7 +24,23 @@ export default function ProjectsPage() {
         title="Projects"
         content="Here&rsquo;s a list of my open source projects writen mostly using JavaScript and TypeScript."
       />
-      <CoverImage src={projectsImageSrc} alt="Picture of my desk setup" />
+      <CoverImage
+        src={projectsImageSrc}
+        alt="Picture of abstract sphere"
+        className="mb-9"
+        description={
+          <Typography fontStyle="small" muted>
+            Photo by{' '}
+            <Anchor fontStyle="inherit" href="https://unsplash.com/@fakurian">
+              Milad Fakurian
+            </Anchor>{' '}
+            on{' '}
+            <Anchor fontStyle="inherit" href="https://unsplash.com/s/photos/abstract">
+              Unsplash
+            </Anchor>
+          </Typography>
+        }
+      />
       <div className="flex flex-col space-y-8">
         <ProjectPost
           projectName="PeYa Cover OG"
