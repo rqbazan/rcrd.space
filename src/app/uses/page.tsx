@@ -1,6 +1,8 @@
+import { CoverImage } from '~/ui/components/cover-image'
 import { Heading } from '~/ui/components/heading'
 import { Li } from '~/ui/components/li'
 import { Typography } from '~/ui/components/typography'
+import usesImageSrc from '../../../public/images/cover/uses.webp'
 
 export default function UsesPage() {
   return (
@@ -11,6 +13,7 @@ export default function UsesPage() {
           new Date().getFullYear() - 2017
         } years.`}
       />
+      <CoverImage src={usesImageSrc} alt="Picture of my desk setup" />
       <Typography className="mb-8" fontStyle="h3">
         Desktop
       </Typography>

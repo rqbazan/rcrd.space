@@ -6,7 +6,9 @@ import {
   Package as PackageSvgIcon,
 } from 'react-feather'
 import { Anchor } from '~/ui/components/anchor'
+import { CoverImage } from '~/ui/components/cover-image'
 import { Heading } from '~/ui/components/heading'
+import projectsImageSrc from '../../../public/images/cover/projects.webp'
 import { ProjectPost } from './components'
 
 export default function ProjectsPage() {
@@ -16,6 +18,7 @@ export default function ProjectsPage() {
         title="Projects"
         content="Here&rsquo;s a list of my open source projects writen mostly using JavaScript and TypeScript."
       />
+      <CoverImage src={projectsImageSrc} alt="Picture of my desk setup" />
       <div className="flex flex-col space-y-8">
         <ProjectPost
           projectName="PeYa Cover OG"
