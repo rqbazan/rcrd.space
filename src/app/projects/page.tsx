@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import {
   Edit2 as PencilSvgIcon,
   ExternalLink as ExternalLinkIconSvg,
@@ -10,6 +11,10 @@ import { CoverImage } from '~/ui/components/cover-image'
 import { Heading } from '~/ui/components/heading'
 import projectsImageSrc from '../../../public/images/cover/projects.webp'
 import { ProjectPost } from './components'
+
+export const metadata: Metadata = {
+  title: 'Projects',
+}
 
 export default function ProjectsPage() {
   return (

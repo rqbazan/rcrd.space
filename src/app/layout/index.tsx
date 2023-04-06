@@ -1,15 +1,10 @@
 import 'tailwindcss/tailwind.css'
 import localFont from 'next/font/local'
 import { getJsText } from '@rqbazan/set-initial-color-mode'
+import { Analytics } from '@vercel/analytics/react'
 import { Footer } from './components/footer'
 import { Header } from './components/header'
 import { StylesRegister } from './StylesRegister'
-
-export const metadata = {
-  title: 'Ricardo Q. Bazan – Software Developer.',
-  description:
-    "Software developer mostly with NodeJS 💚 I love to write clean beautiful code even when it's unnecessary.",
-}
 
 const ibmPlexFont = localFont({
   src: '../../../public/fonts/ibm-plex-sans-var.woff2',
@@ -29,7 +24,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <StylesRegister>{children}</StylesRegister>
           <Footer className="mt-auto pt-16" />
         </main>
+        <Analytics />
       </body>
     </html>
   )
 }
+
+export { metadata } from './metadata'

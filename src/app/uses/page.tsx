@@ -1,8 +1,13 @@
+import { Metadata } from 'next'
 import { CoverImage } from '~/ui/components/cover-image'
 import { Heading } from '~/ui/components/heading'
 import { Li } from '~/ui/components/li'
 import { Typography } from '~/ui/components/typography'
 import usesImageSrc from '../../../public/images/cover/uses.webp'
+
+export const metadata: Metadata = {
+  title: 'Uses',
+}
 
 export default function UsesPage() {
   return (
