@@ -15,7 +15,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'IBM Plex Sans',
+          'var(--font-ibm-plex-sans)',
           'ui-sans-serif',
           'system-ui',
           '-apple-system',
