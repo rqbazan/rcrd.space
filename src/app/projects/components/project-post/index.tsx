@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 import kebabCase from 'just-kebab-case'
 import { AnchorIcon } from '~/ui/components/anchor-icon'
 import { NewTag } from '~/ui/components/new-tag'
@@ -44,10 +45,12 @@ export function ProjectPost({
   return (
     <div className={className} id={htmlId}>
       <div className="flex flex-col">
-        <div className="flex items-center cursor-pointer self-start">
-          <Typography fontStyle="h5">{projectName}</Typography>
-          {isNew(postedAt) && <NewTag className="ml-1 -mt-2" />}
-        </div>
+        <Link href={`/projects/#${htmlId}`}>
+          <div className="flex items-center cursor-pointer self-start">
+            <Typography fontStyle="h5">{projectName}</Typography>
+            {isNew(postedAt) && <NewTag className="ml-1 -mt-2" />}
+          </div>
+        </Link>
         <Typography className="mt-4">{content}</Typography>
       </div>
       <div className="flex mt-4">
