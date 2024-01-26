@@ -18,6 +18,7 @@
   - [ ] Basics
   - [ ] Favicon
   - [ ] Sitemap
+  - [ ] Robots.txt
   - [ ] Open Graph
   - [ ] Twitter Card
   - [ ] RSS

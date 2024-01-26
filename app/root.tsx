@@ -16,6 +16,7 @@ import { EnvScript } from "./components/env-script";
 import { env } from "./env";
 
 export const links: LinksFunction = () => [
+  { rel: "icon", href: "/favicon.ico" },
   { rel: "stylesheet", href: globalStylesheet },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
@@ -32,6 +33,7 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preload" href={globalStylesheet} as="style" />
         <link
           rel="preload"
           href="/fonts/ibm-plex-sans-var.woff2"

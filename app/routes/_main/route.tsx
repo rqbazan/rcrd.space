@@ -1,7 +1,10 @@
-// import { Outlet } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/node";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { Content } from "./components/content";
+import { defaultMetaFn } from "./seo";
+
+export const meta: MetaFunction = (args) => [...defaultMetaFn(args)];
 
 export default function MainLayout() {
   return (

@@ -1,11 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
 import { CoverImg } from "~/ui/components/cover-img";
 import { Li } from "~/ui/components/li";
-import { Heading } from "./_main/components/heading";
+import { Heading } from "~/routes/_main/components/heading";
 import { getImageProps } from "~/utils/get-image-props";
 
 export const meta: MetaFunction = () => {
-  return [{ title: "Uses" }];
+  return [{ title: "Uses | Ricardo Q. Bazan" }];
 };
 
 export default function UsesPage() {

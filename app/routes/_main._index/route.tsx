@@ -1,11 +1,6 @@
-import type { MetaFunction } from "@remix-run/node";
 import Typewriter from "typewriter-effect";
 import { Anchor } from "~/ui/components/anchor";
-import { Heading } from "./_main/components/heading";
-
-export const meta: MetaFunction = () => {
-  return [{ title: "Ricardo Q. Bazan – Software Developer." }];
-};
+import { Heading } from "~/routes/_main/components/heading";
 
 export default function IndexPage() {
   return (

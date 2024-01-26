@@ -14,7 +14,7 @@ import { CoverImg } from "~/ui/components/cover-img";
 import { getImageProps } from "~/utils/get-image-props";
 
 export const meta: MetaFunction = () => {
-  return [{ title: "Projects" }];
+  return [{ title: "Projects | Ricardo Q. Bazan" }];
 };
 
 export default function ProjectsPage() {
