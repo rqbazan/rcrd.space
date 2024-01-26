@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json.schemastore.org/cosmos-config",
+  "port": 5000,
+  "rendererUrl": "http://localhost:3000/cosmos",
+  "exposeImports": "app/routes/cosmos/imports.gen.ts",
+  "plugins": ["react-cosmos-plugin-boolean-input"]
+}
