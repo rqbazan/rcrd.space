@@ -10,3 +10,4 @@ app/routes/cosmos/imports.gen.ts
 yalc.lock
 .DS_Store
 /cosmos-export
+bun.lockb
