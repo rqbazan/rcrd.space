@@ -2,7 +2,7 @@ import { useLocation, useOutlet } from "@remix-run/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
-// Solution: https://stackoverflow.com/a/74351729
+// ref: https://stackoverflow.com/a/74351729
 const AnimatedOutlet: React.FC = () => {
   const o = useOutlet();
   const [outlet] = useState(o);

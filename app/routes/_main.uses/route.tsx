@@ -26,20 +26,20 @@ export default function UsesPage() {
         description="Photo by Me at my home office"
       />
       <h3 className="h3 mb-8">Desktop</h3>
-      <ul className="space-y-2 ml-3">
+      <ul className="ml-3 space-y-2">
         <Li>Macbook Pro 16inch 2019</Li>
         <Li>Monitor Dell Ultrasharp 27inch 4K</Li>
         <Li>Magic Keyboard v2</Li>
         <Li>Mouse Logitech Mx Master 3</Li>
       </ul>
-      <h3 className="h3 mt-9 mb-8">Chat</h3>
-      <ul className="space-y-2 ml-3">
+      <h3 className="h3 mb-8 mt-9">Chat</h3>
+      <ul className="ml-3 space-y-2">
         <Li>Sony Headphones WH-1000XM4 Black</Li>
         <Li>Logitech StreamCam Black</Li>
         <Li>Blue Yeti X Black</Li>
       </ul>
-      <h3 className="h3 mt-9 mb-8">Coding</h3>
-      <ul className="space-y-2 ml-3">
+      <h3 className="h3 mb-8 mt-9">Coding</h3>
+      <ul className="ml-3 space-y-2">
         <Li>Visual Studio Code</Li>
         <Li>iTerm</Li>
         <Li>JetBrains DataGrip</Li>
@@ -47,8 +47,8 @@ export default function UsesPage() {
         <Li>Brave Navigator</Li>
         <Li>Github Desktop</Li>
       </ul>
-      <h3 className="h3 mt-9 mb-8">Other</h3>
-      <ul className="space-y-2 ml-3">
+      <h3 className="h3 mb-8 mt-9">Other</h3>
+      <ul className="ml-3 space-y-2">
         <Li>Kindle Paperwhite 10th generation 8GB</Li>
         <Li>Nintendo Switch 2019</Li>
       </ul>
