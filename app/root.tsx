@@ -10,11 +10,12 @@ import {
   json,
   useLoaderData,
 } from "@remix-run/react";
-import globalStylesheet from "~/ui/globals.css";
+import globalStylesheet from "./ui/globals.css";
 import { ColorModeScript } from "./components/color-mode-script";
 import { EnvScript } from "./components/env-script";
 import { useCanonicalUrl } from "./hooks/useCanonicalUrl";
 import { env } from "./env";
+import { getImageProps } from "./utils/get-image-props";
 
 export const links: LinksFunction = () => [
   { rel: "icon", href: "/favicon.ico" },
@@ -47,6 +48,10 @@ export default function App() {
         <meta name="og:type" content="website" />
         <meta name="og:site_name" content="Ricardo Q. Bazan" />
         <meta name="og:locale" content="en" />
+        <meta
+          name="og:image"
+          content={getImageProps("social/og-image.png").src}
+        />
         <meta name="twitter:site" content="@rqbazan" />
         <meta name="twitter:creator" content="@rqbazan" />
         <meta name="twitter:card" content="summary_large_image" />
