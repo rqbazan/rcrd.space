@@ -17,10 +17,10 @@
 
   - [x] Basics
   - [ ] Favicon
-  - [ ] Sitemap
-  - [ ] Robots.txt
-  - [ ] Open Graph
-  - [ ] Twitter Card
+  - [x] Sitemap
+  - [x] Robots.txt
+  - [x] Open Graph
+  - [x] Twitter Card
   - [ ] RSS
 
 - Theme
