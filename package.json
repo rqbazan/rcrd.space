@@ -22,6 +22,7 @@
     "@rqbazan/set-initial-color-mode": "^1.2.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dedent": "^1.5.1",
     "framer-motion": "^10.18.0",
     "isbot": "^4.1.0",
     "just-kebab-case": "^4.2.0",

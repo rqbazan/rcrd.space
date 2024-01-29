@@ -1,6 +1,8 @@
 import { useLocation } from "@remix-run/react";
 
+export const BASE_PROD_URL = "http://rcrd.space";
+
 export function useCanonicalUrl() {
   const location = useLocation();
-  return `https://rcrd.space${location.pathname}`;
+  return `${BASE_PROD_URL}${location.pathname}`;
 }
