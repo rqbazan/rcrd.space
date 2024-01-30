@@ -1,0 +1,22 @@
+{
+  "headers": [
+    {
+      "source": "/fonts/ibm-plex-sans-var.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=864000"
+        }
+      ]
+    }
+  ]
+}

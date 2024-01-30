@@ -32,9 +32,10 @@
 - Animation
 
   - [x] Page Transitions
+  - [ ] Disable Animations on Reduced Motion
 
 - Deployment
 
-  - [x] CI/CD
-  - [x] Cloud Provider (Vercel, Netlify, etc.)
-  - [ ] Redirects
+  - [x] CI/CD: Github Actions
+  - [x] Deploy Provider: Vercel
+  - [x] Redirects: `vercel.json`
