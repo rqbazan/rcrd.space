@@ -11,6 +11,7 @@
 
   - [x] Custom Font
   - [ ] Responsive Images
+  - [ ] Blur Placeholder Images
   - [ ] Fluid Typography
 
 - SEO
@@ -35,5 +36,5 @@
 - Deployment
 
   - [ ] CI/CD
-  - [ ] Cloud Provider (Vercel, Netlify, etc.)
+  - [x] Cloud Provider (Vercel, Netlify, etc.)
   - [ ] Redirects
