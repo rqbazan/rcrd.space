@@ -17,7 +17,7 @@
 - SEO
 
   - [x] Basics
-  - [ ] Favicon
+  - [x] Favicon
   - [x] Sitemap
   - [x] Robots.txt
   - [x] Open Graph
