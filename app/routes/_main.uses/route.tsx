@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Heading } from "~/routes/_main/components/heading";
 import { CoverImg } from "~/ui/components/cover-img";
 import { Li } from "~/ui/components/li";
-import { Heading } from "~/routes/_main/components/heading";
 import { getImageProps } from "~/utils/get-image-props";
 
 export const meta: MetaFunction = () => {

@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import { useColorModeToggle } from "@rqbazan/set-initial-color-mode";
+import clsx from "clsx";
 
 export interface LogoProps {
   className?: string;

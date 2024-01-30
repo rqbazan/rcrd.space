@@ -1,11 +1,11 @@
-import * as React from "react";
 import clsx from "clsx";
+import * as React from "react";
 import {
   GitHub as GitHubSvgIcon,
+  type Icon,
   Linkedin as LinkedinSvgIcon,
   Mail as MailSvgIcon,
   Twitter as TwitterSvgIcon,
-  type Icon,
 } from "react-feather";
 import { AnchorIcon } from "~/ui/components/anchor-icon";
 

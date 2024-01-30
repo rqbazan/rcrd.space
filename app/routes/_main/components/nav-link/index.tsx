@@ -1,7 +1,7 @@
-import * as React from "react";
 import { Link, useLocation } from "@remix-run/react";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import * as React from "react";
 import { getExternalLinkProps } from "~/ui/utils/get-external-link-props";
 
 export interface NavLinkProps {

@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/react";
 import Typewriter from "typewriter-effect";
-import { Anchor } from "~/ui/components/anchor";
 import { Heading } from "~/routes/_main/components/heading";
+import { Anchor } from "~/ui/components/anchor";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Ricardo Q. Bazan | Software Engineer" }];

@@ -10,11 +10,11 @@ import {
   json,
   useLoaderData,
 } from "@remix-run/react";
-import globalStylesheet from "./ui/globals.css";
 import { ColorModeScript } from "./components/color-mode-script";
 import { EnvScript } from "./components/env-script";
-import { useCanonicalUrl } from "./hooks/useCanonicalUrl";
 import { env } from "./env";
+import { useCanonicalUrl } from "./hooks/useCanonicalUrl";
+import globalStylesheet from "./ui/globals.css";
 import { getImageProps } from "./utils/get-image-props";
 
 export const links: LinksFunction = () => [

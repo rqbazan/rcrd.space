@@ -1,6 +1,6 @@
-import { Header } from "./components/header";
-import { Footer } from "./components/footer";
 import { Content } from "./components/content";
+import { Footer } from "./components/footer";
+import { Header } from "./components/header";
 
 export default function MainLayout() {
   return (

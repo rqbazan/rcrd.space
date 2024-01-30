@@ -1,5 +1,5 @@
-import React from "react";
 import { MetaFunction } from "@remix-run/node";
+import React from "react";
 import {
   Edit2 as PencilSvgIcon,
   ExternalLink as ExternalLinkIconSvg,
@@ -7,11 +7,11 @@ import {
   GitHub as GitHubSvgIcon,
   Package as PackageSvgIcon,
 } from "react-feather";
-import { Heading } from "../_main/components/heading";
-import { ProjectPost } from "./components/project-post";
 import { Anchor } from "~/ui/components/anchor";
 import { CoverImg } from "~/ui/components/cover-img";
 import { getImageProps } from "~/utils/get-image-props";
+import { Heading } from "../_main/components/heading";
+import { ProjectPost } from "./components/project-post";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Projects | Ricardo Q. Bazan" }];
