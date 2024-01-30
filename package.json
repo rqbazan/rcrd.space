@@ -11,9 +11,9 @@
     "dev": "remix dev --manual",
     "start": "remix-serve ./build/index.js",
     "cosmos": "cosmos",
-    "check:type": "tsc",
-    "check:lint": "biome check .",
-    "fix:lint": "biome check --apply ."
+    "check:types": "tsc",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --apply ."
   },
   "dependencies": {
     "@remix-run/css-bundle": "^2.5.0",
