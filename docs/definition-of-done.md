@@ -35,6 +35,6 @@
 
 - Deployment
 
-  - [ ] CI/CD
+  - [x] CI/CD
   - [x] Cloud Provider (Vercel, Netlify, etc.)
   - [ ] Redirects
