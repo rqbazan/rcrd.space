@@ -6,5 +6,5 @@ export interface LiProps {
 }
 
 export function Li({ className, ...props }: LiProps) {
-  return <li className={cn("p list-disc", className)} {...props}></li>;
+  return <li className={cn("p list-disc", className)} {...props} />;
 }

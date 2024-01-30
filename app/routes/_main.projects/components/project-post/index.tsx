@@ -65,7 +65,7 @@ export function ProjectPost({
         </div>
         {Number(links?.length) > 0 && (
           <div className="flex space-x-3 ml-auto items-start">
-            {links!.map(({ href, icon, ...rest }) => (
+            {links?.map(({ href, icon, ...rest }) => (
               <AnchorIcon key={href} href={href} {...rest}>
                 {React.createElement(icon, { className: "h-5 w-5" })}
               </AnchorIcon>

@@ -23,7 +23,7 @@ export const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
         className={clsx(
           "text-muted",
           { "text-wording": isSelected },
-          className
+          className,
         )}
         {...getExternalLinkProps(to)}
         {...props}
@@ -46,5 +46,5 @@ export const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
         )}
       </Link>
     );
-  }
+  },
 );

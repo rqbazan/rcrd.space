@@ -33,7 +33,7 @@ export const TechTag = React.memo(function TechTag({
       }}
       className={cn(
         "tech-tag small rounded-full px-2 py-1 select-none border h-5",
-        className
+        className,
       )}
     >
       {children}

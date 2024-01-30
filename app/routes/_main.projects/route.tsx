@@ -56,7 +56,7 @@ export default function ProjectsPage() {
             {
               href: "https://peya-cover-og.vercel.app/api?title=React%20OCTA&subtitle=Q-Commerce%20Tribe",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View PeYa Cover OG",
+              "data-splitbee-event": "View PeYa Cover OG",
             },
           ]}
           content={
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
             {
               href: "https://ultra-fresh-sorting.vercel.app",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View Ultra Fresh Sorting",
+              "data-splitbee-event": "View Ultra Fresh Sorting",
             },
           ]}
           content={
@@ -110,7 +110,7 @@ export default function ProjectsPage() {
             {
               href: "https://cometa.rcrd.space",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View Cometa Challenge",
+              "data-splitbee-event": "View Cometa Challenge",
             },
           ]}
           content={
@@ -147,7 +147,7 @@ export default function ProjectsPage() {
             {
               href: "https://sw.rcrd.space",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View RAVN Challenge",
+              "data-splitbee-event": "View RAVN Challenge",
             },
           ]}
           content={
@@ -229,7 +229,7 @@ export default function ProjectsPage() {
             {
               href: "https://weeks.rcrd.space/pe/1996-05-17",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View Weeks Life",
+              "data-splitbee-event": "View Weeks Life",
             },
           ]}
           content={
@@ -261,7 +261,7 @@ export default function ProjectsPage() {
             {
               href: "https://resume.rcrd.space",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View My React CV",
+              "data-splitbee-event": "View My React CV",
             },
           ]}
           content={
@@ -296,7 +296,7 @@ export default function ProjectsPage() {
             {
               href: "https://graphql-jobs.now.sh/",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View Seach GraphQL Jobs",
+              "data-splitbee-event": "View Seach GraphQL Jobs",
             },
           ]}
           content={
@@ -327,16 +327,12 @@ export default function ProjectsPage() {
             {
               href: "https://prisma-anonymous-chat-staging.herokuapp.com/",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View Prisma Anonymous Chat",
+              "data-splitbee-event": "View Prisma Anonymous Chat",
             },
           ]}
-          content={
-            <React.Fragment>
-              My first try with GraphQL subscriptions, not production ready.
+          content="My first try with GraphQL subscriptions, not production ready.
               Powered by Prisma v1.34 (v2 has no support for subscriptions). Go
-              to the app root (/) and get a new chat access.
-            </React.Fragment>
-          }
+              to the app root (/) and get a new chat access."
         />
         <ProjectPost
           projectName="Mr. Rubik"
@@ -359,7 +355,7 @@ export default function ProjectsPage() {
             {
               href: "https://react-three-fiber-101.now.sh/",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View Mr. Rubik",
+              "data-splitbee-event": "View Mr. Rubik",
             },
           ]}
           content={
@@ -391,7 +387,7 @@ export default function ProjectsPage() {
             {
               href: "https://aimo-challenge.rqbazan.now.sh/",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View AIMO Challenge",
+              "data-splitbee-event": "View AIMO Challenge",
             },
           ]}
           content={
@@ -420,7 +416,7 @@ export default function ProjectsPage() {
             {
               href: "https://zeit-toast-clone.vercel.app",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View Vercel Toast Clone",
+              "data-splitbee-event": "View Vercel Toast Clone",
             },
           ]}
           content={
@@ -444,16 +440,12 @@ export default function ProjectsPage() {
             {
               href: "https://rcrd.space",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View My Personal Site",
+              "data-splitbee-event": "View My Personal Site",
             },
           ]}
-          content={
-            <React.Fragment>
-              Useful to create my personal brand as software developer, with
+          content="Useful to create my personal brand as software developer, with
               this project I really want to share my knowledge about
-              programming.
-            </React.Fragment>
-          }
+              programming."
         />
         <ProjectPost
           projectName="Hashing With Pbkdf2"
@@ -466,7 +458,7 @@ export default function ProjectsPage() {
             {
               href: "https://hashing-with-pbkdf2.vercel.app",
               icon: ExternalLinkIconSvg,
-              ["data-splitbee-event"]: "View Hashing With Pbkdf2",
+              "data-splitbee-event": "View Hashing With Pbkdf2",
             },
           ]}
           content={
@@ -492,15 +484,11 @@ export default function ProjectsPage() {
             {
               href: "https://github.com/rqbazan/programming-challenges#readme",
               icon: GitHubSvgIcon,
-              ["data-splitbee-event"]: "View Programming Challenges",
+              "data-splitbee-event": "View Programming Challenges",
             },
           ]}
-          content={
-            <React.Fragment>
-              Compilation of solutions for different programming challenges from
-              ad-hoc problems to graph theory.
-            </React.Fragment>
-          }
+          content="Compilation of solutions for different programming challenges from
+              ad-hoc problems to graph theory."
         />
       </div>
     </>

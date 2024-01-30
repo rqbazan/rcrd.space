@@ -9,7 +9,7 @@ export function NewTag({ className }: NewTagProps) {
     <div
       className={cn(
         "bg-orange-300 text-body-dark rounded-md inline-flex items-center justify-center px-1 py-0.5",
-        className
+        className,
       )}
     >
       <span className="tiny uppercase translate-y-[0.05rem] font-semibold">

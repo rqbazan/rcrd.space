@@ -20,5 +20,5 @@ export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(
         {children}
       </a>
     );
-  }
+  },
 );

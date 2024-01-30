@@ -14,9 +14,9 @@ export const AnchorIcon = React.forwardRef<HTMLAnchorElement, AnchorIconProps>(
         {...props}
         className={clsx(
           "hover:text-muted transition-colors ease-in-out duration-300",
-          className
+          className,
         )}
       />
     );
-  }
+  },
 );
