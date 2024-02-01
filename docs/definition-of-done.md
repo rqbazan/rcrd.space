@@ -23,6 +23,7 @@
   - [x] Open Graph
   - [x] Twitter Card
   - [ ] RSS
+  - [ ] Analytics
 
 - Theme
 
