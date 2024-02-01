@@ -23,7 +23,7 @@ export default function UsesPage() {
         height={1008}
         alt="My office 2021"
         className="mb-9"
-        description="Photo by Me at my home office"
+        description="My home office"
       />
       <h3 className="h3 mb-8">Desktop</h3>
       <ul className="ml-3 space-y-2">
