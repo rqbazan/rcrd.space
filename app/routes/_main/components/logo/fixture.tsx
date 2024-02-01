@@ -1,3 +1,3 @@
-import { Logo } from "./index";
+import { Logo } from "./index"
 
-export default <Logo />;
+export default <Logo />

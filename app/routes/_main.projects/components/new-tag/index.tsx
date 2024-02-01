@@ -1,7 +1,7 @@
-import { cn } from "~/ui/utils/cn";
+import { cn } from "~/ui/utils/cn"
 
 export interface NewTagProps {
-  className?: string;
+  className?: string
 }
 
 export function NewTag({ className }: NewTagProps) {
@@ -16,5 +16,5 @@ export function NewTag({ className }: NewTagProps) {
         New
       </span>
     </div>
-  );
+  )
 }

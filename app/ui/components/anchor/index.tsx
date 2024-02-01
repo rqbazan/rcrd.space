@@ -1,10 +1,10 @@
-import React from "react";
-import { getExternalLinkProps } from "~/ui/utils/get-external-link-props";
+import React from "react"
+import { getExternalLinkProps } from "~/ui/utils/get-external-link-props"
 
 export interface AnchorProps
   extends React.HtmlHTMLAttributes<HTMLAnchorElement> {
-  href: string;
-  children: React.ReactNode;
+  href: string
+  children: React.ReactNode
 }
 
 export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(
@@ -19,6 +19,6 @@ export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(
       >
         {children}
       </a>
-    );
+    )
   },
-);
+)

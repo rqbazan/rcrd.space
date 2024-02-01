@@ -1,35 +1,35 @@
-import { Link } from "@remix-run/react";
-import kebabCase from "just-kebab-case";
-import * as React from "react";
-import { Icon } from "react-feather";
-import { AnchorIcon } from "~/ui/components/anchor-icon";
-import { dateDiffInDays } from "~/utils/date-diff-in-days";
-import { NewTag } from "../new-tag";
-import { TechTag } from "../tech-tag";
+import { Link } from "@remix-run/react"
+import kebabCase from "just-kebab-case"
+import * as React from "react"
+import { Icon } from "react-feather"
+import { AnchorIcon } from "~/ui/components/anchor-icon"
+import { dateDiffInDays } from "~/utils/date-diff-in-days"
+import { NewTag } from "../new-tag"
+import { TechTag } from "../tech-tag"
 
 export interface ProjectPostProps {
-  projectName: string;
-  postedAt?: string;
-  content: string | React.ReactNode;
-  techs: string[];
-  className?: string;
+  projectName: string
+  postedAt?: string
+  content: string | React.ReactNode
+  techs: string[]
+  className?: string
   links?: Array<{
-    href: string;
-    icon: Icon;
-    [key: string]: unknown;
-  }>;
+    href: string
+    icon: Icon
+    [key: string]: unknown
+  }>
 }
 
-const MAX_DAYS_TO_BE_NEW = 30;
+const MAX_DAYS_TO_BE_NEW = 30
 
 function isNew(postedAt?: string) {
   if (!postedAt) {
-    return false;
+    return false
   }
 
-  const diffInDays = dateDiffInDays(new Date(postedAt));
+  const diffInDays = dateDiffInDays(new Date(postedAt))
 
-  return diffInDays <= MAX_DAYS_TO_BE_NEW;
+  return diffInDays <= MAX_DAYS_TO_BE_NEW
 }
 
 export function ProjectPost({
@@ -40,7 +40,7 @@ export function ProjectPost({
   links,
   className,
 }: ProjectPostProps) {
-  const htmlId = kebabCase(projectName.toLowerCase());
+  const htmlId = kebabCase(projectName.toLowerCase())
 
   return (
     <div className={className} id={htmlId}>
@@ -74,5 +74,5 @@ export function ProjectPost({
         )}
       </div>
     </div>
-  );
+  )
 }

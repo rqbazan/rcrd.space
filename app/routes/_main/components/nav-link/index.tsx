@@ -1,20 +1,20 @@
-import { Link, useLocation } from "@remix-run/react";
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import * as React from "react";
-import { getExternalLinkProps } from "~/ui/utils/get-external-link-props";
+import { Link, useLocation } from "@remix-run/react"
+import clsx from "clsx"
+import { motion } from "framer-motion"
+import * as React from "react"
+import { getExternalLinkProps } from "~/ui/utils/get-external-link-props"
 
 export interface NavLinkProps {
-  to: string;
-  children: React.ReactElement;
-  className?: string;
+  to: string
+  children: React.ReactElement
+  className?: string
 }
 
 export const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
   function NavLink({ children, to, className, ...props }, ref) {
-    const location = useLocation();
+    const location = useLocation()
 
-    const isSelected = location.pathname === to;
+    const isSelected = location.pathname === to
 
     return (
       <Link
@@ -45,6 +45,6 @@ export const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
           />
         )}
       </Link>
-    );
+    )
   },
-);
+)

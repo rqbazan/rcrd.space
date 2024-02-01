@@ -1,9 +1,9 @@
-import clsx from "clsx";
-import * as React from "react";
-import { Anchor, AnchorProps } from "../anchor";
+import clsx from "clsx"
+import * as React from "react"
+import { Anchor, AnchorProps } from "../anchor"
 
 export interface AnchorIconProps extends AnchorProps {
-  children: React.ReactElement;
+  children: React.ReactElement
 }
 
 export const AnchorIcon = React.forwardRef<HTMLAnchorElement, AnchorIconProps>(
@@ -17,6 +17,6 @@ export const AnchorIcon = React.forwardRef<HTMLAnchorElement, AnchorIconProps>(
           className,
         )}
       />
-    );
+    )
   },
-);
+)

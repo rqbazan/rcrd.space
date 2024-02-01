@@ -1,11 +1,11 @@
-import clsx from "clsx";
+import clsx from "clsx"
 
 export interface CoverImgProps
   extends React.ImgHTMLAttributes<HTMLImageElement> {
-  src: string;
-  alt: string;
-  description?: React.ReactNode;
-  className?: string;
+  src: string
+  alt: string
+  description?: React.ReactNode
+  className?: string
 }
 
 export function CoverImg({
@@ -31,5 +31,5 @@ export function CoverImg({
         description
       )}
     </div>
-  );
+  )
 }

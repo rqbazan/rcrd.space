@@ -1,12 +1,12 @@
-import { useColorModeToggle } from "@rqbazan/set-initial-color-mode";
-import clsx from "clsx";
+import { useColorModeToggle } from "@rqbazan/set-initial-color-mode"
+import clsx from "clsx"
 
 export interface LogoProps {
-  className?: string;
+  className?: string
 }
 
 export function Logo({ className, ...props }: LogoProps) {
-  const { onToggle } = useColorModeToggle();
+  const { onToggle } = useColorModeToggle()
 
   return (
     <button
@@ -39,5 +39,5 @@ export function Logo({ className, ...props }: LogoProps) {
         </svg>
       </span>
     </button>
-  );
+  )
 }

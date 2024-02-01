@@ -1,12 +1,12 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Heading } from "~/routes/_main/components/heading";
-import { CoverImg } from "~/ui/components/cover-img";
-import { Li } from "~/ui/components/li";
-import { getImageProps } from "~/utils/get-image-props";
+import type { MetaFunction } from "@remix-run/node"
+import { Heading } from "~/routes/_main/components/heading"
+import { CoverImg } from "~/ui/components/cover-img"
+import { Li } from "~/ui/components/li"
+import { getImageProps } from "~/utils/get-image-props"
 
 export const meta: MetaFunction = () => {
-  return [{ title: "Uses | Ricardo Q. Bazan" }];
-};
+  return [{ title: "Uses | Ricardo Q. Bazan" }]
+}
 
 export default function UsesPage() {
   return (
@@ -53,5 +53,5 @@ export default function UsesPage() {
         <Li>Nintendo Switch 2019</Li>
       </ul>
     </>
-  );
+  )
 }

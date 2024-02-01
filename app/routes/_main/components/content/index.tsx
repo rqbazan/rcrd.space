@@ -1,17 +1,17 @@
-import { useLocation, useOutlet } from "@remix-run/react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useLocation, useOutlet } from "@remix-run/react"
+import { AnimatePresence, motion } from "framer-motion"
+import { useState } from "react"
 
 // ref: https://stackoverflow.com/a/74351729
 const AnimatedOutlet: React.FC = () => {
-  const o = useOutlet();
-  const [outlet] = useState(o);
+  const o = useOutlet()
+  const [outlet] = useState(o)
 
-  return <>{outlet}</>;
-};
+  return <>{outlet}</>
+}
 
 export function Content() {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <AnimatePresence mode="wait" initial={false}>
@@ -25,5 +25,5 @@ export function Content() {
         <AnimatedOutlet />
       </motion.div>
     </AnimatePresence>
-  );
+  )
 }

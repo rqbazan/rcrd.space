@@ -1,15 +1,15 @@
-import clsx from "clsx";
+import clsx from "clsx"
 import {
   FileText as FileTextIconSvg,
   HardDrive as HardDriveIconSvg,
   Home as HomeIconSvg,
   Terminal as TerminalIconSvg,
-} from "react-feather";
-import { Logo } from "../logo";
-import { NavLink } from "../nav-link";
+} from "react-feather"
+import { Logo } from "../logo"
+import { NavLink } from "../nav-link"
 
 export interface HeaderProps {
-  className?: string;
+  className?: string
 }
 
 export function Header({ className, ...props }: HeaderProps) {
@@ -38,5 +38,5 @@ export function Header({ className, ...props }: HeaderProps) {
         </NavLink>
       </nav>
     </header>
-  );
+  )
 }

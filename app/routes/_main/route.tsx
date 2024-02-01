@@ -1,6 +1,6 @@
-import { Content } from "./components/content";
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
+import { Content } from "./components/content"
+import { Footer } from "./components/footer"
+import { Header } from "./components/header"
 
 export default function MainLayout() {
   return (
@@ -9,5 +9,5 @@ export default function MainLayout() {
       <Content />
       <Footer className="mt-auto pt-16" />
     </main>
-  );
+  )
 }

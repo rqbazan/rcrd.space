@@ -1,5 +1,5 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import { cssBundleHref } from "@remix-run/css-bundle"
+import type { LinksFunction } from "@remix-run/node"
 import {
   Links,
   LiveReload,
@@ -9,27 +9,27 @@ import {
   ScrollRestoration,
   json,
   useLoaderData,
-} from "@remix-run/react";
-import { ColorModeScript } from "./components/color-mode-script";
-import { EnvScript } from "./components/env-script";
-import { env } from "./env";
-import { useCanonicalUrl } from "./hooks/useCanonicalUrl";
-import globalStylesheet from "./ui/globals.css";
-import { getImageProps } from "./utils/get-image-props";
+} from "@remix-run/react"
+import { ColorModeScript } from "./components/color-mode-script"
+import { EnvScript } from "./components/env-script"
+import { env } from "./env"
+import { useCanonicalUrl } from "./hooks/useCanonicalUrl"
+import globalStylesheet from "./ui/globals.css"
+import { getImageProps } from "./utils/get-image-props"
 
 export const links: LinksFunction = () => [
   { rel: "icon", href: "/favicon.ico" },
   { rel: "stylesheet", href: globalStylesheet },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+]
 
 export async function loader() {
-  return json({ env });
+  return json({ env })
 }
 
 export default function App() {
-  const data = useLoaderData<typeof loader>();
-  const canonicalUrl = useCanonicalUrl();
+  const data = useLoaderData<typeof loader>()
+  const canonicalUrl = useCanonicalUrl()
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -75,5 +75,5 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }

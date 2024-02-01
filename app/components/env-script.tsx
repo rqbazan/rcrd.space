@@ -1,10 +1,10 @@
 export interface EnvScriptProps {
-  env: Record<string, string>;
+  env: Record<string, string>
 }
 
 declare global {
   interface Window {
-    ENV: Record<string, string>;
+    ENV: Record<string, string>
   }
 }
 
@@ -16,5 +16,5 @@ export function EnvScript({ env }: EnvScriptProps) {
         __html: `window.ENV = ${JSON.stringify(env)}`,
       }}
     />
-  );
+  )
 }

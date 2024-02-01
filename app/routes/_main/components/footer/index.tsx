@@ -1,23 +1,23 @@
-import clsx from "clsx";
-import * as React from "react";
+import clsx from "clsx"
+import * as React from "react"
 import {
   GitHub as GitHubSvgIcon,
   type Icon,
   Linkedin as LinkedinSvgIcon,
   Mail as MailSvgIcon,
   Twitter as TwitterSvgIcon,
-} from "react-feather";
-import { AnchorIcon } from "~/ui/components/anchor-icon";
+} from "react-feather"
+import { AnchorIcon } from "~/ui/components/anchor-icon"
 
 export interface FooterProps {
-  className?: string;
+  className?: string
 }
 
 type Contact = {
-  icon: Icon;
-  href: string;
-  network: string;
-};
+  icon: Icon
+  href: string
+  network: string
+}
 
 const contacts: Contact[] = [
   {
@@ -40,7 +40,7 @@ const contacts: Contact[] = [
     network: "mail",
     href: "mailto:raquirozbazan@gmail.com",
   },
-];
+]
 
 export function Footer({ className, ...props }: FooterProps) {
   return (
@@ -60,5 +60,5 @@ export function Footer({ className, ...props }: FooterProps) {
         </AnchorIcon>
       ))}
     </footer>
-  );
+  )
 }

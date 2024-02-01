@@ -1,12 +1,12 @@
 export function getExternalLinkProps(href: string) {
-  const isInternal = href?.startsWith("/");
+  const isInternal = href?.startsWith("/")
 
   if (isInternal) {
-    return null;
+    return null
   }
 
   return {
     target: "_blank",
     rel: "noreferrer",
-  };
+  }
 }
