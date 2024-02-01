@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "github.vscode-github-actions",
+    "biomejs.biome"
+  ]
+}
