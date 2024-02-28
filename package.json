@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "remix-serve ./build/index.js",
+    "predev": "cosmos-export",
     "dev": "remix dev --manual",
     "dev:ui": "cosmos",
     "build": "cosmos-export && remix build",
