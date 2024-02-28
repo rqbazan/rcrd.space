@@ -8,16 +8,15 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/bee.js",
-      "destination": "https://cdn.splitbee.io/sb.js"
     },
     {
-      "source": "/_hive/:slug",
-      "destination": "https://hive.splitbee.io/:slug"
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=864000"
+        }
+      ]
     }
   ]
 }
