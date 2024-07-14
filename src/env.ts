@@ -1,5 +1,4 @@
-const env = {
-  PROD: process.env.NODE_ENV === 'production',
-}
-
-export default env
+export const env = {
+  CLOUDINARY_CLOUD_NAME: import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME,
+  CLOUDINARY_FOLDER_NAME: import.meta.env.PUBLIC_CLOUDINARY_FOLDER_NAME,
+};

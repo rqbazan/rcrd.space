@@ -1,0 +1,31 @@
+---
+import { cn } from "~/utils/cn";
+
+const { class: className, text } = Astro.props;
+
+// reference: https://stackoverflow.com/q/3426404
+function getHashCode(string: string) {
+  let hash = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    hash = string.charCodeAt(i) + ((hash << 2) - hash);
+    hash &= hash;
+  }
+
+  return hash;
+}
+
+const hash = getHashCode(text) % 360;
+---
+
+<span
+  style={{
+    "--hash": hash,
+  }}
+  class={cn(
+    "tech-tag small rounded-full px-2 py-1 select-none border h-5",
+    className
+  )}
+>
+  {text}
+</span>

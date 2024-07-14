@@ -1,0 +1,14 @@
+---
+import { cn } from "~/utils/cn";
+
+const { class: className } = Astro.props;
+---
+
+<div class={cn("space-y-4 mb-8", className)}>
+  <h1 class="h2 sm:h1">
+    <slot name="title" />
+  </h1>
+  <p class="p">
+    <slot name="content" />
+  </p>
+</div>
