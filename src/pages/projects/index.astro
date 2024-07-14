@@ -46,6 +46,22 @@ import ProjectPost from "./_components/project-post.astro";
 
   <div class="flex flex-col space-y-8">
     <ProjectPost
+      projectName="Advent of Code"
+      postedAt="2024-07-14"
+      techs={["C++", "DataStructure", "Algorithm"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/advent-of-code",
+          icon: GithubIcon,
+        },
+      ]}
+    >
+      My solutions for the{" "}
+      <Anchor href="https://adventofcode.com/2023/about">
+        Advent of Code
+      </Anchor>. Feliz Navidad, Buon Natale, Happy Merry Christmas 🎄
+    </ProjectPost>
+    <ProjectPost
       projectName="Defer It"
       postedAt="2024-07-14"
       techs={["Fastify", "Vercel", "Typebox", "Tap"]}
@@ -64,27 +80,28 @@ import ProjectPost from "./_components/project-post.astro";
       </Anchor>
     </ProjectPost>
     <ProjectPost
-      projectName="PeYa Cover OG"
-      postedAt="2022-12-30"
+      projectName="Peya Image Generator"
+      postedAt="2024-07-14"
       techs={["Next.js", "Edge Runtime", "TaildwindCSS", "TypeScript"]}
       links={[
         {
-          href: "https://github.com/rqbazan/peya-cover-og#readme",
+          href: "https://github.com/rqbazan/peya-img-gen#readme",
           icon: GithubIcon,
         },
         {
-          href: "https://peya-cover-og.vercel.app/api?title=React%20OCTA&subtitle=Q-Commerce%20Tribe",
+          href: "https://peya-img-gen.vercel.app/repository-cover?title=React%20OCTA&subtitle=Q-Commerce%20Tribe",
           icon: ExternalLinkIcon,
         },
       ]}
     >
-      A simple API to generate a cover image for the{" "}
+      A simple API to generate images for the{" "}
       <Anchor
         href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807"
       >
         PedidosYa
       </Anchor>{" "}
-      repositories. Powered by the awesome{" "}
+      repositories, supporting repository covers and storybook logos. Powered by
+      the awesome{" "}
       <Anchor href="https://vercel.com/templates/next.js/og-image-generation">
         Open Graph Image Generator template.
       </Anchor>
