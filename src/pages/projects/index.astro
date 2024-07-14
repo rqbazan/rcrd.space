@@ -14,7 +14,7 @@ import { getImageProps } from "~/utils/get-image-props";
 import ProjectPost from "./_components/project-post.astro";
 ---
 
-<DefaultLayout title="Ricardo Q. Bazan | Software Engineer">
+<DefaultLayout title="Projects | Ricardo Q. Bazan">
   <Heading>
     <Fragment slot="title">Projects</Fragment>
     <Fragment slot="content">
@@ -24,7 +24,7 @@ import ProjectPost from "./_components/project-post.astro";
   </Heading>
 
   <CoverImg
-    {...getImageProps("covers/projects-v2")}
+    {...getImageProps("covers/projects-v3")}
     alt="Abstract art"
     width={2000}
     height={1500}
@@ -32,14 +32,14 @@ import ProjectPost from "./_components/project-post.astro";
   >
     <Fragment slot="description">
       <p class="small text-muted">
-        Photo by{" "}
-        <Anchor href="https://unsplash.com/@fakurian"> Milad Fakurian </Anchor>{
-          " "
-        }
-        on{" "}
-        <Anchor href="https://unsplash.com/s/photos/abstract">
-          Unsplash
-        </Anchor>
+        Photo by
+        <Anchor
+          href="https://unsplash.com/@sebastiansvenson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+          >Sebastian Svenson</Anchor
+        > on <Anchor
+          href="https://unsplash.com/photos/blue-and-white-round-illustration-LpbyDENbQQg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+          >Unsplash</Anchor
+        >
       </p>
     </Fragment>
   </CoverImg>
