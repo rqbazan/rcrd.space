@@ -56,15 +56,20 @@ const htmlId = kebabCase(projectName.toLowerCase());
       }
     </div>
     {
-      Number(links?.length) > 0 && (
+      Number(links?.length) > 0 ? (
         <div class="flex space-x-3 ml-auto items-start">
-          {links?.map(({ href, icon, ...rest }) => (
-            <AnchorIcon href={href} {...rest}>
-              <icon customClasses="h-5 w-5" />
-            </AnchorIcon>
-          ))}
+          {links?.map((link) => {
+            // omit icon from otherProps
+            const { icon, ...otherProps } = link;
+
+            return (
+              <AnchorIcon {...otherProps}>
+                <link.icon customClasses="h-5 w-5" />
+              </AnchorIcon>
+            );
+          })}
         </div>
-      )
+      ) : null
     }
   </div>
 </div>
