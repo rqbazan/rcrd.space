@@ -11,7 +11,7 @@
 
 .dark {
   --wording: rgb(255, 255, 255);
-  --background: rgb(29, 29, 30);
+  --background: rgb(16, 16, 16);
   --muted: rgb(156, 163, 175);
   --selection: rgb(255, 167, 60);
 }
