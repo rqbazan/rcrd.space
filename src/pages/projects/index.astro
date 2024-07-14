@@ -46,6 +46,23 @@ import ProjectPost from "./_components/project-post.astro";
 
   <div class="flex flex-col space-y-8">
     <ProjectPost
+      projectName="Advent of Code"
+      postedAt="2024-07-14"
+      techs={["C++", "DataStructure", "Algorithm"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/advent-of-code",
+          icon: GithubIcon,
+        },
+      ]}
+    >
+      My solutions for the{" "}
+      <Anchor href="https://adventofcode.com/2023/about">
+        Advent of Code
+      </Anchor>. Feliz Navidad, Buon Natale, Happy Merry Christmas 🎄
+    </ProjectPost>
+
+    <ProjectPost
       projectName="Defer It"
       postedAt="2024-07-14"
       techs={["Fastify", "Vercel", "Typebox", "Tap"]}
