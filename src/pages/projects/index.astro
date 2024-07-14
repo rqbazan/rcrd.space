@@ -46,6 +46,24 @@ import ProjectPost from "./_components/project-post.astro";
 
   <div class="flex flex-col space-y-8">
     <ProjectPost
+      projectName="Defer It"
+      postedAt="2024-07-14"
+      techs={["Fastify", "Vercel", "Typebox", "Tap"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/defer-it",
+          icon: GithubIcon,
+        },
+      ]}
+    >
+      This is a simple serverless function that defers a request for a given
+      amount of time. For instance: <Anchor
+        href="https://defer-it.vercel.app/api/v1?waitFor=3000&url=https://example.com"
+      >
+        https://defer-it.vercel.app/api/v1?waitFor=3000&url=https://example.com
+      </Anchor>
+    </ProjectPost>
+    <ProjectPost
       projectName="PeYa Cover OG"
       postedAt="2022-12-30"
       techs={["Next.js", "Edge Runtime", "TaildwindCSS", "TypeScript"]}
