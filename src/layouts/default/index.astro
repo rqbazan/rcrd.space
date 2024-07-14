@@ -17,7 +17,7 @@ const canonicalUrl = getCanonicalUrl(Astro.url);
 <!doctype html>
 <html lang="en">
   <head>
-    <script set:html={getJsText()} />
+    <script is:inline set:html={getJsText()} />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="og:title" content="Ricardo Q. Bazan | Software Engineer" />
