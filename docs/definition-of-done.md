@@ -32,7 +32,7 @@
 
 - Animation
 
-  - [x] Page Transitions
+  - [ ] Page Transitions
   - [ ] Disable Animations on Reduced Motion
 
 - Deployment
