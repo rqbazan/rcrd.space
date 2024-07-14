@@ -1,0 +1,31 @@
+---
+import { cn } from "~/utils/cn";
+import { getExternalLinkProps } from "~/utils/get-external-link-props";
+
+interface Props {
+  href: string;
+  className?: string;
+}
+
+const { href, className } = Astro.props;
+
+// Due to https://github.com/withastro/astro/issues/4252
+const isSelected =
+  Astro.url.pathname === href || Astro.url.pathname === `${href}/`;
+---
+
+<a
+  href={href}
+  class={cn("text-muted", { "text-wording": isSelected }, className)}
+  {...getExternalLinkProps(href)}
+>
+  <span
+    class={cn("h5 h-6 w-6", {
+      "dark:hover:text-gray-300 hover:text-gray-400 transition-colors ease-in-out duration-300":
+        !isSelected,
+    })}
+  >
+    <slot />
+  </span>
+  {isSelected ? <div class="h-1 bg-wording w-full rounded-lg mt-1.5" /> : null}
+</a>

@@ -1,0 +1,30 @@
+---
+import Typewriter from "typewriter-effect";
+import Heading from "~/layouts/default/components/heading.astro";
+import DefaultLayout from "~/layouts/default/index.astro";
+import Anchor from "~/ui/components/anchor.astro";
+---
+
+<DefaultLayout title="Ricardo Q. Bazan | Software Engineer">
+  <Heading>
+    <Fragment slot="title">
+      Hey, I&apos;m{" "}
+      <Typewriter
+        client:visible
+        options={{
+          strings: ["Santiago", "Ricardo", "Alexis", "Rick"],
+          autoStart: true,
+          loop: true,
+        }}
+      />
+    </Fragment>
+    <Fragment slot="content">
+      I&apos;m a software developer from Trujillo - Peru. I work as Sr. Software
+      Engineer at{" "}
+      <Anchor href="https://www.linkedin.com/company/pedidosya/mycompany">
+        PedidosYa
+      </Anchor>
+      . You&apos;ve found my personal place on the internet.
+    </Fragment>
+  </Heading>
+</DefaultLayout>

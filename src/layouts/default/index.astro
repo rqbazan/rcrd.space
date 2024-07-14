@@ -1,0 +1,60 @@
+---
+import "~/ui/globals.css";
+import { getJsText } from "@rqbazan/set-initial-color-mode";
+import { getCanonicalUrl } from "~/utils/get-canonical-url";
+import { getImageProps } from "~/utils/get-image-props";
+import Footer from "./components/footer.astro";
+import Header from "./components/header.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const canonicalUrl = getCanonicalUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script is:inline set:html={getJsText()} />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="og:title" content="Ricardo Q. Bazan | Software Engineer" />
+    <meta
+      name="og:description"
+      content="I'm a software engineer mostly with NodeJS 💚 I love to write clean beautiful code even when it's unnecessary."
+    />
+    <meta name="og:url" content={canonicalUrl} />
+    <meta name="og:type" content="website" />
+    <meta name="og:site_name" content="Ricardo Q. Bazan" />
+    <meta name="og:locale" content="en" />
+    <meta name="og:image" content={getImageProps("social/og-image.png").src} />
+    <meta name="twitter:site" content="@rqbazan" />
+    <meta name="twitter:creator" content="@rqbazan" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link
+      rel="preload"
+      href="/fonts/ibm-plex-sans-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <main
+      class="mx-auto flex min-h-full flex-col px-6 py-8 md:max-w-[42rem] md:px-4 md:py-24"
+    >
+      <Header class="mb-6" />
+      <slot />
+      <Footer class="mt-auto pt-16" />
+    </main>
+  </body>
+</html>

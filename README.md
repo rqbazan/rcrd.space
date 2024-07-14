@@ -1,14 +1,18 @@
 # rcrd.space 🦉
 
-- **Framework**: [Next.js](https://nextjs.org)
+- **Framework**: [Astro](https://astro.build)
 - **Deployment**: [Vercel](https://vercel.com)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com) and [Stitches](https://stitches.dev)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
 
 ## Running Locally
 
 ```bash
 git clone https://github.com/rqbazan/rcrd.space.git
 cd rcrd.space
-pnpm i
-pnpm dev
+bun i
+bun dev
 ```
+
+## Documentation
+
+- [Definition of Done](./docs/definition-of-done.md) ✅

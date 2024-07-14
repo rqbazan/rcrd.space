@@ -1,0 +1,21 @@
+---
+import { cn } from "~/utils/cn";
+
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { class: className, href, ...otherProps } = Astro.props;
+---
+
+<a
+  href={href}
+  class={cn(
+    "hover:text-muted transition-colors ease-in-out duration-300",
+    className
+  )}
+  {...otherProps}
+>
+  <slot />
+</a>

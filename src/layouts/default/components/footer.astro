@@ -1,0 +1,50 @@
+---
+import { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon } from "astro-feather";
+import AnchorIcon from "~/ui/components/anchor-icon.astro";
+import { cn } from "~/utils/cn";
+
+const { class: className, ...otherProps } = Astro.props;
+
+type Contact = {
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  icon: any;
+  href: string;
+  network: string;
+};
+
+const contacts: Contact[] = [
+  {
+    icon: GithubIcon,
+    network: "github",
+    href: "https://github.com/rqbazan",
+  },
+  {
+    icon: LinkedinIcon,
+    network: "twitter",
+    href: "https://twitter.com/rqbazan",
+  },
+  {
+    icon: MailIcon,
+    network: "linkedin",
+    href: "https://www.linkedin.com/in/rqbazan",
+  },
+  {
+    icon: TwitterIcon,
+    network: "mail",
+    href: "mailto:raquirozbazan@gmail.com",
+  },
+];
+---
+
+<footer
+  {...otherProps}
+  class={cn("flex justify-center items-center space-x-4", className)}
+>
+  {
+    contacts.map((contact) => (
+      <AnchorIcon href={contact.href} aria-label={contact.network}>
+        <contact.icon customClasses="h-6 w-6" />
+      </AnchorIcon>
+    ))
+  }
+</footer>

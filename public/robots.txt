@@ -1,0 +1,4 @@
+User-Agent: *
+
+Host: http://rcrd.space
+Sitemap: http://rcrd.space/sitemap-index.xml

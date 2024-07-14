@@ -1,0 +1,31 @@
+---
+import {
+  FileTextIcon,
+  HardDriveIcon,
+  HomeIcon,
+  TerminalIcon,
+} from "astro-feather";
+import { Logo } from "~/ui/components/logo";
+import { cn } from "~/utils/cn";
+import NavLink from "./nav-link.astro";
+
+const { class: className } = Astro.props;
+---
+
+<header class={cn(className, "flex justify-between items-start")}>
+  <Logo client:visible />
+  <nav class="flex space-x-4">
+    <NavLink href="/" aria-label="Home">
+      <HomeIcon />
+    </NavLink>
+    <NavLink href="/uses" aria-label="Uses">
+      <HardDriveIcon />
+    </NavLink>
+    <NavLink href="/projects" aria-label="Projects">
+      <TerminalIcon />
+    </NavLink>
+    <NavLink href="https://resume.rcrd.space" aria-label="Resume">
+      <FileTextIcon />
+    </NavLink>
+  </nav>
+</header>

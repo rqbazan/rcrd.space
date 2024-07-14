@@ -1,0 +1,29 @@
+---
+import { cn } from "~/utils/cn";
+
+interface Props {
+  src: string;
+  alt: string;
+  description?: string;
+  class?: string;
+  width: number;
+  height: number;
+}
+
+const { class: className, src, description, ...otherProps } = Astro.props;
+---
+
+<div class={cn(className, "flex flex-col items-center")}>
+  <a href={src} target="_blank" rel="noreferrer" class="mb-3">
+    <div class="flex select-none aspect-[4/3]">
+      <img
+        {...otherProps}
+        src={src}
+        class="object-cover border-[6px] md:border-8"
+      />
+    </div>
+  </a>
+  <slot name="description">
+    <span class="small text-muted">{description}</span>
+  </slot>
+</div>

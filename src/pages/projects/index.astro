@@ -1,0 +1,363 @@
+---
+import {
+  ExternalLinkIcon,
+  FigmaIcon,
+  GithubIcon,
+  PackageIcon,
+  Edit2Icon as PencilIcon,
+} from "astro-feather";
+import Heading from "~/layouts/default/components/heading.astro";
+import DefaultLayout from "~/layouts/default/index.astro";
+import Anchor from "~/ui/components/anchor.astro";
+import CoverImg from "~/ui/components/cover-img.astro";
+import { getImageProps } from "~/utils/get-image-props";
+import ProjectPost from "./_components/project-post.astro";
+---
+
+<DefaultLayout title="Ricardo Q. Bazan | Software Engineer">
+  <Heading>
+    <Fragment slot="title">Projects</Fragment>
+    <Fragment slot="content">
+      Here&rsquo;s a list of my open source projects writen mostly using
+      JavaScript and TypeScript.
+    </Fragment>
+  </Heading>
+
+  <CoverImg
+    {...getImageProps("covers/projects-v2")}
+    alt="Abstract art"
+    width={2000}
+    height={1500}
+    class="mb-9"
+  >
+    <Fragment slot="description">
+      <p class="small text-muted">
+        Photo by{" "}
+        <Anchor href="https://unsplash.com/@fakurian"> Milad Fakurian </Anchor>{
+          " "
+        }
+        on{" "}
+        <Anchor href="https://unsplash.com/s/photos/abstract">
+          Unsplash
+        </Anchor>
+      </p>
+    </Fragment>
+  </CoverImg>
+
+  <div class="flex flex-col space-y-8">
+    <ProjectPost
+      projectName="PeYa Cover OG"
+      postedAt="2022-12-30"
+      techs={["Next.js", "Edge Runtime", "TaildwindCSS", "TypeScript"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/peya-cover-og#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://peya-cover-og.vercel.app/api?title=React%20OCTA&subtitle=Q-Commerce%20Tribe",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      A simple API to generate a cover image for the{" "}
+      <Anchor
+        href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807"
+      >
+        PedidosYa
+      </Anchor>{" "}
+      repositories. Powered by the awesome{" "}
+      <Anchor href="https://vercel.com/templates/next.js/og-image-generation">
+        Open Graph Image Generator template.
+      </Anchor>
+    </ProjectPost>
+    <ProjectPost
+      projectName="Ultra Fresh Sorting"
+      postedAt="2022-12-30"
+      techs={["Next.js", "TaildwindCSS", "DnD", "Algorithms", "JavaScript"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/ultra-fresh-sorting#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://ultra-fresh-sorting.vercel.app",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      Takes a list of strings and sorts them by alphabetical order, but it uses
+      a priority algorithm to sort the items that are more important to the
+      user. The name was inspired by the project in{" "}
+      <Anchor
+        href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807"
+      >
+        PedidosYa.
+      </Anchor>
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Cometa Challenge"
+      postedAt="2022-04-03"
+      techs={["Next.js", "TypeScript", "Storybook", "MaterialUI"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/cometa-challenge#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://cometa.rcrd.space",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      The solution for{" "}
+      <Anchor
+        href="https://cometa.notion.site/48h-React-Frontend-Challenge-faaa3f5ff28a408799f374b6279793d8"
+      >
+        the Cometa challenge
+      </Anchor>
+      , in order to get the Frontend Engineer position of the company.
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Ravn Challenge"
+      postedAt="2022-04-03"
+      techs={[
+        "Next.js",
+        "TypeScript",
+        "Cypress",
+        "Storybook",
+        "TailwindCSS",
+        "GraphQL",
+        "SemanticRelease",
+      ]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/ravn-challenge-v2-ricardo-q-bazan#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://excalidraw.com/#json=k6pQGzgskJz0DcXvO7xDt,bYqI9PPcI8CB3vue35JRGQ",
+          icon: PencilIcon,
+        },
+        {
+          href: "https://sw.rcrd.space",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      The solution for{" "}
+      <Anchor
+        href="https://docs.google.com/document/d/1hPVfun_1mxDokJ-qrFqIaUT5EfrYCL5X0pLGioEcDXk"
+      >
+        the RAVN challenge
+      </Anchor>
+      , in order to get the Software Engineer position of the company.
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Set Initial Color Mode"
+      postedAt="2022-04-01"
+      techs={["Rollup", "React", "SSR", "TypeScript"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/set-initial-color-mode#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://www.npmjs.com/package/@rqbazan/set-initial-color-mode",
+          icon: PackageIcon,
+        },
+      ]}
+    >
+      After reading{" "}
+      <Anchor href="https://www.joshwcomeau.com/react/dark-mode/">
+        The Quest for the Perfect Dark Mode
+      </Anchor>{" "}
+      by{" "}
+      <Anchor href="https://twitter.com/JoshWComeau"> Josh Comeau </Anchor>
+      , I&rsquo;ve created a reusable solution for the dark-mode-flick-problem. My
+      own website use this solution.
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Toggled Library"
+      techs={[
+        "React.js",
+        "TypeScript",
+        "ReactTestingLibrary",
+        "SemanticRelease",
+      ]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/toggled#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://www.npmjs.com/package/toggled",
+          icon: PackageIcon,
+        },
+      ]}
+    >
+      Tiny library to use{" "}
+      <Anchor href="https://martinfowler.com/articles/feature-toggles.html">
+        feature flags
+      </Anchor>{" "}
+      in React. Get features by its slug identifier or get a binary output using
+      flag queries.
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Weeks of my Life"
+      techs={["Next.js", "TailwindCSS", "SyncScroll", "Math", "JavaScript"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/weeks#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://weeks.rcrd.space/pe/1996-05-17",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      Based on the poster of{" "}
+      <Anchor href="https://www.weeksofmylife.com">
+        www.weeksofmylife.com
+      </Anchor>
+      . It&rsquo;s a calculator to see how many weeks of life you just consumed.
+      Based on the average life expectancy for some country: USA, Italy and Peru.
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="My React CV"
+      techs={[
+        "Vite.js",
+        "ReactPDF",
+        "Airtable",
+        "LambdaFunction",
+        "TypeScript",
+      ]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/resume#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://resume.rcrd.space",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      I created my CV using{" "}
+      <Anchor href="https://react-pdf.org/">ReactPDF</Anchor>, which is another
+      renderer instead of ReactDOM. The information is saved in my personal
+      Airtable and consumed in real-time using a Vercel Lambda Function.
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Seach GraphQL Jobs"
+      techs={[
+        "Next.js",
+        "TailwindCSS",
+        "Codegen",
+        "Storybook",
+        "Apollo",
+        "TypeScript",
+      ]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/graphql-jobs#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://www.figma.com/file/vnoMxFemCYynPFt37BFPK0/GraphQL-jobs?node-id=0%3A1",
+          icon: FigmaIcon,
+        },
+        {
+          href: "https://graphql-jobs.now.sh/",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      Application made fully with TypeScript, using Storybook for
+      component-driven development. Taking advance of client side Apollo
+      resolvers. Powered by{" "}
+      <Anchor href="https://api.graphql.jobs/">
+        the free GraphQL Jobs API.
+      </Anchor>
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Prisma Anonymous Chat"
+      techs={[
+        "xstyled",
+        "Prisma",
+        "YogaGraphQL",
+        "Express",
+        "GraphQL Subscriptions",
+      ]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/prisma-anonymous-chat#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://prisma-anonymous-chat-staging.herokuapp.com/",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      My first try with GraphQL subscriptions, not production ready. Powered by
+      Prisma v1.34 (v2 has no support for subscriptions). Go to the app root (/)
+      and get a new chat access.
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Mr. Rubik"
+      techs={["Gastby", "ThreeJS", "ReactThreeFiber", "TypeScript", "Firebase"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/react-three-fiber-101#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://www.figma.com/file/7lGU5TbDcFUtiU5IatkNsI/react-three-fiber-101?node-id=11%3A14",
+          icon: FigmaIcon,
+        },
+        {
+          href: "https://react-three-fiber-101.now.sh/",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      After watch{" "}
+      <Anchor href="https://www.youtube.com/watch?v=1rP3nNY2hTo">
+        Animation and 3D in react-three-fiber (with Paul Henschel) — Learn With
+        Jason
+      </Anchor>
+      , I decided to give it a try and create my own interactive 3D animation.
+    </ProjectPost>
+
+    <ProjectPost
+      projectName="Advanced Cart Component"
+      techs={["Gatsby.js", "Apollo", "Formik", "xstyled", "TypeScript"]}
+      links={[
+        {
+          href: "https://github.com/rqbazan/advanced-cart#readme",
+          icon: GithubIcon,
+        },
+        {
+          href: "https://advanced-cart.now.sh/",
+          icon: ExternalLinkIcon,
+        },
+      ]}
+    >
+      After get the Groceries list in JSON format from{" "}
+      <Anchor href="https://groceries.dev"> groceries.dev </Anchor>
+      , I created a cart component to add items with different sizes and quantities,
+      display the total amount, apply coupons and choose delivery time.
+    </ProjectPost>
+  </div>
+</DefaultLayout>
