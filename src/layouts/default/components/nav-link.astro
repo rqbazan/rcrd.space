@@ -27,5 +27,12 @@ const isSelected =
   >
     <slot />
   </span>
-  {isSelected ? <div class="h-1 bg-wording w-full rounded-lg mt-1.5" /> : null}
+  {
+    isSelected ? (
+      <div
+        transition:name="nav-link-active-indicator"
+        class="h-1 bg-wording w-full rounded-lg mt-1.5"
+      />
+    ) : null
+  }
 </a>

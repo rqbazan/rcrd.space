@@ -15,8 +15,14 @@ const canonicalUrl = getCanonicalUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
+    <style>
+      @view-transition {
+        navigation: auto; /* enabled! */
+      }
+    </style>
+
     <script is:inline set:html={getJsText()} />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,12 +55,14 @@ const canonicalUrl = getCanonicalUrl(Astro.url);
     <title>{title}</title>
   </head>
   <body>
-    <main
+    <section
       class="mx-auto flex min-h-full flex-col px-6 py-8 md:max-w-[42rem] md:px-4 md:py-24"
     >
       <Header class="mb-6" />
-      <slot />
+      <main>
+        <slot />
+      </main>
       <Footer class="mt-auto pt-16" />
-    </main>
+    </section>
   </body>
 </html>
