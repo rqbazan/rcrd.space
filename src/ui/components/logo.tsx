@@ -1,5 +1,5 @@
 import { useColorModeToggle } from "@rqbazan/set-initial-color-mode";
-import clsx from "clsx";
+import { cn } from "~/utils/cn";
 
 export interface LogoProps {
   className?: string;
@@ -13,7 +13,7 @@ export function Logo({ className, ...props }: LogoProps) {
       {...props}
       type="button"
       onClick={onToggle}
-      className={clsx(
+      className={cn(
         "animate-rainbow p-2 relative lg:scale-[1.45] inline-flex",
         className,
       )}
