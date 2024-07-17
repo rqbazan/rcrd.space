@@ -1,9 +1,7 @@
 ---
 import { Image } from "@unpic/astro";
-import { getPixels } from "@unpic/pixels";
-import { blurhashToDataUri } from "@unpic/placeholder";
-import { encode } from "blurhash";
 import { cn } from "~/utils/cn";
+import { getImagePlaceholder } from "~/utils/get-image-placeholder";
 
 interface Props {
   src: string;
@@ -15,15 +13,7 @@ interface Props {
 }
 
 const { class: className, src, description, ...otherProps } = Astro.props;
-
-let supportedSrc = src.replace(".webp", ".jpg");
-supportedSrc = supportedSrc.replace("upload/", "upload/w_20,h_15/");
-
-const jpgData = await getPixels(supportedSrc);
-const data = Uint8ClampedArray.from(jpgData.data);
-const blurhash = encode(data, jpgData.width, jpgData.height, 4, 4);
-
-const placeholder = blurhashToDataUri(blurhash);
+const placeholder = await getImagePlaceholder(src);
 ---
 
 <div class={cn(className, "flex flex-col items-center")}>
