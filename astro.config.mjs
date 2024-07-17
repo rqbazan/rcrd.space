@@ -13,14 +13,6 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  build: {
-    inlineStylesheets: "always",
-  },
-  vite: {
-    build: {
-      cssMinify: "lightningcss",
-    },
-  },
   integrations: [
     react(),
     tailwind({
