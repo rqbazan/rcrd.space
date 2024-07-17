@@ -27,6 +27,13 @@ const canonicalUrl = getCanonicalUrl(Astro.url);
   content="software engineer, nodejs, javascript, typescript, ricardo quiroz, pedidosya, riqra"
 />
 
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@rqbazan" />
+<meta name="twitter:creator" content="@rqbazan" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+
 <meta name="og:title" content={title} />
 <meta name="og:description" content={description} />
 <meta name="og:url" content={Astro.url} />
@@ -34,13 +41,6 @@ const canonicalUrl = getCanonicalUrl(Astro.url);
 <meta name="og:site_name" content="Ricardo Q. Bazan" />
 <meta name="og:locale" content="en" />
 <meta name="og:image" content={ogImageUrl} />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@rqbazan" />
-<meta name="twitter:creator" content="@rqbazan" />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={ogImageUrl} />
 
 <meta name="robots" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
