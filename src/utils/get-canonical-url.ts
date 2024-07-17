@@ -1,5 +1,5 @@
-export const BASE_PROD_URL = "https://rcrd.space";
+import { BASE_URL } from "./seo-config";
 
 export function getCanonicalUrl(url: URL) {
-  return `${BASE_PROD_URL}${url.pathname}`;
+  return `${BASE_URL}${url.pathname}`;
 }

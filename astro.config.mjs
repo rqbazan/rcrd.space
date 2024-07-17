@@ -3,10 +3,24 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
 import { defineConfig } from "astro/config";
+import { BASE_URL } from "./src/utils/seo-config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://rcrd.space",
+  site: BASE_URL,
+  compressHTML: true,
+  prefetch: true,
+  devToolbar: {
+    enabled: false,
+  },
+  build: {
+    inlineStylesheets: "always",
+  },
+  vite: {
+    build: {
+      cssMinify: "lightningcss",
+    },
+  },
   integrations: [
     react(),
     tailwind({
