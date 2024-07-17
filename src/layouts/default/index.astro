@@ -1,6 +1,7 @@
 ---
 import "~/ui/globals.css";
 import { getJsText } from "@rqbazan/set-initial-color-mode";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import { getCanonicalUrl } from "~/utils/get-canonical-url";
 import { getImageProps } from "~/utils/get-image-props";
 import Footer from "./components/footer.astro";
@@ -51,8 +52,9 @@ const canonicalUrl = getCanonicalUrl(Astro.url);
       type="font/woff2"
       crossorigin="anonymous"
     />
-
     <title>{title}</title>
+
+    <SpeedInsights />
   </head>
   <body>
     <section
