@@ -1,5 +1,6 @@
 ---
 import { cn } from "~/utils/cn";
+import { getExternalLinkProps } from "~/utils/get-external-link-props";
 
 interface Props {
   href: string;
@@ -15,6 +16,7 @@ const { class: className, href, ...otherProps } = Astro.props;
     "text-muted hover:text-wording transition-colors ease-in-out duration-300",
     className
   )}
+  {...getExternalLinkProps(href)}
   {...otherProps}
 >
   <slot />
