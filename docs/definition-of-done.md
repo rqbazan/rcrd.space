@@ -10,8 +10,8 @@
 - Quality
 
   - [x] Custom Font
-  - [ ] Responsive Images
-  - [ ] Blur Placeholder Images
+  - [x] Responsive Images
+  - [x] Blur Placeholder Images
   - [ ] Fluid Typography
 
 - SEO
