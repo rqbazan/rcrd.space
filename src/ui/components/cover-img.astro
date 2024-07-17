@@ -17,7 +17,7 @@ interface Props {
 const { class: className, src, description, ...otherProps } = Astro.props;
 
 let supportedSrc = src.replace(".webp", ".jpg");
-supportedSrc = supportedSrc.replace("upload/", "upload/w_400,h_300/");
+supportedSrc = supportedSrc.replace("upload/", "upload/w_200,h_150/");
 
 const jpgData = await getPixels(supportedSrc);
 const data = Uint8ClampedArray.from(jpgData.data);
