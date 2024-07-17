@@ -1,5 +1,7 @@
 ---
+import { Image } from "@unpic/astro";
 import { cn } from "~/utils/cn";
+import { getImagePlaceholder } from "~/utils/get-image-placeholder";
 
 interface Props {
   src: string;
@@ -11,14 +13,23 @@ interface Props {
 }
 
 const { class: className, src, description, ...otherProps } = Astro.props;
+const placeholder = await getImagePlaceholder(src);
 ---
 
 <div class={cn(className, "flex flex-col items-center")}>
-  <a href={src} target="_blank" rel="noreferrer" class="mb-3">
-    <div class="flex select-none md:border-8 border-[6px]">
-      <img {...otherProps} src={src} class="aspect-[4/3] object-cover" />
-    </div>
-  </a>
+  <div class="select-none w-full mb-3">
+    <a href={src} target="_blank" rel="noreferrer">
+      <Image
+        {...otherProps}
+        src={src}
+        class="md:border-8 border-[6px] aspect-[4/3] w-full h-full"
+        placeholder="blurhash"
+        background={placeholder}
+        priority
+        fetchpriority="high"
+      />
+    </a>
+  </div>
   <slot name="description">
     <span class="small text-muted">{description}</span>
   </slot>
