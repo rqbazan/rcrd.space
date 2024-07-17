@@ -2,7 +2,7 @@
 import Heading from "~/layouts/default/components/heading.astro";
 import CoverImg from "~/ui/components/cover-img.astro";
 import Li from "~/ui/components/li.astro";
-import { getImageProps } from "~/utils/get-image-props";
+import { getImageUrl } from "~/utils/get-image-url";
 import DefaultLayout from "../layouts/default/index.astro";
 
 export const prerender = true;
@@ -19,7 +19,7 @@ export const prerender = true;
     </Fragment>
   </Heading>
   <CoverImg
-    {...getImageProps("covers/uses-v4")}
+    src={getImageUrl("covers/uses-v4")}
     width={672}
     height={504}
     alt="My office 2021"
