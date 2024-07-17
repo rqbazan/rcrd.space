@@ -18,7 +18,10 @@ export default defineConfig({
       lastmod: new Date(),
     }),
   ],
-  output: "static",
+  // TODO change to static when astro/env is supported:
+  // The feature "astro:env getSecret" is experimental and subject to change (used by @astrojs/vercel/serverless).
+  // `output: "server"` or `output: "hybrid"` is required to use the serverless adapter.
+  output: "server",
   adapter: vercel({
     webAnalytics: {
       enabled: true,
