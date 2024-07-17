@@ -1,4 +1,8 @@
 ---
+import { Image } from "@unpic/astro";
+import { getPixels } from "@unpic/pixels";
+import { blurhashToDataUri } from "@unpic/placeholder";
+import { encode } from "blurhash";
 import { cn } from "~/utils/cn";
 
 interface Props {
@@ -11,14 +15,31 @@ interface Props {
 }
 
 const { class: className, src, description, ...otherProps } = Astro.props;
+
+let supportedSrc = src.replace(".webp", ".jpg");
+supportedSrc = supportedSrc.replace("upload/", "upload/w_400,h_300/");
+
+const jpgData = await getPixels(supportedSrc);
+const data = Uint8ClampedArray.from(jpgData.data);
+const blurhash = encode(data, jpgData.width, jpgData.height, 4, 4);
+
+const placeholder = blurhashToDataUri(blurhash);
 ---
 
 <div class={cn(className, "flex flex-col items-center")}>
-  <a href={src} target="_blank" rel="noreferrer" class="mb-3">
-    <div class="flex select-none md:border-8 border-[6px]">
-      <img {...otherProps} src={src} class="aspect-[4/3] object-cover" />
-    </div>
-  </a>
+  <div class="select-none w-full mb-3">
+    <a href={src} target="_blank" rel="noreferrer">
+      <Image
+        {...otherProps}
+        src={src}
+        class="md:border-8 border-[6px] aspect-[4/3] w-full h-full"
+        placeholder="blurhash"
+        background={placeholder}
+        priority
+        fetchpriority="high"
+      />
+    </a>
+  </div>
   <slot name="description">
     <span class="small text-muted">{description}</span>
   </slot>
