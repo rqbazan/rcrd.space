@@ -1,9 +1,9 @@
 ---
+import type { HTMLAttributes } from "astro/types";
 import { getExternalLinkProps } from "~/utils/get-external-link-props";
 
-interface Props {
+interface Props extends HTMLAttributes<"a"> {
   href: string;
-  class?: string;
 }
 
 const { href, ...otherProps } = Astro.props;
