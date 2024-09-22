@@ -1,5 +1,5 @@
 import { dateDiffInDays } from "~/utils/date-diff-in-days";
-import UINewTag from "../_components/new-tag.astro";
+import { NewTag as UINewTag } from "../_components/new-tag";
 
 interface NewTagProps {
   postedAt?: string;
@@ -18,5 +18,5 @@ function isNew(postedAt?: string) {
 }
 
 export function NewTag({ postedAt }: NewTagProps) {
-  return isNew(postedAt) ? <UINewTag class="ml-1 -mt-2" /> : null;
+  return isNew(postedAt) ? <UINewTag className="ml-1 -mt-2" /> : null;
 }
