@@ -1,9 +1,8 @@
 ---
 import kebabCase from "just-kebab-case";
 import AnchorIcon from "~/ui/components/anchor-icon.astro";
-import { dateDiffInDays } from "~/utils/date-diff-in-days";
-import NewTag from "./new-tag.astro";
-import TechTag from "./tech-tag.astro";
+import TechTag from "../_components/tech-tag.astro";
+import { NewTag } from "./new-tag";
 
 interface Props {
   projectName: string;
@@ -20,18 +19,6 @@ interface Props {
 
 const { projectName, postedAt, techs, links, class: className } = Astro.props;
 
-const MAX_DAYS_TO_BE_NEW = 30;
-
-function isNew(postedAt?: string) {
-  if (!postedAt) {
-    return false;
-  }
-
-  const diffInDays = dateDiffInDays(new Date(postedAt));
-
-  return diffInDays <= MAX_DAYS_TO_BE_NEW;
-}
-
 const htmlId = kebabCase(projectName.toLowerCase());
 ---
 
@@ -40,7 +27,7 @@ const htmlId = kebabCase(projectName.toLowerCase());
     <a href={`#${htmlId}`}>
       <div class="flex items-center cursor-pointer self-start">
         <h5 class="h5">{projectName}</h5>
-        {isNew(postedAt) && <NewTag class="ml-1 -mt-2" />}
+        <NewTag postedAt={postedAt} client:load />
       </div>
     </a>
     <p class="p mt-4">
