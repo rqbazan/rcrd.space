@@ -1,20 +1,22 @@
-import { cn } from "~/utils/cn";
+import { NewTag as UINewTag } from "~/ui/components/new-tag";
+import { dateDiffInDays } from "~/utils/date-diff-in-days";
 
-export interface NewTagProps {
-  className?: string;
+interface NewTagProps {
+  postedAt?: string;
 }
 
-export function NewTag({ className }: NewTagProps) {
-  return (
-    <div
-      className={cn(
-        "bg-cyan-300 text-gray-800 rounded-md inline-flex items-center justify-center px-1 py-0.5",
-        className,
-      )}
-    >
-      <span className="tiny uppercase translate-y-[0.05rem] font-semibold">
-        New
-      </span>
-    </div>
-  );
+const MAX_DAYS_TO_BE_NEW = 30;
+
+function isNew(postedAt?: string) {
+  if (!postedAt) {
+    return false;
+  }
+
+  const diffInDays = dateDiffInDays(new Date(postedAt));
+
+  return diffInDays <= MAX_DAYS_TO_BE_NEW;
+}
+
+export function NewTag({ postedAt }: NewTagProps) {
+  return isNew(postedAt) ? <UINewTag className="ml-1 -mt-2" /> : null;
 }
