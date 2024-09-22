@@ -12,8 +12,6 @@ function isNew(postedAt?: string) {
     return false;
   }
 
-  console.log("is new is evaluating", postedAt);
-
   const diffInDays = dateDiffInDays(new Date(postedAt));
 
   return diffInDays <= MAX_DAYS_TO_BE_NEW;
