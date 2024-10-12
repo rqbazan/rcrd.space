@@ -21,5 +21,11 @@ jobs:
       - name: 📦 Install dependencies
         run: bun install
 
+      - name: 🚀 Astro sync
+        run: bunx astro sync
+        env:
+          CLOUDINARY_CLOUD_NAME: "cloud_name"
+          CLOUDINARY_FOLDER_NAME: "folder_name"
+
       - name: 🔎 Static testing
         run: bun test:static
