@@ -1,6 +1,7 @@
 ---
-import { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon } from "astro-feather";
+import { GithubIcon, LinkedinIcon, MailIcon } from "astro-feather";
 import AnchorIcon from "~/ui/components/anchor-icon.astro";
+import XIcon from "~/ui/icons/x.astro";
 import { cn } from "~/utils/cn";
 
 const { class: className, ...otherProps } = Astro.props;
@@ -19,9 +20,9 @@ const contacts: Contact[] = [
     href: "https://github.com/rqbazan",
   },
   {
-    icon: TwitterIcon,
-    network: "twitter",
-    href: "https://twitter.com/rqbazan",
+    icon: XIcon,
+    network: "x",
+    href: "https://x.com/rqbazan",
   },
   {
     icon: LinkedinIcon,
