@@ -1,4 +1,7 @@
-import { env } from "~/env";
+import {
+  CLOUDINARY_CLOUD_NAME,
+  CLOUDINARY_FOLDER_NAME,
+} from "astro:env/server";
 
 type ImageUrlConfig = {
   format?: "webp" | "jpg" | "png";
@@ -10,10 +13,10 @@ const DEFAULT_CONFIG: ImageUrlConfig = {
 };
 
 export function getImageUrl(pathId: string, config?: ImageUrlConfig): string {
-  const fullPathId = `${env.CLOUDINARY_FOLDER_NAME}/${pathId}`;
+  const fullPathId = `${CLOUDINARY_FOLDER_NAME}/${pathId}`;
 
   return transformImageUrl(
-    `https://res.cloudinary.com/${env.CLOUDINARY_CLOUD_NAME}/image/upload/${fullPathId}.webp`,
+    `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${fullPathId}.webp`,
     config ?? DEFAULT_CONFIG,
   );
 }

@@ -2,7 +2,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import { BASE_URL } from "./src/utils/seo-config";
 
 // https://astro.build/config
@@ -24,13 +24,22 @@ export default defineConfig({
       lastmod: new Date(),
     }),
   ],
-  // TODO change to static when astro/env is supported:
-  // The feature "astro:env getSecret" is experimental and subject to change (used by @astrojs/vercel/serverless).
-  // `output: "server"` or `output: "hybrid"` is required to use the serverless adapter.
-  output: "server",
+  output: "static",
   adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
   }),
+  env: {
+    schema: {
+      CLOUDINARY_CLOUD_NAME: envField.string({
+        access: "public",
+        context: "server",
+      }),
+      CLOUDINARY_FOLDER_NAME: envField.string({
+        access: "public",
+        context: "server",
+      }),
+    },
+  },
 });
