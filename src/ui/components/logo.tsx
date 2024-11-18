@@ -15,7 +15,7 @@ export function Logo({ className, ...props }: LogoProps) {
       onClick={onToggle}
       className={cn(
         "animate-rainbow p-2 relative lg:scale-[1.45] inline-flex",
-        className
+        className,
       )}
     >
       <svg
