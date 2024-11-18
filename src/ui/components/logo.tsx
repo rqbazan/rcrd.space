@@ -15,7 +15,7 @@ export function Logo({ className, ...props }: LogoProps) {
       onClick={onToggle}
       className={cn(
         "animate-rainbow p-2 relative lg:scale-[1.45] inline-flex",
-        className,
+        className
       )}
     >
       <svg
@@ -29,8 +29,8 @@ export function Logo({ className, ...props }: LogoProps) {
       </svg>
       <span className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 text-black opacity-40">
         <svg
-          width="32"
-          height="32"
+          width="36"
+          height="36"
           viewBox="0 0 32 32"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
