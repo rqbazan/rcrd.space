@@ -4,6 +4,7 @@ import { getJsText } from "@rqbazan/set-initial-color-mode";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Footer from "./components/footer.astro";
 import Header from "./components/header.astro";
+import PostHog from "./components/post-hog.astro";
 import SEO from "./components/seo.astro";
 
 interface Props {
@@ -34,6 +35,8 @@ const { title } = Astro.props;
     />
 
     <SpeedInsights />
+
+    <PostHog />
   </head>
   <body>
     <section
