@@ -76,10 +76,11 @@ const canonicalUrl = getCanonicalUrl(Astro.url);
 <script is:inline>
   const { STORAGE_KEY, CUSTOM_EVENT_NAME, DARK } = __COLOR_MODE__;
 
+  const themeColorEl = document.querySelector("meta[name=theme-color]");
+
   function onColorModeChange(colorMode) {
-    document
-      .querySelector("meta[name=theme-color]")
-      .setAttribute("content", colorMode === DARK ? "#101010" : "#FFF6E3");
+    const newContent = colorMode === DARK ? "#101010" : "#FFF6E3";
+    themeColorEl.setAttribute("content", newContent);
   }
 
   document.addEventListener(CUSTOM_EVENT_NAME, (e) => {
