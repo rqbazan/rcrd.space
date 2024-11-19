@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # vercel output directory
 .vercel/
+
+# yalc
+.yalc/
+yalc.lock
