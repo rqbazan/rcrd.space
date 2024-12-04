@@ -4,7 +4,7 @@ import { encode } from "blurhash";
 import { transformImageUrl } from "./get-image-url";
 
 /**
- * @param src {string} - Cloudinary Image URL
+ * @param {string} src - Cloudinary Image URL
  * @returns {Promise<string>} - Blurhash Data URI
  */
 export async function getImagePlaceholder(src: string): Promise<string> {

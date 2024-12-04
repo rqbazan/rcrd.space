@@ -1,0 +1,21 @@
+---
+import { cn } from "~/utils/cn";
+
+interface Props {
+  description?: string;
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class={cn(className, "flex flex-col items-center")}>
+  <div class="select-none w-full mb-3">
+    <div class="md:border-8 border-[6px] aspect-[4/3]">
+      <slot name="image" />
+    </div>
+  </div>
+  <p class="small text-muted">
+    <slot name="description" />
+  </p>
+</div>

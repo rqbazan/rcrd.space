@@ -6,11 +6,11 @@ import {
   PackageIcon,
   Edit2Icon as PencilIcon,
 } from "astro-feather";
+import { Novatrix } from "uvcanvas";
 import Heading from "~/layouts/default/components/heading.astro";
 import DefaultLayout from "~/layouts/default/index.astro";
 import Anchor from "~/ui/components/anchor.astro";
-import CoverImg from "~/ui/components/cover-img.astro";
-import { getImageUrl } from "~/utils/get-image-url";
+import CoverImgContainer from "~/ui/components/cover-img-container.astro";
 import ProjectPost from "./_components/project-post.astro";
 ---
 
@@ -23,26 +23,17 @@ import ProjectPost from "./_components/project-post.astro";
     </Fragment>
   </Heading>
 
-  <CoverImg
-    src={getImageUrl("covers/projects-v3")}
-    alt="Abstract art"
-    width={672}
-    height={504}
-    class="mb-9"
-  >
-    <Fragment slot="description">
-      <p class="small text-muted">
-        Photo by
-        <Anchor
-          href="https://unsplash.com/@sebastiansvenson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-          >Sebastian Svenson</Anchor
-        > on <Anchor
-          href="https://unsplash.com/photos/blue-and-white-round-illustration-LpbyDENbQQg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-          >Unsplash</Anchor
-        >
-      </p>
+  <CoverImgContainer class="mb-9">
+    <Fragment slot="image">
+      <Novatrix client:load />
     </Fragment>
-  </CoverImg>
+    <Fragment slot="description">
+      Novatrix by
+      <Anchor href="https://troyni.com">Troy Ni</Anchor> on <Anchor
+        href="https://uvcanvas.com">uvcanvas.com</Anchor
+      >
+    </Fragment>
+  </CoverImgContainer>
 
   <div class="flex flex-col space-y-8">
     <ProjectPost

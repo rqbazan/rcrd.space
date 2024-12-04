@@ -1,8 +1,10 @@
 ---
 import Typewriter from "typewriter-effect";
+import { Opulento } from "uvcanvas";
 import Heading from "~/layouts/default/components/heading.astro";
 import DefaultLayout from "~/layouts/default/index.astro";
 import Anchor from "~/ui/components/anchor.astro";
+import CoverImgContainer from "~/ui/components/cover-img-container.astro";
 ---
 
 <DefaultLayout title="Ricardo Q. Bazan | Software Engineer">
@@ -25,4 +27,18 @@ import Anchor from "~/ui/components/anchor.astro";
       found my personal place on the internet.
     </Fragment>
   </Heading>
+
+  <CoverImgContainer class="mb-9">
+    <Fragment slot="image">
+      <Opulento client:load />
+    </Fragment>
+    <Fragment slot="description">
+      <p class="small text-muted">
+        Opulento by
+        <Anchor href="https://troyni.com">Troy Ni</Anchor> on <Anchor
+          href="https://uvcanvas.com">uvcanvas.com</Anchor
+        >
+      </p>
+    </Fragment>
+  </CoverImgContainer>
 </DefaultLayout>
