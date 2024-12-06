@@ -11,7 +11,6 @@ import Heading from "~/layouts/default/components/heading.astro";
 import DefaultLayout from "~/layouts/default/index.astro";
 import Anchor from "~/ui/components/anchor.astro";
 import ConverCanva from "~/ui/components/conver-canva.astro";
-import CoverImgContainer from "~/ui/components/cover-img-container.astro";
 import { getImageUrl } from "~/utils/get-image-url";
 import ProjectPost from "./_components/project-post.astro";
 ---
@@ -25,12 +24,10 @@ import ProjectPost from "./_components/project-post.astro";
     </Fragment>
   </Heading>
 
-  <CoverImgContainer class="mb-9">
-    <Fragment slot="image">
-      <ConverCanva src={getImageUrl("covers/novatrix-v2")}>
-        {/* @ts-expect-error */}
-        <Novatrix id="canva-container" client:load />
-      </ConverCanva>
+  <ConverCanva class="mb-9" src={getImageUrl("covers/novatrix-v2")}>
+    <Fragment slot="canva">
+      {/* @ts-expect-error */}
+      <Novatrix id="canva-container" client:load />
     </Fragment>
     <Fragment slot="description">
       Novatrix by
@@ -38,7 +35,7 @@ import ProjectPost from "./_components/project-post.astro";
         href="https://uvcanvas.com">uvcanvas.com</Anchor
       >
     </Fragment>
-  </CoverImgContainer>
+  </ConverCanva>
 
   <div class="flex flex-col space-y-8">
     <ProjectPost
