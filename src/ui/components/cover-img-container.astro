@@ -1,5 +1,6 @@
 ---
 import { cn } from "~/utils/cn";
+import ImgFrame from "./img-frame.astro";
 
 interface Props {
   description?: string;
@@ -11,9 +12,7 @@ const { class: className } = Astro.props;
 
 <div class={cn(className, "flex flex-col items-center")}>
   <div class="select-none w-full mb-3">
-    <div class="md:border-8 border-[6px] aspect-[4/3]">
-      <slot name="image" />
-    </div>
+    <slot name="image" />
   </div>
   <p class="small text-muted">
     <slot name="description" />

@@ -2,6 +2,7 @@
 import { Image } from "@unpic/astro";
 import { getImagePlaceholder } from "~/utils/get-image-placeholder";
 import CoverImgContainer from "./cover-img-container.astro";
+import ImgFrame from "./img-frame.astro";
 
 interface Props {
   src: string;
@@ -17,16 +18,19 @@ const placeholder = await getImagePlaceholder(src);
 
 <CoverImgContainer class={className}>
   <Fragment slot="image">
-    <a href={src} target="_blank" rel="noreferrer" class="w-full h-full">
-      <Image
-        {...otherProps}
-        src={src}
-        placeholder="blurhash"
-        background={placeholder}
-        priority
-        fetchpriority="high"
-      />
-    </a>
+    <ImgFrame>
+      <a href={src} target="_blank" rel="noreferrer" class="w-full h-full">
+        <Image
+          {...otherProps}
+          src={src}
+          placeholder="blurhash"
+          background={placeholder}
+          priority
+          fetchpriority="high"
+          class="aspect-[4/3] w-full h-full"
+        />
+      </a>
+    </ImgFrame>
   </Fragment>
   <Fragment slot="description">
     <slot name="description" />
