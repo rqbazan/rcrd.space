@@ -71,6 +71,9 @@ const config = {
         small: "0.75rem",
         tiny: "0.5rem",
       },
+      aspectRatio: {
+        cover: "4/3",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

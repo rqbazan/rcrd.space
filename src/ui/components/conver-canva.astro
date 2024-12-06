@@ -1,6 +1,5 @@
 ---
 import { Image } from "@unpic/astro";
-import { Opulento } from "uvcanvas";
 import { getImagePlaceholder } from "~/utils/get-image-placeholder";
 import CoverImgContainer from "./cover-img-container.astro";
 import ImgFrame from "./img-frame.astro";
@@ -16,15 +15,9 @@ const placeholder = await getImagePlaceholder(src);
 
 <CoverImgContainer class={className}>
   <Fragment slot="image">
-    <ImgFrame class="aspect-[4/3] relative">
-      <slot id="canva-container" />
-      <a
-        id="image-link"
-        href={src}
-        target="_blank"
-        rel="noreferrer"
-        class="w-full h-full absolute inset-0"
-      >
+    <ImgFrame class="aspect-cover relative">
+      <slot name="canva" id="canva-container" />
+      <div id="image-container" class="w-full h-full absolute inset-0">
         <Image
           src={src}
           width={672}
@@ -33,9 +26,9 @@ const placeholder = await getImagePlaceholder(src);
           background={placeholder}
           priority
           fetchpriority="high"
-          class="aspect-[4/3] w-full h-full"
+          class="aspect-cover w-full h-full"
         />
-      </a>
+      </div>
     </ImgFrame>
   </Fragment>
   <Fragment slot="description">
@@ -51,9 +44,9 @@ const placeholder = await getImagePlaceholder(src);
       if ("querySelector" in target) {
         const canvas = (target as HTMLElement).querySelector("canvas");
         if (canvas) {
-          const imgLinkEl = document.getElementById("image-link");
-          if (imgLinkEl) {
-            imgLinkEl.style.opacity = "0";
+          const containerEl = document.getElementById("image-container");
+          if (containerEl) {
+            containerEl.style.opacity = "0";
           }
           observer.disconnect();
         }

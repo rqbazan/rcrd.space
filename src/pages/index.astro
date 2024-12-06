@@ -30,20 +30,16 @@ import { getImageUrl } from "~/utils/get-image-url";
     </Fragment>
   </Heading>
 
-  <CoverImgContainer>
-    <Fragment slot="image">
-      <CoverCanva src={getImageUrl("covers/opulento-v2")}>
-        {/* @ts-expect-error */}
-        <Opulento id="canva-container" client:load />
-      </CoverCanva>
+  <CoverCanva src={getImageUrl("covers/opulento-v2")}>
+    <Fragment slot="canva">
+      {/* @ts-expect-error */}
+      <Opulento id="canva-container" client:load />
     </Fragment>
     <Fragment slot="description">
-      <p class="small text-muted">
-        Opulento by
-        <Anchor href="https://troyni.com">Troy Ni</Anchor> on <Anchor
-          href="https://uvcanvas.com">uvcanvas.com</Anchor
-        >
-      </p>
+      Opulento by
+      <Anchor href="https://troyni.com">Troy Ni</Anchor> on <Anchor
+        href="https://uvcanvas.com">uvcanvas.com</Anchor
+      >
     </Fragment>
-  </CoverImgContainer>
+  </CoverCanva>
 </DefaultLayout>
