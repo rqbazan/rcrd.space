@@ -1,0 +1,68 @@
+---
+import { Image } from "@unpic/astro";
+import { Opulento } from "uvcanvas";
+import { getImagePlaceholder } from "~/utils/get-image-placeholder";
+import CoverImgContainer from "./cover-img-container.astro";
+import ImgFrame from "./img-frame.astro";
+
+interface Props {
+  src: string;
+  class?: string;
+}
+
+const { src, class: className } = Astro.props;
+const placeholder = await getImagePlaceholder(src);
+---
+
+<CoverImgContainer class={className}>
+  <Fragment slot="image">
+    <ImgFrame class="aspect-[4/3] relative">
+      <slot id="canva-container" />
+      <a
+        id="image-link"
+        href={src}
+        target="_blank"
+        rel="noreferrer"
+        class="w-full h-full absolute inset-0"
+      >
+        <Image
+          src={src}
+          width={672}
+          height={504}
+          placeholder="blurhash"
+          background={placeholder}
+          priority
+          fetchpriority="high"
+          class="aspect-[4/3] w-full h-full"
+        />
+      </a>
+    </ImgFrame>
+  </Fragment>
+  <Fragment slot="description">
+    <slot name="description" />
+  </Fragment>
+</CoverImgContainer>
+
+<script>
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      const { target } = mutation;
+
+      if ("querySelector" in target) {
+        const canvas = (target as HTMLElement).querySelector("canvas");
+        if (canvas) {
+          const imgLinkEl = document.getElementById("image-link");
+          if (imgLinkEl) {
+            imgLinkEl.style.opacity = "0";
+          }
+          observer.disconnect();
+        }
+      }
+    });
+  });
+
+  const containerEl = document.getElementById("canva-container");
+  if (containerEl) {
+    observer.observe(containerEl, { childList: true, subtree: true });
+  }
+</script>

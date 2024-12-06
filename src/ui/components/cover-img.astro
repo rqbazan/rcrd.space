@@ -1,36 +1,38 @@
 ---
 import { Image } from "@unpic/astro";
-import { cn } from "~/utils/cn";
 import { getImagePlaceholder } from "~/utils/get-image-placeholder";
+import CoverImgContainer from "./cover-img-container.astro";
+import ImgFrame from "./img-frame.astro";
 
 interface Props {
   src: string;
   alt: string;
-  description?: string;
   class?: string;
   width: number;
   height: number;
 }
 
-const { class: className, src, description, ...otherProps } = Astro.props;
+const { class: className, src, ...otherProps } = Astro.props;
 const placeholder = await getImagePlaceholder(src);
 ---
 
-<div class={cn(className, "flex flex-col items-center")}>
-  <div class="select-none w-full mb-3">
-    <a href={src} target="_blank" rel="noreferrer">
-      <Image
-        {...otherProps}
-        src={src}
-        class="md:border-8 border-[6px] aspect-[4/3] w-full h-full"
-        placeholder="blurhash"
-        background={placeholder}
-        priority
-        fetchpriority="high"
-      />
-    </a>
-  </div>
-  <slot name="description">
-    <span class="small text-muted">{description}</span>
-  </slot>
-</div>
+<CoverImgContainer class={className}>
+  <Fragment slot="image">
+    <ImgFrame>
+      <a href={src} target="_blank" rel="noreferrer" class="w-full h-full">
+        <Image
+          {...otherProps}
+          src={src}
+          placeholder="blurhash"
+          background={placeholder}
+          priority
+          fetchpriority="high"
+          class="aspect-[4/3] w-full h-full"
+        />
+      </a>
+    </ImgFrame>
+  </Fragment>
+  <Fragment slot="description">
+    <slot name="description" />
+  </Fragment>
+</CoverImgContainer>
