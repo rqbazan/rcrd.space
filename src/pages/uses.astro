@@ -1,5 +1,6 @@
 ---
 import Heading from "~/layouts/default/components/heading.astro";
+import Anchor from "~/ui/components/anchor.astro";
 import CoverImg from "~/ui/components/cover-img.astro";
 import Li from "~/ui/components/li.astro";
 import { getImageUrl } from "~/utils/get-image-url";
@@ -41,15 +42,27 @@ import DefaultLayout from "../layouts/default/index.astro";
   <h3 class="h3 mb-8 mt-9">Coding</h3>
   <ul class="ml-3 space-y-2">
     <Li>Visual Studio Code</Li>
-    <Li>iTerm</Li>
-    <Li>JetBrains DataGrip</Li>
-    <Li>Docker Desktop</Li>
-    <Li>Arc</Li>
     <Li>Github Desktop</Li>
+    <Li>
+      <Anchor href="https://ghostty.org">Ghostty</Anchor>
+    </Li>
+    <Li>JetBrains DataGrip</Li>
+    <Li>
+      <Anchor href="https://proxyman.com">Proxyman</Anchor>
+    </Li>
+    <Li>
+      <Anchor href="https://httpie.io">Httpie</Anchor>
+    </Li>
+    <Li>
+      <Anchor href="https://lmstudio.ai">LM Studio</Anchor>
+    </Li>
+    <Li>Docker</Li>
+    <Li>Arc</Li>
   </ul>
   <h3 class="h3 mb-8 mt-9">Other</h3>
   <ul class="ml-3 space-y-2">
     <Li>Kindle Paperwhite 10th generation 8GB</Li>
     <Li>Nintendo Switch 2019</Li>
+    <Li>Play Station 5 Slim Standard</Li>
   </ul>
 </DefaultLayout>
