@@ -27,7 +27,8 @@
   --breakpoint-2xl: 1536px;
 
   --font-inherit: inherit;
-  --font-sans: "IBM Plex Sans", "ui-sans-serif", "system-ui", "-apple-system",
+  --font-sans:
+    "IBM Plex Sans", "ui-sans-serif", "system-ui", "-apple-system",
     "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
     "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
@@ -41,7 +42,7 @@
   --text-small: 0.75rem;
   --text-tiny: 0.5rem;
 
-  --aspect-cover: 4/3;
+  --aspect-cover: 4 / 3;
 }
 
 @layer base {
