@@ -1,7 +1,7 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, envField } from "astro/config";
 import { BASE_URL } from "./src/utils/seo-config";
 
@@ -15,10 +15,6 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    tailwind({
-      applyBaseStyles: false,
-      nesting: true,
-    }),
     sitemap({
       changefreq: "daily",
       lastmod: new Date(),
@@ -41,5 +37,8 @@ export default defineConfig({
         context: "server",
       }),
     },
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });
