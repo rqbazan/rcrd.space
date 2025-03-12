@@ -28,4 +28,4 @@ jobs:
           CLOUDINARY_FOLDER_NAME: "folder_name"
 
       - name: 🔎 Static testing
-        run: bun test:static
+        run: bunx rr test:static

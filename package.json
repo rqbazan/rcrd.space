@@ -6,12 +6,7 @@
     "preview": "astro preview",
     "build": "astro check && astro build",
     "dev": "astro dev",
-    "check:format": "biome format",
-    "check:lint": "biome lint",
-    "check:types": "tsc --noEmit",
-    "fix:format": "biome format --write",
-    "fix:lint": "biome lint --write",
-    "test:static": "run-p check:*"
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -23,6 +18,7 @@
     "@unpic/astro": "^0.0.46",
     "@unpic/pixels": "^1.2.2",
     "@unpic/placeholder": "^0.1.2",
+    "@variableland/run-run": "^0.1.3",
     "@vercel/speed-insights": "^1.0.12",
     "astro": "5.0.0-beta.4",
     "astro-feather": "^1.0.0",
@@ -43,7 +39,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@variableland/biome-config": "^0.0.1",
-    "npm-run-all": "^4.1.5",
+    "husky": "^9.1.7",
     "typescript": "^5.5.3"
   }
 }
