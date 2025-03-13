@@ -1,7 +1,4 @@
-import {
-  CLOUDINARY_CLOUD_NAME,
-  CLOUDINARY_FOLDER_NAME,
-} from "astro:env/server";
+import { CLOUDINARY_CLOUD_NAME, CLOUDINARY_FOLDER_NAME } from "astro:env/server";
 
 type ImageUrlConfig = {
   format?: "webp" | "jpg" | "png";
@@ -21,10 +18,7 @@ export function getImageUrl(pathId: string, config?: ImageUrlConfig): string {
   );
 }
 
-export function transformImageUrl(
-  _src: string,
-  _config: ImageUrlConfig,
-): string {
+export function transformImageUrl(_src: string, _config: ImageUrlConfig): string {
   const config = { ...DEFAULT_CONFIG, ..._config };
   let src = `${_src}`;
 

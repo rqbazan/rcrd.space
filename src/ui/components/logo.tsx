@@ -130,10 +130,7 @@ export function Logo({ className, ...props }: LogoProps) {
       {...props}
       type="button"
       onClick={onToggle}
-      className={cn(
-        "flex justify-center items-center p-0 size-16 lg:size-20",
-        className,
-      )}
+      className={cn("flex justify-center items-center p-0 size-16 lg:size-20", className)}
     >
       <AnimatedRLogo />
     </button>

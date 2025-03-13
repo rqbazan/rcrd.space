@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --wording: rgb(31, 41, 55);
@@ -14,6 +12,37 @@
   --background: rgb(16, 16, 16);
   --muted: rgb(156, 163, 175);
   --selection: rgb(255, 167, 60);
+}
+
+@theme {
+  --color-wording: var(--wording);
+  --color-background: var(--background);
+  --color-muted: var(--muted);
+  --color-selection: var(--selection);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --font-inherit: inherit;
+  --font-sans:
+    "IBM Plex Sans", "ui-sans-serif", "system-ui", "-apple-system",
+    "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
+    "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  --text-h1: 2.25rem;
+  --text-h2: 2rem;
+  --text-h3: 1.5rem;
+  --text-h4: 1.25rem;
+  --text-h5: 0.8125rem;
+  --text-p: 0.875rem;
+  --text-small: 0.75rem;
+  --text-tiny: 0.5rem;
+
+  --aspect-cover: 4 / 3;
 }
 
 @layer base {
