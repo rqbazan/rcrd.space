@@ -12,9 +12,7 @@ export function NewTag({ className }: NewTagProps) {
         className,
       )}
     >
-      <span className="tiny uppercase translate-y-[0.05rem] font-semibold">
-        New
-      </span>
+      <span className="tiny uppercase translate-y-[0.05rem] font-semibold">New</span>
     </div>
   );
 }

@@ -6,12 +6,7 @@
     "preview": "astro preview",
     "build": "astro check && astro build",
     "dev": "astro dev",
-    "check:fmt": "biome format",
-    "check:lint": "biome lint",
-    "check:types": "tsc --noEmit",
-    "fix:fmt": "biome format --write",
-    "fix:lint": "biome lint --write",
-    "test:static": "run-p check:*"
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -43,7 +38,9 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@variableland/biome-config": "^0.0.4",
-    "npm-run-all": "^4.1.5",
+    "@variableland/run-run": "^0.1.6",
+    "husky": "^9.1.7",
     "typescript": "^5.8.2"
-  }
+  },
+  "trustedDependencies": ["@biomejs/biome", "@variableland/run-run", "@vercel/speed-insights"]
 }

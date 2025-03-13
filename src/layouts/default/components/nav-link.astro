@@ -10,8 +10,7 @@ interface Props {
 const { href, className } = Astro.props;
 
 // Due to https://github.com/withastro/astro/issues/4252
-const isSelected =
-  Astro.url.pathname === href || Astro.url.pathname === `${href}/`;
+const isSelected = Astro.url.pathname === href || Astro.url.pathname === `${href}/`;
 ---
 
 <a

@@ -8,10 +8,7 @@ interface ImportMeta {
 }
 
 declare let posthog: {
-  init: (
-    token: string,
-    config: { api_host: string; person_profiles: string },
-  ) => void;
+  init: (token: string, config: { api_host: string; person_profiles: string }) => void;
   capture(event: string, properties?: Record<string, unknown>): void;
 };
 
