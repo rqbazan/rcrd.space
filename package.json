@@ -38,7 +38,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@variableland/biome-config": "^0.0.4",
-    "@variableland/run-run": "^0.1.6",
+    "@variableland/run-run": "^0.2.1",
     "husky": "^9.1.7",
     "typescript": "^5.8.2"
   },

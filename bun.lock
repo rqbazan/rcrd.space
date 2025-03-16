@@ -33,7 +33,7 @@
         "@types/react": "^19.0.10",
         "@types/react-dom": "^19.0.4",
         "@variableland/biome-config": "^0.0.4",
-        "@variableland/run-run": "^0.1.6",
+        "@variableland/run-run": "^0.2.1",
         "husky": "^9.1.7",
         "typescript": "^5.8.2",
       },
@@ -403,7 +403,7 @@
 
     "@variableland/biome-config": ["@variableland/biome-config@0.0.4", "", {}, "sha512-zDWFU3rJ4F82qq2nuZmpOTw2tBU29uRD3llCAbzvGpsuvD2Uwqiu3/UE2uelMKLLAPIG+UlAAmVUEqOLvmsIkA=="],
 
-    "@variableland/run-run": ["@variableland/run-run@0.1.6", "", { "dependencies": { "zx": "^8.4.0" }, "bin": { "rr": "bin", "run-run": "bin" } }, "sha512-rrYauUPkI5hp7a8Z6uju5sr2MGLn/n/sPyp4Urobje/aN+A7h3dzSzrcg0suf3Zios2y+6S0PFQiYYmRwl/zPw=="],
+    "@variableland/run-run": ["@variableland/run-run@0.2.1", "", { "dependencies": { "zx": "^8.4.0" }, "peerDependencies": { "@biomejs/biome": "1.9.4" }, "bin": { "rr": "bin", "run-run": "bin" } }, "sha512-lZAh03EDIleYMe0I0+Up2gGw+S5A0SBQ4FLLQHIY0gYphoMQQTuo/9PXpHWmJutainMt4x3uYKPTlLWDdgWABA=="],
 
     "@vercel/analytics": ["@vercel/analytics@1.5.0", "", { "peerDependencies": { "@remix-run/react": "^2", "@sveltejs/kit": "^1 || ^2", "next": ">= 13", "react": "^18 || ^19 || ^19.0.0-rc", "svelte": ">= 4", "vue": "^3", "vue-router": "^4" }, "optionalPeers": ["@remix-run/react", "@sveltejs/kit", "next", "react", "svelte", "vue", "vue-router"] }, "sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g=="],
 
