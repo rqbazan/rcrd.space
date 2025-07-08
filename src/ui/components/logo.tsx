@@ -7,12 +7,7 @@ export interface LogoProps {
 
 function AnimatedRLogo() {
   return (
-    <svg
-      className="w-full h-full"
-      viewBox="11 9 18 22"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg className="w-full h-full" viewBox="11 9 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>Animated R logo</title>
       <defs>
         <filter id="glitch1" x="-10%" y="-10%" width="120%" height="120%">
@@ -34,12 +29,7 @@ function AnimatedRLogo() {
               calcMode="discrete"
             />
           </feOffset>
-          <feColorMatrix
-            in="red"
-            type="matrix"
-            values="1 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.7 0"
-            result="red-channel"
-          />
+          <feColorMatrix in="red" type="matrix" values="1 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.7 0" result="red-channel" />
         </filter>
         <filter id="glitch2" x="-10%" y="-10%" width="120%" height="120%">
           <feOffset in="SourceGraphic" dx="-1.5" dy="1" result="cyan">
@@ -60,12 +50,7 @@ function AnimatedRLogo() {
               calcMode="discrete"
             />
           </feOffset>
-          <feColorMatrix
-            in="cyan"
-            type="matrix"
-            values="0 0 0 0 0   0 1 0 0 0   0 0 1 0 0  0 0 0 0.7 0"
-            result="cyan-channel"
-          />
+          <feColorMatrix in="cyan" type="matrix" values="0 0 0 0 0   0 1 0 0 0   0 0 1 0 0  0 0 0 0.7 0" result="cyan-channel" />
         </filter>
       </defs>
 
