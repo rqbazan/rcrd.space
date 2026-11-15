@@ -12,10 +12,7 @@ import ProjectPost from "./_components/project-post.astro";
 <DefaultLayout title="Projects | Ricardo Q. Bazan">
   <Heading>
     <Fragment slot="title">Projects</Fragment>
-    <Fragment slot="content">
-      Here's a list of my open source projects writen mostly using JavaScript
-      and TypeScript.
-    </Fragment>
+    <Fragment slot="content"> Here's a list of my open source projects writen mostly using JavaScript and TypeScript. </Fragment>
   </Heading>
 
   <ConverCanva class="mb-9" src={getImageUrl("covers/novatrix-v2")}>
@@ -25,9 +22,8 @@ import ProjectPost from "./_components/project-post.astro";
     </Fragment>
     <Fragment slot="description">
       Novatrix by
-      <Anchor href="https://troyni.com">Troy Ni</Anchor> on <Anchor
-        href="https://uvcanvas.com">uvcanvas.com</Anchor
-      >
+      <Anchor href="https://troyni.com">Troy Ni</Anchor>
+      on <Anchor href="https://uvcanvas.com">uvcanvas.com</Anchor>
     </Fragment>
   </ConverCanva>
 
@@ -44,9 +40,7 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       My solutions for the{" "}
-      <Anchor href="https://adventofcode.com/2023/about">
-        Advent of Code
-      </Anchor>. Feliz Navidad, Buon Natale, Merry Christmas 🎄
+      <Anchor href="https://adventofcode.com/2023/about"> Advent of Code </Anchor>. Feliz Navidad, Buon Natale, Merry Christmas 🎄
     </ProjectPost>
     <ProjectPost
       projectName="Defer It"
@@ -59,10 +53,8 @@ import ProjectPost from "./_components/project-post.astro";
         },
       ]}
     >
-      This is a simple serverless function that defers a request for a given
-      amount of time. For instance: <Anchor
-        href="https://defer-it.vercel.app/api/v1?waitFor=3000&url=https://example.com"
-      >
+      This is a simple serverless function that defers a request for a given amount of time. For instance:
+      <Anchor href="https://defer-it.vercel.app/api/v1?waitFor=3000&url=https://example.com">
         https://defer-it.vercel.app/api/v1?waitFor=3000&url=https://example.com
       </Anchor>
     </ProjectPost>
@@ -82,16 +74,9 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       A simple API to generate images for the{" "}
-      <Anchor
-        href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807"
-      >
-        PedidosYa
-      </Anchor>{" "}
-      repositories, supporting repository covers and storybook logos. Powered by
-      the awesome{" "}
-      <Anchor href="https://vercel.com/templates/next.js/og-image-generation">
-        Open Graph Image Generator template.
-      </Anchor>
+      <Anchor href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807"> PedidosYa </Anchor>{" "}
+      repositories, supporting repository covers and storybook logos. Powered by the awesome{" "}
+      <Anchor href="https://vercel.com/templates/next.js/og-image-generation"> Open Graph Image Generator template. </Anchor>
     </ProjectPost>
     <ProjectPost
       projectName="Ultra Fresh Sorting"
@@ -108,14 +93,9 @@ import ProjectPost from "./_components/project-post.astro";
         },
       ]}
     >
-      Takes a list of strings and sorts them by alphabetical order, but it uses
-      a priority algorithm to sort the items that are more important to the
-      user. The name was inspired by the project in{" "}
-      <Anchor
-        href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807"
-      >
-        PedidosYa.
-      </Anchor>
+      Takes a list of strings and sorts them by alphabetical order, but it uses a priority algorithm to sort the items that are
+      more important to the user. The name was inspired by the project in{" "}
+      <Anchor href="https://apps.apple.com/pe/app/pedidosya-delivery-app/id490099807"> PedidosYa. </Anchor>
     </ProjectPost>
     <ProjectPost
       projectName="Cometa Challenge"
@@ -129,9 +109,7 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       The solution for{" "}
-      <Anchor
-        href="https://cometa.notion.site/48h-React-Frontend-Challenge-faaa3f5ff28a408799f374b6279793d8"
-      >
+      <Anchor href="https://cometa.notion.site/48h-React-Frontend-Challenge-faaa3f5ff28a408799f374b6279793d8">
         the Cometa challenge
       </Anchor>
       , in order to get the Frontend Engineer position of the company.
@@ -139,15 +117,7 @@ import ProjectPost from "./_components/project-post.astro";
     <ProjectPost
       projectName="Ravn Challenge"
       postedAt="2022-04-03"
-      techs={[
-        "Next.js",
-        "TypeScript",
-        "Cypress",
-        "Storybook",
-        "TailwindCSS",
-        "GraphQL",
-        "SemanticRelease",
-      ]}
+      techs={["Next.js", "TypeScript", "Cypress", "Storybook", "TailwindCSS", "GraphQL", "SemanticRelease"]}
       links={[
         {
           href: "https://github.com/rqbazan/ravn-challenge-v2-ricardo-q-bazan#readme",
@@ -164,11 +134,7 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       The solution for{" "}
-      <Anchor
-        href="https://docs.google.com/document/d/1hPVfun_1mxDokJ-qrFqIaUT5EfrYCL5X0pLGioEcDXk"
-      >
-        the RAVN challenge
-      </Anchor>
+      <Anchor href="https://docs.google.com/document/d/1hPVfun_1mxDokJ-qrFqIaUT5EfrYCL5X0pLGioEcDXk"> the RAVN challenge </Anchor>
       , in order to get the Software Engineer position of the company.
     </ProjectPost>
     <ProjectPost
@@ -187,22 +153,14 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       After reading{" "}
-      <Anchor href="https://www.joshwcomeau.com/react/dark-mode/">
-        The Quest for the Perfect Dark Mode
-      </Anchor>{" "}
+      <Anchor href="https://www.joshwcomeau.com/react/dark-mode/"> The Quest for the Perfect Dark Mode </Anchor>{" "}
       by{" "}
       <Anchor href="https://x.com/JoshWComeau"> Josh Comeau </Anchor>
-      , I've created a reusable solution for the dark-mode-flick-problem. My own
-      website use this solution.
+      , I've created a reusable solution for the dark-mode-flick-problem. My own website use this solution.
     </ProjectPost>
     <ProjectPost
       projectName="Toggled Library"
-      techs={[
-        "React.js",
-        "TypeScript",
-        "ReactTestingLibrary",
-        "SemanticRelease",
-      ]}
+      techs={["React.js", "TypeScript", "ReactTestingLibrary", "SemanticRelease"]}
       links={[
         {
           href: "https://github.com/rqbazan/toggled#readme",
@@ -215,11 +173,8 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       Tiny library to use{" "}
-      <Anchor href="https://martinfowler.com/articles/feature-toggles.html">
-        feature flags
-      </Anchor>{" "}
-      in React. Get features by its slug identifier or get a binary output using
-      flag queries.
+      <Anchor href="https://martinfowler.com/articles/feature-toggles.html"> feature flags </Anchor>{" "}
+      in React. Get features by its slug identifier or get a binary output using flag queries.
     </ProjectPost>
     <ProjectPost
       projectName="Weeks of my Life"
@@ -236,21 +191,13 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       Based on the poster of{" "}
-      <Anchor href="https://www.weeksofmylife.com">
-        www.weeksofmylife.com
-      </Anchor>
-      . It's a calculator to see how many weeks of life you just consumed. Based
-      on the average life expectancy for some country: USA, Italy and Peru.
+      <Anchor href="https://www.weeksofmylife.com"> www.weeksofmylife.com </Anchor>
+      . It's a calculator to see how many weeks of life you just consumed. Based on the average life expectancy for some country:
+      USA, Italy and Peru.
     </ProjectPost>
     <ProjectPost
       projectName="My React CV"
-      techs={[
-        "Vite.js",
-        "ReactPDF",
-        "Airtable",
-        "LambdaFunction",
-        "TypeScript",
-      ]}
+      techs={["Vite.js", "ReactPDF", "Airtable", "LambdaFunction", "TypeScript"]}
       links={[
         {
           href: "https://github.com/rqbazan/resume#readme",
@@ -263,20 +210,12 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       I created my CV using{" "}
-      <Anchor href="https://react-pdf.org/">ReactPDF</Anchor>, which is another
-      renderer instead of ReactDOM. The information is saved in my personal
-      Airtable and consumed in real-time using a Vercel Lambda Function.
+      <Anchor href="https://react-pdf.org/">ReactPDF</Anchor>, which is another renderer instead of ReactDOM. The information is
+      saved in my personal Airtable and consumed in real-time using a Vercel Lambda Function.
     </ProjectPost>
     <ProjectPost
       projectName="Seach GraphQL Jobs"
-      techs={[
-        "Next.js",
-        "TailwindCSS",
-        "Codegen",
-        "Storybook",
-        "Apollo",
-        "TypeScript",
-      ]}
+      techs={["Next.js", "TailwindCSS", "Codegen", "Storybook", "Apollo", "TypeScript"]}
       links={[
         {
           href: "https://github.com/rqbazan/graphql-jobs#readme",
@@ -292,22 +231,13 @@ import ProjectPost from "./_components/project-post.astro";
         },
       ]}
     >
-      Application made fully with TypeScript, using Storybook for
-      component-driven development. Taking advance of client side Apollo
-      resolvers. Powered by{" "}
-      <Anchor href="https://api.graphql.jobs/">
-        the free GraphQL Jobs API.
-      </Anchor>
+      Application made fully with TypeScript, using Storybook for component-driven development. Taking advance of client side
+      Apollo resolvers. Powered by{" "}
+      <Anchor href="https://api.graphql.jobs/"> the free GraphQL Jobs API. </Anchor>
     </ProjectPost>
     <ProjectPost
       projectName="Prisma Anonymous Chat"
-      techs={[
-        "xstyled",
-        "Prisma",
-        "YogaGraphQL",
-        "Express",
-        "GraphQL Subscriptions",
-      ]}
+      techs={["xstyled", "Prisma", "YogaGraphQL", "Express", "GraphQL Subscriptions"]}
       links={[
         {
           href: "https://github.com/rqbazan/prisma-anonymous-chat#readme",
@@ -319,9 +249,8 @@ import ProjectPost from "./_components/project-post.astro";
         },
       ]}
     >
-      My first try with GraphQL subscriptions, not production ready. Powered by
-      Prisma v1.34 (v2 has no support for subscriptions). Go to the app root (/)
-      and get a new chat access.
+      My first try with GraphQL subscriptions, not production ready. Powered by Prisma v1.34 (v2 has no support for
+      subscriptions). Go to the app root (/) and get a new chat access.
     </ProjectPost>
     <ProjectPost
       projectName="Mr. Rubik"
@@ -343,11 +272,9 @@ import ProjectPost from "./_components/project-post.astro";
     >
       After watch{" "}
       <Anchor href="https://www.youtube.com/watch?v=1rP3nNY2hTo">
-        Animation and 3D in react-three-fiber (with Paul Henschel) — Learn With
-        Jason
+        Animation and 3D in react-three-fiber (with Paul Henschel) — Learn With Jason
       </Anchor>
-      , I decided to try to create this project just for fun, using The Rubik's cube
-      Doodle for inspiration.
+      , I decided to try to create this project just for fun, using The Rubik's cube Doodle for inspiration.
     </ProjectPost>
     <ProjectPost
       projectName="AIMO Challenge"
@@ -364,9 +291,7 @@ import ProjectPost from "./_components/project-post.astro";
       ]}
     >
       The solution for{" "}
-      <Anchor href="https://github.com/aimo/prueba-frontend#readme">
-        the AIMO challenge
-      </Anchor>
+      <Anchor href="https://github.com/aimo/prueba-frontend#readme"> the AIMO challenge </Anchor>
       , in order to get the Software Engineer Frontend position of the company.
     </ProjectPost>
     <ProjectPost
@@ -387,11 +312,8 @@ import ProjectPost from "./_components/project-post.astro";
         },
       ]}
     >
-      A front-end challenge required by myself, I worked with animation effects
-      powered by the awesome spring library.{" "}
-      <Anchor href="https://vercel.com/design/toast">
-        Here the original.
-      </Anchor>
+      A front-end challenge required by myself, I worked with animation effects powered by the awesome spring library.{" "}
+      <Anchor href="https://vercel.com/design/toast"> Here the original. </Anchor>
     </ProjectPost>
     <ProjectPost
       projectName="My Personal Site"
@@ -407,8 +329,8 @@ import ProjectPost from "./_components/project-post.astro";
         },
       ]}
     >
-      Useful to create my personal brand as software developer, with this
-      project I really want to share my knowledge about programming.
+      Useful to create my personal brand as software developer, with this project I really want to share my knowledge about
+      programming.
     </ProjectPost>
     <ProjectPost
       projectName="Hashing With Pbkdf2"
@@ -424,13 +346,8 @@ import ProjectPost from "./_components/project-post.astro";
         },
       ]}
     >
-      Serverless application to use the pbkdf2 algorithm and a sort of
-      playground to hash any text like account safe passwords.{" "}
-      <Anchor
-        href="https://github.com/rqbazan/hashing-with-pbkdf2/blob/main/api/index.js"
-      >
-        My λ function is right here.
-      </Anchor>
+      Serverless application to use the pbkdf2 algorithm and a sort of playground to hash any text like account safe passwords.{" "}
+      <Anchor href="https://github.com/rqbazan/hashing-with-pbkdf2/blob/main/api/index.js"> My λ function is right here. </Anchor>
     </ProjectPost>
     <ProjectPost
       projectName="Programming Challenges"
@@ -442,8 +359,7 @@ import ProjectPost from "./_components/project-post.astro";
         },
       ]}
     >
-      Compilation of solutions for different programming challenges from ad-hoc
-      problems to graph theory.</ProjectPost
+      Compilation of solutions for different programming challenges from ad-hoc problems to graph theory.</ProjectPost
     >
   </div>
 </DefaultLayout>

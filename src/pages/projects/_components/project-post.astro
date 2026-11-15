@@ -36,27 +36,23 @@ const htmlId = kebabCase(projectName.toLowerCase());
   </div>
   <div class="flex mt-4">
     <div class="flex mr-1 flex-wrap -m-1">
-      {
-        Array.from(techs)
-          .sort()
-          .map((tech) => <TechTag text={tech} class="m-1" />)
-      }
+      {Array.from(techs)
+        .sort()
+        .map((tech) => <TechTag text={tech} class="m-1" />)}
     </div>
-    {
-      Number(links?.length) > 0 ? (
-        <div class="flex space-x-3 ml-auto items-start">
-          {links?.map((link) => {
-            // omit icon from otherProps
-            const { icon, ...otherProps } = link;
+    {Number(links?.length) > 0 ? (
+      <div class="flex space-x-3 ml-auto items-start">
+        {links?.map((link) => {
+          // omit icon from otherProps
+          const { icon, ...otherProps } = link;
 
-            return (
-              <AnchorIcon {...otherProps}>
-                <link.icon customClasses="h-5 w-5" />
-              </AnchorIcon>
-            );
-          })}
-        </div>
-      ) : null
-    }
+          return (
+            <AnchorIcon {...otherProps}>
+              <link.icon customClasses="h-5 w-5" />
+            </AnchorIcon>
+          );
+        })}
+      </div>
+    ) : null}
   </div>
 </div>
