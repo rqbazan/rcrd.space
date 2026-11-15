@@ -1,5 +1,5 @@
-import { NewTag as UINewTag } from "~/ui/components/new-tag";
-import { dateDiffInDays } from "~/utils/date-diff-in-days";
+import { NewTag as UINewTag } from "~/ui/components/new-tag.tsx";
+import { dateDiffInDays } from "~/utils/date-diff-in-days.ts";
 
 interface NewTagProps {
   postedAt?: string;

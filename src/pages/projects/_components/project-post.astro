@@ -2,7 +2,7 @@
 import kebabCase from "just-kebab-case";
 import AnchorIcon from "~/ui/components/anchor-icon.astro";
 import TechTag from "~/ui/components/tech-tag.astro";
-import { NewTag } from "./new-tag";
+import { NewTag } from "./new-tag.tsx";
 
 interface Props {
   projectName: string;
@@ -11,7 +11,7 @@ interface Props {
   class?: string;
   links?: Array<{
     href: string;
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    // biome-ignore lint/suspicious/noExplicitAny: callers pass any .astro icon component, and .astro components share no component type
     icon: any;
     [key: string]: unknown;
   }>;

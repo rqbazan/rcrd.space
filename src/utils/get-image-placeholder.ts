@@ -1,7 +1,7 @@
 import { getPixels } from "@unpic/pixels";
 import { blurhashToDataUri } from "@unpic/placeholder";
 import { encode } from "blurhash";
-import { transformImageUrl } from "./get-image-url";
+import { transformImageUrl } from "./get-image-url.ts";
 
 /**
  * @param {string} src - Cloudinary Image URL

@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, envField } from "astro/config";
-import { BASE_URL } from "./src/utils/seo-config";
+import { BASE_URL } from "./src/utils/seo-config.ts";
 
 // https://astro.build/config
 export default defineConfig({
