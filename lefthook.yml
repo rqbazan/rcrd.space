@@ -1,0 +1,12 @@
+extends:
+  - node_modules/@rrlab/cli/lefthook/base.yml
+  - lefthook/tsc.yml
+
+pre-commit:
+  jobs:
+    - name: shared-hooks
+      run: |
+        if [ ! -f node_modules/@rrlab/cli/lefthook/base.yml ]; then
+          echo "@rrlab/cli's git hooks are missing from node_modules: run pnpm install, then commit again."
+          exit 1
+        fi
