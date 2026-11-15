@@ -1,0 +1,16 @@
+allowBuilds:
+  "@tailwindcss/oxide": false
+  "@vercel/speed-insights": false
+  esbuild: true
+  lefthook: true
+  sharp: false
+
+sideEffectsCache: false
+
+# Supply-chain cooldown: malicious releases are usually pulled within 24h.
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - "@variablelab/*"
+  - "@rrlab/*"
+  - "@variableland/*"
+  - "@vidriera/*"

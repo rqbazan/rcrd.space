@@ -44,7 +44,11 @@
     "husky": "^9.1.7",
     "typescript": "^5.8.3"
   },
-  "trustedDependencies": [
-    "@vercel/speed-insights"
-  ]
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.16.1",
+      "onFail": "error"
+    }
+  }
 }
