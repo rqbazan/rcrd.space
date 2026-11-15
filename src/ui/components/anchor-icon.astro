@@ -1,6 +1,6 @@
 ---
-import { cn } from "~/utils/cn";
-import { getExternalLinkProps } from "~/utils/get-external-link-props";
+import { cn } from "~/utils/cn.ts";
+import { getExternalLinkProps } from "~/utils/get-external-link-props.ts";
 
 interface Props {
   href: string;
@@ -10,6 +10,7 @@ interface Props {
 const { class: className, href, ...otherProps } = Astro.props;
 ---
 
+{/* biome-ignore lint/a11y/useAnchorContent: the content comes through the slot */}
 <a
   href={href}
   class={cn(

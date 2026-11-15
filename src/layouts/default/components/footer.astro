@@ -2,12 +2,12 @@
 import { GithubIcon, LinkedinIcon, MailIcon } from "astro-feather";
 import AnchorIcon from "~/ui/components/anchor-icon.astro";
 import XIcon from "~/ui/icons/x.astro";
-import { cn } from "~/utils/cn";
+import { cn } from "~/utils/cn.ts";
 
 const { class: className, ...otherProps } = Astro.props;
 
 type Contact = {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  // biome-ignore lint/suspicious/noExplicitAny: Astro exports no type for .astro components
   icon: any;
   href: string;
   network: string;

@@ -1,6 +1,6 @@
 ---
 import { Image } from "@unpic/astro";
-import { getImagePlaceholder } from "~/utils/get-image-placeholder";
+import { getImagePlaceholder } from "~/utils/get-image-placeholder.ts";
 import CoverImgContainer from "./cover-img-container.astro";
 import ImgFrame from "./img-frame.astro";
 
@@ -19,6 +19,7 @@ const placeholder = await getImagePlaceholder(src);
 <CoverImgContainer class={className}>
   <Fragment slot="image">
     <ImgFrame>
+      {/* biome-ignore lint/a11y/useAnchorContent: the Image component renders an img with its alt */}
       <a href={src} target="_blank" rel="noreferrer" class="w-full h-full">
         <Image
           {...otherProps}
