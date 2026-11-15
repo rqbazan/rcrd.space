@@ -9,8 +9,9 @@
 ```bash
 git clone https://github.com/rqbazan/rcrd.space.git
 cd rcrd.space
-bun i
-bun dev
+mise install
+pnpm install
+pnpm dev
 ```
 
 ## Documentation
