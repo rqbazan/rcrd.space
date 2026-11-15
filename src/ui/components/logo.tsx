@@ -1,5 +1,5 @@
 import { useColorModeToggle } from "@rqbazan/set-initial-color-mode";
-import { cn } from "~/utils/cn";
+import { cn } from "~/utils/cn.ts";
 
 export interface LogoProps {
   className?: string;

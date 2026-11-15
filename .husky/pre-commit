@@ -1,2 +1,2 @@
-bunx rr test:static --fix-staged
+bunx rr jsc --fix-staged
 git update-index --again

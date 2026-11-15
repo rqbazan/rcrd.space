@@ -1,10 +1,11 @@
 ---
-import { cn } from "~/utils/cn";
+import { cn } from "~/utils/cn.ts";
 
 const { class: className } = Astro.props;
 ---
 
 <div class={cn("space-y-4 mb-8", className)}>
+  {/* biome-ignore lint/a11y/useHeadingContent: the title comes through the slot */}
   <h1 class="h2 sm:h1">
     <slot name="title" />
   </h1>
