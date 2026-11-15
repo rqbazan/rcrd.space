@@ -1,32 +1,76 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
+    types: [opened, synchronize, reopened]
+
+permissions: {}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  ci:
+  check:
+    name: Check
     runs-on: ubuntu-latest
-
+    timeout-minutes: 10
+    permissions:
+      contents: read
     steps:
       - name: ⬇️ Checkout repo
-        uses: actions/checkout@v4
-
-      - name: 🥟 Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          bun-version-file: ".bun-version"
+          persist-credentials: false
 
-      - name: 📥 Install dependencies
-        run: bun install --frozen-lockfile
+      - name: 🛠️ Setup mise
+        uses: jdx/mise-action@82a612c5ab8bcda7cc5db6b7e81a8e7584c3dc6e # v5.2.3
+        with:
+          version: 2026.10.19
+          install: true
+          cache: true
 
-      - name: 🔬 Check
-        run: bunx rr check
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🔍 Check
+        run: pnpm rr check
+
+  secrets:
+    name: Scan for secrets
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: 🛠️ Setup mise
+        uses: jdx/mise-action@82a612c5ab8bcda7cc5db6b7e81a8e7584c3dc6e # v5.2.3
+        with:
+          version: 2026.10.19
+          install_args: gitleaks
+          cache: true
+
+      - name: 🔐 Scan the new commits
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: gitleaks git --redact --verbose --log-opts="$BASE_SHA..$HEAD_SHA"
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs: [check, secrets]
+    if: ${{ always() }}
+    permissions: {}
+    steps:
+      - name: ✅ The check passed and no secret leaked
+        env:
+          CHECK: ${{ needs.check.result }}
+          SECRETS: ${{ needs.secrets.result }}
+        run: test "$CHECK" = "success" && test "$SECRETS" = "success"
