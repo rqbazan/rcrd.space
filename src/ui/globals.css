@@ -81,7 +81,7 @@
     background: rgb(107, 114, 128);
   }
 
-  *::-webkit-scrollbar-thumb::hover {
+  *::-webkit-scrollbar-thumb:hover {
     background: rgb(55, 65, 81);
   }
 
