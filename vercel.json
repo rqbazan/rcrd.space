@@ -9,5 +9,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/mac/install.sh",
+      "destination": "https://raw.githubusercontent.com/rqbazan/.dotfiles/main/install.sh",
+      "permanent": false
+    }
   ]
 }
