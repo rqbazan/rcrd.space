@@ -37,15 +37,10 @@ const contacts: Contact[] = [
 ];
 ---
 
-<footer
-  {...otherProps}
-  class={cn("flex justify-center items-center space-x-4", className)}
->
-  {
-    contacts.map((contact) => (
-      <AnchorIcon href={contact.href} aria-label={contact.network}>
-        <contact.icon customClasses="h-6 w-6" />
-      </AnchorIcon>
-    ))
-  }
+<footer {...otherProps} class={cn("flex justify-center items-center space-x-4", className)}>
+  {contacts.map((contact) => (
+    <AnchorIcon href={contact.href} aria-label={contact.network}>
+      <contact.icon customClasses="h-6 w-6" />
+    </AnchorIcon>
+  ))}
 </footer>

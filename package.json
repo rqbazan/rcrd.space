@@ -5,8 +5,7 @@
   "scripts": {
     "preview": "astro preview",
     "build": "astro check && astro build",
-    "dev": "astro dev",
-    "prepare": "husky"
+    "dev": "astro dev"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -41,10 +40,17 @@
     "@types/node": "^22.16.1",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "husky": "^9.1.7",
+    "lefthook": "2.2.2",
     "typescript": "^5.8.3"
   },
-  "trustedDependencies": [
-    "@vercel/speed-insights"
-  ]
+  "engines": {
+    "node": "24.x"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.16.1",
+      "onFail": "error"
+    }
+  }
 }

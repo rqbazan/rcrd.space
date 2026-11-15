@@ -1,0 +1,7 @@
+pre-commit:
+  jobs:
+    - name: tsc
+      run: pnpm rr tsc
+      glob:
+        - "*.{ts,tsx,mts,cts,astro}"
+        - "*tsconfig*.json"

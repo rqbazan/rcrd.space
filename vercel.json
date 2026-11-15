@@ -1,4 +1,6 @@
 {
+  "installCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack pnpm@12.16.1 install --frozen-lockfile",
+  "buildCommand": "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack pnpm@12.16.1 run build",
   "headers": [
     {
       "source": "/fonts/ibm-plex-sans-var.woff2",

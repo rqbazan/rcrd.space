@@ -37,25 +37,25 @@ const placeholder = await getImagePlaceholder(src);
 </CoverImgContainer>
 
 <script>
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      const { target } = mutation;
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    const { target } = mutation;
 
-      if ("querySelector" in target) {
-        const canvas = (target as HTMLElement).querySelector("canvas");
-        if (canvas) {
-          const containerEl = document.getElementById("image-container");
-          if (containerEl) {
-            containerEl.style.opacity = "0";
-          }
-          observer.disconnect();
+    if ("querySelector" in target) {
+      const canvas = (target as HTMLElement).querySelector("canvas");
+      if (canvas) {
+        const containerEl = document.getElementById("image-container");
+        if (containerEl) {
+          containerEl.style.opacity = "0";
         }
+        observer.disconnect();
       }
-    });
+    }
   });
+});
 
-  const containerEl = document.getElementById("canva-container");
-  if (containerEl) {
-    observer.observe(containerEl, { childList: true, subtree: true });
-  }
+const containerEl = document.getElementById("canva-container");
+if (containerEl) {
+  observer.observe(containerEl, { childList: true, subtree: true });
+}
 </script>

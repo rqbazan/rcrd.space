@@ -1,0 +1,33 @@
+name: Workflow audit
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit-workflows:
+    name: Audit workflows
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Repo root, not .github/: keeps annotation paths repo-relative.
+      - name: 🔒 Scan workflows
+        env:
+          # Enables zizmor's online audits.
+          GH_TOKEN: ${{ github.token }}
+        run: pipx run --spec zizmor==1.31.1 zizmor --format=github .

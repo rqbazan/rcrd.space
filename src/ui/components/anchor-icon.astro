@@ -13,10 +13,7 @@ const { class: className, href, ...otherProps } = Astro.props;
 {/* biome-ignore lint/a11y/useAnchorContent: the content comes through the slot */}
 <a
   href={href}
-  class={cn(
-    "text-muted hover:text-wording transition-colors ease-in-out duration-300",
-    className
-  )}
+  class={cn("text-muted hover:text-wording transition-colors ease-in-out duration-300", className)}
   {...getExternalLinkProps(href)}
   {...otherProps}
 >
