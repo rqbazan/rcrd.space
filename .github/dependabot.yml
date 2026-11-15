@@ -1,0 +1,34 @@
+# Dependabot security updates only. open-pull-requests-limit: 0 turns version updates off; security
+# updates, once enabled in the repo's code security settings, open a PR for each new alert.
+# cooldown mirrors pnpm's minimumReleaseAge (24 h), but it only delays version updates. Security PRs
+# skip both: GitHub ignores cooldown for them, and Dependabot runs pnpm with
+# --config.minimumReleaseAge=0 (dependabot-core#15170). Check the fixed version's age before merging.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directories:
+      - "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    cooldown:
+      default-days: 1
+    groups:
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  - package-ecosystem: github-actions
+    directories:
+      - "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    cooldown:
+      default-days: 1
+    groups:
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
