@@ -7,7 +7,7 @@ import { cn } from "~/utils/cn.ts";
 const { class: className, ...otherProps } = Astro.props;
 
 type Contact = {
-  // biome-ignore lint/suspicious/noExplicitAny: the icons are astro-feather and local .astro components, which share no component type
+  // biome-ignore lint/suspicious/noExplicitAny: Astro exports no type for .astro components
   icon: any;
   href: string;
   network: string;

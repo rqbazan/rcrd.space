@@ -11,7 +11,7 @@ interface Props {
   class?: string;
   links?: Array<{
     href: string;
-    // biome-ignore lint/suspicious/noExplicitAny: callers pass any .astro icon component, and .astro components share no component type
+    // biome-ignore lint/suspicious/noExplicitAny: Astro exports no type for .astro components
     icon: any;
     [key: string]: unknown;
   }>;
